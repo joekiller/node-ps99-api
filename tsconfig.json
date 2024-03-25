@@ -4,6 +4,9 @@
     "forceConsistentCasingInFileNames": true,
     "outDir": "./dist",
     "rootDir": "./src",
-    "sourceMap": true
-  }
+    "sourceMap": true,
+    "declaration": true
+  },
+  "include": [ "src/**/*.ts" ],
+  "exclude": [ "**/__tests__/*"]
 }

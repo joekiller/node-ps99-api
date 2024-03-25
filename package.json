@@ -8,7 +8,7 @@
   "license": "MIT",
   "scripts": {
     "test": "npx jest",
-    "build": "npx tsc --project tsconfig.build.json",
+    "build": "npx tsc",
     "semantic-release": "npx semantic-release",
     "format": "npx prettier --write \"src/**/*.ts\""
   },
@@ -33,7 +33,7 @@
   },
   "repository": {
     "type": "git",
-    "url": "https://github.com/joekiller/node-ps99-api.git"
+    "url": "git+https://github.com/joekiller/node-ps99-api.git"
   },
   "config": {
     "commitizen": {
