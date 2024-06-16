@@ -1,8 +1,7 @@
 import { ApiRequestParams, RequestClient } from "./request-client/common";
 import { getAxiosRequest } from "./request-client/axios";
 import { CollectionsResponseBody } from "./responses/collections";
-import { Collection } from "./common";
-import { CollectionResponseBody } from "./responses/collection";
+import {Collection, GetCollectionResponse} from "./responses/collection";
 import { ClanResponseBody } from "./responses/clan";
 import { ClansResponseBody } from "./responses/clans";
 import { ClansSort, GetClansParams, SortOrder } from "./params/clans";
@@ -53,8 +52,8 @@ export class PetSimulator99API {
     return this.request<CollectionsResponseBody>("/api/collections");
   }
 
-  getCollection(collection: Collection) {
-    return this.request<CollectionResponseBody>(
+  getCollection<C extends Collection>(collection: C) {
+    return this.request<GetCollectionResponse<C>>(
       `/api/collection/${collection}`,
     );
   }

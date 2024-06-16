@@ -1,65 +1,91 @@
 export type ClanResponseBody = {
-  status: string;
-  data: {
-    Created: number;
-    Owner: number;
-    Name: string;
-    Icon: string;
-    Desc: string;
-    MemberCapacity: number;
-    OfficerCapacity: number;
-    GuildLevel: number;
-    Members: { UserID: number; PermissionLevel: number; JoinTime: number }[];
-    DepositedDiamonds: number;
-    DiamondContributions: {
-      AllTime: { Sum: number; Data: { UserID: number; Diamonds: number }[] };
-    };
-    Status: string;
-    StatusTimestamp: number;
-    StatusUsername: string;
-    Battles: {
-      Christmas2023: {
-        ProcessedAwards: boolean;
-        AwardUserIDs: number[];
-        BattleID: string;
-        Points: number;
-        PointContributions: { UserID: number; Points: number }[];
-        EarnedMedal: string;
-      };
-      DecemberActiveHugePets: {
-        ProcessedAwards: boolean;
-        AwardUserIDs: number[];
-        BattleID: string;
-        Points: number;
-        PointContributions: { UserID: number; Points: number }[];
-        EarnedMedal: string;
-      };
-      IndexBattle: {
-        ProcessedAwards: boolean;
-        AwardUserIDs: number[];
-        BattleID: string;
-        Points: number;
-        PointContributions: { UserID: number; Points: number }[];
-        EarnedMedal: string;
-      };
-      AchBattle: {
-        ProcessedAwards: boolean;
-        AwardUserIDs: number[];
-        BattleID: string;
-        Points: number;
-        PointContributions: { UserID: number; Points: number }[];
-        EarnedMedal: string;
-      };
-      RaidBattle: {
-        ProcessedAwards: boolean;
-        AwardUserIDs: any[];
-        BattleID: string;
-        Points: number;
-        PointContributions: { UserID: number; Points: number }[];
-      };
-    };
-    CountryCode: string;
-    BronzeMedals: number;
-    LastKickTimestamp: number;
-  };
-};
+  Battles: Battles
+  BronzeMedals: number
+  CountryCode: string
+  Created: number
+  DepositedDiamonds: number
+  Desc: string
+  DiamondContributions: DiamondContributions
+  GoodMedals: number
+  GuildLevel: number
+  Icon: string
+  LastKickTimestamp: number
+  MemberCapacity: number
+  Members: Member[]
+  Name: string
+  OfficerCapacity: number
+  Owner: number
+  SilverMedals: number
+  Status: string
+  StatusTimestamp: number
+  StatusUsername: string
+}
+
+export type Battles = {[key: string]: PointsBattle | GoalBattle}
+
+export type PointsBattle = {
+  AwardUserIDs: number[]
+  BattleID: string
+  EarnedMedal?: string
+  Place?: number
+  PointContributions: PointContribution[]
+  Points: number
+  ProcessedAwards: boolean
+}
+
+export type PointContribution = {
+  Points: number
+  UserID: number
+}
+
+export type GoalBattle = {
+  AwardUserIDs: any[]
+  BattleID: string
+  EarnedMedal?: string
+  Goals: Goal[]
+  Place?: number
+  PointContributions: PointContribution[]
+  Points: number
+  ProcessedAwards: boolean
+}
+
+export type Goal = {
+  Amount: number
+  Contributions: Contributions
+  Progress: number
+  Stars: number
+  Tier: number
+  Type: number
+}
+
+export type Contributions = {[key: string]: number}
+
+export type HackerBattle = {
+  AwardUserIDs: any[]
+  BattleID: string
+  Place: number
+  PointContributions: PointContribution[]
+  Points: number
+  ProcessedAwards: boolean
+}
+
+
+export type DiamondContributions = {
+  AllTime: AllTime
+}
+
+export type AllTime = {
+  Data: Daum[]
+  Sum: number
+}
+
+export type Daum = {
+  Diamonds: number
+  UserID: number
+}
+
+export type Member = {
+  JoinTime: number
+  PermissionLevel: number
+  UserID: number
+}
