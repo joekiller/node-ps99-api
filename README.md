@@ -21,5 +21,6 @@ await ps99api.getClan('CAT');
 
 ## Links
 
+
 * [ps99-public-api-docs](https://github.com/BIG-Games-LLC/ps99-public-api-docs)
 * [Pet Simulator Public API](https://docs.biggamesapi.io/)
