@@ -1,6 +1,7 @@
 import React, { useState, useEffect } from 'react';
 import { PetSimulator99API, ClanResponseBody } from 'ps99-api';
 import './App.css';
+import ImageComponent from "./Image";
 
 interface ClanDetailsProps {
   clanName: string;
@@ -8,7 +9,6 @@ interface ClanDetailsProps {
 
 const ClanDetails: React.FC<ClanDetailsProps> = ({ clanName }) => {
   const [clanData, setClanData] = useState<ClanResponseBody | null>(null);
-  const [iconUrl, setIconUrl] = useState<string | null>(null);
 
   useEffect(() => {
     const fetchData = async () => {
@@ -16,9 +16,6 @@ const ClanDetails: React.FC<ClanDetailsProps> = ({ clanName }) => {
       try {
         const response = await api.getClan(clanName);
         setClanData(response.data);
-        const iconBlob = await api.getImage(response.data.Icon);
-        const url = URL.createObjectURL(new Blob([iconBlob], { type: 'image/png' }));
-        setIconUrl(url);
       } catch (error) {
         console.error('Error fetching clan data:', error);
       }
@@ -33,7 +30,7 @@ const ClanDetails: React.FC<ClanDetailsProps> = ({ clanName }) => {
   return (
     <div className="container clan-details">
       <h2>{clanData.Name}</h2>
-      {iconUrl && <img src={iconUrl} alt="Clan Icon" className="clan-icon"/>}
+      <ImageComponent rbxassetid={clanData.Icon}/>
       <p><strong>Description:</strong> {clanData.Desc}</p>
       <p><strong>Country:</strong> {clanData.CountryCode}</p>
       <p><strong>Created:</strong> {new Date(clanData.Created * 1000).toLocaleString()}</p>

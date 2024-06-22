@@ -19,7 +19,7 @@ module.exports = {
     resolve: {
         extensions: ['.tsx', '.ts', '.js'],
         alias: {
-            'ps99-api': path.resolve(__dirname, '../src'),
+            'ps99-api': path.resolve(__dirname, '../../src'),
         }
     },
     output: {

@@ -97,7 +97,7 @@ export class PetSimulator99API {
     );
   }
 
-  /** resolve rbxassetid:// references */
+  /** resolve rbxassetid:// references to image/png */
   getImage(rbxassetid: string): Promise<Blob> {
     if (rbxassetid.startsWith("rbxassetid://")) {
       rbxassetid = rbxassetid.slice(13);

@@ -5,13 +5,13 @@
   "private": true,
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
-    "build": "webpack",
+    "build": "npx webpack",
     "dev": "npx webpack serve --config webpack.config.js --live-reload --mode=development"
   },
   "author": "",
   "license": "ISC",
   "dependencies": {
-    "ps99-api": "file:.."
+    "ps99-api": "file:../.."
   },
   "devDependencies": {
     "@types/react": "^18.3.3",

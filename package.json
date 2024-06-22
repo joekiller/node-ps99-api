@@ -9,10 +9,11 @@
   "scripts": {
     "test": "npx jest",
     "test:snapshot": "npx jest --updateSnapshot",
-    "build": "npx tsc",
+    "build": "npm run build:src && npm run build:types",
+    "build:tsc": "npx tsc",
+    "build:src": "esbuild src/index.ts --bundle --minify --sourcemap --outfile=dist/index.js",
     "semantic-release": "npx semantic-release",
     "format": "npx prettier --write \"src/**/*.ts\"",
-    "esbuild": "npx esbuild dist/index.js --bundle --outfile=dist/index-bundle.js --minify",
     "build:types": "npx dets src/index.ts --files src/**/*.ts --out dist/index.d.ts"
   },
   "keywords": [
