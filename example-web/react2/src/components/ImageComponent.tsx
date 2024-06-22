@@ -1,4 +1,4 @@
-import React, { useEffect, useState, useRef } from 'react';
+import React, { useEffect, useState } from 'react';
 import { PetSimulator99API } from 'ps99-api';
 
 interface ImageProps {
@@ -18,8 +18,9 @@ const ImageComponent: React.FC<ImageProps> = ({ src, alt }) => {
       } else {
         try {
           const api = new PetSimulator99API();
-          const imageBlob = await api.getImage(src);
-          const imageUrl = URL.createObjectURL(new Blob([imageBlob], { type: 'image/png' }));
+          const response = await api.getImage(src);
+          const imageBlob = new Blob([response], { type: 'image/png' });
+          const imageUrl = URL.createObjectURL(imageBlob);
           imageCache.set(src, imageUrl);
           setImageUrl(imageUrl);
         } catch (error) {

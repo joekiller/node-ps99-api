@@ -9,8 +9,7 @@
   "scripts": {
     "test": "npx jest",
     "test:snapshot": "npx jest --updateSnapshot",
-    "build": "npm run build:src && npm run build:types",
-    "build:tsc": "npx tsc",
+    "build": "npx tsc",
     "build:src": "esbuild src/index.ts --bundle --minify --sourcemap --outfile=dist/index.js",
     "semantic-release": "npx semantic-release",
     "format": "npx prettier --write \"src/**/*.ts\"",
