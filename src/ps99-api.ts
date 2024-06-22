@@ -51,7 +51,7 @@ export class PetSimulator99API {
   }
 
   getCollections() {
-    return this.request<ApiResponseBody<Collection>>("/api/collections");
+    return this.request<ApiResponseBody<Collection[]>>("/api/collections");
   }
 
   getCollection<C extends Collection>(collection: C) {
