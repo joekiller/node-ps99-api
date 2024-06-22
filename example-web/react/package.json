@@ -1,7 +1,7 @@
 {
   "name": "example-ps99-api-webapp",
   "version": "1.0.0",
-  "description": "A demonistration of using the Pet Simulator 99 node-ps99-api library.",
+  "description": "A demonstration of using the Pet Simulator 99 node-ps99-api library.",
   "private": true,
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
