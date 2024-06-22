@@ -145,7 +145,7 @@ describe("Pet Simulator Public API Tests", () => {
       params: {},
       responseEncoding: "BINARY",
       responseType: "arraybuffer",
-      url: "https://biggamesapi.io/api/image/14615650278",
+      url: "https://biggamesapi.io/image/14615650278",
     });
     await api.getImage("rbxassetid://14976576332");
     expect(axios).toBeCalledWith({
@@ -153,7 +153,7 @@ describe("Pet Simulator Public API Tests", () => {
       params: {},
       responseEncoding: "BINARY",
       responseType: "arraybuffer",
-      url: "https://biggamesapi.io/api/image/14976576332",
+      url: "https://biggamesapi.io/image/14976576332",
     });
   });
 });

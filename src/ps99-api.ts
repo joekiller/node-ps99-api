@@ -1,6 +1,6 @@
 import { ApiRequestParams, RequestClient } from "./request-client/common";
 import { getAxiosRequest } from "./request-client/axios";
-import {Collection, GetCollectionResponse} from "./responses/collection";
+import { Collection, GetCollectionResponse } from "./responses/collection";
 import { ClanResponseBody } from "./responses/clan";
 import { ClansResponseBody } from "./responses/clans";
 import { ClansSort, GetClansParams, SortOrder } from "./params/clans";
@@ -74,7 +74,9 @@ export class PetSimulator99API {
       sort: sort || "Points",
       sortOrder: sortOrder || "desc",
     };
-    return this.request<ApiResponseBody<ClansResponseBody>>("/api/clans", { params });
+    return this.request<ApiResponseBody<ClansResponseBody>>("/api/clans", {
+      params,
+    });
   }
 
   getClan(name: string) {
@@ -90,7 +92,9 @@ export class PetSimulator99API {
   }
 
   getActiveClanBattle() {
-    return this.request<ApiResponseBody<ActiveClanBattleResponseBody>>(`/api/activeClanBattle`);
+    return this.request<ApiResponseBody<ActiveClanBattleResponseBody>>(
+      `/api/activeClanBattle`,
+    );
   }
 
   /** resolve rbxassetid:// references */

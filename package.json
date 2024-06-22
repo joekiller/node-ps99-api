@@ -8,10 +8,11 @@
   "license": "MIT",
   "scripts": {
     "test": "npx jest",
+    "test:snapshot": "npx jest --updateSnapshot",
     "build": "npx tsc",
     "semantic-release": "npx semantic-release",
     "format": "npx prettier --write \"src/**/*.ts\"",
-    "esbuild": "npx esbuild dist/index.js --bundle --outfile=dist/index-bundle.js",
+    "esbuild": "npx esbuild dist/index.js --bundle --outfile=dist/index-bundle.js --minify",
     "build:types": "npx dets src/index.ts --files src/**/*.ts --out dist/index.d.ts"
   },
   "keywords": [
