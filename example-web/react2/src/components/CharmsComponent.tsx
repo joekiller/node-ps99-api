@@ -1,5 +1,5 @@
-import React, { useEffect, useState } from 'react';
-import { CharmData, PetSimulator99API } from 'ps99-api';
+import React, { useEffect, useState } from "react";
+import { CharmData, PetSimulator99API } from "ps99-api";
 import ImageComponent from "./ImageComponent";
 
 const CharmsComponent: React.FC = () => {
@@ -9,7 +9,7 @@ const CharmsComponent: React.FC = () => {
     const fetchCharms = async () => {
       const api = new PetSimulator99API();
       const response = await api.getCollection("Charms");
-      if (response.status === 'ok') {
+      if (response.status === "ok") {
         setCharms(response.data);
       }
     };
@@ -22,7 +22,10 @@ const CharmsComponent: React.FC = () => {
       <ul>
         {charms.map((charm, index) => (
           <li key={index}>
-            <ImageComponent src={charm.configData.Icon} alt={`Charm ${index + 1}`} />
+            <ImageComponent
+              src={charm.configData.Icon}
+              alt={`Charm ${index + 1}`}
+            />
             <span>Base Tier: {charm.configData.BaseTier}</span>
             <span>Max Tier: {charm.configData.MaxTier}</span>
             {charm.configData.Tiers.map((tier, tierIndex) => (

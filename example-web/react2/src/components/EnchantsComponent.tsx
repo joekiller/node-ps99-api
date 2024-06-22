@@ -1,5 +1,5 @@
-import React, { useEffect, useState } from 'react';
-import { EnchantmentData, PetSimulator99API } from 'ps99-api';
+import React, { useEffect, useState } from "react";
+import { EnchantmentData, PetSimulator99API } from "ps99-api";
 import ImageComponent from "./ImageComponent";
 
 const EnchantsComponent: React.FC = () => {
@@ -9,7 +9,7 @@ const EnchantsComponent: React.FC = () => {
     const fetchEnchants = async () => {
       const api = new PetSimulator99API();
       const response = await api.getCollection("Enchants");
-      if (response.status === 'ok') {
+      if (response.status === "ok") {
         setEnchants(response.data);
       }
     };
@@ -22,7 +22,12 @@ const EnchantsComponent: React.FC = () => {
       <ul>
         {enchants.map((enchant, index) => (
           <li key={index}>
-            {enchant.configData.PageIcon && <ImageComponent src={enchant.configData.PageIcon} alt={`Enchant ${index + 1}`} />}
+            {enchant.configData.PageIcon && (
+              <ImageComponent
+                src={enchant.configData.PageIcon}
+                alt={`Enchant ${index + 1}`}
+              />
+            )}
             <span>Base Tier: {enchant.configData.BaseTier}</span>
             <span>Max Tier: {enchant.configData.MaxTier}</span>
             {enchant.configData.Tiers.map((tier, tierIndex) => (

@@ -1,5 +1,5 @@
-import React, { useEffect, useState } from 'react';
-import {PetSimulator99API, ZoneData} from 'ps99-api';
+import React, { useEffect, useState } from "react";
+import { PetSimulator99API, ZoneData } from "ps99-api";
 
 const ZonesComponent: React.FC = () => {
   const [zones, setZones] = useState<ZoneData[]>([]);
@@ -8,7 +8,7 @@ const ZonesComponent: React.FC = () => {
     const fetchZones = async () => {
       const api = new PetSimulator99API();
       const response = await api.getCollection("Zones");
-      if (response.status === 'ok') {
+      if (response.status === "ok") {
         setZones(response.data);
       }
     };

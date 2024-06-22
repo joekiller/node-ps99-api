@@ -12,7 +12,7 @@
     "build": "npx tsc",
     "build:src": "esbuild src/index.ts --bundle --minify --sourcemap --outfile=dist/index.js",
     "semantic-release": "npx semantic-release",
-    "format": "npx prettier --write \"src/**/*.ts\"",
+    "format": "npx prettier --write .",
     "build:types": "npx dets src/index.ts --files src/**/*.ts --out dist/index.d.ts"
   },
   "keywords": [

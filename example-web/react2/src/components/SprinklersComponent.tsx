@@ -1,5 +1,5 @@
-import React, { useEffect, useState } from 'react';
-import {PetSimulator99API, SprinklerData} from 'ps99-api';
+import React, { useEffect, useState } from "react";
+import { PetSimulator99API, SprinklerData } from "ps99-api";
 import ImageComponent from "./ImageComponent";
 
 const SprinklersComponent: React.FC = () => {
@@ -9,7 +9,7 @@ const SprinklersComponent: React.FC = () => {
     const fetchSprinklers = async () => {
       const api = new PetSimulator99API();
       const response = await api.getCollection("Sprinklers");
-      if (response.status === 'ok') {
+      if (response.status === "ok") {
         setSprinklers(response.data);
       }
     };
@@ -22,7 +22,10 @@ const SprinklersComponent: React.FC = () => {
       <ul>
         {sprinklers.map((sprinkler, index) => (
           <li key={index}>
-            <ImageComponent src={sprinkler.configData.Icon} alt={sprinkler.configData.Name} />
+            <ImageComponent
+              src={sprinkler.configData.Icon}
+              alt={sprinkler.configData.Name}
+            />
             <span>{sprinkler.configData.Name}</span>
             <span>Duration: {sprinkler.configData.Duration}</span>
           </li>

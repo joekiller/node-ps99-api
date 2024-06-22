@@ -1,7 +1,7 @@
-import React, { useEffect, useState } from 'react';
-import { MiscItemData, PetSimulator99API } from 'ps99-api';
-import ImageComponent from './ImageComponent';
-import ErrorComponent from './ErrorComponent';
+import React, { useEffect, useState } from "react";
+import { MiscItemData, PetSimulator99API } from "ps99-api";
+import ImageComponent from "./ImageComponent";
+import ErrorComponent from "./ErrorComponent";
 
 const MiscItemsComponent: React.FC = () => {
   const [miscItems, setMiscItems] = useState<MiscItemData[]>([]);
@@ -11,7 +11,7 @@ const MiscItemsComponent: React.FC = () => {
     const fetchMiscItems = async () => {
       const api = new PetSimulator99API();
       const response = await api.getCollection("MiscItems");
-      if (response.status === 'ok') {
+      if (response.status === "ok") {
         setMiscItems(response.data);
       } else {
         setError(response.error.message);
@@ -30,13 +30,21 @@ const MiscItemsComponent: React.FC = () => {
       <ul>
         {miscItems.map((item, index) => (
           <li key={index}>
-            <ImageComponent src={item.configData.Icon} alt={item.configData.DisplayName} />
+            <ImageComponent
+              src={item.configData.Icon}
+              alt={item.configData.DisplayName}
+            />
             <span>{item.configData.DisplayName}</span>
             <span>Category: {item.configData.Category}</span>
             <span>Description: {item.configData.Desc}</span>
             <span>Rarity: {item.configData.Rarity.DisplayName}</span>
             {item.configData.Tradable && <span>Tradable</span>}
-            {item.configData.AltIcon && <ImageComponent src={item.configData.AltIcon} alt={`${item.configData.DisplayName} Alternate Icon`} />}
+            {item.configData.AltIcon && (
+              <ImageComponent
+                src={item.configData.AltIcon}
+                alt={`${item.configData.DisplayName} Alternate Icon`}
+              />
+            )}
           </li>
         ))}
       </ul>

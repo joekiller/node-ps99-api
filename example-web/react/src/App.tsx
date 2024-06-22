@@ -1,9 +1,9 @@
-import React, { useState } from 'react';
-import ClanDetails from './ClanDetails';
-import './App.css';
+import React, { useState } from "react";
+import ClanDetails from "./ClanDetails";
+import "./App.css";
 
 const App: React.FC = () => {
-  const [clanName, setClanName] = useState<string>('CATT');
+  const [clanName, setClanName] = useState<string>("CATT");
   const [selectedClan, setSelectedClan] = useState<string | null>(null);
 
   const handleFetchClanInfo = () => {

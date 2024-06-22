@@ -1,5 +1,5 @@
-import React, { useEffect, useState } from 'react';
-import { PetSimulator99API, PotionData } from 'ps99-api';
+import React, { useEffect, useState } from "react";
+import { PetSimulator99API, PotionData } from "ps99-api";
 import ImageComponent from "./ImageComponent";
 
 const PotionsComponent: React.FC = () => {
@@ -9,7 +9,7 @@ const PotionsComponent: React.FC = () => {
     const fetchPotions = async () => {
       const api = new PetSimulator99API();
       const response = await api.getCollection("Potions");
-      if (response.status === 'ok') {
+      if (response.status === "ok") {
         setPotions(response.data);
       }
     };

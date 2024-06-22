@@ -1,5 +1,5 @@
-import React, { useEffect, useState } from 'react';
-import {PetData, PetSimulator99API} from 'ps99-api';
+import React, { useEffect, useState } from "react";
+import { PetData, PetSimulator99API } from "ps99-api";
 import ImageComponent from "./ImageComponent";
 
 const PetsComponent: React.FC = () => {
@@ -9,7 +9,7 @@ const PetsComponent: React.FC = () => {
     const fetchPets = async () => {
       const api = new PetSimulator99API();
       const response = await api.getCollection("Pets");
-      if (response.status === 'ok') {
+      if (response.status === "ok") {
         setPets(response.data);
       }
     };
@@ -22,9 +22,17 @@ const PetsComponent: React.FC = () => {
       <ul>
         {pets.map((pet, index) => (
           <li key={index}>
-            <ImageComponent src={pet.configData.thumbnail} alt={pet.configData.name} />
+            <ImageComponent
+              src={pet.configData.thumbnail}
+              alt={pet.configData.name}
+            />
             <span>{pet.configData.name}</span>
-            {pet.configData.goldenThumbnail && <ImageComponent src={pet.configData.goldenThumbnail} alt={`Golden ${pet.configData.name}`} />}
+            {pet.configData.goldenThumbnail && (
+              <ImageComponent
+                src={pet.configData.goldenThumbnail}
+                alt={`Golden ${pet.configData.name}`}
+              />
+            )}
           </li>
         ))}
       </ul>

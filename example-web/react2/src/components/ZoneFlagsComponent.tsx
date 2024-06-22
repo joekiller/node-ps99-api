@@ -1,5 +1,5 @@
-import React, { useEffect, useState } from 'react';
-import {PetSimulator99API, ZoneFlagData} from 'ps99-api';
+import React, { useEffect, useState } from "react";
+import { PetSimulator99API, ZoneFlagData } from "ps99-api";
 import ImageComponent from "./ImageComponent";
 
 const ZoneFlagsComponent: React.FC = () => {
@@ -9,7 +9,7 @@ const ZoneFlagsComponent: React.FC = () => {
     const fetchZoneFlags = async () => {
       const api = new PetSimulator99API();
       const response = await api.getCollection("ZoneFlags");
-      if (response.status === 'ok') {
+      if (response.status === "ok") {
         setZoneFlags(response.data);
       }
     };
@@ -22,7 +22,10 @@ const ZoneFlagsComponent: React.FC = () => {
       <ul>
         {zoneFlags.map((flag, index) => (
           <li key={index}>
-            <ImageComponent src={flag.configData.Icon} alt={flag.configData.Name} />
+            <ImageComponent
+              src={flag.configData.Icon}
+              alt={flag.configData.Name}
+            />
             <span>{flag.configData.Name}</span>
             <span>Duration: {flag.configData.Duration}</span>
           </li>

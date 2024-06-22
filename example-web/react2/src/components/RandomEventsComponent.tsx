@@ -1,5 +1,5 @@
-import React, { useEffect, useState } from 'react';
-import {PetSimulator99API, RandomEventData} from 'ps99-api';
+import React, { useEffect, useState } from "react";
+import { PetSimulator99API, RandomEventData } from "ps99-api";
 import ImageComponent from "./ImageComponent";
 
 const RandomEventsComponent: React.FC = () => {
@@ -9,7 +9,7 @@ const RandomEventsComponent: React.FC = () => {
     const fetchRandomEvents = async () => {
       const api = new PetSimulator99API();
       const response = await api.getCollection("RandomEvents");
-      if (response.status === 'ok') {
+      if (response.status === "ok") {
         setRandomEvents(response.data);
       }
     };
@@ -22,7 +22,10 @@ const RandomEventsComponent: React.FC = () => {
       <ul>
         {randomEvents.map((event, index) => (
           <li key={index}>
-            <ImageComponent src={event.configData.Icon} alt={event.configData.Name} />
+            <ImageComponent
+              src={event.configData.Icon}
+              alt={event.configData.Name}
+            />
             <span>{event.configData.Name}</span>
             <span>Duration: {event.configData.Duration}</span>
             <span>Chance: {event.configData.Chance}</span>

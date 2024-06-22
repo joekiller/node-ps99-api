@@ -1,5 +1,5 @@
-import React, { useEffect, useState } from 'react';
-import {MerchantData, PetSimulator99API} from 'ps99-api';
+import React, { useEffect, useState } from "react";
+import { MerchantData, PetSimulator99API } from "ps99-api";
 
 const MerchantsComponent: React.FC = () => {
   const [merchants, setMerchants] = useState<MerchantData[]>([]);
@@ -8,7 +8,7 @@ const MerchantsComponent: React.FC = () => {
     const fetchMerchants = async () => {
       const api = new PetSimulator99API();
       const response = await api.getCollection("Merchants");
-      if (response.status === 'ok') {
+      if (response.status === "ok") {
         setMerchants(response.data);
       }
     };

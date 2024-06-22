@@ -1,5 +1,5 @@
-import React, { useEffect, useState } from 'react';
-import { PetSimulator99API } from 'ps99-api';
+import React, { useEffect, useState } from "react";
+import { PetSimulator99API } from "ps99-api";
 
 interface ImageProps {
   src: string;
@@ -19,12 +19,12 @@ const ImageComponent: React.FC<ImageProps> = ({ src, alt }) => {
         try {
           const api = new PetSimulator99API();
           const response = await api.getImage(src);
-          const imageBlob = new Blob([response], { type: 'image/png' });
+          const imageBlob = new Blob([response], { type: "image/png" });
           const imageUrl = URL.createObjectURL(imageBlob);
           imageCache.set(src, imageUrl);
           setImageUrl(imageUrl);
         } catch (error) {
-          console.error('Error fetching image:', error);
+          console.error("Error fetching image:", error);
         }
       }
     };
@@ -39,9 +39,7 @@ const ImageComponent: React.FC<ImageProps> = ({ src, alt }) => {
   }, [src]);
 
   return (
-    <div>
-      {imageUrl ? <img src={imageUrl} alt={alt} /> : <p>Loading...</p>}
-    </div>
+    <div>{imageUrl ? <img src={imageUrl} alt={alt} /> : <p>Loading...</p>}</div>
   );
 };
 

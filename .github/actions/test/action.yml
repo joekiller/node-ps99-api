@@ -1,7 +1,7 @@
-name: 'Test'
-description: 'Test the library'
+name: "Test"
+description: "Test the library"
 runs:
-  using: 'composite'
+  using: "composite"
   steps:
     - name: Checkout
       uses: actions/checkout@v4

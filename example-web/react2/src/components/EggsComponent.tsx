@@ -1,5 +1,5 @@
-import React, { useEffect, useState } from 'react';
-import {EggData, PetSimulator99API} from 'ps99-api';
+import React, { useEffect, useState } from "react";
+import { EggData, PetSimulator99API } from "ps99-api";
 import ImageComponent from "./ImageComponent";
 
 const EggsComponent: React.FC = () => {
@@ -9,7 +9,7 @@ const EggsComponent: React.FC = () => {
     const fetchEggs = async () => {
       const api = new PetSimulator99API();
       const response = await api.getCollection("Eggs");
-      if (response.status === 'ok') {
+      if (response.status === "ok") {
         setEggs(response.data);
       }
     };
@@ -22,7 +22,10 @@ const EggsComponent: React.FC = () => {
       <ul>
         {eggs.map((egg, index) => (
           <li key={index}>
-            <ImageComponent src={egg.configData.icon} alt={egg.configData.name} />
+            <ImageComponent
+              src={egg.configData.icon}
+              alt={egg.configData.name}
+            />
             <span>{egg.configData.name}</span>
             <span>Currency: {egg.configData.currency}</span>
             <span>Pets: {egg.configData.pets.length}</span>

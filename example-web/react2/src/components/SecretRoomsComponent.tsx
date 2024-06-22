@@ -1,5 +1,5 @@
-import React, { useEffect, useState } from 'react';
-import {PetSimulator99API, SecretRoomData} from 'ps99-api';
+import React, { useEffect, useState } from "react";
+import { PetSimulator99API, SecretRoomData } from "ps99-api";
 
 const SecretRoomsComponent: React.FC = () => {
   const [secretRooms, setSecretRooms] = useState<SecretRoomData[]>([]);
@@ -8,7 +8,7 @@ const SecretRoomsComponent: React.FC = () => {
     const fetchSecretRooms = async () => {
       const api = new PetSimulator99API();
       const response = await api.getCollection("SecretRooms");
-      if (response.status === 'ok') {
+      if (response.status === "ok") {
         setSecretRooms(response.data);
       }
     };

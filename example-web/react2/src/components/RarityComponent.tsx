@@ -1,5 +1,5 @@
-import React, { useEffect, useState } from 'react';
-import {PetSimulator99API, RarityData} from 'ps99-api';
+import React, { useEffect, useState } from "react";
+import { PetSimulator99API, RarityData } from "ps99-api";
 
 const RarityComponent: React.FC = () => {
   const [rarityItems, setRarityItems] = useState<RarityData[]>([]);
@@ -8,7 +8,7 @@ const RarityComponent: React.FC = () => {
     const fetchRarityItems = async () => {
       const api = new PetSimulator99API();
       const response = await api.getCollection("Rarity");
-      if (response.status === 'ok') {
+      if (response.status === "ok") {
         setRarityItems(response.data);
       }
     };

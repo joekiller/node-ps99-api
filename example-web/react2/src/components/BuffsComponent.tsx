@@ -1,5 +1,5 @@
-import React, { useEffect, useState } from 'react';
-import { BuffData, PetSimulator99API } from 'ps99-api';
+import React, { useEffect, useState } from "react";
+import { BuffData, PetSimulator99API } from "ps99-api";
 
 const BuffsComponent: React.FC = () => {
   const [buffs, setBuffs] = useState<BuffData[]>([]);
@@ -8,7 +8,7 @@ const BuffsComponent: React.FC = () => {
     const fetchBuffs = async () => {
       const api = new PetSimulator99API();
       const response = await api.getCollection("Buffs");
-      if (response.status === 'ok') {
+      if (response.status === "ok") {
         setBuffs(response.data);
       }
     };
@@ -23,7 +23,9 @@ const BuffsComponent: React.FC = () => {
           <li key={index}>
             <span>{buff.configData.DisplayName}</span>
             <span>Length: {buff.configData.Length}</span>
-            <span>Associated Item Class: {buff.configData.AssociatedItemClass}</span>
+            <span>
+              Associated Item Class: {buff.configData.AssociatedItemClass}
+            </span>
             <span>Associated Item ID: {buff.configData.AssociatedItemID}</span>
           </li>
         ))}

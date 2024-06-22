@@ -9,10 +9,10 @@ Pet Simulator Public API wrapper written in Typescript.
 ## Usage
 
 ```typescript
-import {PetSimulator99API} from 'ps99-api';
+import { PetSimulator99API } from "ps99-api";
 
-const ps99api = new PetSimulator99API()
-await ps99api.getClan('CAT');
+const ps99api = new PetSimulator99API();
+await ps99api.getClan("CAT");
 ```
 
 ## Notes
@@ -21,6 +21,5 @@ await ps99api.getClan('CAT');
 
 ## Links
 
-
-* [ps99-public-api-docs](https://github.com/BIG-Games-LLC/ps99-public-api-docs)
-* [Pet Simulator Public API](https://docs.biggamesapi.io/)
+- [ps99-public-api-docs](https://github.com/BIG-Games-LLC/ps99-public-api-docs)
+- [Pet Simulator Public API](https://docs.biggamesapi.io/)

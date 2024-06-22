@@ -1,53 +1,55 @@
-import React, { useEffect, useState } from 'react';
-import { PetSimulator99API } from 'ps99-api';
+import React, { useEffect, useState } from "react";
+import { PetSimulator99API } from "ps99-api";
 
-import AchievementsComponent from './components/AchievementsComponent';
-import BoostsComponent from './components/BoostsComponent';
-import BoothsComponent from './components/BoothsComponent';
-import BoxesComponent from './components/BoxesComponent';
-import BuffsComponent from './components/BuffsComponent';
-import CharmsComponent from './components/CharmsComponent';
-import CurrencyComponent from './components/CurrencyComponent';
-import EggsComponent from './components/EggsComponent';
-import EnchantsComponent from './components/EnchantsComponent';
-import FishingRodsComponent from './components/FishingRodsComponent';
-import FruitsComponent from './components/FruitsComponent';
-import GuildBattlesComponent from './components/GuildBattlesComponent';
-import HoverboardsComponent from './components/HoverboardsComponent';
-import LootboxesComponent from './components/LootboxesComponent';
-import MasteryComponent from './components/MasteryComponent';
-import MerchantsComponent from './components/MerchantsComponent';
-import MiscItemsComponent from './components/MiscItemsComponent';
-import PetsComponent from './components/PetsComponent';
-import PotionsComponent from './components/PotionsComponent';
-import RandomEventsComponent from './components/RandomEventsComponent';
-import RanksComponent from './components/RanksComponent';
-import RarityComponent from './components/RarityComponent';
-import RebirthsComponent from './components/RebirthsComponent';
-import SecretRoomsComponent from './components/SecretRoomsComponent';
-import SeedsComponent from './components/SeedsComponent';
-import ShovelsComponent from './components/ShovelsComponent';
-import SprinklersComponent from './components/SprinklersComponent';
-import UltimatesComponent from './components/UltimatesComponent';
-import UpgradesComponent from './components/UpgradesComponent';
-import WateringCansComponent from './components/WateringCansComponent';
-import WorldsComponent from './components/WorldsComponent';
-import ZoneFlagsComponent from './components/ZoneFlagsComponent';
-import ZonesComponent from './components/ZonesComponent';
+import AchievementsComponent from "./components/AchievementsComponent";
+import BoostsComponent from "./components/BoostsComponent";
+import BoothsComponent from "./components/BoothsComponent";
+import BoxesComponent from "./components/BoxesComponent";
+import BuffsComponent from "./components/BuffsComponent";
+import CharmsComponent from "./components/CharmsComponent";
+import CurrencyComponent from "./components/CurrencyComponent";
+import EggsComponent from "./components/EggsComponent";
+import EnchantsComponent from "./components/EnchantsComponent";
+import FishingRodsComponent from "./components/FishingRodsComponent";
+import FruitsComponent from "./components/FruitsComponent";
+import GuildBattlesComponent from "./components/GuildBattlesComponent";
+import HoverboardsComponent from "./components/HoverboardsComponent";
+import LootboxesComponent from "./components/LootboxesComponent";
+import MasteryComponent from "./components/MasteryComponent";
+import MerchantsComponent from "./components/MerchantsComponent";
+import MiscItemsComponent from "./components/MiscItemsComponent";
+import PetsComponent from "./components/PetsComponent";
+import PotionsComponent from "./components/PotionsComponent";
+import RandomEventsComponent from "./components/RandomEventsComponent";
+import RanksComponent from "./components/RanksComponent";
+import RarityComponent from "./components/RarityComponent";
+import RebirthsComponent from "./components/RebirthsComponent";
+import SecretRoomsComponent from "./components/SecretRoomsComponent";
+import SeedsComponent from "./components/SeedsComponent";
+import ShovelsComponent from "./components/ShovelsComponent";
+import SprinklersComponent from "./components/SprinklersComponent";
+import UltimatesComponent from "./components/UltimatesComponent";
+import UpgradesComponent from "./components/UpgradesComponent";
+import WateringCansComponent from "./components/WateringCansComponent";
+import WorldsComponent from "./components/WorldsComponent";
+import ZoneFlagsComponent from "./components/ZoneFlagsComponent";
+import ZonesComponent from "./components/ZonesComponent";
 
 const App: React.FC = () => {
   const [collections, setCollections] = useState([]);
-  const [selectedCollection, setSelectedCollection] = useState<string | null>(null);
+  const [selectedCollection, setSelectedCollection] = useState<string | null>(
+    null,
+  );
 
   useEffect(() => {
     const fetchCollections = async () => {
       const api = new PetSimulator99API();
       const response = await api.getCollections();
-      console.log('Fetched collections:', response); // Add this line
-      if (response.status === 'ok') {
+      console.log("Fetched collections:", response); // Add this line
+      if (response.status === "ok") {
         setCollections(response.data);
       } else {
-        console.error('Failed to fetch collections', response); // Add this line
+        console.error("Failed to fetch collections", response); // Add this line
       }
     };
     fetchCollections();
@@ -138,9 +140,7 @@ const App: React.FC = () => {
           ))}
         </ul>
       </nav>
-      <div>
-        {renderComponent()}
-      </div>
+      <div>{renderComponent()}</div>
     </div>
   );
 };

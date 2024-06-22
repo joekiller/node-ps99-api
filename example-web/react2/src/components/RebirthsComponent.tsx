@@ -1,5 +1,5 @@
-import React, { useEffect, useState } from 'react';
-import {PetSimulator99API, RebirthData} from 'ps99-api';
+import React, { useEffect, useState } from "react";
+import { PetSimulator99API, RebirthData } from "ps99-api";
 
 const RebirthsComponent: React.FC = () => {
   const [rebirths, setRebirths] = useState<RebirthData[]>([]);
@@ -8,7 +8,7 @@ const RebirthsComponent: React.FC = () => {
     const fetchRebirths = async () => {
       const api = new PetSimulator99API();
       const response = await api.getCollection("Rebirths");
-      if (response.status === 'ok') {
+      if (response.status === "ok") {
         setRebirths(response.data);
       }
     };

@@ -1,5 +1,5 @@
-import React, { useEffect, useState } from 'react';
-import {PetSimulator99API, WorldData} from 'ps99-api';
+import React, { useEffect, useState } from "react";
+import { PetSimulator99API, WorldData } from "ps99-api";
 
 const WorldsComponent: React.FC = () => {
   const [worlds, setWorlds] = useState<WorldData[]>([]);
@@ -8,7 +8,7 @@ const WorldsComponent: React.FC = () => {
     const fetchWorlds = async () => {
       const api = new PetSimulator99API();
       const response = await api.getCollection("Worlds");
-      if (response.status === 'ok') {
+      if (response.status === "ok") {
         setWorlds(response.data);
       }
     };

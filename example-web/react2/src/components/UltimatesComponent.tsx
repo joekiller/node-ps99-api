@@ -1,5 +1,5 @@
-import React, { useEffect, useState } from 'react';
-import {PetSimulator99API, UltimateData} from 'ps99-api';
+import React, { useEffect, useState } from "react";
+import { PetSimulator99API, UltimateData } from "ps99-api";
 import ImageComponent from "./ImageComponent";
 
 const UltimatesComponent: React.FC = () => {
@@ -9,7 +9,7 @@ const UltimatesComponent: React.FC = () => {
     const fetchUltimates = async () => {
       const api = new PetSimulator99API();
       const response = await api.getCollection("Ultimates");
-      if (response.status === 'ok') {
+      if (response.status === "ok") {
         setUltimates(response.data);
       }
     };
@@ -22,7 +22,10 @@ const UltimatesComponent: React.FC = () => {
       <ul>
         {ultimates.map((ultimate, index) => (
           <li key={index}>
-            <ImageComponent src={ultimate.configData.Icon} alt={ultimate.configData.DisplayName} />
+            <ImageComponent
+              src={ultimate.configData.Icon}
+              alt={ultimate.configData.DisplayName}
+            />
             <span>{ultimate.configData.DisplayName}</span>
             <span>Max Tier: {ultimate.configData.MaxTier}</span>
             <span>Cooldown: {ultimate.configData.Cooldown}</span>

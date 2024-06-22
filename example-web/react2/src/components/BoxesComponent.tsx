@@ -1,5 +1,5 @@
-import React, { useEffect, useState } from 'react';
-import {BoxData, PetSimulator99API} from 'ps99-api';
+import React, { useEffect, useState } from "react";
+import { BoxData, PetSimulator99API } from "ps99-api";
 import ImageComponent from "./ImageComponent";
 
 const BoxesComponent: React.FC = () => {
@@ -9,7 +9,7 @@ const BoxesComponent: React.FC = () => {
     const fetchBoxes = async () => {
       const api = new PetSimulator99API();
       const response = await api.getCollection("Boxes");
-      if (response.status === 'ok') {
+      if (response.status === "ok") {
         setBoxes(response.data);
       }
     };
@@ -22,7 +22,10 @@ const BoxesComponent: React.FC = () => {
       <ul>
         {boxes.map((box, index) => (
           <li key={index}>
-            <ImageComponent src={box.configData.Icons[index].Icon} alt={box.configData.DisplayName} />
+            <ImageComponent
+              src={box.configData.Icons[index].Icon}
+              alt={box.configData.DisplayName}
+            />
             <span>{box.configData.DisplayName}</span>
             <span>{box.configData.Desc}</span>
           </li>

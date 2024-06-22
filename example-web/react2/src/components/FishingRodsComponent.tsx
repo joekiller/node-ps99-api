@@ -1,5 +1,5 @@
-import React, { useEffect, useState } from 'react';
-import {FishingRodData, PetSimulator99API} from 'ps99-api';
+import React, { useEffect, useState } from "react";
+import { FishingRodData, PetSimulator99API } from "ps99-api";
 import ImageComponent from "./ImageComponent";
 
 const FishingRodsComponent: React.FC = () => {
@@ -9,7 +9,7 @@ const FishingRodsComponent: React.FC = () => {
     const fetchFishingRods = async () => {
       const api = new PetSimulator99API();
       const response = await api.getCollection("FishingRods");
-      if (response.status === 'ok') {
+      if (response.status === "ok") {
         setFishingRods(response.data);
       }
     };
@@ -22,7 +22,10 @@ const FishingRodsComponent: React.FC = () => {
       <ul>
         {fishingRods.map((rod, index) => (
           <li key={index}>
-            <ImageComponent src={rod.configData.Icon} alt={rod.configData.DisplayName} />
+            <ImageComponent
+              src={rod.configData.Icon}
+              alt={rod.configData.DisplayName}
+            />
             <span>{rod.configData.DisplayName}</span>
             <span>Fishing Chance: {rod.configData.FishingChance}</span>
           </li>

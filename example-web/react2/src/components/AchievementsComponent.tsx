@@ -1,5 +1,5 @@
-import React, { useEffect, useState } from 'react';
-import {AchievementData, PetSimulator99API} from 'ps99-api';
+import React, { useEffect, useState } from "react";
+import { AchievementData, PetSimulator99API } from "ps99-api";
 import ImageComponent from "./ImageComponent";
 
 const AchievementsComponent: React.FC = () => {
@@ -9,7 +9,7 @@ const AchievementsComponent: React.FC = () => {
     const fetchAchievements = async () => {
       const api = new PetSimulator99API();
       const response = await api.getCollection("Achievements");
-      if (response.status === 'ok') {
+      if (response.status === "ok") {
         setAchievements(response.data);
       }
     };
@@ -22,7 +22,10 @@ const AchievementsComponent: React.FC = () => {
       <ul>
         {achievements.map((achievement, index) => (
           <li key={index}>
-            <ImageComponent src={achievement.configData.Icon} alt={achievement.configData.Name} />
+            <ImageComponent
+              src={achievement.configData.Icon}
+              alt={achievement.configData.Name}
+            />
             <span>{achievement.configData.Name}</span>
           </li>
         ))}

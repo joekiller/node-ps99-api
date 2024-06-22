@@ -1,5 +1,5 @@
-import React, { useEffect, useState } from 'react';
-import {PetSimulator99API, RankData} from 'ps99-api';
+import React, { useEffect, useState } from "react";
+import { PetSimulator99API, RankData } from "ps99-api";
 
 const RanksComponent: React.FC = () => {
   const [ranks, setRanks] = useState<RankData[]>([]);
@@ -8,7 +8,7 @@ const RanksComponent: React.FC = () => {
     const fetchRanks = async () => {
       const api = new PetSimulator99API();
       const response = await api.getCollection("Ranks");
-      if (response.status === 'ok') {
+      if (response.status === "ok") {
         setRanks(response.data);
       }
     };
@@ -23,7 +23,9 @@ const RanksComponent: React.FC = () => {
           <li key={index}>
             <span>{rank.configData.Title}</span>
             <span>Rank Number: {rank.configData.RankNumber}</span>
-            <span>Max Enchants Equipped: {rank.configData.MaxEnchantsEquipped}</span>
+            <span>
+              Max Enchants Equipped: {rank.configData.MaxEnchantsEquipped}
+            </span>
           </li>
         ))}
       </ul>
