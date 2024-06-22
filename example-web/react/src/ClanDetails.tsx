@@ -15,7 +15,9 @@ const ClanDetails: React.FC<ClanDetailsProps> = ({ clanName }) => {
       const api = new PetSimulator99API();
       try {
         const response = await api.getClan(clanName);
-        setClanData(response.data);
+        if (response.status === 'ok') {
+          setClanData(response.data);
+        }
       } catch (error) {
         console.error('Error fetching clan data:', error);
       }
