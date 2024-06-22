@@ -1,9 +1,11 @@
 import React, { useEffect, useState } from 'react';
 import { MiscItemData, PetSimulator99API } from 'ps99-api';
 import ImageComponent from './ImageComponent';
+import ErrorComponent from './ErrorComponent';
 
 const MiscItemsComponent: React.FC = () => {
   const [miscItems, setMiscItems] = useState<MiscItemData[]>([]);
+  const [error, setError] = useState<string | null>(null);
 
   useEffect(() => {
     const fetchMiscItems = async () => {
@@ -11,10 +13,16 @@ const MiscItemsComponent: React.FC = () => {
       const response = await api.getCollection("MiscItems");
       if (response.status === 'ok') {
         setMiscItems(response.data);
+      } else {
+        setError(response.error.message);
       }
     };
     fetchMiscItems();
   }, []);
+
+  if (error) {
+    return <ErrorComponent message={error} />;
+  }
 
   return (
     <div>
