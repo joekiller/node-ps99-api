@@ -1537,7 +1537,4 @@ export type CollectionData =
 
 export type Collection = CollectionData['collection']
 
-export type GetCollectionResponse<C extends Collection> = {
-  data: Extract<CollectionData, {collection: C}>[]
-  status: string
-}
+export type GetCollectionResponse<C extends Collection> = Extract<CollectionData, {collection: C}>[]

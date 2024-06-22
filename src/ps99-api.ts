@@ -1,6 +1,5 @@
 import { ApiRequestParams, RequestClient } from "./request-client/common";
 import { getAxiosRequest } from "./request-client/axios";
-import { CollectionsResponseBody } from "./responses/collections";
 import {Collection, GetCollectionResponse} from "./responses/collection";
 import { ClanResponseBody } from "./responses/clan";
 import { ClansResponseBody } from "./responses/clans";
@@ -12,6 +11,9 @@ import { ActiveClanBattleResponseBody } from "./responses/activeClanBattle";
 export type PetSimulator99APIOptions = {
   requestClient?: RequestClient;
 };
+
+export type ApiResponseBody<T> = { status: string; data: T };
+
 export class PetSimulator99API {
   public requestClient: RequestClient;
 
@@ -49,11 +51,11 @@ export class PetSimulator99API {
   }
 
   getCollections() {
-    return this.request<CollectionsResponseBody>("/api/collections");
+    return this.request<ApiResponseBody<Collection>>("/api/collections");
   }
 
   getCollection<C extends Collection>(collection: C) {
-    return this.request<GetCollectionResponse<C>>(
+    return this.request<ApiResponseBody<GetCollectionResponse<C>>>(
       `/api/collection/${collection}`,
     );
   }
@@ -72,15 +74,15 @@ export class PetSimulator99API {
       sort: sort || "Points",
       sortOrder: sortOrder || "desc",
     };
-    return this.request<ClansResponseBody>("/api/clans", { params });
+    return this.request<ApiResponseBody<ClansResponseBody>>("/api/clans", { params });
   }
 
   getClan(name: string) {
-    return this.request<ClanResponseBody>(`/api/clan/${name}`);
+    return this.request<ApiResponseBody<ClanResponseBody>>(`/api/clan/${name}`);
   }
 
   getExists() {
-    return this.request<ExistsResponseBody>(`/api/exists`);
+    return this.request<ApiResponseBody<ExistsResponseBody>>(`/api/exists`);
   }
 
   getRAP() {
@@ -88,14 +90,15 @@ export class PetSimulator99API {
   }
 
   getActiveClanBattle() {
-    return this.request<ActiveClanBattleResponseBody>(`/api/activeClanBattle`);
+    return this.request<ApiResponseBody<ActiveClanBattleResponseBody>>(`/api/activeClanBattle`);
   }
 
-  getImage(rbxassetid: string) {
+  /** resolve rbxassetid:// references */
+  getImage(rbxassetid: string): Promise<Blob> {
     if (rbxassetid.startsWith("rbxassetid://")) {
       rbxassetid = rbxassetid.slice(13);
     }
-    return this.request<Blob>(`/api/image/${rbxassetid}`, {
+    return this.request<Blob>(`/image/${rbxassetid}`, {
       responseType: "arraybuffer",
       responseEncoding: "BINARY",
     });

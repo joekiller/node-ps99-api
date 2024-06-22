@@ -8,6 +8,7 @@ export type ClanResponseBody = {
   DiamondContributions: DiamondContributions
   GoodMedals: number
   GuildLevel: number
+  /** use {@link PetSimulator99API.getImage} to get an image blob **/
   Icon: string
   LastKickTimestamp: number
   MemberCapacity: number

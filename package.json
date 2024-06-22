@@ -10,7 +10,9 @@
     "test": "npx jest",
     "build": "npx tsc",
     "semantic-release": "npx semantic-release",
-    "format": "npx prettier --write \"src/**/*.ts\""
+    "format": "npx prettier --write \"src/**/*.ts\"",
+    "esbuild": "npx esbuild dist/index.js --bundle --outfile=dist/index-bundle.js",
+    "build:types": "npx dets src/index.ts --files src/**/*.ts --out dist/index.d.ts"
   },
   "keywords": [
     "pet simulator 99"
@@ -22,6 +24,8 @@
     "@types/jest": "^29.5.12",
     "@types/node": "^20.14.2",
     "cz-conventional-changelog": "^3.3.0",
+    "dets": "^0.16.0",
+    "esbuild": "0.21.5",
     "jest": "^29.7.0",
     "prettier": "^3.3.2",
     "semantic-release": "^24.0.0",
