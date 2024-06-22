@@ -12,7 +12,9 @@ export type PetSimulator99APIOptions = {
   requestClient?: RequestClient;
 };
 
-export type ApiResponseBody<T> = { status: 'ok', data: T } | { status: 'error', error: {message: string, ignore: boolean}};
+export type ApiResponseBody<T> =
+  | { status: "ok"; data: T }
+  | { status: "error"; error: { message: string; ignore: boolean } };
 
 export class PetSimulator99API {
   public requestClient: RequestClient;
