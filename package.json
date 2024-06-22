@@ -7,8 +7,10 @@
   "author": "joekiller",
   "license": "MIT",
   "scripts": {
-    "test": "npx jest",
-    "test:snapshot": "npx jest --updateSnapshot",
+    "test": "npx jest --testPathIgnorePatterns ps99-api-changes.ts",
+    "test:changing": "npx jest src/__tests__/ps99-api-changes.ts",
+    "test:snapshot": "npx jest --testPathIgnorePatterns ps99-api-changes.ts --updateSnapshot",
+    "test:snapshot-changing": "npx jest src/__tests__/ps99-api-changes.ts --updateSnapshot",
     "build": "npx tsc",
     "build:src": "esbuild src/index.ts --bundle --minify --sourcemap --outfile=dist/index.js",
     "semantic-release": "npx semantic-release",

@@ -1,0 +1,12 @@
+<component name="ProjectRunConfigurationManager">
+  <configuration default="false" name="test:snapshot-changing" type="JavaScriptTestRunnerJest">
+    <node-interpreter value="project" />
+    <jest-package value="$PROJECT_DIR$/node_modules/jest" />
+    <working-dir value="$PROJECT_DIR$" />
+    <jest-options value="--updateSnapshot" />
+    <envs />
+    <scope-kind value="TEST_FILE" />
+    <test-file value="$PROJECT_DIR$/src/__tests__/ps99-api-changes.ts" />
+    <method v="2" />
+  </configuration>
+</component>

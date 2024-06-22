@@ -4,7 +4,7 @@ import { PetSimulator99API } from "../ps99-api";
 /**
  * It's hard assert these snapshots so .skip em
  */
-describe.skip("Pet Simulator Public Live API Test - Changing Items", () => {
+describe("Pet Simulator Public Live API Test - Changing Items", () => {
   const api = new PetSimulator99API();
 
   test("Active Clan Battle", async () => {
