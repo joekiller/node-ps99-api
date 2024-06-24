@@ -1,5 +1,5 @@
 import React from "react";
-import { CollectionConfigData, MasteryConfigData } from "ps99-api";
+import { CollectionConfigData } from "ps99-api";
 import { GenericFetchComponent } from "./GenericFetchComponent";
 import ImageComponent from "./ImageComponent";
 
