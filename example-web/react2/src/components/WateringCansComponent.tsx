@@ -1,6 +1,7 @@
 import React from "react";
 import { CollectionConfigData } from "ps99-api";
 import { GenericFetchComponent } from "./GenericFetchComponent";
+import ImageComponent from "./ImageComponent";
 
 const WateringCanComponent: React.FC<{
   configData?: CollectionConfigData<"WateringCans">;
@@ -14,7 +15,7 @@ const WateringCanComponent: React.FC<{
           <h2>Watering Can</h2>
           <h3>{data.DisplayName}</h3>
           {data.Icon && (
-            <img src={data.Icon} alt={`${data.DisplayName} Icon`} />
+            <ImageComponent src={data.Icon} alt={`${data.DisplayName} Icon`} />
           )}
           <p>Associated Item ID: {data.AssociatedItemID}</p>
           <p>Plant Time Multiplier: {data.PlantTimeMultiplier}</p>

@@ -1,6 +1,7 @@
 import React from "react";
 import { CollectionConfigData } from "ps99-api";
 import { GenericFetchComponent } from "./GenericFetchComponent";
+import ImageComponent from "./ImageComponent";
 
 const ZoneFlagComponent: React.FC<{
   configData?: CollectionConfigData<"ZoneFlags">;
@@ -17,7 +18,7 @@ const ZoneFlagComponent: React.FC<{
           <p>Duration: {data.Duration} seconds</p>
           <p>Color: {data.Color}</p>
           <p>
-            Icon: <img src={data.Icon} alt={data.Name} />
+            Icon: <ImageComponent src={data.Icon} alt={data.Name} />
           </p>
           <h4>Rarity</h4>
           <p>Rarity: {data.Rarity.DisplayName}</p>

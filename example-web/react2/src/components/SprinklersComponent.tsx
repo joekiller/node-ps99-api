@@ -1,6 +1,7 @@
 import React from "react";
 import { CollectionConfigData } from "ps99-api";
 import { GenericFetchComponent } from "./GenericFetchComponent";
+import ImageComponent from "./ImageComponent";
 
 const SprinklerComponent: React.FC<{
   configData?: CollectionConfigData<"Sprinklers">;
@@ -18,7 +19,7 @@ const SprinklerComponent: React.FC<{
           <h3>Rarity</h3>
           <p>Rarity Number: {data.Rarity.RarityNumber}</p>
           <p>Display Name: {data.Rarity.DisplayName}</p>
-          <img src={data.Icon} alt={data.Name} />
+          <ImageComponent src={data.Icon} alt={data.Name} />
         </div>
       )}
     />

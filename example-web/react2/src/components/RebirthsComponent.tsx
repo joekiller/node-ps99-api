@@ -1,6 +1,7 @@
 import React from "react";
 import { CollectionConfigData, RebirthUnlock } from "ps99-api";
 import { GenericFetchComponent } from "./GenericFetchComponent";
+import ImageComponent from "./ImageComponent";
 
 const RebirthComponent: React.FC<{
   configData?: CollectionConfigData<"Rebirths">;
@@ -21,7 +22,7 @@ const RebirthComponent: React.FC<{
           <ul>
             {data.RebirthUnlocks.map((unlock: RebirthUnlock, index: number) => (
               <li key={index}>
-                <img src={unlock.Icon} alt={unlock.Title} />
+                <ImageComponent src={unlock.Icon} alt={unlock.Title} />
                 <strong>{unlock.GuiTitle || unlock.Title}</strong>:{" "}
                 {unlock.Desc}
               </li>

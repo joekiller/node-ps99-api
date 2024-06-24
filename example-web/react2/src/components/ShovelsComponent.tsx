@@ -1,6 +1,7 @@
 import React from "react";
 import { CollectionConfigData } from "ps99-api";
 import { GenericFetchComponent } from "./GenericFetchComponent";
+import ImageComponent from "./ImageComponent";
 
 const ShovelComponent: React.FC<{
   configData?: CollectionConfigData<"Shovels">;
@@ -17,7 +18,7 @@ const ShovelComponent: React.FC<{
           {data.MerchantSalePrice && (
             <p>Merchant Sale Price: {data.MerchantSalePrice}</p>
           )}
-          <img src={data.Icon} alt={data.DisplayName} />
+          <ImageComponent src={data.Icon} alt={data.DisplayName} />
         </div>
       )}
     />

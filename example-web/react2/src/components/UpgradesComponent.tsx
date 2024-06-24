@@ -1,6 +1,7 @@
 import React from "react";
 import { CollectionConfigData } from "ps99-api";
 import { GenericFetchComponent } from "./GenericFetchComponent";
+import ImageComponent from "./ImageComponent";
 
 const UpgradeComponent: React.FC<{
   configData?: CollectionConfigData<"Upgrades">;
@@ -12,7 +13,7 @@ const UpgradeComponent: React.FC<{
       render={(data) => (
         <div>
           <h2>Upgrade</h2>
-          {data.Icon && <img src={data.Icon} alt="Upgrade Icon" />}
+          {data.Icon && <ImageComponent src={data.Icon} alt="Upgrade Icon" />}
           <h3>Tier Powers</h3>
           <ul>
             {data.TierPowers.map((power, index) => (
@@ -42,7 +43,7 @@ const UpgradeComponent: React.FC<{
                 {currency.BagTiers.map((bagTier, bagIndex) => (
                   <li key={bagIndex}>
                     <p>Value: {bagTier.value}</p>
-                    <img
+                    <ImageComponent
                       src={bagTier.image}
                       alt={`Bag Tier ${bagTier.value}`}
                     />
@@ -57,8 +58,8 @@ const UpgradeComponent: React.FC<{
                     <p>Order: {tier.Order}</p>
                     <p>Value: {tier.value}</p>
                     {tier.isBottom && <p>Is Bottom</p>}
-                    <img src={tier.orbImage} alt="Orb" />
-                    <img src={tier.imageOutline} alt="Outline" />
+                    <ImageComponent src={tier.orbImage} alt="Orb" />
+                    <ImageComponent src={tier.imageOutline} alt="Outline" />
                   </li>
                 ))}
               </ul>

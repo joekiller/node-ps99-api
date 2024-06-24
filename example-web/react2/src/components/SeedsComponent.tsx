@@ -7,6 +7,7 @@ import {
   LootTableData,
 } from "ps99-api";
 import { GenericFetchComponent } from "./GenericFetchComponent";
+import ImageComponent from "./ImageComponent";
 
 const parseRawStackKey = (rawStackKey: RawStackKey): LootTableData => {
   try {
@@ -59,7 +60,7 @@ const SeedComponent: React.FC<{
             Rarity: {data.Rarity.DisplayName} (Rarity Number:{" "}
             {data.Rarity.RarityNumber})
           </p>
-          <img src={data.Icon} alt={data.DisplayName} />
+          <ImageComponent src={data.Icon} alt={data.DisplayName} />
           <div>
             <h3>Loot Table</h3>
             {renderLootTable(data.LootTable)}

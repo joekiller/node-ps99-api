@@ -1,6 +1,7 @@
 import React from "react";
 import { CollectionConfigData } from "ps99-api";
 import { GenericFetchComponent } from "./GenericFetchComponent";
+import ImageComponent from "./ImageComponent";
 
 const UltimateComponent: React.FC<{
   configData?: CollectionConfigData<"Ultimates">;
@@ -21,7 +22,7 @@ const UltimateComponent: React.FC<{
           <h3>Rarity</h3>
           <p>Rarity Number: {data.Rarity.RarityNumber}</p>
           <p>Display Name: {data.Rarity.DisplayName}</p>
-          <img src={data.Icon} alt={data.DisplayName} />
+          <ImageComponent src={data.Icon} alt={data.DisplayName} />
           <h3>Tiers</h3>
           <p>Tier to Level Mapping: {data.TierToLevel.join(", ")}</p>
           <p>Level to Tier Mapping: {data.LevelToTier.join(", ")}</p>
