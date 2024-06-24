@@ -1,37 +1,25 @@
-import React, { useEffect, useState } from "react";
-import { LootboxData, PetSimulator99API } from "ps99-api";
+import React from "react";
+import { CollectionConfigData } from "ps99-api";
+import { GenericFetchComponent } from "./GenericFetchComponent";
 import ImageComponent from "./ImageComponent";
 
-const LootboxesComponent: React.FC = () => {
-  const [lootboxes, setLootboxes] = useState<LootboxData[]>([]);
-
-  useEffect(() => {
-    const fetchLootboxes = async () => {
-      const api = new PetSimulator99API();
-      const response = await api.getCollection("Lootboxes");
-      if (response.status === "ok") {
-        setLootboxes(response.data);
-      }
-    };
-    fetchLootboxes();
-  }, []);
-
+const LootboxesComponent: React.FC<{
+  configData?: CollectionConfigData<"Lootboxes">;
+}> = ({ configData }) => {
   return (
-    <div>
-      <h2>Lootboxes</h2>
-      <ul>
-        {lootboxes.map((lootbox, index) => (
-          <li key={index}>
-            <ImageComponent
-              src={lootbox.configData.Icon}
-              alt={lootbox.configData.DisplayName}
-            />
-            <span>{lootbox.configData.DisplayName}</span>
-            <span>{lootbox.configData.Desc}</span>
-          </li>
-        ))}
-      </ul>
-    </div>
+    <GenericFetchComponent<CollectionConfigData<"Lootboxes">>
+      collectionName="Lootboxes"
+      configData={configData}
+      render={(data) => (
+        <div>
+          <h2>{data.DisplayName}</h2>
+          <ImageComponent src={data.Icon} alt={data.DisplayName} />
+          <p>Description: {data.Desc}</p>
+          <p>Rarity: {data.Rarity.DisplayName}</p>
+          <p>Rarity Number: {data.Rarity.RarityNumber}</p>
+        </div>
+      )}
+    />
   );
 };
 

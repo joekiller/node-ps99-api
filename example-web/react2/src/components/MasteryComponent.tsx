@@ -1,37 +1,55 @@
-import React, { useEffect, useState } from "react";
-import { MasteryData, PetSimulator99API } from "ps99-api";
+import React from "react";
+import { CollectionConfigData, MasteryConfigData } from "ps99-api";
+import { GenericFetchComponent } from "./GenericFetchComponent";
 import ImageComponent from "./ImageComponent";
 
-const MasteryComponent: React.FC = () => {
-  const [mastery, setMastery] = useState<MasteryData[]>([]);
-
-  useEffect(() => {
-    const fetchMastery = async () => {
-      const api = new PetSimulator99API();
-      const response = await api.getCollection("Mastery");
-      if (response.status === "ok") {
-        setMastery(response.data);
-      }
-    };
-    fetchMastery();
-  }, []);
+const MasteryComponent: React.FC<{
+  configData?: CollectionConfigData<"Mastery">;
+}> = ({ configData }) => {
+  const renderPerks = (perks: any) => {
+    return Object.entries(perks).map(
+      ([perkType, perkDetails]: [string, any]) => (
+        <div key={perkType}>
+          <h3>{perkType}</h3>
+          {perkDetails.map((detail: any, index: number) => (
+            <div key={index}>
+              <p>Level: {detail.Level}</p>
+              <p>Title: {detail.Title}</p>
+              <p>Description: {detail.Text}</p>
+              {detail.Power && <p>Power: {detail.Power}</p>}
+            </div>
+          ))}
+        </div>
+      ),
+    );
+  };
 
   return (
-    <div>
-      <h2>Mastery</h2>
-      <ul>
-        {mastery.map((item, index) => (
-          <li key={index}>
-            <ImageComponent
-              src={item.configData.Icon}
-              alt={item.configData.Name}
-            />
-            <span>{item.configData.Name}</span>
-            <span>{item.configData.Desc}</span>
-          </li>
-        ))}
-      </ul>
-    </div>
+    <GenericFetchComponent<CollectionConfigData<"Mastery">>
+      collectionName="Mastery"
+      configData={configData}
+      render={(data) => (
+        <div>
+          <h2>{data.Name}</h2>
+          <ImageComponent src={data.Icon} alt={data.Name} />
+          <p>Description: {data.Desc}</p>
+          {data.ToggleablePerks && (
+            <div>
+              <h3>Toggleable Perks</h3>
+              {Object.entries(data.ToggleablePerks).map(([perk, value]) => (
+                <p key={perk}>
+                  {perk}: {value ? "Enabled" : "Disabled"}
+                </p>
+              ))}
+            </div>
+          )}
+          <div>
+            <h3>Perks</h3>
+            {renderPerks(data.Perks)}
+          </div>
+        </div>
+      )}
+    />
   );
 };
 

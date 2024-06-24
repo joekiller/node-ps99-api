@@ -1,37 +1,41 @@
-import React, { useEffect, useState } from "react";
-import { FishingRodData, PetSimulator99API } from "ps99-api";
+import React from "react";
+import { CollectionConfigData } from "ps99-api";
+import { GenericFetchComponent } from "./GenericFetchComponent";
 import ImageComponent from "./ImageComponent";
 
-const FishingRodsComponent: React.FC = () => {
-  const [fishingRods, setFishingRods] = useState<FishingRodData[]>([]);
-
-  useEffect(() => {
-    const fetchFishingRods = async () => {
-      const api = new PetSimulator99API();
-      const response = await api.getCollection("FishingRods");
-      if (response.status === "ok") {
-        setFishingRods(response.data);
-      }
-    };
-    fetchFishingRods();
-  }, []);
-
+const FishingRodsComponent: React.FC<{
+  configData?: CollectionConfigData<"FishingRods">;
+}> = ({ configData }) => {
   return (
-    <div>
-      <h2>Fishing Rods</h2>
-      <ul>
-        {fishingRods.map((rod, index) => (
-          <li key={index}>
-            <ImageComponent
-              src={rod.configData.Icon}
-              alt={rod.configData.DisplayName}
-            />
-            <span>{rod.configData.DisplayName}</span>
-            <span>Fishing Chance: {rod.configData.FishingChance}</span>
-          </li>
-        ))}
-      </ul>
-    </div>
+    <GenericFetchComponent<CollectionConfigData<"FishingRods">>
+      collectionName="FishingRods"
+      configData={configData}
+      render={(data) => (
+        <div>
+          <h2>{data.DisplayName}</h2>
+          <ImageComponent src={data.Icon} alt={data.DisplayName} />
+          <p>Fishing Chance: {data.FishingChance}</p>
+          <p>Fishing Currency Multiplier: {data.FishingCurrencyMultiplier}</p>
+          <p>Minimum Fishing Time: {data.MinFishingTime} seconds</p>
+          <p>
+            Fishing Game Speed Multiplier: {data.FishingGameSpeedMultiplier}
+          </p>
+          <p>Bar Size: {data.BarSize}</p>
+          <p>Associated Item ID: {data.AssociatedItemID}</p>
+          {data.MerchantSalePrice && (
+            <p>Merchant Sale Price: {data.MerchantSalePrice}</p>
+          )}
+          <h3>Fishing Odds:</h3>
+          <ul>
+            {data.FishingOdds.map((odds, index) => (
+              <li key={index}>
+                {odds[0]}: {odds[1]}%
+              </li>
+            ))}
+          </ul>
+        </div>
+      )}
+    />
   );
 };
 

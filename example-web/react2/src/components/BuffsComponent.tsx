@@ -1,36 +1,24 @@
-import React, { useEffect, useState } from "react";
-import { BuffData, PetSimulator99API } from "ps99-api";
+import React from "react";
+import { CollectionConfigData } from "ps99-api";
+import { GenericFetchComponent } from "./GenericFetchComponent";
 
-const BuffsComponent: React.FC = () => {
-  const [buffs, setBuffs] = useState<BuffData[]>([]);
-
-  useEffect(() => {
-    const fetchBuffs = async () => {
-      const api = new PetSimulator99API();
-      const response = await api.getCollection("Buffs");
-      if (response.status === "ok") {
-        setBuffs(response.data);
-      }
-    };
-    fetchBuffs();
-  }, []);
-
+const BuffsComponent: React.FC<{
+  configData?: CollectionConfigData<"Buffs">;
+}> = ({ configData }) => {
   return (
-    <div>
-      <h2>Buffs</h2>
-      <ul>
-        {buffs.map((buff, index) => (
-          <li key={index}>
-            <span>{buff.configData.DisplayName}</span>
-            <span>Length: {buff.configData.Length}</span>
-            <span>
-              Associated Item Class: {buff.configData.AssociatedItemClass}
-            </span>
-            <span>Associated Item ID: {buff.configData.AssociatedItemID}</span>
-          </li>
-        ))}
-      </ul>
-    </div>
+    <GenericFetchComponent<CollectionConfigData<"Buffs">>
+      collectionName="Buffs"
+      configData={configData}
+      render={(data) => (
+        <div>
+          <h2>{data.DisplayName}</h2>
+          <p>Associated Item ID: {data.AssociatedItemID}</p>
+          <p>Associated Item Class: {data.AssociatedItemClass}</p>
+          <p>Length: {data.Length} seconds</p>
+          {data.IgnoreInstancePause && <p>Ignore Instance Pause: Yes</p>}
+        </div>
+      )}
+    />
   );
 };
 

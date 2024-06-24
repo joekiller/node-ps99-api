@@ -1,48 +1,45 @@
-import React, { useEffect, useState } from "react";
-import { EnchantmentData, PetSimulator99API } from "ps99-api";
+import React from "react";
+import { CollectionConfigData } from "ps99-api";
+import { GenericFetchComponent } from "./GenericFetchComponent";
 import ImageComponent from "./ImageComponent";
 
-const EnchantsComponent: React.FC = () => {
-  const [enchants, setEnchants] = useState<EnchantmentData[]>([]);
-
-  useEffect(() => {
-    const fetchEnchants = async () => {
-      const api = new PetSimulator99API();
-      const response = await api.getCollection("Enchants");
-      if (response.status === "ok") {
-        setEnchants(response.data);
-      }
-    };
-    fetchEnchants();
-  }, []);
-
+const EnchantsComponent: React.FC<{
+  configData?: CollectionConfigData<"Enchants">;
+}> = ({ configData }) => {
   return (
-    <div>
-      <h2>Enchants</h2>
-      <ul>
-        {enchants.map((enchant, index) => (
-          <li key={index}>
-            {enchant.configData.PageIcon && (
-              <ImageComponent
-                src={enchant.configData.PageIcon}
-                alt={`Enchant ${index + 1}`}
-              />
-            )}
-            <span>Base Tier: {enchant.configData.BaseTier}</span>
-            <span>Max Tier: {enchant.configData.MaxTier}</span>
-            {enchant.configData.Tiers.map((tier, tierIndex) => (
-              <div key={tierIndex}>
+    <GenericFetchComponent<CollectionConfigData<"Enchants">>
+      collectionName="Enchants"
+      configData={configData}
+      render={(data) => (
+        <div>
+          <h2>Enchantment</h2>
+          {data.PageIcon && (
+            <ImageComponent src={data.PageIcon} alt="Page Icon" />
+          )}
+          <p>Base Tier: {data.BaseTier}</p>
+          <p>Max Tier: {data.MaxTier}</p>
+          <p>Max Page: {data.MaxPage}</p>
+          {data.DiminishPowerThreshold && (
+            <p>Diminish Power Threshold: {data.DiminishPowerThreshold}</p>
+          )}
+          {data.EmpoweredBoost && <p>Empowered Boost: {data.EmpoweredBoost}</p>}
+          {data.ProductId && <p>Product ID: {data.ProductId}</p>}
+          <h3>Tiers:</h3>
+          <ul>
+            {data.Tiers.map((tier, index) => (
+              <li key={index}>
                 <ImageComponent src={tier.Icon} alt={tier.DisplayName} />
-                <span>Tier {tierIndex + 1}:</span>
-                <span>{tier.DisplayName}</span>
-                <span>Power: {tier.Power}</span>
-                <span>Rarity: {tier.Rarity.DisplayName}</span>
-              </div>
+                <p>Display Name: {tier.DisplayName}</p>
+                <p>Description: {tier.Desc}</p>
+                <p>Power: {tier.Power}</p>
+                <p>Rarity: {tier.Rarity.DisplayName}</p>
+                <p>Rarity Number: {tier.Rarity.RarityNumber}</p>
+              </li>
             ))}
-          </li>
-        ))}
-      </ul>
-    </div>
+          </ul>
+        </div>
+      )}
+    />
   );
 };
 

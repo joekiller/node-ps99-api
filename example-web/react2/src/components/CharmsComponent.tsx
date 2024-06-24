@@ -1,45 +1,40 @@
-import React, { useEffect, useState } from "react";
-import { CharmData, PetSimulator99API } from "ps99-api";
+import React from "react";
+import { CollectionConfigData } from "ps99-api";
+import { GenericFetchComponent } from "./GenericFetchComponent";
 import ImageComponent from "./ImageComponent";
 
-const CharmsComponent: React.FC = () => {
-  const [charms, setCharms] = useState<CharmData[]>([]);
-
-  useEffect(() => {
-    const fetchCharms = async () => {
-      const api = new PetSimulator99API();
-      const response = await api.getCollection("Charms");
-      if (response.status === "ok") {
-        setCharms(response.data);
-      }
-    };
-    fetchCharms();
-  }, []);
-
+const CharmsComponent: React.FC<{
+  configData?: CollectionConfigData<"Charms">;
+}> = ({ configData }) => {
   return (
-    <div>
-      <h2>Charms</h2>
-      <ul>
-        {charms.map((charm, index) => (
-          <li key={index}>
-            <ImageComponent
-              src={charm.configData.Icon}
-              alt={`Charm ${index + 1}`}
-            />
-            <span>Base Tier: {charm.configData.BaseTier}</span>
-            <span>Max Tier: {charm.configData.MaxTier}</span>
-            {charm.configData.Tiers.map((tier, tierIndex) => (
-              <div key={tierIndex}>
-                <span>Tier {tierIndex + 1}:</span>
-                <span>{tier.DisplayName}</span>
-                <span>Power: {tier.Power}</span>
-                <span>Rarity: {tier.Rarity.DisplayName}</span>
-              </div>
+    <GenericFetchComponent<CollectionConfigData<"Charms">>
+      collectionName="Charms"
+      configData={configData}
+      render={(data) => (
+        <div>
+          <h2>{data.Tiers[0].DisplayName}</h2>
+          <ImageComponent src={data.Icon} alt={data.Tiers[0].DisplayName} />
+          <p>Base Tier: {data.BaseTier}</p>
+          <p>Max Tier: {data.MaxTier}</p>
+          {data.DiminishPowerThreshold && (
+            <p>Diminish Power Threshold: {data.DiminishPowerThreshold}</p>
+          )}
+          {data.Unique && <p>Unique: Yes</p>}
+          <h3>Tiers:</h3>
+          <ul>
+            {data.Tiers.map((tier, index) => (
+              <li key={index}>
+                <p>{tier.DisplayName}</p>
+                <p>Description: {tier.Desc}</p>
+                <p>Power: {tier.Power}</p>
+                <p>Rarity: {tier.Rarity.DisplayName}</p>
+                <p>Rarity Number: {tier.Rarity.RarityNumber}</p>
+              </li>
             ))}
-          </li>
-        ))}
-      </ul>
-    </div>
+          </ul>
+        </div>
+      )}
+    />
   );
 };
 

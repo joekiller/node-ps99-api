@@ -1,34 +1,36 @@
-import React, { useEffect, useState } from "react";
-import { PetSimulator99API, WorldData } from "ps99-api";
+import React from "react";
+import { CollectionConfigData } from "ps99-api";
+import { GenericFetchComponent } from "./GenericFetchComponent";
 
-const WorldsComponent: React.FC = () => {
-  const [worlds, setWorlds] = useState<WorldData[]>([]);
-
-  useEffect(() => {
-    const fetchWorlds = async () => {
-      const api = new PetSimulator99API();
-      const response = await api.getCollection("Worlds");
-      if (response.status === "ok") {
-        setWorlds(response.data);
-      }
-    };
-    fetchWorlds();
-  }, []);
-
+const WorldComponent: React.FC<{
+  configData?: CollectionConfigData<"Worlds">;
+}> = ({ configData }) => {
   return (
-    <div>
-      <h2>Worlds</h2>
-      <ul>
-        {worlds.map((world, index) => (
-          <li key={index}>
-            <span>{world.configData.MapName}</span>
-            <span>World Number: {world.configData.WorldNumber}</span>
-            <span>Place ID: {world.configData.PlaceId}</span>
-          </li>
-        ))}
-      </ul>
-    </div>
+    <GenericFetchComponent<CollectionConfigData<"Worlds">>
+      collectionName="Worlds"
+      configData={configData}
+      render={(data) => (
+        <div>
+          <h2>World</h2>
+          <h3>{data.MapName}</h3>
+          <p>Spawn ID: {data.SpawnId}</p>
+          <p>World Currency: {data.WorldCurrency}</p>
+          <p>Place ID: {data.PlaceId}</p>
+          <p>World Number: {data.WorldNumber}</p>
+          {data.AdditionalMusic && data.AdditionalMusic.length > 0 && (
+            <div>
+              <h4>Additional Music</h4>
+              <ul>
+                {data.AdditionalMusic.map((music, index) => (
+                  <li key={index}>{music}</li>
+                ))}
+              </ul>
+            </div>
+          )}
+        </div>
+      )}
+    />
   );
 };
 
-export default WorldsComponent;
+export default WorldComponent;

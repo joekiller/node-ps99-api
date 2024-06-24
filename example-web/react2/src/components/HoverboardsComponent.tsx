@@ -1,37 +1,46 @@
-import React, { useEffect, useState } from "react";
-import { HoverboardData, PetSimulator99API } from "ps99-api";
+import React from "react";
+import { CollectionConfigData } from "ps99-api";
+import { GenericFetchComponent } from "./GenericFetchComponent";
 import ImageComponent from "./ImageComponent";
 
-const HoverboardsComponent: React.FC = () => {
-  const [hoverboards, setHoverboards] = useState<HoverboardData[]>([]);
-
-  useEffect(() => {
-    const fetchHoverboards = async () => {
-      const api = new PetSimulator99API();
-      const response = await api.getCollection("Hoverboards");
-      if (response.status === "ok") {
-        setHoverboards(response.data);
-      }
-    };
-    fetchHoverboards();
-  }, []);
-
+const HoverboardsComponent: React.FC<{
+  configData?: CollectionConfigData<"Hoverboards">;
+}> = ({ configData }) => {
   return (
-    <div>
-      <h2>Hoverboards</h2>
-      <ul>
-        {hoverboards.map((hoverboard, index) => (
-          <li key={index}>
-            <ImageComponent
-              src={hoverboard.configData.Icon}
-              alt={hoverboard.configData.DisplayName}
-            />
-            <span>{hoverboard.configData.DisplayName}</span>
-            <span>{hoverboard.configData.Desc}</span>
-          </li>
-        ))}
-      </ul>
-    </div>
+    <GenericFetchComponent<CollectionConfigData<"Hoverboards">>
+      collectionName="Hoverboards"
+      configData={configData}
+      render={(data) => (
+        <div>
+          <h2>{data.DisplayName}</h2>
+          <ImageComponent src={data.Icon} alt={data.DisplayName} />
+          <p>Description: {data.Desc}</p>
+          <p>Rarity: {data.Rarity.DisplayName}</p>
+          <p>Rarity Number: {data.Rarity.RarityNumber}</p>
+          {data.Tradable && <p>Tradable: Yes</p>}
+          {data.CanBeShiny && <p>Can Be Shiny: Yes</p>}
+          {data.HoverHeight && <p>Hover Height: {data.HoverHeight}</p>}
+          {data.RotationLimit && <p>Rotation Limit: {data.RotationLimit}</p>}
+          {data.ProductId && <p>Product ID: {data.ProductId}</p>}
+          {data.Animation && <p>Animation: {data.Animation}</p>}
+          {data.BobRate && <p>Bob Rate: {data.BobRate}</p>}
+          {data.PitchScale && <p>Pitch Scale: {data.PitchScale}</p>}
+          {data.MaxRoll && <p>Max Roll: {data.MaxRoll}</p>}
+          {data.DefaultJumpSpeedBoost && (
+            <p>Default Jump Speed Boost: {data.DefaultJumpSpeedBoost}</p>
+          )}
+          {data.IdleVolumeSpeedScale && (
+            <p>Idle Volume Speed Scale: {data.IdleVolumeSpeedScale}</p>
+          )}
+          {data.IdlePitchScale && (
+            <p>Idle Pitch Scale: {data.IdlePitchScale}</p>
+          )}
+          {data.BlockcastScale && <p>Blockcast Scale: {data.BlockcastScale}</p>}
+          {data.SkateMode && <p>Skate Mode: Yes</p>}
+          {data.IdleVolume && <p>Idle Volume: {data.IdleVolume}</p>}
+        </div>
+      )}
+    />
   );
 };
 

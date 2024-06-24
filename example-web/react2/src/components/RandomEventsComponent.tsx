@@ -1,38 +1,45 @@
-import React, { useEffect, useState } from "react";
-import { PetSimulator99API, RandomEventData } from "ps99-api";
+import React from "react";
+import { CollectionConfigData } from "ps99-api";
+import { GenericFetchComponent } from "./GenericFetchComponent";
 import ImageComponent from "./ImageComponent";
 
-const RandomEventsComponent: React.FC = () => {
-  const [randomEvents, setRandomEvents] = useState<RandomEventData[]>([]);
-
-  useEffect(() => {
-    const fetchRandomEvents = async () => {
-      const api = new PetSimulator99API();
-      const response = await api.getCollection("RandomEvents");
-      if (response.status === "ok") {
-        setRandomEvents(response.data);
-      }
-    };
-    fetchRandomEvents();
-  }, []);
-
+const RandomEventsComponent: React.FC<{
+  configData?: CollectionConfigData<"RandomEvents">;
+}> = ({ configData }) => {
   return (
-    <div>
-      <h2>Random Events</h2>
-      <ul>
-        {randomEvents.map((event, index) => (
-          <li key={index}>
-            <ImageComponent
-              src={event.configData.Icon}
-              alt={event.configData.Name}
-            />
-            <span>{event.configData.Name}</span>
-            <span>Duration: {event.configData.Duration}</span>
-            <span>Chance: {event.configData.Chance}</span>
-          </li>
-        ))}
-      </ul>
-    </div>
+    <GenericFetchComponent<CollectionConfigData<"RandomEvents">>
+      collectionName="RandomEvents"
+      configData={configData}
+      render={(data) => (
+        <div>
+          <h2>Random Event: {data.Name}</h2>
+          <div>
+            <ImageComponent src={data.Icon} alt={data.Name} />
+            <p>Color: {data.Color}</p>
+            <p>Duration: {data.Duration} seconds</p>
+            <p>Breaking Requirement: {data.BreakingRequirement}</p>
+            <p>Playtime Requirement: {data.PlaytimeRequirement} minutes</p>
+            <p>Chance: {data.Chance}</p>
+            <p>Allow in Zones: {data.AllowInZones ? "Yes" : "No"}</p>
+            <p>Allow in Instances: {data.AllowInInstances ? "Yes" : "No"}</p>
+            <p>Allow Multiple: {data.AllowMultiple ? "Yes" : "No"}</p>
+            {data.MinimumZone && <p>Minimum Zone: {data.MinimumZone}</p>}
+          </div>
+          <div>
+            <h3>Area Whitelist:</h3>
+            <ul>
+              {Object.entries(data.AreaWhitelist).map(
+                ([area, allowed], index) => (
+                  <li key={index}>
+                    {area.replace("_", " ")}: {allowed ? "Yes" : "No"}
+                  </li>
+                ),
+              )}
+            </ul>
+          </div>
+        </div>
+      )}
+    />
   );
 };
 

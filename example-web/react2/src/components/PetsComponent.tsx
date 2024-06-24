@@ -1,42 +1,61 @@
-import React, { useEffect, useState } from "react";
-import { PetData, PetSimulator99API } from "ps99-api";
+import React from "react";
+import { CollectionConfigData } from "ps99-api";
+import { GenericFetchComponent } from "./GenericFetchComponent";
 import ImageComponent from "./ImageComponent";
 
-const PetsComponent: React.FC = () => {
-  const [pets, setPets] = useState<PetData[]>([]);
-
-  useEffect(() => {
-    const fetchPets = async () => {
-      const api = new PetSimulator99API();
-      const response = await api.getCollection("Pets");
-      if (response.status === "ok") {
-        setPets(response.data);
-      }
-    };
-    fetchPets();
-  }, []);
-
+const PetsComponent: React.FC<{
+  configData?: CollectionConfigData<"Pets">;
+}> = ({ configData }) => {
   return (
-    <div>
-      <h2>Pets</h2>
-      <ul>
-        {pets.map((pet, index) => (
-          <li key={index}>
+    <GenericFetchComponent<CollectionConfigData<"Pets">>
+      collectionName="Pets"
+      configData={configData}
+      render={(data) => (
+        <div>
+          <h2>{data.name}</h2>
+          <ImageComponent src={data.thumbnail} alt={data.name} />
+          {data.goldenThumbnail && (
             <ImageComponent
-              src={pet.configData.thumbnail}
-              alt={pet.configData.name}
+              src={data.goldenThumbnail}
+              alt={`${data.name} (Golden)`}
             />
-            <span>{pet.configData.name}</span>
-            {pet.configData.goldenThumbnail && (
-              <ImageComponent
-                src={pet.configData.goldenThumbnail}
-                alt={`Golden ${pet.configData.name}`}
-              />
-            )}
-          </li>
-        ))}
-      </ul>
-    </div>
+          )}
+          <p>From World Number: {data.fromWorldNumber}</p>
+          <p>From Zone Number: {data.fromZoneNumber}</p>
+          {data.indexObtainable && <p>Index Obtainable: Yes</p>}
+          {data.huge && <p>Huge: Yes</p>}
+          {data.fly && <p>Can Fly: Yes</p>}
+          {data.tradable && <p>Tradable: Yes</p>}
+          {data.secret && <p>Secret: Yes</p>}
+          {data.hidden && <p>Hidden: Yes</p>}
+          {data.cachedPower && (
+            <div>
+              <h3>Cached Power:</h3>
+              <ul>
+                {data.cachedPower.map((power, index) => (
+                  <li key={index}>{power}</li>
+                ))}
+              </ul>
+            </div>
+          )}
+          {data.animations && (
+            <div>
+              <h3>Animations:</h3>
+              <ul>
+                {Object.entries(data.animations).map(([key, value], index) => (
+                  <li key={index}>
+                    {key}: {JSON.stringify(value)}
+                  </li>
+                ))}
+              </ul>
+            </div>
+          )}
+          {data.indexDesc && <p>Description: {data.indexDesc}</p>}
+          {data.exclusiveLevel && <p>Exclusive Level: {data.exclusiveLevel}</p>}
+          {data.power && <p>Power: {data.power}</p>}
+        </div>
+      )}
+    />
   );
 };
 

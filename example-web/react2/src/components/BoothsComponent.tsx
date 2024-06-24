@@ -1,37 +1,31 @@
-import React, { useEffect, useState } from "react";
-import { BoothData, PetSimulator99API } from "ps99-api";
+import React from "react";
+import { CollectionConfigData } from "ps99-api";
+import { GenericFetchComponent } from "./GenericFetchComponent";
 import ImageComponent from "./ImageComponent";
 
-const BoothsComponent: React.FC = () => {
-  const [booths, setBooths] = useState<BoothData[]>([]);
-
-  useEffect(() => {
-    const fetchBooths = async () => {
-      const api = new PetSimulator99API();
-      const response = await api.getCollection("Booths");
-      if (response.status === "ok") {
-        setBooths(response.data);
-      }
-    };
-    fetchBooths();
-  }, []);
-
+const BoothsComponent: React.FC<{
+  configData?: CollectionConfigData<"Booths">;
+}> = ({ configData }) => {
   return (
-    <div>
-      <h2>Booths</h2>
-      <ul>
-        {booths.map((booth, index) => (
-          <li key={index}>
-            <ImageComponent
-              src={booth.configData.Icon}
-              alt={booth.configData.DisplayName}
-            />
-            <span>{booth.configData.DisplayName}</span>
-            <span>{booth.configData.Desc}</span>
-          </li>
-        ))}
-      </ul>
-    </div>
+    <GenericFetchComponent<CollectionConfigData<"Booths">>
+      collectionName="Booths"
+      configData={configData}
+      render={(data) => (
+        <div>
+          <h2>{data.DisplayName}</h2>
+          <ImageComponent src={data.Icon} alt={data.DisplayName} />
+          <p>Description: {data.Desc}</p>
+          <p>Rarity: {data.Rarity.DisplayName}</p>
+          <p>Rarity Number: {data.Rarity.RarityNumber}</p>
+          {data.Hidden && <p>Hidden: Yes</p>}
+          {data.Tradable && <p>Tradable: Yes</p>}
+          {data.OffSale && <p>Off Sale: Yes</p>}
+          {data.ProductId && <p>Product ID: {data.ProductId}</p>}
+          {data.DiamondPrice && <p>Diamond Price: {data.DiamondPrice}</p>}
+          {data.Sittable && <p>Sittable: Yes</p>}
+        </div>
+      )}
+    />
   );
 };
 

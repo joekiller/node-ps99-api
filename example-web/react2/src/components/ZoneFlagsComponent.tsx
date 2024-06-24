@@ -1,38 +1,32 @@
-import React, { useEffect, useState } from "react";
-import { PetSimulator99API, ZoneFlagData } from "ps99-api";
-import ImageComponent from "./ImageComponent";
+import React from "react";
+import { CollectionConfigData } from "ps99-api";
+import { GenericFetchComponent } from "./GenericFetchComponent";
 
-const ZoneFlagsComponent: React.FC = () => {
-  const [zoneFlags, setZoneFlags] = useState<ZoneFlagData[]>([]);
-
-  useEffect(() => {
-    const fetchZoneFlags = async () => {
-      const api = new PetSimulator99API();
-      const response = await api.getCollection("ZoneFlags");
-      if (response.status === "ok") {
-        setZoneFlags(response.data);
-      }
-    };
-    fetchZoneFlags();
-  }, []);
-
+const ZoneFlagComponent: React.FC<{
+  configData?: CollectionConfigData<"ZoneFlags">;
+}> = ({ configData }) => {
   return (
-    <div>
-      <h2>Zone Flags</h2>
-      <ul>
-        {zoneFlags.map((flag, index) => (
-          <li key={index}>
-            <ImageComponent
-              src={flag.configData.Icon}
-              alt={flag.configData.Name}
-            />
-            <span>{flag.configData.Name}</span>
-            <span>Duration: {flag.configData.Duration}</span>
-          </li>
-        ))}
-      </ul>
-    </div>
+    <GenericFetchComponent<CollectionConfigData<"ZoneFlags">>
+      collectionName="ZoneFlags"
+      configData={configData}
+      render={(data) => (
+        <div>
+          <h2>Zone Flag</h2>
+          <h3>{data.Name}</h3>
+          <p>Description: {data.Desc}</p>
+          <p>Duration: {data.Duration} seconds</p>
+          <p>Color: {data.Color}</p>
+          <p>
+            Icon: <img src={data.Icon} alt={data.Name} />
+          </p>
+          <h4>Rarity</h4>
+          <p>Rarity: {data.Rarity.DisplayName}</p>
+          <p>Rarity Number: {data.Rarity.RarityNumber}</p>
+          <p>Announce: {data.Rarity.Announce.toString()}</p>
+        </div>
+      )}
+    />
   );
 };
 
-export default ZoneFlagsComponent;
+export default ZoneFlagComponent;

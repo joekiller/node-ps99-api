@@ -1,37 +1,34 @@
-import React, { useEffect, useState } from "react";
-import { BoxData, PetSimulator99API } from "ps99-api";
+import React from "react";
+import { CollectionConfigData } from "ps99-api";
+import { GenericFetchComponent } from "./GenericFetchComponent";
 import ImageComponent from "./ImageComponent";
 
-const BoxesComponent: React.FC = () => {
-  const [boxes, setBoxes] = useState<BoxData[]>([]);
-
-  useEffect(() => {
-    const fetchBoxes = async () => {
-      const api = new PetSimulator99API();
-      const response = await api.getCollection("Boxes");
-      if (response.status === "ok") {
-        setBoxes(response.data);
-      }
-    };
-    fetchBoxes();
-  }, []);
-
+const BoxesComponent: React.FC<{
+  configData?: CollectionConfigData<"Boxes">;
+}> = ({ configData }) => {
   return (
-    <div>
-      <h2>Boxes</h2>
-      <ul>
-        {boxes.map((box, index) => (
-          <li key={index}>
-            <ImageComponent
-              src={box.configData.Icons[index].Icon}
-              alt={box.configData.DisplayName}
-            />
-            <span>{box.configData.DisplayName}</span>
-            <span>{box.configData.Desc}</span>
-          </li>
-        ))}
-      </ul>
-    </div>
+    <GenericFetchComponent<CollectionConfigData<"Boxes">>
+      collectionName="Boxes"
+      configData={configData}
+      render={(data) => (
+        <div>
+          <h2>{data.DisplayName}</h2>
+          <p>Description: {data.Desc}</p>
+          <p>Capacity: {data.Capacity}</p>
+          <p>Rarity: {data.Rarity.DisplayName}</p>
+          <p>Rarity Number: {data.Rarity.RarityNumber}</p>
+          <h3>Icons:</h3>
+          <ul>
+            {data.Icons.map((icon, index) => (
+              <li key={index}>
+                <ImageComponent src={icon.Icon} alt={icon.Name} />
+                <span>{icon.Name}</span>
+              </li>
+            ))}
+          </ul>
+        </div>
+      )}
+    />
   );
 };
 

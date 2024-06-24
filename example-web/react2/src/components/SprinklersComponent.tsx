@@ -1,38 +1,28 @@
-import React, { useEffect, useState } from "react";
-import { PetSimulator99API, SprinklerData } from "ps99-api";
-import ImageComponent from "./ImageComponent";
+import React from "react";
+import { CollectionConfigData } from "ps99-api";
+import { GenericFetchComponent } from "./GenericFetchComponent";
 
-const SprinklersComponent: React.FC = () => {
-  const [sprinklers, setSprinklers] = useState<SprinklerData[]>([]);
-
-  useEffect(() => {
-    const fetchSprinklers = async () => {
-      const api = new PetSimulator99API();
-      const response = await api.getCollection("Sprinklers");
-      if (response.status === "ok") {
-        setSprinklers(response.data);
-      }
-    };
-    fetchSprinklers();
-  }, []);
-
+const SprinklerComponent: React.FC<{
+  configData?: CollectionConfigData<"Sprinklers">;
+}> = ({ configData }) => {
   return (
-    <div>
-      <h2>Sprinklers</h2>
-      <ul>
-        {sprinklers.map((sprinkler, index) => (
-          <li key={index}>
-            <ImageComponent
-              src={sprinkler.configData.Icon}
-              alt={sprinkler.configData.Name}
-            />
-            <span>{sprinkler.configData.Name}</span>
-            <span>Duration: {sprinkler.configData.Duration}</span>
-          </li>
-        ))}
-      </ul>
-    </div>
+    <GenericFetchComponent<CollectionConfigData<"Sprinklers">>
+      collectionName="Sprinklers"
+      configData={configData}
+      render={(data) => (
+        <div>
+          <h2>Sprinkler: {data.Name}</h2>
+          <p>Description: {data.Desc}</p>
+          <p>Color: {data.Color}</p>
+          <p>Duration: {data.Duration} seconds</p>
+          <h3>Rarity</h3>
+          <p>Rarity Number: {data.Rarity.RarityNumber}</p>
+          <p>Display Name: {data.Rarity.DisplayName}</p>
+          <img src={data.Icon} alt={data.Name} />
+        </div>
+      )}
+    />
   );
 };
 
-export default SprinklersComponent;
+export default SprinklerComponent;

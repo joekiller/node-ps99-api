@@ -1,10 +1,11 @@
-const CACHE_NAME = "ps99-cache-v1";
+const CACHE_NAME = "ps99-cache-v2";
 const urlsToCache = [
   "/",
   "/bundle.js",
   "/manifest.json",
   "/icons/icon-192x192.png",
   "/icons/icon-512x512.png",
+  "/collections",
 ];
 
 self.addEventListener("install", (event) => {
