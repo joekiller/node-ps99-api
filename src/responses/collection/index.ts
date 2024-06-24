@@ -21,7 +21,8 @@ import { RandomEventData } from "./random-event";
 import { RankData } from "./rank";
 import { RarityData } from "./rarity";
 import { RebirthData } from "./rebirth";
-import { SecretRoomData, SeedData } from "./secret-room";
+import { SeedData } from "./seed";
+import { SecretRoomData } from "./secret-room";
 import { ShovelData } from "./shovel";
 import { SprinklerData } from "./sprinkler";
 import { UltimateData } from "./ultimate";
@@ -71,4 +72,7 @@ export type CollectionName = Collections["collection"];
 export type Collection<C extends CollectionName> = Extract<
   Collections,
   { collection: C }
->[];
+>;
+
+export type CollectionConfigData<C extends CollectionName> =
+  Collection<C>["configData"];

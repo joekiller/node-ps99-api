@@ -1,25 +1,22 @@
-export type GuildBattleData = {
-  category: string;
-  collection: "GuildBattles";
-  configData: GuildBattleConfigData;
-  configName: string;
-  dateCreated: any;
-  dateModified: any;
-  hash: any;
-};
+import { CollectionData } from "./collection-data";
+
+export type GuildBattleData = CollectionData<
+  "GuildBattles",
+  GuildBattleConfigData
+>;
 
 export type GuildBattleConfigData = {
-  FinishTime: number;
   PlacementRewards?: GuildBattlePlacementReward[];
-  Rewards: GuildBattleRewards;
-  StartTime: number;
+  FinishTime: number;
   Title: string;
+  StartTime: number;
+  Rewards: GuildBattleRewards;
   HasGoals?: boolean;
 };
 
 export type GuildBattlePlacementReward = {
-  Best: number;
   Item: GuildBattleItem;
+  Best: number;
   Worst: number;
 };
 

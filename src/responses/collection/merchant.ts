@@ -1,21 +1,15 @@
-export type MerchantData = {
-  category: string;
-  collection: "Merchants";
-  configData: MerchantConfigData;
-  configName: string;
-  dateCreated: any;
-  dateModified: any;
-  hash: any;
-};
+import { CollectionData } from "./collection-data";
+
+export type MerchantData = CollectionData<"Merchants", MerchantConfigData>;
 
 export type MerchantConfigData = {
-  DisplayName: string;
-  GetOffers: any;
-  MachineName: string;
   PriceMult: number;
-  RefreshRate: number;
-  SlotRespectLevels?: number[];
+  GetOffers: unknown;
+  DisplayName: string;
   StockRangeByRespectLevel?: number[][];
+  MachineName: string;
+  SlotRespectLevels?: number[];
+  RefreshRate: number;
   HideNotification?: boolean;
   HideRespect?: boolean;
   IsStatic?: boolean;

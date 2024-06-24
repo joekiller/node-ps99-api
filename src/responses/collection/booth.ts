@@ -1,36 +1,31 @@
-export type BoothData = {
-  category: "Booths";
-  collection: "Booths";
-  configData: BoothConfigData;
-  configName: string;
-  dateCreated: any;
-  dateModified: any;
-  hash: any;
-};
+import { CollectionData } from "./collection-data";
+
+export type BoothData = CollectionData<"Booths", BoothConfigData, "Booths">;
+
 export type BoothConfigData = {
-  Desc: string;
   DisplayName: string;
-  Icon: string;
-  Model: any;
   Rarity: BoothRarity;
+  Model: unknown;
+  Icon: string;
+  Desc: string;
   Hidden?: boolean;
   Tradable?: boolean;
-  Callback: any;
+  Callback: unknown;
   OffSale?: boolean;
   ProductId?: number;
   DiamondPrice?: number;
   Sittable?: boolean;
-  RenderStepped: any;
+  RenderStepped: unknown;
 };
 export type BoothRarity = {
-  Announce: boolean;
-  Color: any;
-  DisplayName: string;
-  Gradient: any;
-  ItemSlot: any;
-  Lootbag: any;
-  Message: any;
   RarityNumber: number;
+  Lootbag: unknown;
   _id: string;
-  _script: any;
+  Color: unknown;
+  DisplayName: string;
+  Message: unknown;
+  ItemSlot: unknown;
+  Gradient: unknown;
+  Announce: boolean;
+  _script: unknown;
 };

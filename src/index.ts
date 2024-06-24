@@ -32,6 +32,7 @@ export * from "./responses/collection/rank";
 export * from "./responses/collection/rarity";
 export * from "./responses/collection/rebirth";
 export * from "./responses/collection/secret-room";
+export * from "./responses/collection/seed";
 export * from "./responses/collection/shovel";
 export * from "./responses/collection/sprinkler";
 export * from "./responses/collection/ultimate";

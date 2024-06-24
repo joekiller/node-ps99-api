@@ -1,18 +1,12 @@
-export type ShovelData = {
-  category: string;
-  collection: "Shovels";
-  configData: ShovelConfigData;
-  configName: string;
-  dateCreated: any;
-  dateModified: any;
-  hash: any;
-};
+import { CollectionData } from "./collection-data";
+
+export type ShovelData = CollectionData<"Shovels", ShovelConfigData>;
 
 export type ShovelConfigData = {
   AssociatedItemID: string;
-  Desc: string;
   DisplayName: string;
+  Model: unknown;
   Icon: string;
-  Model: any;
+  Desc: string;
   MerchantSalePrice?: number;
 };

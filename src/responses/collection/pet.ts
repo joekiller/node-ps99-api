@@ -1,34 +1,28 @@
-export type PetData = {
-  category: string;
-  collection: "Pets";
-  configData: PetConfigData;
-  configName: string;
-  dateCreated: any;
-  dateModified: any;
-  hash: any;
-};
+import { CollectionData } from "./collection-data";
+
+export type PetData = CollectionData<"Pets", PetConfigData>;
 
 export type PetConfigData = {
   goldenThumbnail: string;
-  huge?: boolean;
-  indexDesc?: string;
   indexObtainable?: boolean;
+  huge?: boolean;
   name: string;
+  indexDesc?: string;
   thumbnail: string;
   fly?: boolean;
   animations?: PetAnimations;
   hideSerial?: boolean;
-  hideExists?: boolean;
   tradable?: boolean;
+  hideExists?: boolean;
   ugc?: boolean;
   evolved?: boolean;
   preventGolden?: boolean;
   titanic?: boolean;
   flyingTitanic?: boolean;
-  cachedPower?: number[];
-  fromEgg?: string;
   fromWorldNumber?: number;
   fromZoneNumber?: number;
+  cachedPower?: number[];
+  fromEgg?: string;
   exclusiveLevel?: number;
   power?: number;
   overrideZoneNumber?: number;
@@ -40,16 +34,17 @@ export type PetConfigData = {
 };
 
 export type PetAnimations = {
+  angelusSpin?: boolean;
   flyHeight?: number;
   flyHeightChange?: number;
   flySpeed?: number;
   swerve?: boolean;
-  swerveAggression?: number;
   swerveMaxAngle?: number;
+  swerveAggression?: number;
   ballBounceHeight?: number;
   spinZ?: boolean;
-  ridingCameraOffset: any;
   ridingGravity?: number;
+  ridingCameraOffset: unknown;
   balloon?: boolean;
   particlesSketch?: PetParticlesSketch;
   vertexColorAnim?: PetVertexColorAnim[];
@@ -58,18 +53,17 @@ export type PetAnimations = {
   replacementPool?: number[][];
   replacements?: PetReplacement[];
   boneFlyingAnimation?: string;
-  customAnimations?: boolean;
   fadeFrames?: PetFadeFrame[];
   idleActionAnimations?: [string, number][];
-  angelusSpin?: boolean;
+  customAnimations?: boolean;
   christmasLights?: boolean;
   hybridFly?: boolean;
-  flipbookAnimation?: string[];
   flipbookAnimationGold?: string[];
   flipbookAnimationSpeed?: number;
+  flipbookAnimation?: string[];
   ridingJumpPower?: number;
-  balloonScale: any;
   balloonSpeed?: number;
+  balloonScale: unknown;
   ridingTransparency?: number;
   spin?: boolean;
   colorVariants?: PetColorVariant[];
@@ -81,23 +75,23 @@ export type PetParticlesSketch = {
 };
 
 export type PetFarm = {
-  Left: any;
-  Right: any;
+  Left: unknown;
+  Right: unknown;
 };
 
 export type PetIdle = {
-  Left: any;
-  Right: any;
+  Left: unknown;
+  Right: unknown;
 };
 
 export type PetVertexColorAnim = {
   Time: number;
-  Value: any;
+  Value: unknown;
 };
 
 export type PetReplacement = {
   desc: string;
-  dst: any;
+  dst: unknown;
   isUnique: boolean;
   title: string;
 };
@@ -111,7 +105,7 @@ export type PetFadeFrame = {
 
 export type PetColorVariant = {
   Chance: number;
-  Color: any;
+  Color: unknown;
   Desc: string;
   Id: number;
   IsUnique: boolean;

@@ -1,19 +1,13 @@
-export type WorldData = {
-  category: string;
-  collection: "Worlds";
-  configData: WorldConfigData;
-  configName: string;
-  dateCreated: any;
-  dateModified: any;
-  hash: any;
-};
+import { CollectionData } from "./collection-data";
+
+export type WorldData = CollectionData<"Worlds", WorldConfigData>;
 
 export type WorldConfigData = {
-  FallbackSpawnLocation: any;
-  Lighting: any;
-  MapName: string;
-  PlaceId: number;
   SpawnId: string;
+  FallbackSpawnLocation: unknown;
+  Lighting: unknown;
+  PlaceId: number;
+  MapName: string;
   WorldCurrency: string;
   WorldNumber: number;
   AdditionalMusic?: string[];

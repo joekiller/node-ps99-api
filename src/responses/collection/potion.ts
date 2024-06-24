@@ -1,39 +1,33 @@
-export type PotionData = {
-  category: string;
-  collection: "Potions";
-  configData: PotionConfigData;
-  configName: string;
-  dateCreated: any;
-  dateModified: any;
-  hash: any;
-};
+import { CollectionData } from "./collection-data";
+
+export type PotionData = CollectionData<"Potions", PotionConfigData>;
 
 export type PotionConfigData = {
-  BaseTier: number;
-  MaxTier: number;
-  PrimaryColor: string;
-  SecondaryColor: string;
   Tiers: PotionTier[];
+  PrimaryColor: string;
+  MaxTier: number;
+  SecondaryColor: string;
+  BaseTier: number;
 };
 
 export type PotionTier = {
-  Desc: string;
-  DisplayName: string;
-  Icon: string;
-  Power: number;
   Rarity: PotionRarity;
+  Power: number;
+  Desc: string;
   Time: number;
+  Icon: string;
+  DisplayName: string;
 };
 
 export type PotionRarity = {
-  Announce: boolean;
-  Color: any;
-  DisplayName: string;
-  Gradient: any;
-  ItemSlot: any;
-  Lootbag: any;
-  Message: any;
   RarityNumber: number;
+  Lootbag: unknown;
   _id: string;
-  _script: any;
+  Color: unknown;
+  DisplayName: string;
+  Message: unknown;
+  ItemSlot: unknown;
+  Gradient: unknown;
+  Announce: boolean;
+  _script: unknown;
 };

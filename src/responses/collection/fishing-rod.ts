@@ -1,24 +1,21 @@
-export type FishingRodData = {
-  category: string;
-  collection: "FishingRods";
-  configData: FishingRodConfigData;
-  configName: string;
-  dateCreated: any;
-  dateModified: any;
-  hash: any;
-};
+import { CollectionData } from "./collection-data";
+
+export type FishingRodData = CollectionData<
+  "FishingRods",
+  FishingRodConfigData
+>;
 
 export type FishingRodConfigData = {
-  AssociatedItemID: string;
-  BarSize: number;
-  DisplayName: string;
   FishingChance: number;
-  FishingCurrencyMultiplier: number;
-  FishingGameSpeedMultiplier: number;
   FishingOdds: [string, number][];
-  Icon: string;
-  LineColor: any;
+  FishingCurrencyMultiplier: number;
+  DisplayName: string;
+  LineColor: unknown;
+  AssociatedItemID: string;
+  Model: unknown;
   MinFishingTime: number;
-  Model: any;
+  FishingGameSpeedMultiplier: number;
+  Icon: string;
+  BarSize: number;
   MerchantSalePrice?: number;
 };

@@ -1,41 +1,35 @@
-export type EnchantmentData = {
-  category: string;
-  collection: "Enchants";
-  configData: EnchantmentConfigData;
-  configName: string;
-  dateCreated: any;
-  dateModified: any;
-  hash: any;
-};
+import { CollectionData } from "./collection-data";
+
+export type EnchantmentData = CollectionData<"Enchants", EnchantmentConfigData>;
 
 export type EnchantmentConfigData = {
-  BaseTier: number;
-  DiminishPowerThreshold?: number;
-  EmpoweredBoost?: number;
-  MaxPage: number;
-  MaxTier: number;
   PageIcon?: string;
+  DiminishPowerThreshold?: number;
   Tiers: EnchantmentTier[];
+  BaseTier: number;
+  MaxTier: number;
+  MaxPage: number;
+  EmpoweredBoost?: number;
   ProductId?: number;
 };
 
 export type EnchantmentTier = {
-  Desc: string;
-  DisplayName: string;
-  Icon: string;
-  Power: number;
   Rarity: EnchantmentRarity;
+  Power: number;
+  Desc: string;
+  Icon: string;
+  DisplayName: string;
 };
 
 export type EnchantmentRarity = {
-  Announce: boolean;
-  Color: any;
-  DisplayName: string;
-  Gradient: any;
-  ItemSlot: any;
-  Lootbag: any;
-  Message: any;
   RarityNumber: number;
+  Lootbag: unknown;
   _id: string;
-  _script: any;
+  Color: unknown;
+  DisplayName: string;
+  Message: unknown;
+  ItemSlot: unknown;
+  Gradient: unknown;
+  Announce: boolean;
+  _script: unknown;
 };

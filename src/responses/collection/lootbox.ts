@@ -1,29 +1,23 @@
-export type LootboxData = {
-  category: string;
-  collection: "Lootboxes";
-  configData: LootboxConfigData;
-  configName: string;
-  dateCreated: any;
-  dateModified: any;
-  hash: any;
-};
+import { CollectionData } from "./collection-data";
+
+export type LootboxData = CollectionData<"Lootboxes", LootboxConfigData>;
 
 export type LootboxConfigData = {
-  Desc: string;
+  Rarity: LootboxRarity;
   DisplayName: string;
   Icon: string;
-  Rarity: LootboxRarity;
+  Desc: string;
 };
 
 export type LootboxRarity = {
-  Announce: boolean;
-  Color: any;
-  DisplayName: string;
-  Gradient: any;
-  ItemSlot: any;
-  Lootbag: any;
-  Message: any;
   RarityNumber: number;
+  Lootbag: unknown;
   _id: string;
-  _script: any;
+  Color: unknown;
+  DisplayName: string;
+  Message: unknown;
+  ItemSlot: unknown;
+  Gradient: unknown;
+  Announce: boolean;
+  _script: unknown;
 };

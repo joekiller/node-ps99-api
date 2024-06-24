@@ -1,32 +1,26 @@
-export type ZoneFlagData = {
-  category: string;
-  collection: "ZoneFlags";
-  configData: ZoneFlagConfigData;
-  configName: string;
-  dateCreated: any;
-  dateModified: any;
-  hash: any;
-};
+import { CollectionData } from "./collection-data";
+
+export type ZoneFlagData = CollectionData<"ZoneFlags", ZoneFlagConfigData>;
 
 export type ZoneFlagConfigData = {
-  Color: string;
-  Desc: string;
-  Duration: number;
-  Icon: string;
-  Model: any;
-  Name: string;
   Rarity: ZoneFlagRarity;
+  Color: string;
+  Duration: number;
+  Desc: string;
+  Name: string;
+  Model: unknown;
+  Icon: string;
 };
 
 export type ZoneFlagRarity = {
-  Announce: boolean;
-  Color: any;
-  DisplayName: string;
-  Gradient: any;
-  ItemSlot: any;
-  Lootbag: any;
-  Message: any;
   RarityNumber: number;
+  Lootbag: unknown;
   _id: string;
-  _script: any;
+  Color: unknown;
+  DisplayName: string;
+  Message: unknown;
+  ItemSlot: unknown;
+  Gradient: unknown;
+  Announce: boolean;
+  _script: unknown;
 };

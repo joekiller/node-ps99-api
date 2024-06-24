@@ -1,21 +1,15 @@
-export type FruitData = {
-  category: string;
-  collection: "Fruits";
-  configData: FruitConfigData;
-  configName: string;
-  dateCreated: any;
-  dateModified: any;
-  hash: any;
-};
+import { CollectionData } from "./collection-data";
+
+export type FruitData = CollectionData<"Fruits", FruitConfigData>;
 
 export type FruitConfigData = {
-  Boost: FruitBoost[];
-  Desc?: string;
-  DisplayName: string;
-  Duration: number;
-  Icon: string;
-  IgnoreFruitMachine?: boolean;
   Rarity: FruitRarity;
+  Duration: number;
+  DisplayName: string;
+  IgnoreFruitMachine?: boolean;
+  Desc?: string;
+  Icon: string;
+  Boost: FruitBoost[];
 };
 
 export type FruitBoost = {
@@ -24,14 +18,14 @@ export type FruitBoost = {
 };
 
 export type FruitRarity = {
-  Announce: boolean;
-  Color: any;
-  DisplayName: string;
-  Gradient: any;
-  ItemSlot: any;
-  Lootbag: any;
-  Message: any;
   RarityNumber: number;
+  Lootbag: unknown;
   _id: string;
-  _script: any;
+  Color: unknown;
+  DisplayName: string;
+  Message: unknown;
+  ItemSlot: unknown;
+  Gradient: unknown;
+  Announce: boolean;
+  _script: unknown;
 };

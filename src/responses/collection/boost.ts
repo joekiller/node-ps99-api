@@ -1,12 +1,12 @@
-export type BoostData = {
-  category: "Boosts";
-  collection: "Boosts";
-  configData: BoostConfigData;
-  configName: "Boost | Friends";
-  dateCreated: any;
-  dateModified: any;
-  hash: any;
-};
+import { CollectionData } from "./collection-data";
+
+export type BoostData = CollectionData<
+  "Boosts",
+  BoostConfigData,
+  "Boosts",
+  "Boost | Friends"
+>;
+
 export type BoostConfigData = {
   DisplayName: string;
   Icon: string;

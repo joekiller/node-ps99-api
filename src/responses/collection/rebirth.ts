@@ -1,22 +1,16 @@
-export type RebirthData = {
-  category: string;
-  collection: "Rebirths";
-  configData: RebirthConfigData;
-  configName: string;
-  dateCreated: any;
-  dateModified: any;
-  hash: any;
-};
+import { CollectionData } from "./collection-data";
+
+export type RebirthData = CollectionData<"Rebirths", RebirthConfigData>;
 
 export type RebirthConfigData = {
   BoostDesc: string;
   DisplayName: string;
-  ItemRewards: any;
+  ItemRewards: unknown;
   RebirthNumber: number;
   RebirthUnlocks: RebirthUnlock[];
   StrengthPowerBoost: number;
   ZoneNumberRequired: number;
-  RebirthCallback: any;
+  RebirthCallback: unknown;
   ResetZone?: string;
 };
 

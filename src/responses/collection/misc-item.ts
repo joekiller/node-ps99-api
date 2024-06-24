@@ -1,15 +1,9 @@
-export type MiscItemData = {
-  category: string;
-  collection: "MiscItems";
-  configData: MiscItemConfigData;
-  configName: string;
-  dateCreated: any;
-  dateModified: any;
-  hash: any;
-};
+import { CollectionData } from "./collection-data";
+
+export type MiscItemData = CollectionData<"MiscItems", MiscItemConfigData>;
 
 export interface MiscItemConfigData {
-  Rarity: MiscItem;
+  Rarity: MiscItemRarity;
   DisplayName: string;
   Category: string;
   Icon: string;
@@ -18,15 +12,15 @@ export interface MiscItemConfigData {
   AltIcon?: string;
 }
 
-export interface MiscItem {
+export interface MiscItemRarity {
   RarityNumber: number;
-  Lootbag: any;
+  Lootbag: unknown;
   _id: string;
-  Color: any;
+  Color: unknown;
   DisplayName: string;
-  Message: any;
-  ItemSlot: any;
-  Gradient: any;
+  Message: unknown;
+  ItemSlot: unknown;
+  Gradient: unknown;
   Announce: boolean;
-  _script: any;
+  _script: unknown;
 }

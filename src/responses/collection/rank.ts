@@ -1,12 +1,6 @@
-export type RankData = {
-  category: string;
-  collection: "Ranks";
-  configData: RankConfigData;
-  configName: string;
-  dateCreated: any;
-  dateModified: any;
-  hash: any;
-};
+import { CollectionData } from "./collection-data";
+
+export type RankData = CollectionData<"Ranks", RankConfigData>;
 
 export type RankConfigData = {
   Goals: RankGoal[][];
@@ -17,7 +11,7 @@ export type RankConfigData = {
   Title: string;
   UnlockableEggSlots: number;
   UnlockablePetSlots: number;
-  RankUpRewards?: RankUpReward[];
+  RankUpRewards?: RankRewardItem[];
   RequiredRebirth?: number;
   RequiredZone?: string;
 };
@@ -33,25 +27,15 @@ export type RankGoal = {
 };
 
 export type RankReward = {
-  Item: RankItem;
+  Item: RankRewardItem;
   StarsRequired: number;
 };
 
-export type RankItem = {
-  _data: RankItemData;
+export type RankRewardItem = {
+  _data: RankRewardItemData;
 };
 
-export type RankItemData = {
-  _am?: number;
-  id: string;
-  tn?: number;
-};
-
-export type RankUpReward = {
-  _data: RankUpRewardData;
-};
-
-export type RankUpRewardData = {
+export type RankRewardItemData = {
   _am?: number;
   id: string;
   tn?: number;

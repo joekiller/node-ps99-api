@@ -1,12 +1,7 @@
-export type BuffData = {
-  category: "Buffs";
-  collection: "Buffs";
-  configData: BuffConfigData;
-  configName: string;
-  dateCreated: any;
-  dateModified: any;
-  hash: any;
-};
+import { CollectionData } from "./collection-data";
+
+export type BuffData = CollectionData<"Buffs", BuffConfigData, "BuffData">;
+
 export type BuffConfigData = {
   AssociatedItemClass: string;
   AssociatedItemID: string;

@@ -1,32 +1,26 @@
-export type SprinklerData = {
-  category: string;
-  collection: "Sprinklers";
-  configData: SprinklerConfigData;
-  configName: string;
-  dateCreated: any;
-  dateModified: any;
-  hash: any;
-};
+import { CollectionData } from "./collection-data";
+
+export type SprinklerData = CollectionData<"Sprinklers", SprinklerConfigData>;
 
 export type SprinklerConfigData = {
-  Color: string;
-  Desc: string;
-  Duration: number;
-  Icon: string;
-  Model: any;
-  Name: string;
   Rarity: SprinklerRarity;
+  Color: string;
+  Duration: number;
+  Desc: string;
+  Name: string;
+  Model: unknown;
+  Icon: string;
 };
 
 export type SprinklerRarity = {
-  Announce: boolean;
-  Color: any;
-  DisplayName: string;
-  Gradient: any;
-  ItemSlot: any;
-  Lootbag: any;
-  Message: any;
   RarityNumber: number;
+  Lootbag: unknown;
   _id: string;
-  _script: any;
+  Color: unknown;
+  DisplayName: string;
+  Message: unknown;
+  ItemSlot: unknown;
+  Gradient: unknown;
+  Announce: boolean;
+  _script: unknown;
 };

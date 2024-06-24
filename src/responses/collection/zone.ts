@@ -1,27 +1,21 @@
-export type ZoneData = {
-  category: string;
-  collection: "Zones";
-  configData: ZoneConfigData;
-  configName: string;
-  dateCreated: any;
-  dateModified: any;
-  hash: any;
-};
+import { CollectionData } from "./collection-data";
+
+export type ZoneData = CollectionData<"Zones", ZoneConfigData>;
 
 export type ZoneConfigData = {
+  ZoneName: string;
   Ambience?: ZoneAmbience;
-  Breakables: ZoneBreakables;
+  Price?: number;
   Currency: string;
   GateHealth?: number;
-  MaximumAvailableEgg: number;
-  Price?: number;
-  WorldNumber: number;
-  ZoneFolder: any;
-  ZoneName: string;
   ZoneNumber: number;
-  ExtraDropTable: any;
+  Breakables: ZoneBreakables;
+  MaximumAvailableEgg: number;
+  WorldNumber: number;
+  ZoneFolder: unknown;
+  ExtraDropTable: unknown;
   Lighting?: ZoneLighting;
-  Chests: any;
+  Chests: unknown;
   RenderAdditionalZones?: number[];
   CannonGroupId?: number;
   QuestsRequired?: ZoneQuestsRequired[];
@@ -33,139 +27,52 @@ export type ZoneAmbience = {
   SoundId: string;
 };
 
-export type ZoneBreakables = {
-  Easy?: ZoneEasy;
-  Main?: ZoneMain;
-  VIP?: ZoneVip;
-  Main_Ice?: ZoneMainIce;
-  Main_Magma?: ZoneMainMagma;
-  HQ?: ZoneHq;
+export type ZoneBreakables = { [key: string]: ZoneDataAndSettings };
+
+export type ZoneDataAndSettings = {
+  Data: ZoneTypeData[];
+  Settings: ZoneSettings;
 };
 
-export type ZoneEasy = {
-  Data: ZoneEasyDaum[];
-  Settings: ZoneEasySettings;
-};
-
-export type ZoneEasyDaum = {
-  Type: string;
-  Weight: number;
-  WorldNumber: number;
-};
-
-export type ZoneEasySettings = {
-  Maximum: number;
-  RandomDiamondBreakables: boolean;
-  RespawnTime: number;
-};
-
-export type ZoneMain = {
-  Data: ZoneMainDaum[];
-  Settings: ZoneMainSettings;
-};
-
-export type ZoneMainDaum = {
+export type ZoneTypeData = {
   Type: string;
   Weight: number;
   WorldNumber?: number;
   ZoneNumber?: number;
 };
 
-export type ZoneMainSettings = {
+export type ZoneSettings = {
   Maximum: number;
-  RespawnTime: number;
   RandomDiamondBreakables?: boolean;
-};
-
-export type ZoneVip = {
-  Data: ZoneVipDaum[];
-  Settings: ZoneVipSettings;
-};
-
-export type ZoneVipDaum = {
-  Type: string;
-  Weight: number;
-  WorldNumber?: number;
-};
-
-export type ZoneVipSettings = {
-  DaycareIgnore: boolean;
-  Maximum: number;
   RespawnTime: number;
-};
-
-export type ZoneMainIce = {
-  Data: ZoneMainIceDaum[];
-  Settings: ZoneMainIceSettings;
-};
-
-export type ZoneMainIceDaum = {
-  Type: string;
-  Weight: number;
-  WorldNumber: number;
-};
-
-export type ZoneMainIceSettings = {
-  Maximum: number;
-  RespawnTime: number;
-};
-
-export type ZoneMainMagma = {
-  Data: ZoneMainMagmaDaum[];
-  Settings: ZoneMainMagmaSettings;
-};
-
-export type ZoneMainMagmaDaum = {
-  Type: string;
-  Weight: number;
-  WorldNumber?: number;
-};
-
-export type ZoneMainMagmaSettings = {
-  Maximum: number;
-  RespawnTime: number;
-};
-
-export type ZoneHq = {
-  Data: ZoneHqDaum[];
-  Settings: ZoneHqSettings;
-};
-
-export type ZoneHqDaum = {
-  Type: string;
-  Weight: number;
-};
-
-export type ZoneHqSettings = {
-  Maximum: number;
-  Requirement: any;
-  RespawnTime: number;
+  DaycareIgnore?: boolean;
+  Requirement?: unknown;
 };
 
 export type ZoneLighting = {
-  Ambient: any;
+  Ambient: unknown;
   Atmosphere: ZoneAtmosphere;
   Bloom: ZoneBloom;
   Brightness: number;
   ClockTime: number;
   ColorCorrection: ZoneColorCorrection;
-  ColorShift_Bottom: any;
-  ColorShift_Top: any;
+  ColorShift_Bottom: unknown;
+  ColorShift_Top: unknown;
   EnvironmentDiffuseScale: number;
   EnvironmentSpecularScale: number;
   ExposureCompensation: number;
-  FogColor: any;
+  FogColor: unknown;
   FogEnd: number;
   FogStart: number;
   GeographicLatitude: number;
-  OutdoorAmbient: any;
+  OutdoorAmbient: unknown;
   ShadowSoftness: number;
   Sky: ZoneSky;
 };
 
 export type ZoneAtmosphere = {
-  Color: any;
-  Decay: any;
+  Color: unknown;
+  Decay: unknown;
   Density: number;
   Glare: number;
   Haze: number;
@@ -184,7 +91,7 @@ export type ZoneColorCorrection = {
   Contrast: number;
   Enabled: boolean;
   Saturation: number;
-  TintColor: any;
+  TintColor: unknown;
 };
 
 export type ZoneSky = {

@@ -1,18 +1,15 @@
-export type WateringCanData = {
-  category: string;
-  collection: "WateringCans";
-  configData: WateringCanConfigData;
-  configName: string;
-  dateCreated: any;
-  dateModified: any;
-  hash: any;
-};
+import { CollectionData } from "./collection-data";
+
+export type WateringCanData = CollectionData<
+  "WateringCans",
+  WateringCanConfigData
+>;
 
 export type WateringCanConfigData = {
-  AssociatedItemID: string;
   DisplayName: string;
-  Icon: string;
-  Model: any;
+  AssociatedItemID: string;
+  Model: unknown;
   PlantTimeMultiplier: number;
+  Icon: string;
   PlantTimeMultiplierDuration: number;
 };

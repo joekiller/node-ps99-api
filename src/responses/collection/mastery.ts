@@ -1,19 +1,13 @@
-export type MasteryData = {
-  category: string;
-  collection: "Mastery";
-  configData: MasteryConfigData;
-  configName: string;
-  dateCreated: any;
-  dateModified: any;
-  hash: any;
-};
+import { CollectionData } from "./collection-data";
+
+export type MasteryData = CollectionData<"Mastery", MasteryConfigData>;
 
 export type MasteryConfigData = {
-  Desc: string;
-  FFlag: string;
-  Icon: string;
-  Name: string;
   Perks: MasteryPerks;
+  FFlag: string;
+  Name: string;
+  Icon: string;
+  Desc: string;
   ToggleablePerks?: MasteryToggleablePerks;
 };
 

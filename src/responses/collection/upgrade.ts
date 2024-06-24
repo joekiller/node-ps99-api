@@ -1,62 +1,56 @@
-export type UpgradeData = {
-  category: string;
-  collection: "Upgrades";
-  configData: UpgradeConfigData;
-  configName: string;
-  dateCreated: any;
-  dateModified: any;
-  hash: any;
-};
+import { CollectionData } from "./collection-data";
+
+export type UpgradeData = CollectionData<"Upgrades", UpgradeConfigData>;
 
 export type UpgradeConfigData = {
-  Icon: string;
-  RewardText: any;
-  TierCosts: number[];
-  TierCurrencies: UpgradeTierCurrency[];
+  RewardText: unknown;
   TierPowers: number[];
+  Icon: string;
+  TierCurrencies: UpgradeTierCurrency[];
+  TierCosts: number[];
 };
 
 export type UpgradeTierCurrency = {
+  Rarity: UpgradeRarity;
+  Tradable: boolean;
+  Tiers: UpgradeTier[];
+  DisplayName: string;
+  _script: unknown;
+  _index: number;
+  _id: string;
+  MaxAmount: number;
   BagTiers: UpgradeBagTier[];
   Desc: string;
-  DisplayName: string;
-  MaxAmount: number;
-  Rarity: UpgradeRarity;
-  Tiers: UpgradeTier[];
-  Tradable: boolean;
-  _id: string;
-  _index: number;
-  _script: any;
 };
 
 export type UpgradeBagTier = {
-  image: string;
   value: number;
+  image: string;
 };
 
 export type UpgradeRarity = {
-  Announce: boolean;
-  Color: any;
-  DisplayName: string;
-  Gradient: any;
-  ItemSlot: any;
-  Lootbag: any;
-  Message: any;
   RarityNumber: number;
+  Lootbag: unknown;
   _id: string;
-  _script: any;
+  Color: unknown;
+  DisplayName: string;
+  Message: unknown;
+  ItemSlot: unknown;
+  Gradient: unknown;
+  Announce: boolean;
+  _script: unknown;
 };
 
 export type UpgradeTier = {
-  Order: number;
+  orbImage: string;
   imageOutline: string;
   isBottom: boolean;
-  orbImage: string;
+  Order: number;
   rainData: UpgradeRainData;
-  textColor: any;
-  tierName: string;
-  tinyImage: string;
   value: number;
+  tinyImage: string;
+  tierName: string;
+  textColor: unknown;
 };
 
 export type UpgradeRainData = {

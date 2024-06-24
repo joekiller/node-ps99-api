@@ -1,33 +1,28 @@
-export type BoxData = {
-  category: "Boxes";
-  collection: "Boxes";
-  configData: BoxConfigData;
-  configName: string;
-  dateCreated: any;
-  dateModified: any;
-  hash: any;
-};
+import { CollectionData } from "./collection-data";
+
+export type BoxData = CollectionData<"Boxes", BoxConfigData, "Boxes">;
+
 export type BoxConfigData = {
+  Rarity: BoxRarity;
   Capacity: number;
-  Desc: string;
   DisplayName: string;
   Icons: BoxIcon[];
-  Rarity: BoxRarity;
+  Desc: string;
 };
 export type BoxIcon = {
-  Color: any;
-  Icon: string;
+  Color: unknown;
   Name: string;
+  Icon: string;
 };
 export type BoxRarity = {
-  Announce: boolean;
-  Color: any;
-  DisplayName: string;
-  Gradient: any;
-  ItemSlot: any;
-  Lootbag: any;
-  Message: any;
   RarityNumber: number;
+  Lootbag: unknown;
   _id: string;
-  _script: any;
+  Color: unknown;
+  DisplayName: string;
+  Message: unknown;
+  ItemSlot: unknown;
+  Gradient: unknown;
+  Announce: boolean;
+  _script: unknown;
 };

@@ -1,36 +1,31 @@
-export type UltimateData = {
-  category: string;
-  collection: "Ultimates";
-  configData: UltimateConfigData;
-  configName: string;
-  dateCreated: any;
-  dateModified: any;
-  hash: any;
-};
+import { CollectionData } from "./collection-data";
+
+export type UltimateData = CollectionData<"Ultimates", UltimateConfigData>;
 
 export type UltimateConfigData = {
-  Cooldown: any;
-  Desc: string;
-  DisplayName: string;
-  FFlagName: string;
-  Icon: string;
-  LevelToTier: number[];
-  MaxTier: number;
   Rarity: UltimateRarity;
   TierToLevel: number[];
+  DisplayName: string;
+  LevelToTier: number[];
+  Desc: string;
+  Icon: string;
+  MaxTier: number;
+  Cooldown: unknown;
+  FFlagName: string;
   Tradable?: boolean;
   ProductId?: number;
+  NotAllowedInInstances?: boolean;
 };
 
 export type UltimateRarity = {
-  Announce: boolean;
-  Color: any;
-  DisplayName: string;
-  Gradient: any;
-  ItemSlot: any;
-  Lootbag: any;
-  Message: any;
   RarityNumber: number;
+  Lootbag: unknown;
   _id: string;
-  _script: any;
+  Color: unknown;
+  DisplayName: string;
+  Message: unknown;
+  ItemSlot: unknown;
+  Gradient: unknown;
+  Announce: boolean;
+  _script: unknown;
 };

@@ -1,30 +1,27 @@
-export type RandomEventData = {
-  category: string;
-  collection: "RandomEvents";
-  configData: RandomEventConfigData;
-  configName: string;
-  dateCreated: any;
-  dateModified: any;
-  hash: any;
-};
+import { CollectionData } from "./collection-data";
+
+export type RandomEventData = CollectionData<
+  "RandomEvents",
+  RandomEventConfigData
+>;
 
 export type RandomEventConfigData = {
-  AllowInInstances: boolean;
   AllowInZones: boolean;
-  AllowMultiple: boolean;
-  AreaWhitelist: RandomEventAreaWhitelist;
-  BreakingRequirement: number;
-  Chance: number;
   Color: string;
   Duration: number;
   Icon: string;
-  Name: string;
+  BreakingRequirement: number;
   PlaytimeRequirement: number;
+  Name: string;
+  AllowInInstances: boolean;
+  Chance: number;
+  AreaWhitelist: RandomEventAreaWhitelist;
+  AllowMultiple: boolean;
   MinimumZone?: number;
 };
 
 export type RandomEventAreaWhitelist = {
+  Main_Magma: boolean;
   Main: boolean;
   Main_Ice: boolean;
-  Main_Magma: boolean;
 };

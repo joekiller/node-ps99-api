@@ -1,20 +1,14 @@
-export type RarityData = {
-  category: string;
-  collection: "Rarity";
-  configData: RarityConfigData;
-  configName: string;
-  dateCreated: any;
-  dateModified: any;
-  hash: any;
-};
+import { CollectionData } from "./collection-data";
+
+export type RarityData = CollectionData<"Rarity", RarityConfigData>;
 
 export type RarityConfigData = {
   Announce: boolean;
   Color: string;
   DisplayName: string;
-  Gradient: any;
-  ItemSlot: any;
-  Lootbag: any;
-  Message: any;
+  Gradient: unknown;
+  ItemSlot: unknown;
+  Lootbag: unknown;
+  Message: unknown;
   RarityNumber: number;
 };

@@ -1,50 +1,14 @@
-export type SecretRoomData = {
-  category: string;
-  collection: "SecretRooms";
-  configData: SecretRoomConfigData;
-  configName: string;
-  dateCreated: any;
-  dateModified: any;
-  hash: any;
-};
+import { CollectionData } from "./collection-data";
+
+export type SecretRoomData = CollectionData<
+  "SecretRooms",
+  SecretRoomConfigData
+>;
 
 export type SecretRoomConfigData = {
-  CloseDoor: any;
-  DisplayName: string;
+  UnlockAnimation: unknown;
   InstanceId: string;
+  CloseDoor: unknown;
   RequiredZone: string;
-  UnlockAnimation: any;
-};
-
-export type SeedData = {
-  category: string;
-  collection: "Seeds";
-  configData: SeedConfigData;
-  configName: string;
-  dateCreated: any;
-  dateModified: any;
-  hash: any;
-};
-
-export type SeedConfigData = {
-  Desc: string;
   DisplayName: string;
-  GrowTime: number;
-  Icon: string;
-  LootTable: any;
-  Rarity: SeedRarity;
-  Stages: any[];
-};
-
-export type SeedRarity = {
-  Announce: boolean;
-  Color: any;
-  DisplayName: string;
-  Gradient: any;
-  ItemSlot: any;
-  Lootbag: any;
-  Message: any;
-  RarityNumber: number;
-  _id: string;
-  _script: any;
 };

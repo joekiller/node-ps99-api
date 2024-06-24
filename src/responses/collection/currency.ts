@@ -1,54 +1,52 @@
-export type CurrencyData = {
-  category: "Currency";
-  collection: "Currency";
-  configData: CurrencyConfigData;
-  configName: string;
-  dateCreated: any;
-  dateModified: any;
-  hash: any;
-};
+import { CollectionData } from "./collection-data";
+
+export type CurrencyData = CollectionData<
+  "Currency",
+  CurrencyConfigData,
+  "Currency"
+>;
 
 export type CurrencyConfigData = {
-  BagTiers?: CurrencyBagTier[];
-  Desc: string;
-  DisplayName: string;
-  IsWorldCurrency?: boolean;
-  MaxAmount: number;
   Rarity: CurrencyRarity;
-  Tiers: CurrencyTier[];
   Tradable: boolean;
+  Tiers: CurrencyTier[];
+  DisplayName: string;
   _index: number;
+  IsWorldCurrency?: boolean;
+  Desc: string;
+  BagTiers?: CurrencyBagTier[];
+  MaxAmount: number;
   PermitAutoLootScaling?: boolean;
 };
 
 export type CurrencyBagTier = {
-  image: string;
   value: number;
+  image: string;
 };
 
 export type CurrencyRarity = {
-  Announce: boolean;
-  Color: any;
-  DisplayName: string;
-  Gradient: any;
-  ItemSlot: any;
-  Lootbag: any;
-  Message: any;
   RarityNumber: number;
+  Lootbag: unknown;
   _id: string;
-  _script: any;
+  Color: unknown;
+  DisplayName: string;
+  Message: unknown;
+  ItemSlot: unknown;
+  Gradient: unknown;
+  Announce: boolean;
+  _script: unknown;
 };
 
 export type CurrencyTier = {
-  Order: number;
+  orbImage: string;
   imageOutline: string;
   isBottom?: boolean;
-  orbImage: string;
+  Order: number;
   rainData?: CurrencyRainData;
-  textColor: any;
-  tierName: string;
-  tinyImage: string;
   value: number;
+  tinyImage: string;
+  tierName: string;
+  textColor: unknown;
 };
 
 export type CurrencyRainData = {

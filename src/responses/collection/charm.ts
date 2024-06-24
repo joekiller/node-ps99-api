@@ -1,18 +1,12 @@
-export type CharmData = {
-  category: "Charms";
-  collection: "Charms";
-  configData: CharmConfigData;
-  configName: string;
-  dateCreated: any;
-  dateModified: any;
-  hash: any;
-};
+import { CollectionData } from "./collection-data";
+
+export type CharmData = CollectionData<"Charms", CharmConfigData, "Charms">;
 
 export type CharmConfigData = {
   BaseTier: number;
-  Icon: string;
-  MaxTier: number;
   Tiers: CharmTier[];
+  MaxTier: number;
+  Icon: string;
   DiminishPowerThreshold?: number;
   Unique?: boolean;
 };
@@ -20,19 +14,19 @@ export type CharmConfigData = {
 export type CharmTier = {
   Desc: string;
   DisplayName: string;
-  Power: number;
   Rarity: CharmRarity;
+  Power: number;
 };
 
 export type CharmRarity = {
-  Announce: boolean;
-  Color: any;
-  DisplayName: string;
-  Gradient: any;
-  ItemSlot: any;
-  Lootbag: any;
-  Message: any;
   RarityNumber: number;
+  Lootbag: unknown;
   _id: string;
-  _script: any;
+  Color: unknown;
+  DisplayName: string;
+  Message: unknown;
+  ItemSlot: unknown;
+  Gradient: unknown;
+  Announce: boolean;
+  _script: unknown;
 };
