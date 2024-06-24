@@ -31,7 +31,7 @@ import { WorldData } from "./world";
 import { ZoneFlagData } from "./zone-flag";
 import { ZoneData } from "./zone";
 
-export type CollectionData =
+export type Collections =
   | AchievementData
   | BoostData
   | BoothData
@@ -66,9 +66,9 @@ export type CollectionData =
   | ZoneFlagData
   | ZoneData;
 
-export type Collection = CollectionData["collection"];
+export type CollectionName = Collections["collection"];
 
-export type GetCollectionResponse<C extends Collection> = Extract<
-  CollectionData,
+export type Collection<C extends CollectionName> = Extract<
+  Collections,
   { collection: C }
 >[];
