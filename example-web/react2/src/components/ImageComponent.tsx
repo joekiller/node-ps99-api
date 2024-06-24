@@ -6,41 +6,59 @@ interface ImageProps {
   alt: string;
 }
 
-const imageCache = new Map<string, string>();
+const MAX_CONCURRENT_REQUESTS = 5;
+let currentRequests = 0;
+const queue: (() => void)[] = [];
+
+const processQueue = () => {
+  if (queue.length > 0 && currentRequests < MAX_CONCURRENT_REQUESTS) {
+    const nextRequest = queue.shift();
+    if (nextRequest) {
+      currentRequests++;
+      nextRequest();
+    }
+  }
+};
 
 const ImageComponent: React.FC<ImageProps> = ({ src, alt }) => {
   const [imageUrl, setImageUrl] = useState<string | null>(null);
+  const [error, setError] = useState<string | null>(null);
 
   useEffect(() => {
     const fetchImage = async () => {
-      if (imageCache.has(src)) {
-        setImageUrl(imageCache.get(src)!);
-      } else {
-        try {
-          const api = new PetSimulator99API();
-          const response = await api.getImage(src);
-          const imageBlob = new Blob([response], { type: "image/png" });
-          const imageUrl = URL.createObjectURL(imageBlob);
-          imageCache.set(src, imageUrl);
-          setImageUrl(imageUrl);
-        } catch (error) {
-          console.error("Error fetching image:", error);
-        }
+      try {
+        const api = new PetSimulator99API();
+        const imageBlob = await api.getImage(src);
+        const imageUrl = URL.createObjectURL(new Blob([imageBlob], { type: "image/png" }));
+        setImageUrl(imageUrl);
+      } catch (error) {
+        setError("Error fetching image");
+        console.error("Error fetching image:", error);
+      } finally {
+        currentRequests--;
+        processQueue();
       }
     };
 
-    fetchImage();
+    const load = () => {
+      fetchImage();
+    };
+
+    queue.push(load);
+    processQueue();
 
     return () => {
       if (imageUrl) {
         URL.revokeObjectURL(imageUrl);
       }
     };
-  }, [src]);
+  }, [src, imageUrl]);
 
-  return (
-    <div>{imageUrl ? <img src={imageUrl} alt={alt} /> : <p>Loading...</p>}</div>
-  );
+  if (error) {
+    return <div>{error}</div>;
+  }
+
+  return <div>{imageUrl ? <img src={imageUrl} alt={alt} /> : <p>Loading...</p>}</div>;
 };
 
 export default ImageComponent;
