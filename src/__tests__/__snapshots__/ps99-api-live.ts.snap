@@ -5835,7 +5835,7 @@ exports[`Pet Simulator Public Live API Test Currency shape 1`] = `
         "Desc": "Fate will decide!",
         "DisplayName": "Good vs. Evil Coins",
         "IsWorldCurrency": false,
-        "MaxAmount": 20000000000,
+        "MaxAmount": 1000000000000,
         "PermitAutoLootScaling": true,
         "Rarity": {
           "Announce": false,
@@ -14234,11 +14234,11 @@ exports[`Pet Simulator Public Live API Test Eggs shape 1`] = `
             1,
           ],
           [
-            "Huge Kangaroo",
+            "Huge Red Panda",
             1,
           ],
           [
-            "Huge Koi Fish",
+            "Huge Knight Beagle",
             1,
           ],
         ],
@@ -20660,7 +20660,7 @@ exports[`Pet Simulator Public Live API Test Eggs shape 1`] = `
       "category": "Good vs Evil",
       "collection": "Eggs",
       "configData": {
-        "currency": "Coins",
+        "currency": "GoodVsEvilCoins",
         "disableGold": true,
         "disableModifiers": true,
         "disableRainbow": true,
@@ -21135,6 +21135,751 @@ exports[`Pet Simulator Public Live API Test Eggs shape 1`] = `
         },
       },
       "configName": "Angelic Egg",
+    },
+    {
+      "category": "Evil",
+      "collection": "Eggs",
+      "configData": {
+        "currency": "GoodVsEvilCoins",
+        "egg": null,
+        "goldenEgg": null,
+        "icon": "rbxassetid://15172355963",
+        "isCustomEgg": true,
+        "name": "Overgrown Magma Egg",
+        "overrideCost": 250,
+        "pets": [
+          [
+            "Good vs Evil Cat",
+            90,
+          ],
+          [
+            "Demon Cat",
+            10,
+          ],
+          [
+            "Evil Ram",
+            1,
+            "Nice",
+          ],
+        ],
+        "rarity": {
+          "Announce": true,
+          "Color": null,
+          "DisplayName": "Celestial",
+          "Gradient": null,
+          "ItemSlot": null,
+          "Lootbag": null,
+          "Message": null,
+          "RarityNumber": 9,
+          "_id": "Celestial",
+          "_script": null,
+        },
+      },
+      "configName": "1 | Overgrown Magma Egg",
+    },
+    {
+      "category": "Evil",
+      "collection": "Eggs",
+      "configData": {
+        "currency": "GoodVsEvilCoins",
+        "egg": null,
+        "goldenEgg": null,
+        "icon": "rbxassetid://15172355963",
+        "isCustomEgg": true,
+        "name": "Horned Egg",
+        "overrideCost": 500,
+        "pets": [
+          [
+            "Demon Cat",
+            90,
+          ],
+          [
+            "Evil Ram",
+            10,
+          ],
+          [
+            "Chimera",
+            1,
+            "Nice",
+          ],
+        ],
+        "rarity": {
+          "Announce": true,
+          "Color": null,
+          "DisplayName": "Celestial",
+          "Gradient": null,
+          "ItemSlot": null,
+          "Lootbag": null,
+          "Message": null,
+          "RarityNumber": 9,
+          "_id": "Celestial",
+          "_script": null,
+        },
+      },
+      "configName": "2 | Horned Egg",
+    },
+    {
+      "category": "Evil",
+      "collection": "Eggs",
+      "configData": {
+        "currency": "GoodVsEvilCoins",
+        "egg": null,
+        "goldenEgg": null,
+        "icon": "rbxassetid://15172355963",
+        "isCustomEgg": true,
+        "name": "Evil Dragon Egg",
+        "overrideCost": 1000,
+        "pets": [
+          [
+            "Evil Ram",
+            90,
+          ],
+          [
+            "Chimera",
+            10,
+          ],
+          [
+            "Evil Imp",
+            1,
+            "Nice",
+          ],
+        ],
+        "rarity": {
+          "Announce": true,
+          "Color": null,
+          "DisplayName": "Celestial",
+          "Gradient": null,
+          "ItemSlot": null,
+          "Lootbag": null,
+          "Message": null,
+          "RarityNumber": 9,
+          "_id": "Celestial",
+          "_script": null,
+        },
+      },
+      "configName": "3 | Evil Dragon Egg",
+    },
+    {
+      "category": "Evil",
+      "collection": "Eggs",
+      "configData": {
+        "currency": "GoodVsEvilCoins",
+        "egg": null,
+        "goldenEgg": null,
+        "icon": "rbxassetid://15172355963",
+        "isCustomEgg": true,
+        "name": "Lava Monster Egg",
+        "overrideCost": 2000,
+        "pets": [
+          [
+            "Chimera",
+            90,
+          ],
+          [
+            "Evil Imp",
+            10,
+          ],
+          [
+            "Evil Deer",
+            1,
+            "Nice",
+          ],
+          [
+            "Demon Serpents",
+            0.005,
+            "Insane",
+          ],
+        ],
+        "rarity": {
+          "Announce": true,
+          "Color": null,
+          "DisplayName": "Celestial",
+          "Gradient": null,
+          "ItemSlot": null,
+          "Lootbag": null,
+          "Message": null,
+          "RarityNumber": 9,
+          "_id": "Celestial",
+          "_script": null,
+        },
+      },
+      "configName": "4 | Lava Monster Egg",
+    },
+    {
+      "category": "Evil",
+      "collection": "Eggs",
+      "configData": {
+        "currency": "GoodVsEvilCoins",
+        "egg": null,
+        "goldenEgg": null,
+        "icon": "rbxassetid://18150705084",
+        "isCustomEgg": true,
+        "name": "Imp Egg",
+        "overrideCost": 4000,
+        "pets": [
+          [
+            "Evil Imp",
+            90,
+          ],
+          [
+            "Evil Deer",
+            10,
+          ],
+          [
+            "Demon Serpents",
+            0.05,
+            "Great",
+          ],
+          [
+            "Dark Lord",
+            0.0001,
+            "Insane",
+          ],
+        ],
+        "rarity": {
+          "Announce": true,
+          "Color": null,
+          "DisplayName": "Celestial",
+          "Gradient": null,
+          "ItemSlot": null,
+          "Lootbag": null,
+          "Message": null,
+          "RarityNumber": 9,
+          "_id": "Celestial",
+          "_script": null,
+        },
+      },
+      "configName": "5 | Imp Egg",
+    },
+    {
+      "category": "Evil",
+      "collection": "Eggs",
+      "configData": {
+        "currency": "GoodVsEvilCoins",
+        "egg": null,
+        "goldenEgg": null,
+        "icon": "rbxassetid://15172355963",
+        "isCustomEgg": true,
+        "name": "Demon Spider Egg",
+        "overrideCost": 16000,
+        "pets": [
+          [
+            "Evil Bat",
+            90,
+          ],
+          [
+            "Evil Minotaur",
+            10,
+          ],
+          [
+            "Hell Scorpion",
+            1,
+            "Nice",
+          ],
+        ],
+        "rarity": {
+          "Announce": true,
+          "Color": null,
+          "DisplayName": "Celestial",
+          "Gradient": null,
+          "ItemSlot": null,
+          "Lootbag": null,
+          "Message": null,
+          "RarityNumber": 9,
+          "_id": "Celestial",
+          "_script": null,
+        },
+      },
+      "configName": "7 | Demon Spider Egg",
+    },
+    {
+      "category": "Evil",
+      "collection": "Eggs",
+      "configData": {
+        "currency": "GoodVsEvilCoins",
+        "egg": null,
+        "goldenEgg": null,
+        "icon": "rbxassetid://18258754427",
+        "isCustomEgg": true,
+        "name": "Devil Egg",
+        "overrideCost": 32000,
+        "pets": [
+          [
+            "Evil Minotaur",
+            90,
+          ],
+          [
+            "Hell Scorpion",
+            10,
+          ],
+          [
+            "Devil Agony",
+            0.05,
+            "Great",
+          ],
+          [
+            "Devil Dominus",
+            0.0001,
+            "Insane",
+          ],
+          [
+            "Huge Evil Imp",
+            0.000006,
+            "Insane",
+          ],
+          [
+            "Huge Devil Agony",
+            0.000003,
+            "Insane",
+          ],
+        ],
+        "rarity": {
+          "Announce": true,
+          "Color": null,
+          "DisplayName": "Celestial",
+          "Gradient": null,
+          "ItemSlot": null,
+          "Lootbag": null,
+          "Message": null,
+          "RarityNumber": 9,
+          "_id": "Celestial",
+          "_script": null,
+        },
+      },
+      "configName": "8 | Devil Egg",
+    },
+    {
+      "category": "Evil",
+      "collection": "Eggs",
+      "configData": {
+        "currency": "GoodVsEvilCoins",
+        "egg": null,
+        "goldenEgg": null,
+        "icon": "rbxassetid://15172355963",
+        "isCustomEgg": true,
+        "name": "Chained Egg",
+        "overrideCost": 8000,
+        "pets": [
+          [
+            "Dark Lord",
+            90,
+          ],
+          [
+            "Demon Dog",
+            10,
+          ],
+          [
+            "Evil Bat",
+            1,
+            "Nice",
+          ],
+        ],
+        "rarity": {
+          "Announce": true,
+          "Color": null,
+          "DisplayName": "Celestial",
+          "Gradient": null,
+          "ItemSlot": null,
+          "Lootbag": null,
+          "Message": null,
+          "RarityNumber": 9,
+          "_id": "Celestial",
+          "_script": null,
+        },
+      },
+      "configName": "6 | Chained Egg",
+    },
+    {
+      "category": "Good",
+      "collection": "Eggs",
+      "configData": {
+        "currency": "GoodVsEvilCoins",
+        "egg": null,
+        "goldenEgg": null,
+        "icon": "rbxassetid://15172355963",
+        "isCustomEgg": true,
+        "name": "Blessing Egg",
+        "overrideCost": 250,
+        "pets": [
+          [
+            "Good vs Evil Cat",
+            90,
+          ],
+          [
+            "Angel Lamb",
+            10,
+          ],
+          [
+            "Angel Seal",
+            1,
+            "Nice",
+          ],
+        ],
+        "rarity": {
+          "Announce": true,
+          "Color": null,
+          "DisplayName": "Celestial",
+          "Gradient": null,
+          "ItemSlot": null,
+          "Lootbag": null,
+          "Message": null,
+          "RarityNumber": 9,
+          "_id": "Celestial",
+          "_script": null,
+        },
+      },
+      "configName": "1 | Blessing Egg",
+    },
+    {
+      "category": "Good",
+      "collection": "Eggs",
+      "configData": {
+        "currency": "GoodVsEvilCoins",
+        "egg": null,
+        "goldenEgg": null,
+        "icon": "rbxassetid://15172355963",
+        "isCustomEgg": true,
+        "name": "Divine Floral Egg",
+        "overrideCost": 500,
+        "pets": [
+          [
+            "Angel Lamb",
+            90,
+          ],
+          [
+            "Angel Seal",
+            10,
+          ],
+          [
+            "Heavenly Dove",
+            1,
+            "Nice",
+          ],
+        ],
+        "rarity": {
+          "Announce": true,
+          "Color": null,
+          "DisplayName": "Celestial",
+          "Gradient": null,
+          "ItemSlot": null,
+          "Lootbag": null,
+          "Message": null,
+          "RarityNumber": 9,
+          "_id": "Celestial",
+          "_script": null,
+        },
+      },
+      "configName": "2 | Divine Floral Egg",
+    },
+    {
+      "category": "Good",
+      "collection": "Eggs",
+      "configData": {
+        "currency": "GoodVsEvilCoins",
+        "egg": null,
+        "goldenEgg": null,
+        "icon": "rbxassetid://15172355963",
+        "isCustomEgg": true,
+        "name": "Utopia Egg",
+        "overrideCost": 1000,
+        "pets": [
+          [
+            "Angel Seal",
+            90,
+          ],
+          [
+            "Heavenly Dove",
+            10,
+          ],
+          [
+            "Angel Pegasus",
+            1,
+            "Nice",
+          ],
+        ],
+        "rarity": {
+          "Announce": true,
+          "Color": null,
+          "DisplayName": "Celestial",
+          "Gradient": null,
+          "ItemSlot": null,
+          "Lootbag": null,
+          "Message": null,
+          "RarityNumber": 9,
+          "_id": "Celestial",
+          "_script": null,
+        },
+      },
+      "configName": "3 | Utopia Egg",
+    },
+    {
+      "category": "Good",
+      "collection": "Eggs",
+      "configData": {
+        "currency": "GoodVsEvilCoins",
+        "egg": null,
+        "goldenEgg": null,
+        "icon": "rbxassetid://15172355963",
+        "isCustomEgg": true,
+        "name": "Heavenly Throne Egg",
+        "overrideCost": 2000,
+        "pets": [
+          [
+            "Heavenly Dove",
+            90,
+          ],
+          [
+            "Angel Pegasus",
+            10,
+          ],
+          [
+            "Avenging Griffin",
+            1,
+            "Nice",
+          ],
+          [
+            "Pentangelus",
+            0.005,
+            "Insane",
+          ],
+        ],
+        "rarity": {
+          "Announce": true,
+          "Color": null,
+          "DisplayName": "Celestial",
+          "Gradient": null,
+          "ItemSlot": null,
+          "Lootbag": null,
+          "Message": null,
+          "RarityNumber": 9,
+          "_id": "Celestial",
+          "_script": null,
+        },
+      },
+      "configName": "4 | Heavenly Throne Egg",
+    },
+    {
+      "category": "Good",
+      "collection": "Eggs",
+      "configData": {
+        "currency": "GoodVsEvilCoins",
+        "egg": null,
+        "goldenEgg": null,
+        "icon": "rbxassetid://18150705407",
+        "isCustomEgg": true,
+        "name": "Angelic Egg",
+        "overrideCost": 4000,
+        "pets": [
+          [
+            "Angel Pegasus",
+            90,
+          ],
+          [
+            "Avenging Griffin",
+            10,
+          ],
+          [
+            "Pentangelus",
+            0.05,
+            "Great",
+          ],
+          [
+            "Divinus",
+            0.0001,
+            "Insane",
+          ],
+        ],
+        "rarity": {
+          "Announce": true,
+          "Color": null,
+          "DisplayName": "Celestial",
+          "Gradient": null,
+          "ItemSlot": null,
+          "Lootbag": null,
+          "Message": null,
+          "RarityNumber": 9,
+          "_id": "Celestial",
+          "_script": null,
+        },
+      },
+      "configName": "5 | Angelic Egg",
+    },
+    {
+      "category": "Good",
+      "collection": "Eggs",
+      "configData": {
+        "currency": "GoodVsEvilCoins",
+        "egg": null,
+        "goldenEgg": null,
+        "icon": "rbxassetid://18258754192",
+        "isCustomEgg": true,
+        "name": "Majestic Egg",
+        "overrideCost": 32000,
+        "pets": [
+          [
+            "Angel Moth",
+            90,
+          ],
+          [
+            "Angel Pony",
+            10,
+          ],
+          [
+            "Sage Axolotl",
+            0.05,
+            "Great",
+          ],
+          [
+            "Warrior Wolf",
+            0.0001,
+            "Insane",
+          ],
+          [
+            "Huge Avenging Griffin",
+            0.000006,
+            "Insane",
+          ],
+          [
+            "Huge Sage Axolotl",
+            0.000003,
+            "Insane",
+          ],
+        ],
+        "rarity": {
+          "Announce": true,
+          "Color": null,
+          "DisplayName": "Celestial",
+          "Gradient": null,
+          "ItemSlot": null,
+          "Lootbag": null,
+          "Message": null,
+          "RarityNumber": 9,
+          "_id": "Celestial",
+          "_script": null,
+        },
+      },
+      "configName": "8 | Majestic Egg",
+    },
+    {
+      "category": "Good",
+      "collection": "Eggs",
+      "configData": {
+        "currency": "GoodVsEvilCoins",
+        "egg": null,
+        "goldenEgg": null,
+        "icon": "rbxassetid://15172355963",
+        "isCustomEgg": true,
+        "name": "Musical Harp Egg",
+        "overrideCost": 8000,
+        "pets": [
+          [
+            "Divinus",
+            90,
+          ],
+          [
+            "Archangel Cat",
+            10,
+          ],
+          [
+            "Angel Fawn",
+            1,
+          ],
+        ],
+        "rarity": {
+          "Announce": true,
+          "Color": null,
+          "DisplayName": "Celestial",
+          "Gradient": null,
+          "ItemSlot": null,
+          "Lootbag": null,
+          "Message": null,
+          "RarityNumber": 9,
+          "_id": "Celestial",
+          "_script": null,
+        },
+      },
+      "configName": "6 | Musical Harp Egg",
+    },
+    {
+      "category": "Good",
+      "collection": "Eggs",
+      "configData": {
+        "currency": "GoodVsEvilCoins",
+        "egg": null,
+        "goldenEgg": null,
+        "icon": "rbxassetid://15172355963",
+        "isCustomEgg": true,
+        "name": "Avenging Egg",
+        "overrideCost": 16000,
+        "pets": [
+          [
+            "Angel Fawn",
+            90,
+          ],
+          [
+            "Angel Moth",
+            10,
+          ],
+          [
+            "Angel Pony",
+            1,
+            "Nice",
+          ],
+        ],
+        "rarity": {
+          "Announce": true,
+          "Color": null,
+          "DisplayName": "Celestial",
+          "Gradient": null,
+          "ItemSlot": null,
+          "Lootbag": null,
+          "Message": null,
+          "RarityNumber": 9,
+          "_id": "Celestial",
+          "_script": null,
+        },
+      },
+      "configName": "7 | Avenging Egg",
+    },
+    {
+      "category": "Good vs Evil",
+      "collection": "Eggs",
+      "configData": {
+        "currency": "Diamonds",
+        "egg": null,
+        "goldenEgg": null,
+        "icon": "rbxassetid://15172355963",
+        "isCustomEgg": true,
+        "name": "Good vs Evil Diamond Egg",
+        "oddsFFlags": {
+          "Huge Good vs Evil Dragon": "EggMultiplier_D1",
+        },
+        "overrideCost": 50,
+        "pets": [
+          [
+            "Good vs Evil Dragon",
+            100.0501,
+          ],
+          [
+            "Huge Good vs Evil Dragon",
+            0.000012,
+            "Insane",
+          ],
+        ],
+        "rarity": {
+          "Announce": true,
+          "Color": null,
+          "DisplayName": "Celestial",
+          "Gradient": null,
+          "ItemSlot": null,
+          "Lootbag": null,
+          "Message": null,
+          "RarityNumber": 9,
+          "_id": "Celestial",
+          "_script": null,
+        },
+      },
+      "configName": "Good vs Evil Diamond Egg",
     },
   ],
   "status": "ok",
@@ -23702,19 +24447,113 @@ exports[`Pet Simulator Public Live API Test Enchants shape 1`] = `
             "Rarity": {
               "Announce": true,
               "Color": null,
-              "DisplayName": "Celestial",
+              "DisplayName": "Divine",
               "Gradient": null,
               "ItemSlot": null,
               "Lootbag": null,
               "Message": null,
-              "RarityNumber": 9,
-              "_id": "Celestial",
+              "RarityNumber": 7,
+              "_id": "Divine",
               "_script": null,
             },
           },
         ],
       },
       "configName": "Enchant | Hacker Key Hunter",
+    },
+    {
+      "category": "Special",
+      "collection": "Enchants",
+      "configData": {
+        "BaseTier": 1,
+        "DiminishPowerThreshold": 1.04,
+        "MaxPage": 0,
+        "MaxTier": 1,
+        "Tiers": [
+          {
+            "Desc": "Chance to strike breakables with a demonic curse dealing more damage with every strike! Strikes up to 5 times!",
+            "DisplayName": "Demonic",
+            "Icon": "rbxassetid://18255411160",
+            "Power": 0.65,
+            "Rarity": {
+              "Announce": true,
+              "Color": null,
+              "DisplayName": "Superior",
+              "Gradient": null,
+              "ItemSlot": null,
+              "Lootbag": null,
+              "Message": null,
+              "RarityNumber": 8,
+              "_id": "Superior",
+              "_script": null,
+            },
+          },
+        ],
+      },
+      "configName": "Enchant | Demonic",
+    },
+    {
+      "category": "Special",
+      "collection": "Enchants",
+      "configData": {
+        "BaseTier": 1,
+        "DiminishPowerThreshold": 1.04,
+        "MaxPage": 0,
+        "MaxTier": 1,
+        "Tiers": [
+          {
+            "Desc": "Chance to strike breakables with angelic justice dealing more damage with every strike! Strikes up to 5 times!",
+            "DisplayName": "Angelic",
+            "Icon": "rbxassetid://18222206298",
+            "Power": 0.65,
+            "Rarity": {
+              "Announce": true,
+              "Color": null,
+              "DisplayName": "Superior",
+              "Gradient": null,
+              "ItemSlot": null,
+              "Lootbag": null,
+              "Message": null,
+              "RarityNumber": 8,
+              "_id": "Superior",
+              "_script": null,
+            },
+          },
+        ],
+      },
+      "configName": "Enchant | Angelic",
+    },
+    {
+      "category": "Exclusive",
+      "collection": "Enchants",
+      "configData": {
+        "BaseTier": 1,
+        "DiminishPowerThreshold": 0.5333333333333333,
+        "MaxPage": 0,
+        "MaxTier": 1,
+        "ProductId": 1861245836,
+        "Tiers": [
+          {
+            "Desc": "Destroying a breakable can drop a Diamond Gift Bag!",
+            "DisplayName": "Diamond Gift Hunter",
+            "Icon": "rbxassetid://18222206998",
+            "Power": 0.3333333333333333,
+            "Rarity": {
+              "Announce": true,
+              "Color": null,
+              "DisplayName": "Exclusive",
+              "Gradient": null,
+              "ItemSlot": null,
+              "Lootbag": null,
+              "Message": null,
+              "RarityNumber": 999,
+              "_id": "Exclusive",
+              "_script": null,
+            },
+          },
+        ],
+      },
+      "configName": "Enchant | Diamond Gift Hunter",
     },
   ],
   "status": "ok",
@@ -26700,7 +27539,19 @@ Found in the Hacker Pack!",
           "_id": "Exotic",
           "_script": null,
         },
-        "Sounds": [],
+        "Sounds": {
+          "equip": [
+            "rbxassetid://18252156889",
+          ],
+          "idle": [
+            "rbxassetid://18252157473",
+          ],
+          "jump": [
+            "rbxassetid://18252157197",
+            "rbxassetid://18252157786",
+            "rbxassetid://18252158085",
+          ],
+        },
       },
       "configName": "Hoverboard | Safety",
     },
@@ -32422,6 +33273,29 @@ Click to equip!",
         "Tradable": false,
       },
       "configName": "Demon Horn",
+    },
+    {
+      "category": "Gifts",
+      "collection": "MiscItems",
+      "configData": {
+        "Category": "Gifts",
+        "Desc": "Open for diamond rewards!",
+        "DisplayName": "Diamond Gift Bag",
+        "Icon": "rbxassetid://18254455124",
+        "Rarity": {
+          "Announce": false,
+          "Color": null,
+          "DisplayName": "Mythical",
+          "Gradient": null,
+          "ItemSlot": null,
+          "Lootbag": null,
+          "Message": null,
+          "RarityNumber": 5,
+          "_id": "Mythical",
+          "_script": null,
+        },
+      },
+      "configName": "Diamond Gift Bag",
     },
   ],
   "status": "ok",
@@ -53730,7 +54604,7 @@ exports[`Pet Simulator Public Live API Test Pets shape 1`] = `
       "collection": "Pets",
       "configData": {
         "animations": {
-          "angelusSpin": true,
+          "spinZ": true,
         },
         "fly": true,
         "goldenThumbnail": "rbxassetid://18152335445",
@@ -53779,10 +54653,10 @@ exports[`Pet Simulator Public Live API Test Pets shape 1`] = `
       "collection": "Pets",
       "configData": {
         "animations": {
-          "angelusSpin": true,
+          "spinZ": true,
         },
         "cachedPower": [
-          10623832102397,
+          9784734252274,
         ],
         "fly": true,
         "fromWorldNumber": 3,
@@ -53798,10 +54672,10 @@ exports[`Pet Simulator Public Live API Test Pets shape 1`] = `
       "collection": "Pets",
       "configData": {
         "animations": {
-          "angelusSpin": true,
+          "spinZ": true,
         },
         "cachedPower": [
-          11007826033809,
+          10012286211629,
         ],
         "fly": true,
         "fromWorldNumber": 3,
@@ -53833,7 +54707,7 @@ exports[`Pet Simulator Public Live API Test Pets shape 1`] = `
       "collection": "Pets",
       "configData": {
         "cachedPower": [
-          10126062191307,
+          9557182292919,
         ],
         "fly": true,
         "fromWorldNumber": 3,
@@ -53849,7 +54723,7 @@ exports[`Pet Simulator Public Live API Test Pets shape 1`] = `
       "collection": "Pets",
       "configData": {
         "cachedPower": [
-          9443406313241,
+          9102078374209,
         ],
         "fly": true,
         "fromWorldNumber": 3,
@@ -53865,7 +54739,7 @@ exports[`Pet Simulator Public Live API Test Pets shape 1`] = `
       "collection": "Pets",
       "configData": {
         "cachedPower": [
-          9784734252274,
+          9329630333564,
         ],
         "fly": true,
         "fromWorldNumber": 3,
@@ -53881,7 +54755,7 @@ exports[`Pet Simulator Public Live API Test Pets shape 1`] = `
       "collection": "Pets",
       "configData": {
         "cachedPower": [
-          10126062191307,
+          9557182292919,
         ],
         "fromWorldNumber": 3,
         "fromZoneNumber": 214,
@@ -53896,7 +54770,7 @@ exports[`Pet Simulator Public Live API Test Pets shape 1`] = `
       "collection": "Pets",
       "configData": {
         "cachedPower": [
-          9784734252274,
+          9329630333564,
         ],
         "fly": true,
         "fromWorldNumber": 3,
@@ -53920,7 +54794,6 @@ exports[`Pet Simulator Public Live API Test Pets shape 1`] = `
         "goldenThumbnail": "rbxassetid://18127448059",
         "name": "Demon Cat",
         "thumbnail": "rbxassetid://18127448207",
-        "tradable": false,
       },
       "configName": "Demon Cat",
     },
@@ -53937,7 +54810,6 @@ exports[`Pet Simulator Public Live API Test Pets shape 1`] = `
         "goldenThumbnail": "rbxassetid://18151021189",
         "name": "Angel Lamb",
         "thumbnail": "rbxassetid://18151021378",
-        "tradable": false,
       },
       "configName": "Angel Lamb",
     },
@@ -53946,7 +54818,7 @@ exports[`Pet Simulator Public Live API Test Pets shape 1`] = `
       "collection": "Pets",
       "configData": {
         "cachedPower": [
-          9102078374209,
+          8899809965893,
         ],
         "fromWorldNumber": 3,
         "fromZoneNumber": 214,
@@ -53961,7 +54833,7 @@ exports[`Pet Simulator Public Live API Test Pets shape 1`] = `
       "collection": "Pets",
       "configData": {
         "cachedPower": [
-          11007826033809,
+          10012286211629,
         ],
         "fly": true,
         "fromWorldNumber": 3,
@@ -53977,7 +54849,7 @@ exports[`Pet Simulator Public Live API Test Pets shape 1`] = `
       "collection": "Pets",
       "configData": {
         "cachedPower": [
-          9443406313241,
+          9102078374209,
         ],
         "fromWorldNumber": 3,
         "fromZoneNumber": 214,
@@ -53992,7 +54864,7 @@ exports[`Pet Simulator Public Live API Test Pets shape 1`] = `
       "collection": "Pets",
       "configData": {
         "cachedPower": [
-          10623832102397,
+          9784734252274,
         ],
         "fromWorldNumber": 3,
         "fromZoneNumber": 214,
@@ -54040,7 +54912,7 @@ exports[`Pet Simulator Public Live API Test Pets shape 1`] = `
       "collection": "Pets",
       "configData": {
         "cachedPower": [
-          9102078374209,
+          8899809965893,
         ],
         "fly": true,
         "fromWorldNumber": 3,
@@ -54050,6 +54922,278 @@ exports[`Pet Simulator Public Live API Test Pets shape 1`] = `
         "thumbnail": "rbxassetid://18151022248",
       },
       "configName": "Angel Seal",
+    },
+    {
+      "category": "Huge",
+      "collection": "Pets",
+      "configData": {
+        "fly": true,
+        "goldenThumbnail": "rbxassetid://18256895227",
+        "huge": true,
+        "indexDesc": "Earned from Good vs. Evil Diamond Egg!",
+        "indexObtainable": true,
+        "name": "Huge Good vs Evil Dragon",
+        "thumbnail": "rbxassetid://18256895106",
+      },
+      "configName": "Huge Good vs Evil Dragon",
+    },
+    {
+      "category": "Huge",
+      "collection": "Pets",
+      "configData": {
+        "goldenThumbnail": "rbxassetid://18256894972",
+        "huge": true,
+        "indexDesc": "Found in the Good vs. Evil Pack!",
+        "indexObtainable": true,
+        "name": "Huge Devil Dominus",
+        "thumbnail": "rbxassetid://18256894835",
+      },
+      "configName": "Huge Devil Dominus",
+    },
+    {
+      "category": "Huge",
+      "collection": "Pets",
+      "configData": {
+        "fly": true,
+        "goldenThumbnail": "rbxassetid://18256894698",
+        "huge": true,
+        "indexDesc": "Earned from the Good vs. Evil World and Evil Gifts!",
+        "indexObtainable": true,
+        "name": "Huge Devil Agony",
+        "thumbnail": "rbxassetid://18256894534",
+      },
+      "configName": "Huge Devil Agony",
+    },
+    {
+      "category": "Huge",
+      "collection": "Pets",
+      "configData": {
+        "goldenThumbnail": "rbxassetid://18256895564",
+        "huge": true,
+        "indexDesc": "Earned from the Good vs. Evil World and Good Gifts!",
+        "indexObtainable": true,
+        "name": "Huge Sage Axolotl",
+        "thumbnail": "rbxassetid://18256895424",
+      },
+      "configName": "Huge Sage Axolotl",
+    },
+    {
+      "category": "Huge",
+      "collection": "Pets",
+      "configData": {
+        "fly": true,
+        "goldenThumbnail": "rbxassetid://18256895855",
+        "huge": true,
+        "indexDesc": "Found in the Good vs. Evil Pack!",
+        "indexObtainable": true,
+        "name": "Huge Warrior Wolf",
+        "thumbnail": "rbxassetid://18256895705",
+      },
+      "configName": "Huge Warrior Wolf",
+    },
+    {
+      "category": "Uncategorized",
+      "collection": "Pets",
+      "configData": {
+        "cachedPower": [
+          11519817942358,
+        ],
+        "fly": true,
+        "fromWorldNumber": 3,
+        "fromZoneNumber": 214,
+        "goldenThumbnail": "rbxassetid://18256799509",
+        "name": "Warrior Wolf",
+        "thumbnail": "rbxassetid://18256799617",
+      },
+      "configName": "Warrior Wolf",
+    },
+    {
+      "category": "Uncategorized",
+      "collection": "Pets",
+      "configData": {
+        "cachedPower": [
+          10751830079534,
+        ],
+        "fly": true,
+        "fromWorldNumber": 3,
+        "fromZoneNumber": 214,
+        "goldenThumbnail": "rbxassetid://18256795703",
+        "name": "Angel Moth",
+        "thumbnail": "rbxassetid://18256795926",
+      },
+      "configName": "Angel Moth",
+    },
+    {
+      "category": "Uncategorized",
+      "collection": "Pets",
+      "configData": {
+        "cachedPower": [
+          11263821988083,
+        ],
+        "fromWorldNumber": 3,
+        "fromZoneNumber": 214,
+        "goldenThumbnail": "rbxassetid://18256799049",
+        "name": "Sage Axolotl",
+        "thumbnail": "rbxassetid://18256799375",
+      },
+      "configName": "Sage Axolotl",
+    },
+    {
+      "category": "Uncategorized",
+      "collection": "Pets",
+      "configData": {
+        "cachedPower": [
+          10495834125259,
+        ],
+        "fly": true,
+        "fromWorldNumber": 3,
+        "fromZoneNumber": 214,
+        "goldenThumbnail": "rbxassetid://18256795307",
+        "name": "Angel Fawn",
+        "thumbnail": "rbxassetid://18256795515",
+      },
+      "configName": "Angel Fawn",
+    },
+    {
+      "category": "Uncategorized",
+      "collection": "Pets",
+      "configData": {
+        "cachedPower": [
+          10239838170985,
+        ],
+        "fly": true,
+        "fromWorldNumber": 3,
+        "fromZoneNumber": 214,
+        "goldenThumbnail": "rbxassetid://18256796507",
+        "name": "Archangel Cat",
+        "thumbnail": "rbxassetid://18256796655",
+      },
+      "configName": "Archangel Cat",
+    },
+    {
+      "category": "Uncategorized",
+      "collection": "Pets",
+      "configData": {
+        "cachedPower": [
+          11007826033809,
+        ],
+        "fly": true,
+        "fromWorldNumber": 3,
+        "fromZoneNumber": 214,
+        "goldenThumbnail": "rbxassetid://18256796174",
+        "name": "Angel Pony",
+        "thumbnail": "rbxassetid://18256796372",
+      },
+      "configName": "Angel Pony",
+    },
+    {
+      "category": "Uncategorized",
+      "collection": "Pets",
+      "configData": {
+        "cachedPower": [
+          11007826033809,
+        ],
+        "fromWorldNumber": 3,
+        "fromZoneNumber": 214,
+        "goldenThumbnail": "rbxassetid://18256798411",
+        "name": "Hell Scorpion",
+        "thumbnail": "rbxassetid://18256798599",
+      },
+      "configName": "Hell Scorpion",
+    },
+    {
+      "category": "Uncategorized",
+      "collection": "Pets",
+      "configData": {
+        "cachedPower": [
+          11263821988083,
+        ],
+        "fly": true,
+        "fromWorldNumber": 3,
+        "fromZoneNumber": 214,
+        "goldenThumbnail": "rbxassetid://18256797088",
+        "name": "Devil Agony",
+        "thumbnail": "rbxassetid://18256797251",
+      },
+      "configName": "Devil Agony",
+    },
+    {
+      "category": "Uncategorized",
+      "collection": "Pets",
+      "configData": {
+        "cachedPower": [
+          10495834125259,
+        ],
+        "fly": true,
+        "fromWorldNumber": 3,
+        "fromZoneNumber": 214,
+        "goldenThumbnail": "rbxassetid://18256797746",
+        "name": "Evil Bat",
+        "thumbnail": "rbxassetid://18256797857",
+      },
+      "configName": "Evil Bat",
+    },
+    {
+      "category": "Uncategorized",
+      "collection": "Pets",
+      "configData": {
+        "cachedPower": [
+          10239838170985,
+        ],
+        "fly": true,
+        "fromWorldNumber": 3,
+        "fromZoneNumber": 214,
+        "goldenThumbnail": "rbxassetid://18256796826",
+        "name": "Demon Dog",
+        "thumbnail": "rbxassetid://18256796953",
+      },
+      "configName": "Demon Dog",
+    },
+    {
+      "category": "Uncategorized",
+      "collection": "Pets",
+      "configData": {
+        "cachedPower": [
+          10751830079534,
+        ],
+        "fromWorldNumber": 3,
+        "fromZoneNumber": 214,
+        "goldenThumbnail": "rbxassetid://18256797992",
+        "name": "Evil Minotaur",
+        "thumbnail": "rbxassetid://18256798139",
+      },
+      "configName": "Evil Minotaur",
+    },
+    {
+      "category": "Uncategorized",
+      "collection": "Pets",
+      "configData": {
+        "cachedPower": [
+          11519817942358,
+        ],
+        "fromWorldNumber": 3,
+        "fromZoneNumber": 214,
+        "goldenThumbnail": "rbxassetid://18256797403",
+        "name": "Devil Dominus",
+        "thumbnail": "rbxassetid://18256797545",
+      },
+      "configName": "Devil Dominus",
+    },
+    {
+      "category": "Uncategorized",
+      "collection": "Pets",
+      "configData": {
+        "cachedPower": [
+          11007826033809,
+        ],
+        "fly": true,
+        "fromWorldNumber": 3,
+        "fromZoneNumber": 214,
+        "goldenThumbnail": "rbxassetid://18256798226",
+        "name": "Good vs Evil Dragon",
+        "thumbnail": "rbxassetid://18256798311",
+      },
+      "configName": "Good vs Evil Dragon",
     },
   ],
   "status": "ok",
@@ -82566,7 +83710,6 @@ exports[`Pet Simulator Public Live API Test Ultimates shape 1`] = `
           4,
         ],
         "MaxTier": 4,
-        "NotAllowedInInstances": true,
         "ProductId": 1759543962,
         "Rarity": {
           "Announce": true,
@@ -82838,7 +83981,6 @@ exports[`Pet Simulator Public Live API Test Ultimates shape 1`] = `
           4,
         ],
         "MaxTier": 4,
-        "NotAllowedInInstances": true,
         "Rarity": {
           "Announce": true,
           "Color": null,
@@ -87102,27 +88244,22 @@ exports[`Pet Simulator Public Live API Test Zones shape 1`] = `
               {
                 "Type": "Small Coins (Default)",
                 "Weight": 6,
-                "WorldNumber": 1,
               },
               {
                 "Type": "Medium Coins (Default)",
                 "Weight": 8,
-                "WorldNumber": 1,
               },
               {
                 "Type": "Crate (Crystal)",
                 "Weight": 5,
-                "WorldNumber": 1,
               },
               {
                 "Type": "Mine Cart (Default)",
                 "Weight": 4,
-                "WorldNumber": 1,
               },
               {
                 "Type": "Safe (Crystal)",
                 "Weight": 3,
-                "WorldNumber": 1,
               },
             ],
             "Settings": {
@@ -87155,27 +88292,22 @@ exports[`Pet Simulator Public Live API Test Zones shape 1`] = `
               {
                 "Type": "Small Coins (Default)",
                 "Weight": 8,
-                "WorldNumber": 1,
               },
               {
                 "Type": "Medium Coins (Default)",
                 "Weight": 2,
-                "WorldNumber": 1,
               },
               {
                 "Type": "Large Coins (Default)",
                 "Weight": 1,
-                "WorldNumber": 1,
               },
               {
                 "Type": "Crate (Crystal)",
                 "Weight": 4,
-                "WorldNumber": 1,
               },
               {
                 "Type": "Mine Cart (Default)",
                 "Weight": 3,
-                "WorldNumber": 1,
               },
             ],
             "Settings": {
@@ -87208,22 +88340,18 @@ exports[`Pet Simulator Public Live API Test Zones shape 1`] = `
               {
                 "Type": "Medium Coins (Default)",
                 "Weight": 6.75,
-                "WorldNumber": 1,
               },
               {
                 "Type": "Large Coins (Default)",
                 "Weight": 10,
-                "WorldNumber": 1,
               },
               {
                 "Type": "Crate (Mossy)",
                 "Weight": 8,
-                "WorldNumber": 1,
               },
               {
                 "Type": "Present (Mossy)",
                 "Weight": 8,
-                "WorldNumber": 1,
               },
             ],
             "Settings": {
@@ -87307,32 +88435,26 @@ exports[`Pet Simulator Public Live API Test Zones shape 1`] = `
               {
                 "Type": "Small Coins (Default)",
                 "Weight": 60,
-                "WorldNumber": 1,
               },
               {
                 "Type": "Medium Coins (Default)",
                 "Weight": 80,
-                "WorldNumber": 1,
               },
               {
                 "Type": "Large Coins (Default)",
                 "Weight": 60,
-                "WorldNumber": 1,
               },
               {
                 "Type": "Crate (Mossy)",
                 "Weight": 25,
-                "WorldNumber": 1,
               },
               {
                 "Type": "Safe (Mossy)",
                 "Weight": 30,
-                "WorldNumber": 1,
               },
               {
                 "Type": "Vault (Mossy)",
                 "Weight": 20,
-                "WorldNumber": 1,
               },
             ],
             "Settings": {
@@ -87416,22 +88538,18 @@ exports[`Pet Simulator Public Live API Test Zones shape 1`] = `
               {
                 "Type": "Small Coins (Default)",
                 "Weight": 3.75,
-                "WorldNumber": 1,
               },
               {
                 "Type": "Medium Coins (Default)",
                 "Weight": 7,
-                "WorldNumber": 1,
               },
               {
                 "Type": "Large Coins (Default)",
                 "Weight": 10,
-                "WorldNumber": 1,
               },
               {
                 "Type": "Crate (Mushroom)",
                 "Weight": 13,
-                "WorldNumber": 1,
               },
             ],
             "Settings": {
@@ -87464,22 +88582,18 @@ exports[`Pet Simulator Public Live API Test Zones shape 1`] = `
               {
                 "Type": "Large Coins (Default)",
                 "Weight": 3.75,
-                "WorldNumber": 1,
               },
               {
                 "Type": "Crate (Mushroom)",
                 "Weight": 35,
-                "WorldNumber": 1,
               },
               {
                 "Type": "Safe (Mushroom)",
                 "Weight": 15,
-                "WorldNumber": 1,
               },
               {
                 "Type": "Vault (Mushroom)",
                 "Weight": 15,
-                "WorldNumber": 1,
               },
             ],
             "Settings": {
@@ -87512,27 +88626,22 @@ exports[`Pet Simulator Public Live API Test Zones shape 1`] = `
               {
                 "Type": "Small Coins (Default)",
                 "Weight": 5.25,
-                "WorldNumber": 1,
               },
               {
                 "Type": "Medium Coins (Default)",
                 "Weight": 8,
-                "WorldNumber": 1,
               },
               {
                 "Type": "Large Coins (Default)",
                 "Weight": 9,
-                "WorldNumber": 1,
               },
               {
                 "Type": "Present (Mushroom)",
                 "Weight": 9,
-                "WorldNumber": 1,
               },
               {
                 "Type": "Safe (Mushroom)",
                 "Weight": 2,
-                "WorldNumber": 1,
               },
             ],
             "Settings": {
@@ -87565,27 +88674,22 @@ exports[`Pet Simulator Public Live API Test Zones shape 1`] = `
               {
                 "Type": "Small Coins (Default)",
                 "Weight": 3.75,
-                "WorldNumber": 1,
               },
               {
                 "Type": "Medium Coins (Default)",
                 "Weight": 5,
-                "WorldNumber": 1,
               },
               {
                 "Type": "Large Coins (Default)",
                 "Weight": 10,
-                "WorldNumber": 1,
               },
               {
                 "Type": "Crate (Mossy)",
                 "Weight": 12,
-                "WorldNumber": 1,
               },
               {
                 "Type": "Safe (Mossy)",
                 "Weight": 3,
-                "WorldNumber": 1,
               },
             ],
             "Settings": {
@@ -87618,32 +88722,26 @@ exports[`Pet Simulator Public Live API Test Zones shape 1`] = `
               {
                 "Type": "Small Coins (Default)",
                 "Weight": 1.5,
-                "WorldNumber": 1,
               },
               {
                 "Type": "Medium Coins (Default)",
                 "Weight": 4,
-                "WorldNumber": 1,
               },
               {
                 "Type": "Large Coins (Default)",
                 "Weight": 5,
-                "WorldNumber": 1,
               },
               {
                 "Type": "Present (Mossy)",
                 "Weight": 7,
-                "WorldNumber": 1,
               },
               {
                 "Type": "Safe (Mossy)",
                 "Weight": 7,
-                "WorldNumber": 1,
               },
               {
                 "Type": "Vault (Mossy)",
                 "Weight": 3,
-                "WorldNumber": 1,
               },
             ],
             "Settings": {
@@ -87676,27 +88774,22 @@ exports[`Pet Simulator Public Live API Test Zones shape 1`] = `
               {
                 "Type": "Small Coins (Default)",
                 "Weight": 2.25,
-                "WorldNumber": 1,
               },
               {
                 "Type": "Medium Coins (Default)",
                 "Weight": 5,
-                "WorldNumber": 1,
               },
               {
                 "Type": "Large Coins (Default)",
                 "Weight": 8,
-                "WorldNumber": 1,
               },
               {
                 "Type": "Present (Tropical)",
                 "Weight": 5,
-                "WorldNumber": 1,
               },
               {
                 "Type": "Crate (Tropical)",
                 "Weight": 15,
-                "WorldNumber": 1,
               },
             ],
             "Settings": {
@@ -87729,37 +88822,30 @@ exports[`Pet Simulator Public Live API Test Zones shape 1`] = `
               {
                 "Type": "Small Coins (Default)",
                 "Weight": 3,
-                "WorldNumber": 1,
               },
               {
                 "Type": "Medium Coins (Default)",
                 "Weight": 6,
-                "WorldNumber": 1,
               },
               {
                 "Type": "Large Coins (Default)",
                 "Weight": 2,
-                "WorldNumber": 1,
               },
               {
                 "Type": "Present (Tropical)",
                 "Weight": 3,
-                "WorldNumber": 1,
               },
               {
                 "Type": "Crate (Tropical)",
                 "Weight": 12,
-                "WorldNumber": 1,
               },
               {
                 "Type": "Safe (Tropical)",
                 "Weight": 8,
-                "WorldNumber": 1,
               },
               {
                 "Type": "Vault (Tropical)",
                 "Weight": 4,
-                "WorldNumber": 1,
               },
             ],
             "Settings": {
@@ -87850,27 +88936,22 @@ exports[`Pet Simulator Public Live API Test Zones shape 1`] = `
               {
                 "Type": "Small Coins (Default)",
                 "Weight": 1.5,
-                "WorldNumber": 1,
               },
               {
                 "Type": "Medium Coins (Default)",
                 "Weight": 4,
-                "WorldNumber": 1,
               },
               {
                 "Type": "Large Coins (Default)",
                 "Weight": 8,
-                "WorldNumber": 1,
               },
               {
                 "Type": "Present (Coral)",
                 "Weight": 25,
-                "WorldNumber": 1,
               },
               {
                 "Type": "Safe (Coral)",
                 "Weight": 10,
-                "WorldNumber": 1,
               },
             ],
             "Settings": {
@@ -87957,32 +89038,26 @@ exports[`Pet Simulator Public Live API Test Zones shape 1`] = `
               {
                 "Type": "Small Coins (Default)",
                 "Weight": 0.75,
-                "WorldNumber": 1,
               },
               {
                 "Type": "Medium Coins (Default)",
                 "Weight": 2,
-                "WorldNumber": 1,
               },
               {
                 "Type": "Large Coins (Default)",
                 "Weight": 6,
-                "WorldNumber": 1,
               },
               {
                 "Type": "Crate (Coral)",
                 "Weight": 3,
-                "WorldNumber": 1,
               },
               {
                 "Type": "Safe (Default)",
                 "Weight": 4,
-                "WorldNumber": 1,
               },
               {
                 "Type": "Vault (Default)",
                 "Weight": 2,
-                "WorldNumber": 1,
               },
             ],
             "Settings": {
@@ -88069,37 +89144,30 @@ exports[`Pet Simulator Public Live API Test Zones shape 1`] = `
               {
                 "Type": "Small Coins (Default)",
                 "Weight": 15,
-                "WorldNumber": 1,
               },
               {
                 "Type": "Medium Coins (Default)",
                 "Weight": 30,
-                "WorldNumber": 1,
               },
               {
                 "Type": "Large Coins (Default)",
                 "Weight": 40,
-                "WorldNumber": 1,
               },
               {
                 "Type": "Crate (Coral)",
                 "Weight": 40,
-                "WorldNumber": 1,
               },
               {
                 "Type": "Present (Coral)",
                 "Weight": 35,
-                "WorldNumber": 1,
               },
               {
                 "Type": "Safe (Coral)",
                 "Weight": 25,
-                "WorldNumber": 1,
               },
               {
                 "Type": "Vault (Coral)",
                 "Weight": 18,
-                "WorldNumber": 1,
               },
             ],
             "Settings": {
@@ -88183,32 +89251,26 @@ exports[`Pet Simulator Public Live API Test Zones shape 1`] = `
               {
                 "Type": "Small Coins (Default)",
                 "Weight": 45,
-                "WorldNumber": 1,
               },
               {
                 "Type": "Medium Coins (Default)",
                 "Weight": 80,
-                "WorldNumber": 1,
               },
               {
                 "Type": "Large Coins (Default)",
                 "Weight": 80,
-                "WorldNumber": 1,
               },
               {
                 "Type": "Crate (Tropical)",
                 "Weight": 40,
-                "WorldNumber": 1,
               },
               {
                 "Type": "Present (Tropical)",
                 "Weight": 35,
-                "WorldNumber": 1,
               },
               {
                 "Type": "Safe (Tropical)",
                 "Weight": 30,
-                "WorldNumber": 1,
               },
             ],
             "Settings": {
@@ -88241,22 +89303,18 @@ exports[`Pet Simulator Public Live API Test Zones shape 1`] = `
               {
                 "Type": "Medium Coins (Default)",
                 "Weight": 11.25,
-                "WorldNumber": 1,
               },
               {
                 "Type": "Large Coins (Default)",
                 "Weight": 60,
-                "WorldNumber": 1,
               },
               {
                 "Type": "Present (Tropical)",
                 "Weight": 30,
-                "WorldNumber": 1,
               },
               {
                 "Type": "Vault (Tropical)",
                 "Weight": 40,
-                "WorldNumber": 1,
               },
             ],
             "Settings": {
@@ -88289,22 +89347,18 @@ exports[`Pet Simulator Public Live API Test Zones shape 1`] = `
               {
                 "Type": "Medium Coins (Default)",
                 "Weight": 25,
-                "WorldNumber": 1,
               },
               {
                 "Type": "Large Coins (Default)",
                 "Weight": 50,
-                "WorldNumber": 1,
               },
               {
                 "Type": "Crate (Default)",
                 "Weight": 15,
-                "WorldNumber": 1,
               },
               {
                 "Type": "Present (Default)",
                 "Weight": 25,
-                "WorldNumber": 1,
               },
             ],
             "Settings": {
@@ -88337,32 +89391,26 @@ exports[`Pet Simulator Public Live API Test Zones shape 1`] = `
               {
                 "Type": "Small Coins (Default)",
                 "Weight": 4,
-                "WorldNumber": 1,
               },
               {
                 "Type": "Medium Coins (Default)",
                 "Weight": 4,
-                "WorldNumber": 1,
               },
               {
                 "Type": "Large Coins (Default)",
                 "Weight": 4,
-                "WorldNumber": 1,
               },
               {
                 "Type": "Crate (Default)",
                 "Weight": 20,
-                "WorldNumber": 1,
               },
               {
                 "Type": "Present (Default)",
                 "Weight": 15,
-                "WorldNumber": 1,
               },
               {
                 "Type": "Safe (Default)",
                 "Weight": 5,
-                "WorldNumber": 1,
               },
             ],
             "Settings": {
@@ -88395,17 +89443,14 @@ exports[`Pet Simulator Public Live API Test Zones shape 1`] = `
               {
                 "Type": "Medium Coins (Default)",
                 "Weight": 22,
-                "WorldNumber": 1,
               },
               {
                 "Type": "Large Coins (Default)",
                 "Weight": 16,
-                "WorldNumber": 1,
               },
               {
                 "Type": "Safe (Default)",
                 "Weight": 6,
-                "WorldNumber": 1,
               },
             ],
             "Settings": {
@@ -88438,22 +89483,18 @@ exports[`Pet Simulator Public Live API Test Zones shape 1`] = `
               {
                 "Type": "Small Coins (Default)",
                 "Weight": 1,
-                "WorldNumber": 1,
               },
               {
                 "Type": "Medium Coins (Default)",
                 "Weight": 3,
-                "WorldNumber": 1,
               },
               {
                 "Type": "Large Coins (Default)",
                 "Weight": 5,
-                "WorldNumber": 1,
               },
               {
                 "Type": "Present (Default)",
                 "Weight": 41,
-                "WorldNumber": 1,
               },
             ],
             "Settings": {
@@ -88486,32 +89527,26 @@ exports[`Pet Simulator Public Live API Test Zones shape 1`] = `
               {
                 "Type": "Small Coins (Default)",
                 "Weight": 7,
-                "WorldNumber": 1,
               },
               {
                 "Type": "Medium Coins (Default)",
                 "Weight": 7,
-                "WorldNumber": 1,
               },
               {
                 "Type": "Large Coins (Default)",
                 "Weight": 4,
-                "WorldNumber": 1,
               },
               {
                 "Type": "Safe (Default)",
                 "Weight": 5,
-                "WorldNumber": 1,
               },
               {
                 "Type": "Vault (Default)",
                 "Weight": 3,
-                "WorldNumber": 1,
               },
               {
                 "Type": "Wheel Barrow (Default)",
                 "Weight": 8,
-                "WorldNumber": 1,
               },
             ],
             "Settings": {
@@ -88544,32 +89579,26 @@ exports[`Pet Simulator Public Live API Test Zones shape 1`] = `
               {
                 "Type": "Small Coins (Default)",
                 "Weight": 9,
-                "WorldNumber": 1,
               },
               {
                 "Type": "Medium Coins (Default)",
                 "Weight": 7,
-                "WorldNumber": 1,
               },
               {
                 "Type": "Large Coins (Default)",
                 "Weight": 6,
-                "WorldNumber": 1,
               },
               {
                 "Type": "Crate (Flower)",
                 "Weight": 5,
-                "WorldNumber": 1,
               },
               {
                 "Type": "Present (Flower)",
                 "Weight": 5,
-                "WorldNumber": 1,
               },
               {
                 "Type": "Safe (Flower)",
                 "Weight": 3,
-                "WorldNumber": 1,
               },
             ],
             "Settings": {
@@ -88602,32 +89631,26 @@ exports[`Pet Simulator Public Live API Test Zones shape 1`] = `
               {
                 "Type": "Small Coins (Default)",
                 "Weight": 4,
-                "WorldNumber": 1,
               },
               {
                 "Type": "Medium Coins (Default)",
                 "Weight": 6,
-                "WorldNumber": 1,
               },
               {
                 "Type": "Large Coins (Default)",
                 "Weight": 8,
-                "WorldNumber": 1,
               },
               {
                 "Type": "Present (Flower)",
                 "Weight": 6,
-                "WorldNumber": 1,
               },
               {
                 "Type": "Safe (Flower)",
                 "Weight": 5,
-                "WorldNumber": 1,
               },
               {
                 "Type": "Vault (Flower)",
                 "Weight": 5,
-                "WorldNumber": 1,
               },
             ],
             "Settings": {
@@ -88664,22 +89687,18 @@ exports[`Pet Simulator Public Live API Test Zones shape 1`] = `
               {
                 "Type": "Medium Coins (Default)",
                 "Weight": 15,
-                "WorldNumber": 1,
               },
               {
                 "Type": "Large Coins (Default)",
                 "Weight": 20,
-                "WorldNumber": 1,
               },
               {
                 "Type": "Small Barrel (Default)",
                 "Weight": 35,
-                "WorldNumber": 1,
               },
               {
                 "Type": "Large Barrel (Default)",
                 "Weight": 28,
-                "WorldNumber": 1,
               },
             ],
             "Settings": {
@@ -88712,32 +89731,26 @@ exports[`Pet Simulator Public Live API Test Zones shape 1`] = `
               {
                 "Type": "Small Coins (Default)",
                 "Weight": 15,
-                "WorldNumber": 1,
               },
               {
                 "Type": "Medium Coins (Default)",
                 "Weight": 50,
-                "WorldNumber": 1,
               },
               {
                 "Type": "Large Coins (Default)",
                 "Weight": 30,
-                "WorldNumber": 1,
               },
               {
                 "Type": "Crate (Default)",
                 "Weight": 30,
-                "WorldNumber": 1,
               },
               {
                 "Type": "Present (Default)",
                 "Weight": 40,
-                "WorldNumber": 1,
               },
               {
                 "Type": "Vault (Default)",
                 "Weight": 40,
-                "WorldNumber": 1,
               },
             ],
             "Settings": {
@@ -88824,32 +89837,26 @@ exports[`Pet Simulator Public Live API Test Zones shape 1`] = `
               {
                 "Type": "Small Coins (Default)",
                 "Weight": 41.25,
-                "WorldNumber": 1,
               },
               {
                 "Type": "Medium Coins (Default)",
                 "Weight": 80,
-                "WorldNumber": 1,
               },
               {
                 "Type": "Large Coins (Default)",
                 "Weight": 100,
-                "WorldNumber": 1,
               },
               {
                 "Type": "Crate (Default)",
                 "Weight": 30,
-                "WorldNumber": 1,
               },
               {
                 "Type": "Wheel Barrow (Default)",
                 "Weight": 40,
-                "WorldNumber": 1,
               },
               {
                 "Type": "Safe (Default)",
                 "Weight": 20,
-                "WorldNumber": 1,
               },
             ],
             "Settings": {
@@ -88937,32 +89944,26 @@ exports[`Pet Simulator Public Live API Test Zones shape 1`] = `
               {
                 "Type": "Small Coins (Default)",
                 "Weight": 45,
-                "WorldNumber": 1,
               },
               {
                 "Type": "Medium Coins (Default)",
                 "Weight": 80,
-                "WorldNumber": 1,
               },
               {
                 "Type": "Large Coins (Default)",
                 "Weight": 100,
-                "WorldNumber": 1,
               },
               {
                 "Type": "Present (Ice)",
                 "Weight": 35,
-                "WorldNumber": 1,
               },
               {
                 "Type": "Safe (Ice)",
                 "Weight": 25,
-                "WorldNumber": 1,
               },
               {
                 "Type": "Vault (Ice)",
                 "Weight": 18,
-                "WorldNumber": 1,
               },
             ],
             "Settings": {
@@ -88998,27 +89999,22 @@ exports[`Pet Simulator Public Live API Test Zones shape 1`] = `
               {
                 "Type": "Small Coins (Default)",
                 "Weight": 30,
-                "WorldNumber": 1,
               },
               {
                 "Type": "Medium Coins (Default)",
                 "Weight": 80,
-                "WorldNumber": 1,
               },
               {
                 "Type": "Large Coins (Default)",
                 "Weight": 60,
-                "WorldNumber": 1,
               },
               {
                 "Type": "Present (Ice)",
                 "Weight": 55,
-                "WorldNumber": 1,
               },
               {
                 "Type": "Safe (Ice)",
                 "Weight": 45,
-                "WorldNumber": 1,
               },
             ],
             "Settings": {
@@ -89054,22 +90050,18 @@ exports[`Pet Simulator Public Live API Test Zones shape 1`] = `
               {
                 "Type": "Small Coins (Default)",
                 "Weight": 45,
-                "WorldNumber": 1,
               },
               {
                 "Type": "Medium Coins (Default)",
                 "Weight": 80,
-                "WorldNumber": 1,
               },
               {
                 "Type": "Large Coins (Default)",
                 "Weight": 60,
-                "WorldNumber": 1,
               },
               {
                 "Type": "Present (Ice)",
                 "Weight": 120,
-                "WorldNumber": 1,
               },
             ],
             "Settings": {
@@ -89105,32 +90097,26 @@ exports[`Pet Simulator Public Live API Test Zones shape 1`] = `
               {
                 "Type": "Small Coins (Default)",
                 "Weight": 45,
-                "WorldNumber": 1,
               },
               {
                 "Type": "Medium Coins (Default)",
                 "Weight": 80,
-                "WorldNumber": 1,
               },
               {
                 "Type": "Large Coins (Default)",
                 "Weight": 100,
-                "WorldNumber": 1,
               },
               {
                 "Type": "Present (Ice)",
                 "Weight": 20,
-                "WorldNumber": 1,
               },
               {
                 "Type": "Safe (Ice)",
                 "Weight": 30,
-                "WorldNumber": 1,
               },
               {
                 "Type": "Vault (Ice)",
                 "Weight": 40,
-                "WorldNumber": 1,
               },
             ],
             "Settings": {
@@ -89175,27 +90161,22 @@ exports[`Pet Simulator Public Live API Test Zones shape 1`] = `
               {
                 "Type": "Small Coins (Default)",
                 "Weight": 22.5,
-                "WorldNumber": 1,
               },
               {
                 "Type": "Medium Coins (Default)",
                 "Weight": 80,
-                "WorldNumber": 1,
               },
               {
                 "Type": "Large Coins (Default)",
                 "Weight": 60,
-                "WorldNumber": 1,
               },
               {
                 "Type": "Crate (Default)",
                 "Weight": 80,
-                "WorldNumber": 1,
               },
               {
                 "Type": "Present (Default)",
                 "Weight": 45,
-                "WorldNumber": 1,
               },
             ],
             "Settings": {
@@ -89228,37 +90209,30 @@ exports[`Pet Simulator Public Live API Test Zones shape 1`] = `
               {
                 "Type": "Small Coins (Default)",
                 "Weight": 60,
-                "WorldNumber": 1,
               },
               {
                 "Type": "Medium Coins (Default)",
                 "Weight": 80,
-                "WorldNumber": 1,
               },
               {
                 "Type": "Large Coins (Default)",
                 "Weight": 120,
-                "WorldNumber": 1,
               },
               {
                 "Type": "Crate (Ice)",
                 "Weight": 60,
-                "WorldNumber": 1,
               },
               {
                 "Type": "Present (Ice)",
                 "Weight": 10,
-                "WorldNumber": 1,
               },
               {
                 "Type": "Safe (Ice)",
                 "Weight": 25,
-                "WorldNumber": 1,
               },
               {
                 "Type": "Vault (Ice)",
                 "Weight": 40,
-                "WorldNumber": 1,
               },
             ],
             "Settings": {
@@ -89291,37 +90265,30 @@ exports[`Pet Simulator Public Live API Test Zones shape 1`] = `
               {
                 "Type": "Small Coins (Default)",
                 "Weight": 22.5,
-                "WorldNumber": 1,
               },
               {
                 "Type": "Medium Coins (Default)",
                 "Weight": 80,
-                "WorldNumber": 1,
               },
               {
                 "Type": "Large Coins (Default)",
                 "Weight": 60,
-                "WorldNumber": 1,
               },
               {
                 "Type": "Crate (Tropical)",
                 "Weight": 40,
-                "WorldNumber": 1,
               },
               {
                 "Type": "Present (Tropical)",
                 "Weight": 55,
-                "WorldNumber": 1,
               },
               {
                 "Type": "Safe (Tropical)",
                 "Weight": 45,
-                "WorldNumber": 1,
               },
               {
                 "Type": "Vault (Tropical)",
                 "Weight": 38,
-                "WorldNumber": 1,
               },
             ],
             "Settings": {
@@ -89354,32 +90321,26 @@ exports[`Pet Simulator Public Live API Test Zones shape 1`] = `
               {
                 "Type": "Small Coins (Default)",
                 "Weight": 45,
-                "WorldNumber": 1,
               },
               {
                 "Type": "Medium Coins (Default)",
                 "Weight": 80,
-                "WorldNumber": 1,
               },
               {
                 "Type": "Large Coins (Default)",
                 "Weight": 120,
-                "WorldNumber": 1,
               },
               {
                 "Type": "Present (Desert)",
                 "Weight": 65,
-                "WorldNumber": 1,
               },
               {
                 "Type": "Small Barrel (Default)",
                 "Weight": 75,
-                "WorldNumber": 1,
               },
               {
                 "Type": "Large Barrel (Default)",
                 "Weight": 85,
-                "WorldNumber": 1,
               },
             ],
             "Settings": {
@@ -89466,27 +90427,22 @@ exports[`Pet Simulator Public Live API Test Zones shape 1`] = `
               {
                 "Type": "Small Coins (Default)",
                 "Weight": 37.5,
-                "WorldNumber": 1,
               },
               {
                 "Type": "Medium Coins (Default)",
                 "Weight": 70,
-                "WorldNumber": 1,
               },
               {
                 "Type": "Large Coins (Default)",
                 "Weight": 90,
-                "WorldNumber": 1,
               },
               {
                 "Type": "Crate (Desert)",
                 "Weight": 40,
-                "WorldNumber": 1,
               },
               {
                 "Type": "Present (Desert)",
                 "Weight": 18,
-                "WorldNumber": 1,
               },
             ],
             "Settings": {
@@ -89573,32 +90529,26 @@ exports[`Pet Simulator Public Live API Test Zones shape 1`] = `
               {
                 "Type": "Small Coins (Default)",
                 "Weight": 22.5,
-                "WorldNumber": 1,
               },
               {
                 "Type": "Medium Coins (Default)",
                 "Weight": 60,
-                "WorldNumber": 1,
               },
               {
                 "Type": "Large Coins (Default)",
                 "Weight": 40,
-                "WorldNumber": 1,
               },
               {
                 "Type": "Present (Desert)",
                 "Weight": 35,
-                "WorldNumber": 1,
               },
               {
                 "Type": "Safe (Desert)",
                 "Weight": 25,
-                "WorldNumber": 1,
               },
               {
                 "Type": "Vault (Desert)",
                 "Weight": 10,
-                "WorldNumber": 1,
               },
             ],
             "Settings": {
@@ -89685,32 +90635,26 @@ exports[`Pet Simulator Public Live API Test Zones shape 1`] = `
               {
                 "Type": "Small Coins (Default)",
                 "Weight": 18.75,
-                "WorldNumber": 1,
               },
               {
                 "Type": "Medium Coins (Default)",
                 "Weight": 40,
-                "WorldNumber": 1,
               },
               {
                 "Type": "Large Coins (Default)",
                 "Weight": 30,
-                "WorldNumber": 1,
               },
               {
                 "Type": "Crate (Desert)",
                 "Weight": 45,
-                "WorldNumber": 1,
               },
               {
                 "Type": "Small Barrel (Default)",
                 "Weight": 23,
-                "WorldNumber": 1,
               },
               {
                 "Type": "Large Barrel (Default)",
                 "Weight": 18,
-                "WorldNumber": 1,
               },
             ],
             "Settings": {
@@ -89797,32 +90741,26 @@ exports[`Pet Simulator Public Live API Test Zones shape 1`] = `
               {
                 "Type": "Small Coins (Default)",
                 "Weight": 15,
-                "WorldNumber": 1,
               },
               {
                 "Type": "Medium Coins (Default)",
                 "Weight": 50,
-                "WorldNumber": 1,
               },
               {
                 "Type": "Large Coins (Default)",
                 "Weight": 30,
-                "WorldNumber": 1,
               },
               {
                 "Type": "Crate (Desert)",
                 "Weight": 30,
-                "WorldNumber": 1,
               },
               {
                 "Type": "Safe (Desert)",
                 "Weight": 28,
-                "WorldNumber": 1,
               },
               {
                 "Type": "Vault (Desert)",
                 "Weight": 35,
-                "WorldNumber": 1,
               },
             ],
             "Settings": {
@@ -89906,27 +90844,22 @@ exports[`Pet Simulator Public Live API Test Zones shape 1`] = `
               {
                 "Type": "Medium Coins (Default)",
                 "Weight": 80,
-                "WorldNumber": 1,
               },
               {
                 "Type": "Large Coins (Default)",
                 "Weight": 60,
-                "WorldNumber": 1,
               },
               {
                 "Type": "Crate (Desert)",
                 "Weight": 30,
-                "WorldNumber": 1,
               },
               {
                 "Type": "Safe (Desert)",
                 "Weight": 45,
-                "WorldNumber": 1,
               },
               {
                 "Type": "Vault (Desert)",
                 "Weight": 30,
-                "WorldNumber": 1,
               },
             ],
             "Settings": {
@@ -89959,32 +90892,26 @@ exports[`Pet Simulator Public Live API Test Zones shape 1`] = `
               {
                 "Type": "Small Coins (Default)",
                 "Weight": 60,
-                "WorldNumber": 1,
               },
               {
                 "Type": "Medium Coins (Default)",
                 "Weight": 80,
-                "WorldNumber": 1,
               },
               {
                 "Type": "Large Coins (Default)",
                 "Weight": 50,
-                "WorldNumber": 1,
               },
               {
                 "Type": "Crate (Ice)",
                 "Weight": 40,
-                "WorldNumber": 1,
               },
               {
                 "Type": "Safe (Ice)",
                 "Weight": 25,
-                "WorldNumber": 1,
               },
               {
                 "Type": "Vault (Ice)",
                 "Weight": 18,
-                "WorldNumber": 1,
               },
             ],
             "Settings": {
@@ -89997,22 +90924,18 @@ exports[`Pet Simulator Public Live API Test Zones shape 1`] = `
               {
                 "Type": "Small Coins (Default)",
                 "Weight": 37.5,
-                "WorldNumber": 1,
               },
               {
                 "Type": "Medium Coins (Default)",
                 "Weight": 50,
-                "WorldNumber": 1,
               },
               {
                 "Type": "Large Coins (Default)",
                 "Weight": 90,
-                "WorldNumber": 1,
               },
               {
                 "Type": "Crate (Magma)",
                 "Weight": 30,
-                "WorldNumber": 1,
               },
               {
                 "Type": "Safe (Magma)",
@@ -90021,7 +90944,6 @@ exports[`Pet Simulator Public Live API Test Zones shape 1`] = `
               {
                 "Type": "Vault (Magma)",
                 "Weight": 25,
-                "WorldNumber": 1,
               },
             ],
             "Settings": {
@@ -90054,27 +90976,22 @@ exports[`Pet Simulator Public Live API Test Zones shape 1`] = `
               {
                 "Type": "Small Coins (Default)",
                 "Weight": 60,
-                "WorldNumber": 1,
               },
               {
                 "Type": "Medium Coins (Default)",
                 "Weight": 80,
-                "WorldNumber": 1,
               },
               {
                 "Type": "Large Coins (Default)",
                 "Weight": 100,
-                "WorldNumber": 1,
               },
               {
                 "Type": "Crate (Magma)",
                 "Weight": 55,
-                "WorldNumber": 1,
               },
               {
                 "Type": "Present (Magma)",
                 "Weight": 15,
-                "WorldNumber": 1,
               },
               {
                 "Type": "Safe (Magma)",
@@ -90083,7 +91000,6 @@ exports[`Pet Simulator Public Live API Test Zones shape 1`] = `
               {
                 "Type": "Vault (Magma)",
                 "Weight": 10,
-                "WorldNumber": 1,
               },
             ],
             "Settings": {
@@ -90119,32 +91035,26 @@ exports[`Pet Simulator Public Live API Test Zones shape 1`] = `
               {
                 "Type": "Small Coins (Default)",
                 "Weight": 52.5,
-                "WorldNumber": 1,
               },
               {
                 "Type": "Medium Coins (Default)",
                 "Weight": 80,
-                "WorldNumber": 1,
               },
               {
                 "Type": "Large Coins (Default)",
                 "Weight": 100,
-                "WorldNumber": 1,
               },
               {
                 "Type": "Crate (Magma)",
                 "Weight": 40,
-                "WorldNumber": 1,
               },
               {
                 "Type": "Present (Magma)",
                 "Weight": 50,
-                "WorldNumber": 1,
               },
               {
                 "Type": "Safe (Magma)",
                 "Weight": 30,
-                "WorldNumber": 1,
               },
             ],
             "Settings": {
@@ -90214,32 +91124,26 @@ exports[`Pet Simulator Public Live API Test Zones shape 1`] = `
               {
                 "Type": "Small Coins (Default)",
                 "Weight": 52.5,
-                "WorldNumber": 1,
               },
               {
                 "Type": "Medium Coins (Default)",
                 "Weight": 80,
-                "WorldNumber": 1,
               },
               {
                 "Type": "Large Coins (Default)",
                 "Weight": 90,
-                "WorldNumber": 1,
               },
               {
                 "Type": "Crate (Magma)",
                 "Weight": 60,
-                "WorldNumber": 1,
               },
               {
                 "Type": "Present (Magma)",
                 "Weight": 30,
-                "WorldNumber": 1,
               },
               {
                 "Type": "Vault (Magma)",
                 "Weight": 70,
-                "WorldNumber": 1,
               },
             ],
             "Settings": {
@@ -90275,32 +91179,26 @@ exports[`Pet Simulator Public Live API Test Zones shape 1`] = `
               {
                 "Type": "Small Coins (Default)",
                 "Weight": 7.5,
-                "WorldNumber": 1,
               },
               {
                 "Type": "Medium Coins (Default)",
                 "Weight": 40,
-                "WorldNumber": 1,
               },
               {
                 "Type": "Large Coins (Default)",
                 "Weight": 50,
-                "WorldNumber": 1,
               },
               {
                 "Type": "Crate (Magma)",
                 "Weight": 50,
-                "WorldNumber": 1,
               },
               {
                 "Type": "Safe (Magma)",
                 "Weight": 30,
-                "WorldNumber": 1,
               },
               {
                 "Type": "Vault (Magma)",
                 "Weight": 20,
-                "WorldNumber": 1,
               },
             ],
             "Settings": {
@@ -90385,22 +91283,18 @@ exports[`Pet Simulator Public Live API Test Zones shape 1`] = `
               {
                 "Type": "Small Coins (Default)",
                 "Weight": 22.5,
-                "WorldNumber": 1,
               },
               {
                 "Type": "Medium Coins (Default)",
                 "Weight": 30,
-                "WorldNumber": 1,
               },
               {
                 "Type": "Large Coins (Default)",
                 "Weight": 40,
-                "WorldNumber": 1,
               },
               {
                 "Type": "Present (Magma)",
                 "Weight": 60,
-                "WorldNumber": 1,
               },
               {
                 "Type": "Safe (Magma)",
@@ -90409,7 +91303,6 @@ exports[`Pet Simulator Public Live API Test Zones shape 1`] = `
               {
                 "Type": "Vault (Magma)",
                 "Weight": 20,
-                "WorldNumber": 1,
               },
             ],
             "Settings": {
@@ -90482,37 +91375,30 @@ exports[`Pet Simulator Public Live API Test Zones shape 1`] = `
               {
                 "Type": "Small Coins (Default)",
                 "Weight": 11.25,
-                "WorldNumber": 1,
               },
               {
                 "Type": "Medium Coins (Default)",
                 "Weight": 15,
-                "WorldNumber": 1,
               },
               {
                 "Type": "Large Coins (Default)",
                 "Weight": 30,
-                "WorldNumber": 1,
               },
               {
                 "Type": "Present (Magma)",
                 "Weight": 40,
-                "WorldNumber": 1,
               },
               {
                 "Type": "Crate (Magma)",
                 "Weight": 40,
-                "WorldNumber": 1,
               },
               {
                 "Type": "Safe (Magma)",
                 "Weight": 20,
-                "WorldNumber": 1,
               },
               {
                 "Type": "Vault (Magma)",
                 "Weight": 20,
-                "WorldNumber": 1,
               },
             ],
             "Settings": {
@@ -90585,27 +91471,22 @@ exports[`Pet Simulator Public Live API Test Zones shape 1`] = `
               {
                 "Type": "Small Coins (Default)",
                 "Weight": 11.25,
-                "WorldNumber": 1,
               },
               {
                 "Type": "Medium Coins (Default)",
                 "Weight": 45,
-                "WorldNumber": 1,
               },
               {
                 "Type": "Large Coins (Default)",
                 "Weight": 55,
-                "WorldNumber": 1,
               },
               {
                 "Type": "Safe (Magma)",
                 "Weight": 10,
-                "WorldNumber": 1,
               },
               {
                 "Type": "Vault (Magma)",
                 "Weight": 15,
-                "WorldNumber": 1,
               },
             ],
             "Settings": {
@@ -90675,32 +91556,26 @@ exports[`Pet Simulator Public Live API Test Zones shape 1`] = `
               {
                 "Type": "Small Coins (Default)",
                 "Weight": 11.25,
-                "WorldNumber": 1,
               },
               {
                 "Type": "Medium Coins (Default)",
                 "Weight": 25,
-                "WorldNumber": 1,
               },
               {
                 "Type": "Large Coins (Default)",
                 "Weight": 40,
-                "WorldNumber": 1,
               },
               {
                 "Type": "Present (Sakura)",
                 "Weight": 40,
-                "WorldNumber": 1,
               },
               {
                 "Type": "Safe (Sakura)",
                 "Weight": 30,
-                "WorldNumber": 1,
               },
               {
                 "Type": "Vault (Sakura)",
                 "Weight": 20,
-                "WorldNumber": 1,
               },
             ],
             "Settings": {
@@ -90738,32 +91613,26 @@ exports[`Pet Simulator Public Live API Test Zones shape 1`] = `
               {
                 "Type": "Small Coins (Default)",
                 "Weight": 11.25,
-                "WorldNumber": 1,
               },
               {
                 "Type": "Medium Coins (Default)",
                 "Weight": 25,
-                "WorldNumber": 1,
               },
               {
                 "Type": "Large Coins (Default)",
                 "Weight": 40,
-                "WorldNumber": 1,
               },
               {
                 "Type": "Present (Sakura)",
                 "Weight": 30,
-                "WorldNumber": 1,
               },
               {
                 "Type": "Safe (Sakura)",
                 "Weight": 10,
-                "WorldNumber": 1,
               },
               {
                 "Type": "Vault (Sakura)",
                 "Weight": 15,
-                "WorldNumber": 1,
               },
             ],
             "Settings": {
@@ -90796,27 +91665,22 @@ exports[`Pet Simulator Public Live API Test Zones shape 1`] = `
               {
                 "Type": "Small Coins (Default)",
                 "Weight": 11.25,
-                "WorldNumber": 1,
               },
               {
                 "Type": "Medium Coins (Default)",
                 "Weight": 25,
-                "WorldNumber": 1,
               },
               {
                 "Type": "Large Coins (Default)",
                 "Weight": 40,
-                "WorldNumber": 1,
               },
               {
                 "Type": "Crate (Sakura)",
                 "Weight": 50,
-                "WorldNumber": 1,
               },
               {
                 "Type": "Vault (Sakura)",
                 "Weight": 20,
-                "WorldNumber": 1,
               },
             ],
             "Settings": {
@@ -90849,27 +91713,22 @@ exports[`Pet Simulator Public Live API Test Zones shape 1`] = `
               {
                 "Type": "Medium Coins (Default)",
                 "Weight": 25,
-                "WorldNumber": 1,
               },
               {
                 "Type": "Large Coins (Default)",
                 "Weight": 40,
-                "WorldNumber": 1,
               },
               {
                 "Type": "Present (Sakura)",
                 "Weight": 20,
-                "WorldNumber": 1,
               },
               {
                 "Type": "Crate (Sakura)",
                 "Weight": 20,
-                "WorldNumber": 1,
               },
               {
                 "Type": "Safe (Sakura)",
                 "Weight": 10,
-                "WorldNumber": 1,
               },
             ],
             "Settings": {
@@ -90902,17 +91761,14 @@ exports[`Pet Simulator Public Live API Test Zones shape 1`] = `
               {
                 "Type": "Medium Coins (Default)",
                 "Weight": 25,
-                "WorldNumber": 1,
               },
               {
                 "Type": "Large Coins (Default)",
                 "Weight": 35,
-                "WorldNumber": 1,
               },
               {
                 "Type": "Present (Flower)",
                 "Weight": 90,
-                "WorldNumber": 1,
               },
             ],
             "Settings": {
@@ -90945,27 +91801,22 @@ exports[`Pet Simulator Public Live API Test Zones shape 1`] = `
               {
                 "Type": "Small Coins (Default)",
                 "Weight": 11.25,
-                "WorldNumber": 1,
               },
               {
                 "Type": "Medium Coins (Default)",
                 "Weight": 25,
-                "WorldNumber": 1,
               },
               {
                 "Type": "Large Coins (Default)",
                 "Weight": 40,
-                "WorldNumber": 1,
               },
               {
                 "Type": "Crate (Flower)",
                 "Weight": 65,
-                "WorldNumber": 1,
               },
               {
                 "Type": "Safe (Flower)",
                 "Weight": 20,
-                "WorldNumber": 1,
               },
             ],
             "Settings": {
@@ -90998,27 +91849,22 @@ exports[`Pet Simulator Public Live API Test Zones shape 1`] = `
               {
                 "Type": "Small Coins (Default)",
                 "Weight": 10,
-                "WorldNumber": 1,
               },
               {
                 "Type": "Medium Coins (Default)",
                 "Weight": 15,
-                "WorldNumber": 1,
               },
               {
                 "Type": "Large Coins (Default)",
                 "Weight": 40,
-                "WorldNumber": 1,
               },
               {
                 "Type": "Crate (Stone)",
                 "Weight": 45,
-                "WorldNumber": 1,
               },
               {
                 "Type": "Safe (Stone)",
                 "Weight": 20,
-                "WorldNumber": 1,
               },
             ],
             "Settings": {
@@ -91051,32 +91897,26 @@ exports[`Pet Simulator Public Live API Test Zones shape 1`] = `
               {
                 "Type": "Medium Coins (Default)",
                 "Weight": 25,
-                "WorldNumber": 1,
               },
               {
                 "Type": "Large Coins (Default)",
                 "Weight": 40,
-                "WorldNumber": 1,
               },
               {
                 "Type": "Present (Stone)",
                 "Weight": 40,
-                "WorldNumber": 1,
               },
               {
                 "Type": "Crate (Stone)",
                 "Weight": 30,
-                "WorldNumber": 1,
               },
               {
                 "Type": "Safe (Stone)",
                 "Weight": 7,
-                "WorldNumber": 1,
               },
               {
                 "Type": "Vault (Stone)",
                 "Weight": 3,
-                "WorldNumber": 1,
               },
             ],
             "Settings": {
@@ -91109,32 +91949,26 @@ exports[`Pet Simulator Public Live API Test Zones shape 1`] = `
               {
                 "Type": "Small Coins (Default)",
                 "Weight": 6,
-                "WorldNumber": 1,
               },
               {
                 "Type": "Medium Coins (Default)",
                 "Weight": 28,
-                "WorldNumber": 1,
               },
               {
                 "Type": "Large Coins (Default)",
                 "Weight": 43,
-                "WorldNumber": 1,
               },
               {
                 "Type": "Crate (Stone)",
                 "Weight": 38,
-                "WorldNumber": 1,
               },
               {
                 "Type": "Safe (Stone)",
                 "Weight": 28,
-                "WorldNumber": 1,
               },
               {
                 "Type": "Vault (Stone)",
                 "Weight": 18,
-                "WorldNumber": 1,
               },
             ],
             "Settings": {
@@ -91167,27 +92001,22 @@ exports[`Pet Simulator Public Live API Test Zones shape 1`] = `
               {
                 "Type": "Small Coins (Default)",
                 "Weight": 7,
-                "WorldNumber": 1,
               },
               {
                 "Type": "Medium Coins (Default)",
                 "Weight": 35,
-                "WorldNumber": 1,
               },
               {
                 "Type": "Large Coins (Default)",
                 "Weight": 25,
-                "WorldNumber": 1,
               },
               {
                 "Type": "Crate (Stone)",
                 "Weight": 80,
-                "WorldNumber": 1,
               },
               {
                 "Type": "Present (Stone)",
                 "Weight": 45,
-                "WorldNumber": 1,
               },
             ],
             "Settings": {
@@ -91225,22 +92054,18 @@ exports[`Pet Simulator Public Live API Test Zones shape 1`] = `
               {
                 "Type": "Small Coins (Default)",
                 "Weight": 10,
-                "WorldNumber": 1,
               },
               {
                 "Type": "Medium Coins (Default)",
                 "Weight": 40,
-                "WorldNumber": 1,
               },
               {
                 "Type": "Large Coins (Default)",
                 "Weight": 30,
-                "WorldNumber": 1,
               },
               {
                 "Type": "Present (Rainbow)",
                 "Weight": 100,
-                "WorldNumber": 1,
               },
             ],
             "Settings": {
@@ -91273,32 +92098,26 @@ exports[`Pet Simulator Public Live API Test Zones shape 1`] = `
               {
                 "Type": "Small Coins (Default)",
                 "Weight": 20,
-                "WorldNumber": 1,
               },
               {
                 "Type": "Medium Coins (Default)",
                 "Weight": 80,
-                "WorldNumber": 1,
               },
               {
                 "Type": "Large Coins (Default)",
                 "Weight": 90,
-                "WorldNumber": 1,
               },
               {
                 "Type": "Crate (Rainbow)",
                 "Weight": 70,
-                "WorldNumber": 1,
               },
               {
                 "Type": "Present (Rainbow)",
                 "Weight": 30,
-                "WorldNumber": 1,
               },
               {
                 "Type": "Safe (Rainbow)",
                 "Weight": 80,
-                "WorldNumber": 1,
               },
             ],
             "Settings": {
@@ -91334,37 +92153,30 @@ exports[`Pet Simulator Public Live API Test Zones shape 1`] = `
               {
                 "Type": "Small Coins (Default)",
                 "Weight": 15,
-                "WorldNumber": 1,
               },
               {
                 "Type": "Medium Coins (Default)",
                 "Weight": 20,
-                "WorldNumber": 1,
               },
               {
                 "Type": "Large Coins (Default)",
                 "Weight": 35,
-                "WorldNumber": 1,
               },
               {
                 "Type": "Present (Rainbow)",
                 "Weight": 40,
-                "WorldNumber": 1,
               },
               {
                 "Type": "Crate (Rainbow)",
                 "Weight": 40,
-                "WorldNumber": 1,
               },
               {
                 "Type": "Safe (Rainbow)",
                 "Weight": 20,
-                "WorldNumber": 1,
               },
               {
                 "Type": "Vault (Rainbow)",
                 "Weight": 20,
-                "WorldNumber": 1,
               },
             ],
             "Settings": {
@@ -91401,47 +92213,38 @@ exports[`Pet Simulator Public Live API Test Zones shape 1`] = `
               {
                 "Type": "Small Coins (Default)",
                 "Weight": 30,
-                "WorldNumber": 1,
               },
               {
                 "Type": "Medium Coins (Default)",
                 "Weight": 35,
-                "WorldNumber": 1,
               },
               {
                 "Type": "Large Coins (Default)",
                 "Weight": 50,
-                "WorldNumber": 1,
               },
               {
                 "Type": "Present (Rainbow)",
                 "Weight": 40,
-                "WorldNumber": 1,
               },
               {
                 "Type": "Crate (Rainbow)",
                 "Weight": 20,
-                "WorldNumber": 1,
               },
               {
                 "Type": "Safe (Rainbow)",
                 "Weight": 10,
-                "WorldNumber": 1,
               },
               {
                 "Type": "Vault (Rainbow)",
                 "Weight": 15,
-                "WorldNumber": 1,
               },
               {
                 "Type": "Present (Ice)",
                 "Weight": 40,
-                "WorldNumber": 1,
               },
               {
                 "Type": "Crate (Ice)",
                 "Weight": 20,
-                "WorldNumber": 1,
               },
               {
                 "Type": "Safe (Ice)",
@@ -91450,7 +92253,6 @@ exports[`Pet Simulator Public Live API Test Zones shape 1`] = `
               {
                 "Type": "Vault (Ice)",
                 "Weight": 15,
-                "WorldNumber": 1,
               },
             ],
             "Settings": {
@@ -91486,22 +92288,18 @@ exports[`Pet Simulator Public Live API Test Zones shape 1`] = `
               {
                 "Type": "Large Coins (Default)",
                 "Weight": 20,
-                "WorldNumber": 1,
               },
               {
                 "Type": "Ice Block (Default)",
                 "Weight": 70,
-                "WorldNumber": 1,
               },
               {
                 "Type": "Crate (Ice)",
                 "Weight": 20,
-                "WorldNumber": 1,
               },
               {
                 "Type": "Safe (Ice)",
                 "Weight": 10,
-                "WorldNumber": 1,
               },
             ],
             "Settings": {
@@ -91534,32 +92332,26 @@ exports[`Pet Simulator Public Live API Test Zones shape 1`] = `
               {
                 "Type": "Small Coins (Default)",
                 "Weight": 15,
-                "WorldNumber": 1,
               },
               {
                 "Type": "Medium Coins (Default)",
                 "Weight": 20,
-                "WorldNumber": 1,
               },
               {
                 "Type": "Large Coins (Default)",
                 "Weight": 35,
-                "WorldNumber": 1,
               },
               {
                 "Type": "Ice Block (Default)",
                 "Weight": 40,
-                "WorldNumber": 1,
               },
               {
                 "Type": "Present (Ice)",
                 "Weight": 40,
-                "WorldNumber": 1,
               },
               {
                 "Type": "Safe (Ice)",
                 "Weight": 15,
-                "WorldNumber": 1,
               },
             ],
             "Settings": {
@@ -91592,37 +92384,30 @@ exports[`Pet Simulator Public Live API Test Zones shape 1`] = `
               {
                 "Type": "Small Coins (Default)",
                 "Weight": 12,
-                "WorldNumber": 1,
               },
               {
                 "Type": "Medium Coins (Default)",
                 "Weight": 18,
-                "WorldNumber": 1,
               },
               {
                 "Type": "Large Coins (Default)",
                 "Weight": 18,
-                "WorldNumber": 1,
               },
               {
                 "Type": "Ice Block (Default)",
                 "Weight": 40,
-                "WorldNumber": 1,
               },
               {
                 "Type": "Crate (Ice)",
                 "Weight": 40,
-                "WorldNumber": 1,
               },
               {
                 "Type": "Safe (Ice)",
                 "Weight": 10,
-                "WorldNumber": 1,
               },
               {
                 "Type": "Vault (Ice)",
                 "Weight": 7,
-                "WorldNumber": 1,
               },
             ],
             "Settings": {
@@ -91655,32 +92440,26 @@ exports[`Pet Simulator Public Live API Test Zones shape 1`] = `
               {
                 "Type": "Medium Coins (Default)",
                 "Weight": 16,
-                "WorldNumber": 1,
               },
               {
                 "Type": "Large Coins (Default)",
                 "Weight": 16,
-                "WorldNumber": 1,
               },
               {
                 "Type": "Ice Block (Default)",
                 "Weight": 30,
-                "WorldNumber": 1,
               },
               {
                 "Type": "Crate (Ice)",
                 "Weight": 30,
-                "WorldNumber": 1,
               },
               {
                 "Type": "Safe (Ice)",
                 "Weight": 10,
-                "WorldNumber": 1,
               },
               {
                 "Type": "Vault (Ice)",
                 "Weight": 6,
-                "WorldNumber": 1,
               },
             ],
             "Settings": {
@@ -91713,37 +92492,30 @@ exports[`Pet Simulator Public Live API Test Zones shape 1`] = `
               {
                 "Type": "Small Coins (Default)",
                 "Weight": 15,
-                "WorldNumber": 1,
               },
               {
                 "Type": "Medium Coins (Default)",
                 "Weight": 30,
-                "WorldNumber": 1,
               },
               {
                 "Type": "Large Coins (Default)",
                 "Weight": 45,
-                "WorldNumber": 1,
               },
               {
                 "Type": "Crate (Ruins)",
                 "Weight": 30,
-                "WorldNumber": 1,
               },
               {
                 "Type": "Present (Ruins)",
                 "Weight": 20,
-                "WorldNumber": 1,
               },
               {
                 "Type": "Safe (Ruins)",
                 "Weight": 10,
-                "WorldNumber": 1,
               },
               {
                 "Type": "Vault (Ruins)",
                 "Weight": 5,
-                "WorldNumber": 1,
               },
             ],
             "Settings": {
@@ -91776,37 +92548,30 @@ exports[`Pet Simulator Public Live API Test Zones shape 1`] = `
               {
                 "Type": "Small Coins (Default)",
                 "Weight": 15,
-                "WorldNumber": 1,
               },
               {
                 "Type": "Medium Coins (Default)",
                 "Weight": 30,
-                "WorldNumber": 1,
               },
               {
                 "Type": "Large Coins (Default)",
                 "Weight": 45,
-                "WorldNumber": 1,
               },
               {
                 "Type": "Crate (Ruins)",
                 "Weight": 30,
-                "WorldNumber": 1,
               },
               {
                 "Type": "Present (Ruins)",
                 "Weight": 20,
-                "WorldNumber": 1,
               },
               {
                 "Type": "Safe (Ruins)",
                 "Weight": 10,
-                "WorldNumber": 1,
               },
               {
                 "Type": "Vault (Ruins)",
                 "Weight": 5,
-                "WorldNumber": 1,
               },
             ],
             "Settings": {
@@ -91839,32 +92604,26 @@ exports[`Pet Simulator Public Live API Test Zones shape 1`] = `
               {
                 "Type": "Small Coins (Default)",
                 "Weight": 15,
-                "WorldNumber": 1,
               },
               {
                 "Type": "Medium Coins (Default)",
                 "Weight": 30,
-                "WorldNumber": 1,
               },
               {
                 "Type": "Large Coins (Default)",
                 "Weight": 45,
-                "WorldNumber": 1,
               },
               {
                 "Type": "Crate (Ruins)",
                 "Weight": 30,
-                "WorldNumber": 1,
               },
               {
                 "Type": "Present (Ruins)",
                 "Weight": 100,
-                "WorldNumber": 1,
               },
               {
                 "Type": "Safe (Ruins)",
                 "Weight": 10,
-                "WorldNumber": 1,
               },
               {
                 "Type": "Vault (Ruins)",
@@ -91918,37 +92677,30 @@ exports[`Pet Simulator Public Live API Test Zones shape 1`] = `
               {
                 "Type": "Small Coins (Default)",
                 "Weight": 15,
-                "WorldNumber": 1,
               },
               {
                 "Type": "Medium Coins (Default)",
                 "Weight": 30,
-                "WorldNumber": 1,
               },
               {
                 "Type": "Large Coins (Default)",
                 "Weight": 45,
-                "WorldNumber": 1,
               },
               {
                 "Type": "Crate (Ruins)",
                 "Weight": 30,
-                "WorldNumber": 1,
               },
               {
                 "Type": "Present (Ruins)",
                 "Weight": 20,
-                "WorldNumber": 1,
               },
               {
                 "Type": "Safe (Ruins)",
                 "Weight": 10,
-                "WorldNumber": 1,
               },
               {
                 "Type": "Vault (Ruins)",
                 "Weight": 5,
-                "WorldNumber": 1,
               },
             ],
             "Settings": {
@@ -91981,32 +92733,26 @@ exports[`Pet Simulator Public Live API Test Zones shape 1`] = `
               {
                 "Type": "Small Coins (Default)",
                 "Weight": 15,
-                "WorldNumber": 1,
               },
               {
                 "Type": "Medium Coins (Default)",
                 "Weight": 30,
-                "WorldNumber": 1,
               },
               {
                 "Type": "Large Coins (Default)",
                 "Weight": 135,
-                "WorldNumber": 1,
               },
               {
                 "Type": "Crate (Ruins)",
                 "Weight": 60,
-                "WorldNumber": 1,
               },
               {
                 "Type": "Present (Ruins)",
                 "Weight": 20,
-                "WorldNumber": 1,
               },
               {
                 "Type": "Safe (Ruins)",
                 "Weight": 20,
-                "WorldNumber": 1,
               },
               {
                 "Type": "Vault (Ruins)",
@@ -92047,27 +92793,22 @@ exports[`Pet Simulator Public Live API Test Zones shape 1`] = `
               {
                 "Type": "Medium Coins (Default)",
                 "Weight": 30,
-                "WorldNumber": 1,
               },
               {
                 "Type": "Large Coins (Default)",
                 "Weight": 90,
-                "WorldNumber": 1,
               },
               {
                 "Type": "Crate (Ruins)",
                 "Weight": 90,
-                "WorldNumber": 1,
               },
               {
                 "Type": "Present (Ruins)",
                 "Weight": 80,
-                "WorldNumber": 1,
               },
               {
                 "Type": "Safe (Ruins)",
                 "Weight": 30,
-                "WorldNumber": 1,
               },
               {
                 "Type": "Vault (Ruins)",
@@ -92108,27 +92849,22 @@ exports[`Pet Simulator Public Live API Test Zones shape 1`] = `
               {
                 "Type": "Medium Coins (Default)",
                 "Weight": 22.5,
-                "WorldNumber": 1,
               },
               {
                 "Type": "Large Coins (Default)",
                 "Weight": 45,
-                "WorldNumber": 1,
               },
               {
                 "Type": "Crate (Ruins)",
                 "Weight": 30,
-                "WorldNumber": 1,
               },
               {
                 "Type": "Present (Ruins)",
                 "Weight": 40,
-                "WorldNumber": 1,
               },
               {
                 "Type": "Safe (Ruins)",
                 "Weight": 20,
-                "WorldNumber": 1,
               },
               {
                 "Type": "Vault (Ruins)",
@@ -92165,37 +92901,30 @@ exports[`Pet Simulator Public Live API Test Zones shape 1`] = `
               {
                 "Type": "Small Coins (Default)",
                 "Weight": 10,
-                "WorldNumber": 1,
               },
               {
                 "Type": "Medium Coins (Default)",
                 "Weight": 20,
-                "WorldNumber": 1,
               },
               {
                 "Type": "Large Coins (Default)",
                 "Weight": 40,
-                "WorldNumber": 1,
               },
               {
                 "Type": "Present (Haunted)",
                 "Weight": 30,
-                "WorldNumber": 1,
               },
               {
                 "Type": "Crate (Haunted)",
                 "Weight": 30,
-                "WorldNumber": 1,
               },
               {
                 "Type": "Safe (Haunted)",
                 "Weight": 10,
-                "WorldNumber": 1,
               },
               {
                 "Type": "Vault (Haunted)",
                 "Weight": 10,
-                "WorldNumber": 1,
               },
             ],
             "Settings": {
@@ -92228,22 +92957,18 @@ exports[`Pet Simulator Public Live API Test Zones shape 1`] = `
               {
                 "Type": "Small Coins (Default)",
                 "Weight": 1,
-                "WorldNumber": 1,
               },
               {
                 "Type": "Medium Coins (Default)",
                 "Weight": 3,
-                "WorldNumber": 1,
               },
               {
                 "Type": "Large Coins (Default)",
                 "Weight": 5,
-                "WorldNumber": 1,
               },
               {
                 "Type": "Present (Haunted)",
                 "Weight": 41,
-                "WorldNumber": 1,
               },
             ],
             "Settings": {
@@ -92276,37 +93001,30 @@ exports[`Pet Simulator Public Live API Test Zones shape 1`] = `
               {
                 "Type": "Small Coins (Default)",
                 "Weight": 15,
-                "WorldNumber": 1,
               },
               {
                 "Type": "Medium Coins (Default)",
                 "Weight": 20,
-                "WorldNumber": 1,
               },
               {
                 "Type": "Large Coins (Default)",
                 "Weight": 35,
-                "WorldNumber": 1,
               },
               {
                 "Type": "Present (Haunted)",
                 "Weight": 40,
-                "WorldNumber": 1,
               },
               {
                 "Type": "Crate (Haunted)",
                 "Weight": 40,
-                "WorldNumber": 1,
               },
               {
                 "Type": "Safe (Haunted)",
                 "Weight": 10,
-                "WorldNumber": 1,
               },
               {
                 "Type": "Vault (Haunted)",
                 "Weight": 10,
-                "WorldNumber": 1,
               },
             ],
             "Settings": {
@@ -92339,37 +93057,30 @@ exports[`Pet Simulator Public Live API Test Zones shape 1`] = `
               {
                 "Type": "Small Coins (Default)",
                 "Weight": 10,
-                "WorldNumber": 1,
               },
               {
                 "Type": "Medium Coins (Default)",
                 "Weight": 20,
-                "WorldNumber": 1,
               },
               {
                 "Type": "Large Coins (Default)",
                 "Weight": 35,
-                "WorldNumber": 1,
               },
               {
                 "Type": "Present (Dungeon)",
                 "Weight": 45,
-                "WorldNumber": 1,
               },
               {
                 "Type": "Crate (Dungeon)",
                 "Weight": 35,
-                "WorldNumber": 1,
               },
               {
                 "Type": "Safe (Dungeon)",
                 "Weight": 10,
-                "WorldNumber": 1,
               },
               {
                 "Type": "Vault (Dungeon)",
                 "Weight": 10,
-                "WorldNumber": 1,
               },
             ],
             "Settings": {
@@ -92402,37 +93113,30 @@ exports[`Pet Simulator Public Live API Test Zones shape 1`] = `
               {
                 "Type": "Small Coins (Default)",
                 "Weight": 15,
-                "WorldNumber": 1,
               },
               {
                 "Type": "Medium Coins (Default)",
                 "Weight": 20,
-                "WorldNumber": 1,
               },
               {
                 "Type": "Large Coins (Default)",
                 "Weight": 35,
-                "WorldNumber": 1,
               },
               {
                 "Type": "Present (Dungeon)",
                 "Weight": 40,
-                "WorldNumber": 1,
               },
               {
                 "Type": "Crate (Dungeon)",
                 "Weight": 45,
-                "WorldNumber": 1,
               },
               {
                 "Type": "Safe (Dungeon)",
                 "Weight": 15,
-                "WorldNumber": 1,
               },
               {
                 "Type": "Vault (Dungeon)",
                 "Weight": 10,
-                "WorldNumber": 1,
               },
             ],
             "Settings": {
@@ -92465,22 +93169,18 @@ exports[`Pet Simulator Public Live API Test Zones shape 1`] = `
               {
                 "Type": "Small Coins (Default)",
                 "Weight": 15,
-                "WorldNumber": 1,
               },
               {
                 "Type": "Medium Coins (Default)",
                 "Weight": 25,
-                "WorldNumber": 1,
               },
               {
                 "Type": "Large Coins (Default)",
                 "Weight": 35,
-                "WorldNumber": 1,
               },
               {
                 "Type": "Crate (Dungeon)",
                 "Weight": 40,
-                "WorldNumber": 1,
               },
             ],
             "Settings": {
@@ -92513,27 +93213,22 @@ exports[`Pet Simulator Public Live API Test Zones shape 1`] = `
               {
                 "Type": "Small Coins (Default)",
                 "Weight": 10,
-                "WorldNumber": 1,
               },
               {
                 "Type": "Medium Coins (Default)",
                 "Weight": 25,
-                "WorldNumber": 1,
               },
               {
                 "Type": "Large Coins (Default)",
                 "Weight": 25,
-                "WorldNumber": 1,
               },
               {
                 "Type": "Safe (Dungeon)",
                 "Weight": 15,
-                "WorldNumber": 1,
               },
               {
                 "Type": "Vault (Dungeon)",
                 "Weight": 20,
-                "WorldNumber": 1,
               },
             ],
             "Settings": {
@@ -92566,37 +93261,30 @@ exports[`Pet Simulator Public Live API Test Zones shape 1`] = `
               {
                 "Type": "Small Coins (Default)",
                 "Weight": 15,
-                "WorldNumber": 1,
               },
               {
                 "Type": "Medium Coins (Default)",
                 "Weight": 20,
-                "WorldNumber": 1,
               },
               {
                 "Type": "Large Coins (Default)",
                 "Weight": 35,
-                "WorldNumber": 1,
               },
               {
                 "Type": "Present (Dungeon)",
                 "Weight": 45,
-                "WorldNumber": 1,
               },
               {
                 "Type": "Crate (Dungeon)",
                 "Weight": 45,
-                "WorldNumber": 1,
               },
               {
                 "Type": "Safe (Dungeon)",
                 "Weight": 10,
-                "WorldNumber": 1,
               },
               {
                 "Type": "Vault (Dungeon)",
                 "Weight": 15,
-                "WorldNumber": 1,
               },
             ],
             "Settings": {
@@ -92629,37 +93317,30 @@ exports[`Pet Simulator Public Live API Test Zones shape 1`] = `
               {
                 "Type": "Small Coins (Default)",
                 "Weight": 10,
-                "WorldNumber": 1,
               },
               {
                 "Type": "Medium Coins (Default)",
                 "Weight": 20,
-                "WorldNumber": 1,
               },
               {
                 "Type": "Large Coins (Default)",
                 "Weight": 40,
-                "WorldNumber": 1,
               },
               {
                 "Type": "Present (Candy)",
                 "Weight": 30,
-                "WorldNumber": 1,
               },
               {
                 "Type": "Crate (Candy)",
                 "Weight": 30,
-                "WorldNumber": 1,
               },
               {
                 "Type": "Safe (Candy)",
                 "Weight": 10,
-                "WorldNumber": 1,
               },
               {
                 "Type": "Vault (Candy)",
                 "Weight": 10,
-                "WorldNumber": 1,
               },
             ],
             "Settings": {
@@ -92692,27 +93373,22 @@ exports[`Pet Simulator Public Live API Test Zones shape 1`] = `
               {
                 "Type": "Medium Coins (Default)",
                 "Weight": 20,
-                "WorldNumber": 1,
               },
               {
                 "Type": "Large Coins (Default)",
                 "Weight": 25,
-                "WorldNumber": 1,
               },
               {
                 "Type": "Present (Candy)",
                 "Weight": 40,
-                "WorldNumber": 1,
               },
               {
                 "Type": "Safe (Candy)",
                 "Weight": 10,
-                "WorldNumber": 1,
               },
               {
                 "Type": "Vault (Candy)",
                 "Weight": 10,
-                "WorldNumber": 1,
               },
             ],
             "Settings": {
@@ -92745,27 +93421,22 @@ exports[`Pet Simulator Public Live API Test Zones shape 1`] = `
               {
                 "Type": "Small Coins (Default)",
                 "Weight": 15,
-                "WorldNumber": 1,
               },
               {
                 "Type": "Medium Coins (Default)",
                 "Weight": 20,
-                "WorldNumber": 1,
               },
               {
                 "Type": "Large Coins (Default)",
                 "Weight": 35,
-                "WorldNumber": 1,
               },
               {
                 "Type": "Present (Candy)",
                 "Weight": 40,
-                "WorldNumber": 1,
               },
               {
                 "Type": "Crate (Candy)",
                 "Weight": 40,
-                "WorldNumber": 1,
               },
               {
                 "Type": "Safe (Candy)",
@@ -92806,37 +93477,30 @@ exports[`Pet Simulator Public Live API Test Zones shape 1`] = `
               {
                 "Type": "Small Coins (Default)",
                 "Weight": 10,
-                "WorldNumber": 1,
               },
               {
                 "Type": "Medium Coins (Default)",
                 "Weight": 20,
-                "WorldNumber": 1,
               },
               {
                 "Type": "Large Coins (Default)",
                 "Weight": 35,
-                "WorldNumber": 1,
               },
               {
                 "Type": "Present (Candy)",
                 "Weight": 45,
-                "WorldNumber": 1,
               },
               {
                 "Type": "Crate (Candy)",
                 "Weight": 35,
-                "WorldNumber": 1,
               },
               {
                 "Type": "Safe (Candy)",
                 "Weight": 10,
-                "WorldNumber": 1,
               },
               {
                 "Type": "Vault (Candy)",
                 "Weight": 10,
-                "WorldNumber": 1,
               },
             ],
             "Settings": {
@@ -92869,37 +93533,30 @@ exports[`Pet Simulator Public Live API Test Zones shape 1`] = `
               {
                 "Type": "Small Coins (Default)",
                 "Weight": 15,
-                "WorldNumber": 1,
               },
               {
                 "Type": "Medium Coins (Default)",
                 "Weight": 20,
-                "WorldNumber": 1,
               },
               {
                 "Type": "Large Coins (Default)",
                 "Weight": 35,
-                "WorldNumber": 1,
               },
               {
                 "Type": "Present (Toy)",
                 "Weight": 40,
-                "WorldNumber": 1,
               },
               {
                 "Type": "Crate (Toy)",
                 "Weight": 45,
-                "WorldNumber": 1,
               },
               {
                 "Type": "Safe (Toy)",
                 "Weight": 15,
-                "WorldNumber": 1,
               },
               {
                 "Type": "Vault (Toy)",
                 "Weight": 10,
-                "WorldNumber": 1,
               },
             ],
             "Settings": {
@@ -92932,27 +93589,22 @@ exports[`Pet Simulator Public Live API Test Zones shape 1`] = `
               {
                 "Type": "Medium Coins (Default)",
                 "Weight": 20,
-                "WorldNumber": 1,
               },
               {
                 "Type": "Large Coins (Default)",
                 "Weight": 20,
-                "WorldNumber": 1,
               },
               {
                 "Type": "Crate (Toy)",
                 "Weight": 40,
-                "WorldNumber": 1,
               },
               {
                 "Type": "Safe (Toy)",
                 "Weight": 30,
-                "WorldNumber": 1,
               },
               {
                 "Type": "Vault (Toy)",
                 "Weight": 20,
-                "WorldNumber": 1,
               },
             ],
             "Settings": {
@@ -92988,37 +93640,30 @@ exports[`Pet Simulator Public Live API Test Zones shape 1`] = `
               {
                 "Type": "Small Coins (Default)",
                 "Weight": 15,
-                "WorldNumber": 1,
               },
               {
                 "Type": "Medium Coins (Default)",
                 "Weight": 25,
-                "WorldNumber": 1,
               },
               {
                 "Type": "Large Coins (Default)",
                 "Weight": 35,
-                "WorldNumber": 1,
               },
               {
                 "Type": "Present (Toy)",
                 "Weight": 45,
-                "WorldNumber": 1,
               },
               {
                 "Type": "Crate (Toy)",
                 "Weight": 45,
-                "WorldNumber": 1,
               },
               {
                 "Type": "Safe (Toy)",
                 "Weight": 10,
-                "WorldNumber": 1,
               },
               {
                 "Type": "Vault (Toy)",
                 "Weight": 15,
-                "WorldNumber": 1,
               },
             ],
             "Settings": {
@@ -93055,17 +93700,14 @@ exports[`Pet Simulator Public Live API Test Zones shape 1`] = `
               {
                 "Type": "Medium Coins (Default)",
                 "Weight": 3,
-                "WorldNumber": 1,
               },
               {
                 "Type": "Large Coins (Default)",
                 "Weight": 10,
-                "WorldNumber": 1,
               },
               {
                 "Type": "Crate (Cloud)",
                 "Weight": 41,
-                "WorldNumber": 1,
               },
             ],
             "Settings": {
@@ -93098,37 +93740,30 @@ exports[`Pet Simulator Public Live API Test Zones shape 1`] = `
               {
                 "Type": "Small Coins (Default)",
                 "Weight": 10,
-                "WorldNumber": 1,
               },
               {
                 "Type": "Medium Coins (Default)",
                 "Weight": 20,
-                "WorldNumber": 1,
               },
               {
                 "Type": "Large Coins (Default)",
                 "Weight": 40,
-                "WorldNumber": 1,
               },
               {
                 "Type": "Present (Cloud)",
                 "Weight": 30,
-                "WorldNumber": 1,
               },
               {
                 "Type": "Crate (Cloud)",
                 "Weight": 30,
-                "WorldNumber": 1,
               },
               {
                 "Type": "Safe (Cloud)",
                 "Weight": 10,
-                "WorldNumber": 1,
               },
               {
                 "Type": "Vault (Cloud)",
                 "Weight": 10,
-                "WorldNumber": 1,
               },
             ],
             "Settings": {
@@ -93161,32 +93796,26 @@ exports[`Pet Simulator Public Live API Test Zones shape 1`] = `
               {
                 "Type": "Small Coins (Default)",
                 "Weight": 10,
-                "WorldNumber": 1,
               },
               {
                 "Type": "Medium Coins (Default)",
                 "Weight": 20,
-                "WorldNumber": 1,
               },
               {
                 "Type": "Large Coins (Default)",
                 "Weight": 25,
-                "WorldNumber": 1,
               },
               {
                 "Type": "Present (Cloud)",
                 "Weight": 45,
-                "WorldNumber": 1,
               },
               {
                 "Type": "Crate (Cloud)",
                 "Weight": 30,
-                "WorldNumber": 1,
               },
               {
                 "Type": "Safe (Cloud)",
                 "Weight": 10,
-                "WorldNumber": 1,
               },
               {
                 "Type": "Vault (Cloud)",
@@ -93223,37 +93852,30 @@ exports[`Pet Simulator Public Live API Test Zones shape 1`] = `
               {
                 "Type": "Small Coins (Default)",
                 "Weight": 5,
-                "WorldNumber": 1,
               },
               {
                 "Type": "Medium Coins (Default)",
                 "Weight": 20,
-                "WorldNumber": 1,
               },
               {
                 "Type": "Large Coins (Default)",
                 "Weight": 35,
-                "WorldNumber": 1,
               },
               {
                 "Type": "Present (Cloud)",
                 "Weight": 70,
-                "WorldNumber": 1,
               },
               {
                 "Type": "Crate (Cloud)",
                 "Weight": 40,
-                "WorldNumber": 1,
               },
               {
                 "Type": "Safe (Cloud)",
                 "Weight": 10,
-                "WorldNumber": 1,
               },
               {
                 "Type": "Vault (Cloud)",
                 "Weight": 15,
-                "WorldNumber": 1,
               },
             ],
             "Settings": {
@@ -93290,32 +93912,26 @@ exports[`Pet Simulator Public Live API Test Zones shape 1`] = `
               {
                 "Type": "Medium Coins (Default)",
                 "Weight": 20,
-                "WorldNumber": 1,
               },
               {
                 "Type": "Large Coins (Default)",
                 "Weight": 35,
-                "WorldNumber": 1,
               },
               {
                 "Type": "Present (Cloud)",
                 "Weight": 45,
-                "WorldNumber": 1,
               },
               {
                 "Type": "Crate (Cloud)",
                 "Weight": 35,
-                "WorldNumber": 1,
               },
               {
                 "Type": "Safe (Cloud)",
                 "Weight": 10,
-                "WorldNumber": 1,
               },
               {
                 "Type": "Vault (Cloud)",
                 "Weight": 10,
-                "WorldNumber": 1,
               },
             ],
             "Settings": {
@@ -93348,27 +93964,22 @@ exports[`Pet Simulator Public Live API Test Zones shape 1`] = `
               {
                 "Type": "Small Coins (Default)",
                 "Weight": 5,
-                "WorldNumber": 1,
               },
               {
                 "Type": "Medium Coins (Default)",
                 "Weight": 10,
-                "WorldNumber": 1,
               },
               {
                 "Type": "Large Coins (Default)",
                 "Weight": 35,
-                "WorldNumber": 1,
               },
               {
                 "Type": "Present (Angel)",
                 "Weight": 60,
-                "WorldNumber": 1,
               },
               {
                 "Type": "Crate (Angel)",
                 "Weight": 30,
-                "WorldNumber": 1,
               },
             ],
             "Settings": {
@@ -93413,17 +94024,14 @@ exports[`Pet Simulator Public Live API Test Zones shape 1`] = `
               {
                 "Type": "Present (Angel)",
                 "Weight": 45,
-                "WorldNumber": 1,
               },
               {
                 "Type": "Safe (Angel)",
                 "Weight": 60,
-                "WorldNumber": 1,
               },
               {
                 "Type": "Vault (Angel)",
                 "Weight": 30,
-                "WorldNumber": 1,
               },
             ],
             "Settings": {
@@ -93456,32 +94064,26 @@ exports[`Pet Simulator Public Live API Test Zones shape 1`] = `
               {
                 "Type": "Small Coins (Default)",
                 "Weight": 15,
-                "WorldNumber": 1,
               },
               {
                 "Type": "Medium Coins (Default)",
                 "Weight": 25,
-                "WorldNumber": 1,
               },
               {
                 "Type": "Large Coins (Default)",
                 "Weight": 35,
-                "WorldNumber": 1,
               },
               {
                 "Type": "Present (Angel)",
                 "Weight": 45,
-                "WorldNumber": 1,
               },
               {
                 "Type": "Crate (Angel)",
                 "Weight": 45,
-                "WorldNumber": 1,
               },
               {
                 "Type": "Safe (Angel)",
                 "Weight": 15,
-                "WorldNumber": 1,
               },
               {
                 "Type": "Vault (Angel)",
@@ -93518,32 +94120,26 @@ exports[`Pet Simulator Public Live API Test Zones shape 1`] = `
               {
                 "Type": "Small Coins (Default)",
                 "Weight": 15,
-                "WorldNumber": 1,
               },
               {
                 "Type": "Medium Coins (Default)",
                 "Weight": 20,
-                "WorldNumber": 1,
               },
               {
                 "Type": "Large Coins (Default)",
                 "Weight": 35,
-                "WorldNumber": 1,
               },
               {
                 "Type": "Present (Cloud)",
                 "Weight": 40,
-                "WorldNumber": 1,
               },
               {
                 "Type": "Crate (Cloud)",
                 "Weight": 45,
-                "WorldNumber": 1,
               },
               {
                 "Type": "Safe (Cloud)",
                 "Weight": 15,
-                "WorldNumber": 1,
               },
               {
                 "Type": "Vault (Cloud)",
@@ -93580,37 +94176,30 @@ exports[`Pet Simulator Public Live API Test Zones shape 1`] = `
               {
                 "Type": "Small Coins (Default)",
                 "Weight": 15,
-                "WorldNumber": 1,
               },
               {
                 "Type": "Medium Coins (Default)",
                 "Weight": 20,
-                "WorldNumber": 1,
               },
               {
                 "Type": "Large Coins (Default)",
                 "Weight": 35,
-                "WorldNumber": 1,
               },
               {
                 "Type": "Present (Cloud)",
                 "Weight": 40,
-                "WorldNumber": 1,
               },
               {
                 "Type": "Crate (Cloud)",
                 "Weight": 40,
-                "WorldNumber": 1,
               },
               {
                 "Type": "Safe (Cloud)",
                 "Weight": 20,
-                "WorldNumber": 1,
               },
               {
                 "Type": "Vault (Cloud)",
                 "Weight": 20,
-                "WorldNumber": 1,
               },
             ],
             "Settings": {
