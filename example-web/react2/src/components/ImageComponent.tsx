@@ -7,14 +7,14 @@ interface ImageProps {
 }
 
 const MAX_CONCURRENT_REQUESTS = 5;
-let currentRequests = 0;
-const queue: (() => void)[] = [];
+const requestQueue: Array<() => void> = [];
+let activeRequests = 0;
 
 const processQueue = () => {
-  if (queue.length > 0 && currentRequests < MAX_CONCURRENT_REQUESTS) {
-    const nextRequest = queue.shift();
+  if (activeRequests < MAX_CONCURRENT_REQUESTS && requestQueue.length > 0) {
+    const nextRequest = requestQueue.shift();
     if (nextRequest) {
-      currentRequests++;
+      activeRequests++;
       nextRequest();
     }
   }
@@ -22,31 +22,27 @@ const processQueue = () => {
 
 const ImageComponent: React.FC<ImageProps> = ({ src, alt }) => {
   const [imageUrl, setImageUrl] = useState<string | null>(null);
-  const [error, setError] = useState<string | null>(null);
 
   useEffect(() => {
     const fetchImage = async () => {
+      const api = new PetSimulator99API();
       try {
-        const api = new PetSimulator99API();
         const imageBlob = await api.getImage(src);
-        const imageUrl = URL.createObjectURL(
-          new Blob([imageBlob], { type: "image/png" }),
-        );
-        setImageUrl(imageUrl);
+        const url = URL.createObjectURL(new Blob([imageBlob], { type: "image/png" }));
+        setImageUrl(url);
       } catch (error) {
-        setError("Error fetching image");
         console.error("Error fetching image:", error);
       } finally {
-        currentRequests--;
+        activeRequests--;
         processQueue();
       }
     };
 
-    const load = () => {
+    const requestImage = () => {
       fetchImage();
     };
 
-    queue.push(load);
+    requestQueue.push(requestImage);
     processQueue();
 
     return () => {
@@ -54,14 +50,12 @@ const ImageComponent: React.FC<ImageProps> = ({ src, alt }) => {
         URL.revokeObjectURL(imageUrl);
       }
     };
-  }, [src, imageUrl]);
-
-  if (error) {
-    return <div>{error}</div>;
-  }
+  }, [src]);
 
   return (
-    <div>{imageUrl ? <img src={imageUrl} alt={alt} /> : <p>Loading...</p>}</div>
+    <div>
+      {imageUrl ? <img src={imageUrl} alt={alt} /> : <p>Loading...</p>}
+    </div>
   );
 };
 

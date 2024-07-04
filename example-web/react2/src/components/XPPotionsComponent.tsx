@@ -3,7 +3,9 @@ import { CollectionConfigData } from "ps99-api";
 import { GenericFetchComponent } from "./GenericFetchComponent";
 import ImageComponent from "./ImageComponent";
 
-const XPPotionsComponent: React.FC<{ configData?: CollectionConfigData<"XPPotions"> }> = ({ configData }) => {
+const XPPotionsComponent: React.FC<{
+  configData?: CollectionConfigData<"XPPotions">;
+}> = ({ configData }) => {
   return (
     <GenericFetchComponent<CollectionConfigData<"XPPotions">>
       collectionName="XPPotions"

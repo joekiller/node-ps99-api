@@ -9,10 +9,10 @@ interface GenericFetchComponentProps<T> {
 }
 
 export const GenericFetchComponent = <T,>({
-  collectionName,
-  render,
-  configData,
-}: GenericFetchComponentProps<T>) => {
+                                            collectionName,
+                                            render,
+                                            configData,
+                                          }: GenericFetchComponentProps<T>) => {
   const { configName } = useParams<{ configName: string }>();
   const [data, setData] = useState<T | null>(configData || null);
   const [error, setError] = useState<string | null>(null);
@@ -23,12 +23,9 @@ export const GenericFetchComponent = <T,>({
     const fetchData = async () => {
       if (!configName) return;
       const api = new PetSimulator99API();
-      const response: ApiResponseBody<any[]> =
-        await api.getCollection(collectionName);
+      const response: ApiResponseBody<any[]> = await api.getCollection(collectionName);
       if (response.status === "ok") {
-        const item = response.data.find(
-          (item) => item.configName === configName,
-        );
+        const item = response.data.find((item) => item.configName === configName);
         if (item) {
           setData(item.configData);
         } else {

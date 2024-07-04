@@ -33,9 +33,6 @@ const CollectionConfigIndex: React.FC = () => {
     <div>
       <h2>{collectionName} Configurations</h2>
       <ul>
-        <li>
-          <Link to={`/collections/${collectionName}/all`}>All</Link>
-        </li>
         {configNames.map((configName, index) => (
           <li key={index}>
             <Link
