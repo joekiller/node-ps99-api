@@ -29,6 +29,7 @@ import { UltimateData } from "./ultimate";
 import { UpgradeData } from "./upgrade";
 import { WateringCanData } from "./watering-can";
 import { WorldData } from "./world";
+import { XPPotionData } from "./xp-potion";
 import { ZoneFlagData } from "./zone-flag";
 import { ZoneData } from "./zone";
 
@@ -64,6 +65,7 @@ export type Collections =
   | UpgradeData
   | WateringCanData
   | WorldData
+  | XPPotionData
   | ZoneFlagData
   | ZoneData;
 

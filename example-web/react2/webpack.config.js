@@ -25,7 +25,7 @@ module.exports = {
   output: {
     filename: "bundle.js",
     path: path.resolve(__dirname, "dist"),
-    publicPath: "/"
+    publicPath: "/",
   },
   devServer: {
     static: {
@@ -33,6 +33,6 @@ module.exports = {
     },
     compress: true,
     port: 9000,
-    historyApiFallback: true
+    historyApiFallback: true,
   },
 };

@@ -1,6 +1,6 @@
 import { ApiRequestParams, RequestClient } from "./request-client/common";
 import { getAxiosRequest } from "./request-client/axios";
-import {Collection, CollectionName} from "./responses/collection";
+import { Collection, CollectionName } from "./responses/collection";
 import { ClanResponseBody } from "./responses/clan";
 import { ClansResponseBody } from "./responses/clans";
 import { ClansSort, GetClansParams, SortOrder } from "./params/clans";

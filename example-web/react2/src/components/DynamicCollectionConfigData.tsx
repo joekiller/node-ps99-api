@@ -1,9 +1,24 @@
-import React, { lazy, Suspense, useEffect, useState, useRef, useCallback } from "react";
+import React, {
+  lazy,
+  Suspense,
+  useEffect,
+  useState,
+  useRef,
+  useCallback,
+} from "react";
 import { useParams } from "react-router-dom";
-import { PetSimulator99API, CollectionName, Collection, CollectionConfigData } from "ps99-api";
+import {
+  PetSimulator99API,
+  CollectionName,
+  Collection,
+  CollectionConfigData,
+} from "ps99-api";
 
 const DynamicCollectionConfigData: React.FC = () => {
-  const { collectionName, configName } = useParams<{ collectionName: CollectionName; configName: string }>();
+  const { collectionName, configName } = useParams<{
+    collectionName: CollectionName;
+    configName: string;
+  }>();
 
   if (!collectionName) {
     return <div>Invalid collection name</div>;
@@ -22,8 +37,12 @@ const DynamicCollectionConfigData: React.FC = () => {
   );
 };
 
-const RenderAllConfigs: React.FC<{ collectionName: CollectionName }> = ({ collectionName }) => {
-  const [configDataList, setConfigDataList] = useState<Array<Collection<CollectionName>>>([]);
+const RenderAllConfigs: React.FC<{ collectionName: CollectionName }> = ({
+  collectionName,
+}) => {
+  const [configDataList, setConfigDataList] = useState<
+    Array<Collection<CollectionName>>
+  >([]);
   const [page, setPage] = useState(0);
   const [error, setError] = useState<string | null>(null);
   const observer = useRef<IntersectionObserver | null>(null);
@@ -36,7 +55,10 @@ const RenderAllConfigs: React.FC<{ collectionName: CollectionName }> = ({ collec
       if (response.status === "ok") {
         const start = page * 20;
         const end = start + 20;
-        setConfigDataList((prev) => [...prev, ...response.data.slice(start, end)]);
+        setConfigDataList((prev) => [
+          ...prev,
+          ...response.data.slice(start, end),
+        ]);
       } else {
         setError(response.error.message);
       }
@@ -72,7 +94,13 @@ const RenderAllConfigs: React.FC<{ collectionName: CollectionName }> = ({ collec
           return (
             <div ref={lastElementRef} key={index}>
               <Suspense fallback={<div>Loading...</div>}>
-                <Component configData={configData.configData as CollectionConfigData<typeof collectionName>} />
+                <Component
+                  configData={
+                    configData.configData as CollectionConfigData<
+                      typeof collectionName
+                    >
+                  }
+                />
               </Suspense>
             </div>
           );
@@ -80,7 +108,13 @@ const RenderAllConfigs: React.FC<{ collectionName: CollectionName }> = ({ collec
           return (
             <div key={index}>
               <Suspense fallback={<div>Loading...</div>}>
-                <Component configData={configData.configData as CollectionConfigData<typeof collectionName>} />
+                <Component
+                  configData={
+                    configData.configData as CollectionConfigData<
+                      typeof collectionName
+                    >
+                  }
+                />
               </Suspense>
             </div>
           );

@@ -39,5 +39,6 @@ export * from "./responses/collection/ultimate";
 export * from "./responses/collection/upgrade";
 export * from "./responses/collection/watering-can";
 export * from "./responses/collection/world";
+export * from "./responses/collection/xp-potion";
 export * from "./responses/collection/zone-flag";
 export * from "./responses/collection/zone";
