@@ -29,5 +29,5 @@ runs:
       shell: bash
       working-directory: example-web/react2/
       run: |
-        npm cd
+        npm ci
         npx webpack
