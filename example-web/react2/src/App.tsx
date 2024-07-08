@@ -1,5 +1,5 @@
 import React from "react";
-import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
+import { HashRouter as Router, Routes, Route } from "react-router-dom";
 import HomePage from "./components/HomePage";
 import Header from "./components/Header";
 import CollectionsIndex from "./components/CollectionsIndex";
@@ -9,19 +9,13 @@ import Footer from "./components/Footer";
 
 const App: React.FC = () => {
   return (
-    <Router basename="/node-ps99-api">
+    <Router>
       <Header />
       <Routes>
         <Route path="/" element={<HomePage />} />
         <Route path="/collections" element={<CollectionsIndex />} />
-        <Route
-          path="/collections/:collectionName"
-          element={<CollectionConfigIndex />}
-        />
-        <Route
-          path="/collections/:collectionName/:configName"
-          element={<DynamicCollectionConfigData />}
-        />
+        <Route path="/collections/:collectionName" element={<CollectionConfigIndex />} />
+        <Route path="/collections/:collectionName/:configName" element={<DynamicCollectionConfigData />} />
       </Routes>
       <Footer />
     </Router>
