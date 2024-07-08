@@ -1,5 +1,6 @@
 {
   "name": "example-ps99-api-webapp-2",
+  "homepage": "https://joekiller.github.io/node-ps99-api",
   "version": "1.0.0",
   "description": "A demonstration of using the Pet Simulator 99 node-ps99-api library.",
   "private": true,

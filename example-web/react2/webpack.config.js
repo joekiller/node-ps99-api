@@ -1,5 +1,6 @@
 const path = require("path");
 const CopyWebpackPlugin = require("copy-webpack-plugin");
+const HtmlWebpackPlugin = require("html-webpack-plugin");
 
 module.exports = {
   entry: "./src/index.tsx",
@@ -13,7 +14,7 @@ module.exports = {
       },
       {
         test: /\.css$/i,
-        use: ["css-loader"],
+        use: ["style-loader", "css-loader"], // Add style-loader here to properly handle CSS
       },
     ],
   },
@@ -26,11 +27,23 @@ module.exports = {
   output: {
     filename: "bundle.js",
     path: path.resolve(__dirname, "dist"),
-    publicPath: "/",
+    publicPath: "/node-ps99-api/",
   },
   plugins: [
+    new HtmlWebpackPlugin({
+      template: path.join(__dirname, "public", "index.html"),
+      publicPath: "/node-ps99-api/",
+    }),
     new CopyWebpackPlugin({
-      patterns: [{ from: path.resolve(__dirname, "public") }],
+      patterns: [
+        {
+          from: path.resolve(__dirname, "public"),
+          to: path.resolve(__dirname, "dist"),
+          globOptions: {
+            ignore: ["**/index.html"], // Ignore index.html to avoid conflict
+          },
+        },
+      ],
     }),
   ],
   devServer: {
@@ -39,6 +52,8 @@ module.exports = {
     },
     compress: true,
     port: 9000,
-    historyApiFallback: true,
+    historyApiFallback: {
+      index: "/node-ps99-api/index.html",
+    },
   },
 };

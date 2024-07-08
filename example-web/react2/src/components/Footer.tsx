@@ -1,58 +1,38 @@
-import React, { useState, useEffect } from "react";
-import { useOnlineStatus } from "../hooks/useOnlineStatus";
+import React from "react";
 
 const Footer: React.FC = () => {
-  const isOnline = useOnlineStatus();
-  const [lastUpdate, setLastUpdate] = useState<string | null>(null);
-  const [loading, setLoading] = useState(false);
-
-  const updateLastUpdate = () => {
-    setLastUpdate(new Date().toLocaleString());
-  };
-
-  useEffect(() => {
-    const fetchData = async () => {
-      setLoading(true);
-      // Simulate a fetch call to update lastUpdate time
-      await new Promise((resolve) => setTimeout(resolve, 1000));
-      updateLastUpdate();
-      setLoading(false);
-    };
-
-    fetchData();
-
-    window.addEventListener("online", updateLastUpdate);
-    window.addEventListener("offline", updateLastUpdate);
-
-    return () => {
-      window.removeEventListener("online", updateLastUpdate);
-      window.removeEventListener("offline", updateLastUpdate);
-    };
-  }, []);
-
   return (
     <footer
-      style={{
-        display: "flex",
-        justifyContent: "space-between",
-        padding: "1em",
-        borderTop: "1px solid #ccc",
-      }}
+      style={{ textAlign: "center", padding: "1em", background: "#f8f9fa" }}
     >
       <div>
-        {loading ? (
-          <span>♻️ Loading...</span>
-        ) : (
-          <span>Last update: {lastUpdate}</span>
-        )}
+        <a href="https://badge.fury.io/js/ps99-api">
+          <img
+            src="https://badge.fury.io/js/ps99-api.svg"
+            alt="npm version"
+            height="18"
+          />
+        </a>
+        &nbsp;
+        <a href="https://github.com/joekiller/node-ps99-api">
+          <img
+            src="https://img.shields.io/badge/source-github-blue?logo=github"
+            alt="GitHub source"
+            height="18"
+          />
+        </a>
       </div>
-      <div>
-        {isOnline ? (
-          <span style={{ color: "green" }}>● Online</span>
-        ) : (
-          <span style={{ color: "red" }}>● Offline</span>
-        )}
-      </div>
+      <p>
+        &copy; {new Date().getFullYear()} Joseph "
+        <a
+          href="https://joekiller.com"
+          target="_blank"
+          rel="noopener noreferrer"
+        >
+          joekiller
+        </a>
+        " Lawson. All rights reserved.
+      </p>
     </footer>
   );
 };

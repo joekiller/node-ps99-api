@@ -49,5 +49,5 @@ export const GenericFetchComponent = <T,>({
     return <div>Loading...</div>;
   }
 
-  return <>{render(data)}</>;
+  return <div>{render(data)}</div>;
 };

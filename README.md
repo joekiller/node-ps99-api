@@ -3,7 +3,6 @@
 [![npm version](https://badge.fury.io/js/ps99-api.svg)](https://badge.fury.io/js/ps99-api)
 ![Website](https://img.shields.io/website?url=https%3A%2F%2Fjoekiller.github.io%2Fnode-ps99-api)
 
-
 Pet Simulator Public API wrapper written in Typescript.
 
 ## Installation
