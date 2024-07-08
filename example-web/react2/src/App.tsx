@@ -14,8 +14,14 @@ const App: React.FC = () => {
       <Routes>
         <Route path="/" element={<HomePage />} />
         <Route path="/collections" element={<CollectionsIndex />} />
-        <Route path="/collections/:collectionName" element={<CollectionConfigIndex />} />
-        <Route path="/collections/:collectionName/:configName" element={<DynamicCollectionConfigData />} />
+        <Route
+          path="/collections/:collectionName"
+          element={<CollectionConfigIndex />}
+        />
+        <Route
+          path="/collections/:collectionName/:configName"
+          element={<DynamicCollectionConfigData />}
+        />
       </Routes>
       <Footer />
     </Router>

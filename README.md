@@ -1,5 +1,7 @@
 # ps99-api
 
+[![npm version](https://badge.fury.io/js/ps99-api.svg)](https://badge.fury.io/js/ps99-api)
+
 Pet Simulator Public API wrapper written in Typescript.
 
 ## Installation

@@ -25,3 +25,9 @@ runs:
     - name: Compile
       shell: bash
       run: npm run build
+    - name: Build Site
+      shell: bash
+      run: |
+        cd example-web/react2
+        npm cd
+        npx webpack

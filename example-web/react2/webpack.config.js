@@ -1,4 +1,5 @@
 const path = require("path");
+const CopyWebpackPlugin = require("copy-webpack-plugin");
 
 module.exports = {
   entry: "./src/index.tsx",
@@ -27,6 +28,11 @@ module.exports = {
     path: path.resolve(__dirname, "dist"),
     publicPath: "/",
   },
+  plugins: [
+    new CopyWebpackPlugin({
+      patterns: [{ from: path.resolve(__dirname, "public") }],
+    }),
+  ],
   devServer: {
     static: {
       directory: path.join(__dirname, "public"),

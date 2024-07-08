@@ -28,7 +28,9 @@ const ImageComponent: React.FC<ImageProps> = ({ src, alt }) => {
       const api = new PetSimulator99API();
       try {
         const imageBlob = await api.getImage(src);
-        const url = URL.createObjectURL(new Blob([imageBlob], { type: "image/png" }));
+        const url = URL.createObjectURL(
+          new Blob([imageBlob], { type: "image/png" }),
+        );
         setImageUrl(url);
       } catch (error) {
         console.error("Error fetching image:", error);
@@ -53,9 +55,7 @@ const ImageComponent: React.FC<ImageProps> = ({ src, alt }) => {
   }, [src]);
 
   return (
-    <div>
-      {imageUrl ? <img src={imageUrl} alt={alt} /> : <p>Loading...</p>}
-    </div>
+    <div>{imageUrl ? <img src={imageUrl} alt={alt} /> : <p>Loading...</p>}</div>
   );
 };
 
