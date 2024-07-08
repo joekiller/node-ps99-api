@@ -27,7 +27,7 @@ runs:
       run: npm run build
     - name: Build Site
       shell: bash
+      working-directory: example-web/react2/
       run: |
-        cd example-web/react2
         npm cd
         npx webpack
