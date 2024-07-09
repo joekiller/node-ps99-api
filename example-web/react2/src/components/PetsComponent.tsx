@@ -4,25 +4,58 @@ import ImageComponent from "./ImageComponent";
 
 const PetsComponent: React.FC<{
   configData: CollectionConfigData<"Pets">;
-}> = ({ configData }) => {
+  displayType?: "all" | "specific";
+  pt?: number;
+}> = ({ configData, displayType = "all", pt }) => {
+  const getVariationName = () => {
+    if (pt === 1) return "(Golden)";
+    if (pt === 2) return "(Rainbow)";
+    return "";
+  };
+
   return (
-    <div>
-      <h2>{configData.name}</h2>
-      <ImageComponent src={configData.thumbnail} alt={configData.name} />
-      {configData.goldenThumbnail && (
-        <ImageComponent
-          src={configData.goldenThumbnail}
-          alt={`${configData.name} (Golden)`}
-        />
+    <div style={{ padding: "1em", border: "1px solid #ccc", borderRadius: "8px", backgroundColor: "#f9f9f9" }}>
+      <h2 style={{ borderBottom: "2px solid #ccc", paddingBottom: "0.5em" }}>
+        {configData.name} {getVariationName()}
+      </h2>
+      {displayType === "all" && (
+        <>
+          <ImageComponent src={configData.thumbnail} alt={configData.name} />
+          {configData.goldenThumbnail && (
+            <ImageComponent
+              src={configData.goldenThumbnail}
+              alt={`${configData.name} (Golden)`}
+            />
+          )}
+        </>
       )}
-      <p>From World Number: {configData.fromWorldNumber}</p>
-      <p>From Zone Number: {configData.fromZoneNumber}</p>
-      {configData.indexObtainable && <p>Index Obtainable: Yes</p>}
-      {configData.huge && <p>Huge: Yes</p>}
-      {configData.fly && <p>Can Fly: Yes</p>}
-      {configData.tradable && <p>Tradable: Yes</p>}
-      {configData.secret && <p>Secret: Yes</p>}
-      {configData.hidden && <p>Hidden: Yes</p>}
+      {displayType === "specific" && (
+        <>
+          {pt === 1 && configData.goldenThumbnail ? (
+            <div style={{ minWidth: '250px' }}>
+              <ImageComponent
+                src={configData.goldenThumbnail}
+                alt={`${configData.name} (Golden)`}
+              />
+            </div>
+          ) : (
+            <div style={{ minWidth: '250px', outline: pt === 2 ? '4px solid #FFD700' : 'none', borderRadius: '8px' }}>
+              <ImageComponent
+                src={configData.thumbnail}
+                alt={configData.name}
+              />
+            </div>
+          )}
+        </>
+      )}
+      <p><strong>From World Number:</strong> {configData.fromWorldNumber}</p>
+      <p><strong>From Zone Number:</strong> {configData.fromZoneNumber}</p>
+      {configData.indexObtainable && <p><strong>Index Obtainable:</strong> Yes</p>}
+      {configData.huge && <p><strong>Huge:</strong> Yes</p>}
+      {configData.fly && <p><strong>Can Fly:</strong> Yes</p>}
+      {configData.tradable && <p><strong>Tradable:</strong> Yes</p>}
+      {configData.secret && <p><strong>Secret:</strong> Yes</p>}
+      {configData.hidden && <p><strong>Hidden:</strong> Yes</p>}
       {configData.cachedPower && (
         <div>
           <h3>Cached Power:</h3>
@@ -47,11 +80,11 @@ const PetsComponent: React.FC<{
           </ul>
         </div>
       )}
-      {configData.indexDesc && <p>Description: {configData.indexDesc}</p>}
+      {configData.indexDesc && <p><strong>Description:</strong> {configData.indexDesc}</p>}
       {configData.exclusiveLevel && (
-        <p>Exclusive Level: {configData.exclusiveLevel}</p>
+        <p><strong>Exclusive Level:</strong> {configData.exclusiveLevel}</p>
       )}
-      {configData.power && <p>Power: {configData.power}</p>}
+      {configData.power && <p><strong>Power:</strong> {configData.power}</p>}
     </div>
   );
 };

@@ -6,20 +6,57 @@ const BoothsComponent: React.FC<{
   configData: CollectionConfigData<"Booths">;
 }> = ({ configData }) => {
   return (
-    <div>
-      <h2>{configData.DisplayName}</h2>
+    <div
+      style={{
+        padding: "1em",
+        border: "1px solid #ccc",
+        borderRadius: "8px",
+        backgroundColor: "#f9f9f9",
+      }}
+    >
+      <h2 style={{ borderBottom: "2px solid #ccc", paddingBottom: "0.5em" }}>
+        {configData.DisplayName}
+      </h2>
       <ImageComponent src={configData.Icon} alt={configData.DisplayName} />
-      <p>Description: {configData.Desc}</p>
-      <p>Rarity: {configData.Rarity.DisplayName}</p>
-      <p>Rarity Number: {configData.Rarity.RarityNumber}</p>
-      {configData.Hidden && <p>Hidden: Yes</p>}
-      {configData.Tradable && <p>Tradable: Yes</p>}
-      {configData.OffSale && <p>Off Sale: Yes</p>}
-      {configData.ProductId && <p>Product ID: {configData.ProductId}</p>}
-      {configData.DiamondPrice && (
-        <p>Diamond Price: {configData.DiamondPrice}</p>
+      <p>
+        <strong>Description:</strong> {configData.Desc}
+      </p>
+      <p>
+        <strong>Rarity:</strong> {configData.Rarity.DisplayName}
+      </p>
+      <p>
+        <strong>Rarity Number:</strong> {configData.Rarity.RarityNumber}
+      </p>
+      {configData.Hidden && (
+        <p>
+          <strong>Hidden:</strong> Yes
+        </p>
       )}
-      {configData.Sittable && <p>Sittable: Yes</p>}
+      {configData.Tradable && (
+        <p>
+          <strong>Tradable:</strong> Yes
+        </p>
+      )}
+      {configData.OffSale && (
+        <p>
+          <strong>Off Sale:</strong> Yes
+        </p>
+      )}
+      {configData.ProductId && (
+        <p>
+          <strong>Product ID:</strong> {configData.ProductId}
+        </p>
+      )}
+      {configData.DiamondPrice && (
+        <p>
+          <strong>Diamond Price:</strong> {configData.DiamondPrice}
+        </p>
+      )}
+      {configData.Sittable && (
+        <p>
+          <strong>Sittable:</strong> Yes
+        </p>
+      )}
     </div>
   );
 };

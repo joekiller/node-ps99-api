@@ -6,37 +6,104 @@ const HoverboardsComponent: React.FC<{
   configData: CollectionConfigData<"Hoverboards">;
 }> = ({ configData }) => {
   return (
-    <div>
-      <h2>{configData.DisplayName}</h2>
+    <div
+      style={{
+        padding: "1em",
+        border: "1px solid #ccc",
+        borderRadius: "8px",
+        backgroundColor: "#f9f9f9",
+      }}
+    >
+      <h2 style={{ borderBottom: "2px solid #ccc", paddingBottom: "0.5em" }}>
+        {configData.DisplayName}
+      </h2>
       <ImageComponent src={configData.Icon} alt={configData.DisplayName} />
-      <p>Description: {configData.Desc}</p>
-      <p>Rarity: {configData.Rarity.DisplayName}</p>
-      <p>Rarity Number: {configData.Rarity.RarityNumber}</p>
-      {configData.Tradable && <p>Tradable: Yes</p>}
-      {configData.CanBeShiny && <p>Can Be Shiny: Yes</p>}
-      {configData.HoverHeight && <p>Hover Height: {configData.HoverHeight}</p>}
-      {configData.RotationLimit && (
-        <p>Rotation Limit: {configData.RotationLimit}</p>
+      <p>
+        <strong>Description:</strong> {configData.Desc}
+      </p>
+      <p>
+        <strong>Rarity:</strong> {configData.Rarity.DisplayName}
+      </p>
+      <p>
+        <strong>Rarity Number:</strong> {configData.Rarity.RarityNumber}
+      </p>
+      {configData.Tradable && (
+        <p>
+          <strong>Tradable:</strong> Yes
+        </p>
       )}
-      {configData.ProductId && <p>Product ID: {configData.ProductId}</p>}
-      {configData.Animation && <p>Animation: {configData.Animation}</p>}
-      {configData.BobRate && <p>Bob Rate: {configData.BobRate}</p>}
-      {configData.PitchScale && <p>Pitch Scale: {configData.PitchScale}</p>}
-      {configData.MaxRoll && <p>Max Roll: {configData.MaxRoll}</p>}
+      {configData.CanBeShiny && (
+        <p>
+          <strong>Can Be Shiny:</strong> Yes
+        </p>
+      )}
+      {configData.HoverHeight && (
+        <p>
+          <strong>Hover Height:</strong> {configData.HoverHeight}
+        </p>
+      )}
+      {configData.RotationLimit && (
+        <p>
+          <strong>Rotation Limit:</strong> {configData.RotationLimit}
+        </p>
+      )}
+      {configData.ProductId && (
+        <p>
+          <strong>Product ID:</strong> {configData.ProductId}
+        </p>
+      )}
+      {configData.Animation && (
+        <p>
+          <strong>Animation:</strong> {configData.Animation}
+        </p>
+      )}
+      {configData.BobRate && (
+        <p>
+          <strong>Bob Rate:</strong> {configData.BobRate}
+        </p>
+      )}
+      {configData.PitchScale && (
+        <p>
+          <strong>Pitch Scale:</strong> {configData.PitchScale}
+        </p>
+      )}
+      {configData.MaxRoll && (
+        <p>
+          <strong>Max Roll:</strong> {configData.MaxRoll}
+        </p>
+      )}
       {configData.DefaultJumpSpeedBoost && (
-        <p>Default Jump Speed Boost: {configData.DefaultJumpSpeedBoost}</p>
+        <p>
+          <strong>Default Jump Speed Boost:</strong>{" "}
+          {configData.DefaultJumpSpeedBoost}
+        </p>
       )}
       {configData.IdleVolumeSpeedScale && (
-        <p>Idle Volume Speed Scale: {configData.IdleVolumeSpeedScale}</p>
+        <p>
+          <strong>Idle Volume Speed Scale:</strong>{" "}
+          {configData.IdleVolumeSpeedScale}
+        </p>
       )}
       {configData.IdlePitchScale && (
-        <p>Idle Pitch Scale: {configData.IdlePitchScale}</p>
+        <p>
+          <strong>Idle Pitch Scale:</strong> {configData.IdlePitchScale}
+        </p>
       )}
       {configData.BlockcastScale && (
-        <p>Blockcast Scale: {configData.BlockcastScale}</p>
+        <p>
+          <strong>Blockcast Scale:</strong> {configData.BlockcastScale}
+        </p>
       )}
-      {configData.SkateMode && <p>Skate Mode: Yes</p>}
-      {configData.IdleVolume && <p>Idle Volume: {configData.IdleVolume}</p>}
+      {configData.SkateMode && (
+        <p>
+          <strong>Skate Mode:</strong> Yes
+        </p>
+      )}
+      {configData.IdleVolume && (
+        <p>
+          <strong>Idle Volume:</strong> {configData.IdleVolume}
+        </p>
+      )}
     </div>
   );
 };

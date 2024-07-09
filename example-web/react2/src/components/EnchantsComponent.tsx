@@ -8,9 +8,6 @@ const EnchantsComponent: React.FC<{
   return (
     <div>
       <h2>Enchantment</h2>
-      {configData.PageIcon && (
-        <ImageComponent src={configData.PageIcon} alt="Page Icon" />
-      )}
       <p>Base Tier: {configData.BaseTier}</p>
       <p>Max Tier: {configData.MaxTier}</p>
       <p>Max Page: {configData.MaxPage}</p>
@@ -22,18 +19,35 @@ const EnchantsComponent: React.FC<{
       )}
       {configData.ProductId && <p>Product ID: {configData.ProductId}</p>}
       <h3>Tiers:</h3>
-      <ul>
+      <div style={{ display: "flex", flexWrap: "wrap", gap: "1em" }}>
         {configData.Tiers.map((tier, index) => (
-          <li key={index}>
+          <div
+            key={index}
+            style={{
+              border: "1px solid #ccc",
+              borderRadius: "8px",
+              padding: "1em",
+              width: "calc(33% - 1em)",
+              boxSizing: "border-box",
+            }}
+          >
             <ImageComponent src={tier.Icon} alt={tier.DisplayName} />
-            <p>Display Name: {tier.DisplayName}</p>
-            <p>Description: {tier.Desc}</p>
-            <p>Power: {tier.Power}</p>
-            <p>Rarity: {tier.Rarity.DisplayName}</p>
-            <p>Rarity Number: {tier.Rarity.RarityNumber}</p>
-          </li>
+            <h4>{tier.DisplayName}</h4>
+            <p>
+              <strong>Description:</strong> {tier.Desc}
+            </p>
+            <p>
+              <strong>Power:</strong> {tier.Power}
+            </p>
+            <p>
+              <strong>Rarity:</strong> {tier.Rarity.DisplayName}
+            </p>
+            <p>
+              <strong>Rarity Number:</strong> {tier.Rarity.RarityNumber}
+            </p>
+          </div>
         ))}
-      </ul>
+      </div>
     </div>
   );
 };

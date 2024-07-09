@@ -6,9 +6,20 @@ const MiscItemsComponent: React.FC<{
   configData: CollectionConfigData<"MiscItems">;
 }> = ({ configData }) => {
   return (
-    <div>
-      <h2>{configData.DisplayName}</h2>
-      <p>Category: {configData.Category}</p>
+    <div
+      style={{
+        padding: "1em",
+        border: "1px solid #ccc",
+        borderRadius: "8px",
+        backgroundColor: "#f9f9f9",
+      }}
+    >
+      <h2 style={{ borderBottom: "2px solid #ccc", paddingBottom: "0.5em" }}>
+        {configData.DisplayName}
+      </h2>
+      <p>
+        <strong>Category:</strong> {configData.Category}
+      </p>
       <ImageComponent src={configData.Icon} alt={configData.DisplayName} />
       {configData.AltIcon && (
         <ImageComponent
@@ -16,13 +27,16 @@ const MiscItemsComponent: React.FC<{
           alt={`${configData.DisplayName} (Alternate)`}
         />
       )}
-      <p>Description: {configData.Desc}</p>
       <p>
-        Rarity: {configData.Rarity.DisplayName} (Rarity Number:{" "}
+        <strong>Description:</strong> {configData.Desc}
+      </p>
+      <p>
+        <strong>Rarity:</strong> {configData.Rarity.DisplayName} (Rarity Number:{" "}
         {configData.Rarity.RarityNumber})
       </p>
-      {configData.Tradable && <p>Tradable: Yes</p>}
-      {!configData.Tradable && <p>Tradable: No</p>}
+      <p>
+        <strong>Tradable:</strong> {configData.Tradable ? "Yes" : "No"}
+      </p>
     </div>
   );
 };
