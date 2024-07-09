@@ -6,7 +6,9 @@ export type ExistsData = {
 
 export type ExistsConfigData = {
   id: string;
+  /** for pets pt=1 is golden, p2=2 is rainbow */
   pt?: number;
+  /** for pets sh is shiny */
   sh?: boolean;
 };
 

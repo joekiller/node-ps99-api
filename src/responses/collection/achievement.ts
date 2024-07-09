@@ -36,7 +36,9 @@ export type AchievementRewardItem = {
 
 export type AchievementRewardData = {
   id: string;
+  /** potions: enchants, etc: tn is tier number */
   tn?: number;
   _am?: number;
+  /** For pets: pt=1 is golden, p2=2 is rainbow */
   pt?: number;
 };

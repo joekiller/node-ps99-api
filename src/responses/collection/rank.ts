@@ -38,5 +38,6 @@ export type RankRewardItem = {
 export type RankRewardItemData = {
   _am?: number;
   id: string;
+  /** For potions: enchants, etc: tn is tier number */
   tn?: number;
 };

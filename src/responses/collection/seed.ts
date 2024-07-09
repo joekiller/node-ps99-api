@@ -50,6 +50,7 @@ export type RawStackKey = string;
 
 export interface LootTableData {
   id: string;
+  /** For potions: enchants, etc: tn is tier number */
   tn?: number;
   _am?: number;
 }

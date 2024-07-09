@@ -26,6 +26,7 @@ export type GuildBattleItem = {
 
 export type GuildBattleItemData = {
   id: string;
+  /** For pets: pt=1 is golden, p2=2 is rainbow */
   pt?: number;
 };
 
