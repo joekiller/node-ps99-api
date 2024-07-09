@@ -1,9 +1,8 @@
 import React from "react";
 import { CollectionConfigData } from "ps99-api";
-import { GenericFetchComponent } from "./GenericFetchComponent";
 
-const MerchantComponent: React.FC<{
-  configData?: CollectionConfigData<"Merchants">;
+const MerchantsComponent: React.FC<{
+  configData: CollectionConfigData<"Merchants">;
 }> = ({ configData }) => {
   const renderStockRange = (stockRange: number[][] | undefined) => {
     if (!stockRange) return null;
@@ -17,29 +16,23 @@ const MerchantComponent: React.FC<{
   };
 
   return (
-    <GenericFetchComponent<CollectionConfigData<"Merchants">>
-      collectionName="Merchants"
-      configData={configData}
-      render={(data) => (
+    <div>
+      <h2>{configData.DisplayName}</h2>
+      <p>Price Multiplier: {configData.PriceMult}</p>
+      <p>Machine Name: {configData.MachineName}</p>
+      <p>Refresh Rate: {configData.RefreshRate} seconds</p>
+      {configData.HideNotification && <p>Notification: Hidden</p>}
+      {configData.HideRespect && <p>Respect: Hidden</p>}
+      {configData.IsStatic && <p>Static Merchant</p>}
+      {renderStockRange(configData.StockRangeByRespectLevel)}
+      {configData.SlotRespectLevels && (
         <div>
-          <h2>{data.DisplayName}</h2>
-          <p>Price Multiplier: {data.PriceMult}</p>
-          <p>Machine Name: {data.MachineName}</p>
-          <p>Refresh Rate: {data.RefreshRate} seconds</p>
-          {data.HideNotification && <p>Notification: Hidden</p>}
-          {data.HideRespect && <p>Respect: Hidden</p>}
-          {data.IsStatic && <p>Static Merchant</p>}
-          {renderStockRange(data.StockRangeByRespectLevel)}
-          {data.SlotRespectLevels && (
-            <div>
-              <h3>Slot Respect Levels</h3>
-              <p>{data.SlotRespectLevels.join(", ")}</p>
-            </div>
-          )}
+          <h3>Slot Respect Levels</h3>
+          <p>{configData.SlotRespectLevels.join(", ")}</p>
         </div>
       )}
-    />
+    </div>
   );
 };
 
-export default MerchantComponent;
+export default MerchantsComponent;

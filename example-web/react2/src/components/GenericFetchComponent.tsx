@@ -1,27 +1,22 @@
 import React, { useEffect, useState, ReactNode } from "react";
-import { useParams } from "react-router-dom";
 import { PetSimulator99API, ApiResponseBody, CollectionName } from "ps99-api";
 
 interface GenericFetchComponentProps<T> {
   collectionName: CollectionName;
+  configName: string;
   render: (data: T) => ReactNode;
-  configData?: T;
 }
 
 export const GenericFetchComponent = <T,>({
   collectionName,
+  configName,
   render,
-  configData,
 }: GenericFetchComponentProps<T>) => {
-  const { configName } = useParams<{ configName: string }>();
-  const [data, setData] = useState<T | null>(configData || null);
+  const [data, setData] = useState<T | null>(null);
   const [error, setError] = useState<string | null>(null);
 
   useEffect(() => {
-    if (configData) return;
-
     const fetchData = async () => {
-      if (!configName) return;
       const api = new PetSimulator99API();
       const response: ApiResponseBody<any[]> =
         await api.getCollection(collectionName);
@@ -39,7 +34,7 @@ export const GenericFetchComponent = <T,>({
       }
     };
     fetchData();
-  }, [collectionName, configName, configData]);
+  }, [collectionName, configName]);
 
   if (error) {
     return <div>Error: {error}</div>;

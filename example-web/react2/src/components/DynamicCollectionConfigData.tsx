@@ -1,6 +1,7 @@
 import React, { lazy, Suspense } from "react";
 import { useParams } from "react-router-dom";
 import { CollectionName } from "ps99-api";
+import { GenericFetchComponent } from "./GenericFetchComponent";
 
 const DynamicCollectionConfigData: React.FC = () => {
   const { collectionName, configName } = useParams<{
@@ -16,7 +17,11 @@ const DynamicCollectionConfigData: React.FC = () => {
 
   return (
     <Suspense fallback={<div>Loading...</div>}>
-      <Component configName={configName} />
+      <GenericFetchComponent
+        collectionName={collectionName}
+        configName={configName}
+        render={(configData) => <Component configData={configData} />}
+      />
     </Suspense>
   );
 };

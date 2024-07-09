@@ -5,7 +5,9 @@ const HomePage: React.FC = () => {
   return (
     <div style={{ textAlign: "center", padding: "2em" }}>
       <h1>Welcome to Pet Simulator 99 API</h1>
-      <p>Your one-stop solution for accessing all Pet Simulator 99 data.</p>
+      <p>
+        Your one-stop solution for accessing all Pet Simulator 99 configData.
+      </p>
       <p>Select a collection to get started:</p>
       <Link
         to="/collections"

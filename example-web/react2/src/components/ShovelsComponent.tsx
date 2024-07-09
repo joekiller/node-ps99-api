@@ -1,27 +1,20 @@
 import React from "react";
 import { CollectionConfigData } from "ps99-api";
-import { GenericFetchComponent } from "./GenericFetchComponent";
 import ImageComponent from "./ImageComponent";
 
 const ShovelComponent: React.FC<{
-  configData?: CollectionConfigData<"Shovels">;
+  configData: CollectionConfigData<"Shovels">;
 }> = ({ configData }) => {
   return (
-    <GenericFetchComponent<CollectionConfigData<"Shovels">>
-      collectionName="Shovels"
-      configData={configData}
-      render={(data) => (
-        <div>
-          <h2>Shovel: {data.DisplayName}</h2>
-          <p>Description: {data.Desc}</p>
-          <p>Associated Item ID: {data.AssociatedItemID}</p>
-          {data.MerchantSalePrice && (
-            <p>Merchant Sale Price: {data.MerchantSalePrice}</p>
-          )}
-          <ImageComponent src={data.Icon} alt={data.DisplayName} />
-        </div>
+    <div>
+      <h2>Shovel: {configData.DisplayName}</h2>
+      <p>Description: {configData.Desc}</p>
+      <p>Associated Item ID: {configData.AssociatedItemID}</p>
+      {configData.MerchantSalePrice && (
+        <p>Merchant Sale Price: {configData.MerchantSalePrice}</p>
       )}
-    />
+      <ImageComponent src={configData.Icon} alt={configData.DisplayName} />
+    </div>
   );
 };
 

@@ -1,24 +1,17 @@
 import React from "react";
 import { CollectionConfigData } from "ps99-api";
-import { GenericFetchComponent } from "./GenericFetchComponent";
 
 const BuffsComponent: React.FC<{
-  configData?: CollectionConfigData<"Buffs">;
+  configData: CollectionConfigData<"Buffs">;
 }> = ({ configData }) => {
   return (
-    <GenericFetchComponent<CollectionConfigData<"Buffs">>
-      collectionName="Buffs"
-      configData={configData}
-      render={(data) => (
-        <div>
-          <h2>{data.DisplayName}</h2>
-          <p>Associated Item ID: {data.AssociatedItemID}</p>
-          <p>Associated Item Class: {data.AssociatedItemClass}</p>
-          <p>Length: {data.Length} seconds</p>
-          {data.IgnoreInstancePause && <p>Ignore Instance Pause: Yes</p>}
-        </div>
-      )}
-    />
+    <div>
+      <h2>{configData.DisplayName}</h2>
+      <p>Associated Item ID: {configData.AssociatedItemID}</p>
+      <p>Associated Item Class: {configData.AssociatedItemClass}</p>
+      <p>Length: {configData.Length} seconds</p>
+      {configData.IgnoreInstancePause && <p>Ignore Instance Pause: Yes</p>}
+    </div>
   );
 };
 

@@ -1,25 +1,18 @@
 import React from "react";
 import { CollectionConfigData } from "ps99-api";
-import { GenericFetchComponent } from "./GenericFetchComponent";
 import ImageComponent from "./ImageComponent";
 
 const LootboxesComponent: React.FC<{
-  configData?: CollectionConfigData<"Lootboxes">;
+  configData: CollectionConfigData<"Lootboxes">;
 }> = ({ configData }) => {
   return (
-    <GenericFetchComponent<CollectionConfigData<"Lootboxes">>
-      collectionName="Lootboxes"
-      configData={configData}
-      render={(data) => (
-        <div>
-          <h2>{data.DisplayName}</h2>
-          <ImageComponent src={data.Icon} alt={data.DisplayName} />
-          <p>Description: {data.Desc}</p>
-          <p>Rarity: {data.Rarity.DisplayName}</p>
-          <p>Rarity Number: {data.Rarity.RarityNumber}</p>
-        </div>
-      )}
-    />
+    <div>
+      <h2>{configData.DisplayName}</h2>
+      <ImageComponent src={configData.Icon} alt={configData.DisplayName} />
+      <p>Description: {configData.Desc}</p>
+      <p>Rarity: {configData.Rarity.DisplayName}</p>
+      <p>Rarity Number: {configData.Rarity.RarityNumber}</p>
+    </div>
   );
 };
 

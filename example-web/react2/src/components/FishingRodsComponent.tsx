@@ -1,41 +1,34 @@
 import React from "react";
 import { CollectionConfigData } from "ps99-api";
-import { GenericFetchComponent } from "./GenericFetchComponent";
 import ImageComponent from "./ImageComponent";
 
 const FishingRodsComponent: React.FC<{
-  configData?: CollectionConfigData<"FishingRods">;
+  configData: CollectionConfigData<"FishingRods">;
 }> = ({ configData }) => {
   return (
-    <GenericFetchComponent<CollectionConfigData<"FishingRods">>
-      collectionName="FishingRods"
-      configData={configData}
-      render={(data) => (
-        <div>
-          <h2>{data.DisplayName}</h2>
-          <ImageComponent src={data.Icon} alt={data.DisplayName} />
-          <p>Fishing Chance: {data.FishingChance}</p>
-          <p>Fishing Currency Multiplier: {data.FishingCurrencyMultiplier}</p>
-          <p>Minimum Fishing Time: {data.MinFishingTime} seconds</p>
-          <p>
-            Fishing Game Speed Multiplier: {data.FishingGameSpeedMultiplier}
-          </p>
-          <p>Bar Size: {data.BarSize}</p>
-          <p>Associated Item ID: {data.AssociatedItemID}</p>
-          {data.MerchantSalePrice && (
-            <p>Merchant Sale Price: {data.MerchantSalePrice}</p>
-          )}
-          <h3>Fishing Odds:</h3>
-          <ul>
-            {data.FishingOdds.map((odds, index) => (
-              <li key={index}>
-                {odds[0]}: {odds[1]}%
-              </li>
-            ))}
-          </ul>
-        </div>
+    <div>
+      <h2>{configData.DisplayName}</h2>
+      <ImageComponent src={configData.Icon} alt={configData.DisplayName} />
+      <p>Fishing Chance: {configData.FishingChance}</p>
+      <p>Fishing Currency Multiplier: {configData.FishingCurrencyMultiplier}</p>
+      <p>Minimum Fishing Time: {configData.MinFishingTime} seconds</p>
+      <p>
+        Fishing Game Speed Multiplier: {configData.FishingGameSpeedMultiplier}
+      </p>
+      <p>Bar Size: {configData.BarSize}</p>
+      <p>Associated Item ID: {configData.AssociatedItemID}</p>
+      {configData.MerchantSalePrice && (
+        <p>Merchant Sale Price: {configData.MerchantSalePrice}</p>
       )}
-    />
+      <h3>Fishing Odds:</h3>
+      <ul>
+        {configData.FishingOdds.map((odds, index) => (
+          <li key={index}>
+            {odds[0]}: {odds[1]}%
+          </li>
+        ))}
+      </ul>
+    </div>
   );
 };
 

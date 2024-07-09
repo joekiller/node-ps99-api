@@ -1,10 +1,9 @@
 import React from "react";
 import { CollectionConfigData } from "ps99-api";
-import { GenericFetchComponent } from "./GenericFetchComponent";
 import ImageComponent from "./ImageComponent";
 
 const MasteryComponent: React.FC<{
-  configData?: CollectionConfigData<"Mastery">;
+  configData: CollectionConfigData<"Mastery">;
 }> = ({ configData }) => {
   const renderPerks = (perks: any) => {
     return Object.entries(perks).map(
@@ -25,31 +24,25 @@ const MasteryComponent: React.FC<{
   };
 
   return (
-    <GenericFetchComponent<CollectionConfigData<"Mastery">>
-      collectionName="Mastery"
-      configData={configData}
-      render={(data) => (
+    <div>
+      <h2>{configData.Name}</h2>
+      <ImageComponent src={configData.Icon} alt={configData.Name} />
+      <p>Description: {configData.Desc}</p>
+      {configData.ToggleablePerks && (
         <div>
-          <h2>{data.Name}</h2>
-          <ImageComponent src={data.Icon} alt={data.Name} />
-          <p>Description: {data.Desc}</p>
-          {data.ToggleablePerks && (
-            <div>
-              <h3>Toggleable Perks</h3>
-              {Object.entries(data.ToggleablePerks).map(([perk, value]) => (
-                <p key={perk}>
-                  {perk}: {value ? "Enabled" : "Disabled"}
-                </p>
-              ))}
-            </div>
-          )}
-          <div>
-            <h3>Perks</h3>
-            {renderPerks(data.Perks)}
-          </div>
+          <h3>Toggleable Perks</h3>
+          {Object.entries(configData.ToggleablePerks).map(([perk, value]) => (
+            <p key={perk}>
+              {perk}: {value ? "Enabled" : "Disabled"}
+            </p>
+          ))}
         </div>
       )}
-    />
+      <div>
+        <h3>Perks</h3>
+        {renderPerks(configData.Perks)}
+      </div>
+    </div>
   );
 };
 

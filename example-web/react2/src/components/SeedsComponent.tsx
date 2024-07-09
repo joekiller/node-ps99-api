@@ -6,7 +6,6 @@ import {
   RawStackKey,
   LootTableData,
 } from "ps99-api";
-import { GenericFetchComponent } from "./GenericFetchComponent";
 import ImageComponent from "./ImageComponent";
 
 const parseRawStackKey = (rawStackKey: RawStackKey): LootTableData => {
@@ -45,29 +44,23 @@ const renderLootTable = (lootTable: LootTableRoot | LootTableRoot[]) => {
 };
 
 const SeedComponent: React.FC<{
-  configData?: CollectionConfigData<"Seeds">;
+  configData: CollectionConfigData<"Seeds">;
 }> = ({ configData }) => {
   return (
-    <GenericFetchComponent<CollectionConfigData<"Seeds">>
-      collectionName="Seeds"
-      configData={configData}
-      render={(data) => (
-        <div>
-          <h2>Seed: {data.DisplayName}</h2>
-          <p>Description: {data.Desc}</p>
-          <p>Grow Time: {data.GrowTime} seconds</p>
-          <p>
-            Rarity: {data.Rarity.DisplayName} (Rarity Number:{" "}
-            {data.Rarity.RarityNumber})
-          </p>
-          <ImageComponent src={data.Icon} alt={data.DisplayName} />
-          <div>
-            <h3>Loot Table</h3>
-            {renderLootTable(data.LootTable)}
-          </div>
-        </div>
-      )}
-    />
+    <div>
+      <h2>Seed: {configData.DisplayName}</h2>
+      <p>Description: {configData.Desc}</p>
+      <p>Grow Time: {configData.GrowTime} seconds</p>
+      <p>
+        Rarity: {configData.Rarity.DisplayName} (Rarity Number:{" "}
+        {configData.Rarity.RarityNumber})
+      </p>
+      <ImageComponent src={configData.Icon} alt={configData.DisplayName} />
+      <div>
+        <h3>Loot Table</h3>
+        {renderLootTable(configData.LootTable)}
+      </div>
+    </div>
   );
 };
 
