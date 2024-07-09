@@ -1,11 +1,11 @@
 const CACHE_NAME = "ps99-cache-v2";
 const urlsToCache = [
-  "/",
-  "/bundle.js",
-  "/manifest.json",
-  "/icons/icon-192x192.png",
-  "/icons/icon-512x512.png",
-  "/collections",
+  "/node-ps99-api/",
+  "/node-ps99-api/bundle.js",
+  "/node-ps99-api/manifest.json",
+  "/node-ps99-api/icons/icon-192x192.png",
+  "/node-ps99-api/icons/icon-512x512.png",
+  "/node-ps99-api/collections",
 ];
 
 self.addEventListener("install", (event) => {
