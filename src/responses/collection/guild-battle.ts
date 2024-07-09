@@ -31,10 +31,7 @@ export type GuildBattleItemData = {
 };
 
 export type GuildBattleRewards = {
-  Bronze: GuildBattleRewardItem[];
-  Gold: GuildBattleRewardItem[];
-  Good?: GuildBattleRewardItem[];
-  Silver: GuildBattleRewardItem[];
+  [key: string]: GuildBattleRewardItem[];
 };
 
 export type GuildBattleRewardItem = {
