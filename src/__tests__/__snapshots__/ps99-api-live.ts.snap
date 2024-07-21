@@ -4557,6 +4557,53 @@ Found in Rave Gifts!",
       },
       "configName": "Booth | Rave",
     },
+    {
+      "category": "Booths",
+      "collection": "Booths",
+      "configData": {
+        "Desc": "AYO MILLIONAIRE STATUS!",
+        "DisplayName": "Millionaire Booth",
+        "Icon": "rbxassetid://18556521700",
+        "Model": null,
+        "Rarity": {
+          "Announce": true,
+          "Color": null,
+          "DisplayName": "Superior",
+          "Gradient": null,
+          "ItemSlot": null,
+          "Lootbag": null,
+          "Message": null,
+          "RarityNumber": 8,
+          "_id": "Superior",
+          "_script": null,
+        },
+        "Tradable": true,
+      },
+      "configName": "Booth | Millionaire",
+    },
+    {
+      "category": "Booths",
+      "collection": "Booths",
+      "configData": {
+        "Desc": "⚔️ Rewarded to the top 50 clans in the 2024 Clown Clan Battle!",
+        "DisplayName": "Clown Booth",
+        "Icon": "rbxassetid://18556638001",
+        "Model": null,
+        "Rarity": {
+          "Announce": true,
+          "Color": null,
+          "DisplayName": "Exotic",
+          "Gradient": null,
+          "ItemSlot": null,
+          "Lootbag": null,
+          "Message": null,
+          "RarityNumber": 6,
+          "_id": "Exotic",
+          "_script": null,
+        },
+      },
+      "configName": "Booth | Clown",
+    },
   ],
   "status": "ok",
 }
@@ -5737,7 +5784,7 @@ exports[`Pet Simulator Public Live API Test Currency shape 1`] = `
         "Desc": "Void!",
         "DisplayName": "Coins",
         "IsWorldCurrency": true,
-        "MaxAmount": 3000000000000,
+        "MaxAmount": 100000000000000,
         "Rarity": {
           "Announce": false,
           "Color": null,
@@ -14326,15 +14373,15 @@ exports[`Pet Simulator Public Live API Test Eggs shape 1`] = `
         "name": "Active Huge Egg",
         "pets": [
           [
-            "Huge Giraffe",
-            1,
-          ],
-          [
-            "Huge Red Panda",
+            "Huge Kangaroo",
             1,
           ],
           [
             "Huge Bison",
+            1,
+          ],
+          [
+            "Huge Fluffy Cat",
             1,
           ],
         ],
@@ -19984,7 +20031,6 @@ exports[`Pet Simulator Public Live API Test Eggs shape 1`] = `
       "category": "Update 15",
       "collection": "Eggs",
       "configData": {
-        "bestEgg": true,
         "currency": "VoidCoins",
         "egg": null,
         "eggNumber": 226,
@@ -22132,8 +22178,200 @@ exports[`Pet Simulator Public Live API Test Eggs shape 1`] = `
             0.000075,
             "Insane",
           ],
+        ],
+        "rarity": {
+          "Announce": true,
+          "Color": null,
+          "DisplayName": "Celestial",
+          "Gradient": null,
+          "ItemSlot": null,
+          "Lootbag": null,
+          "Message": null,
+          "RarityNumber": 9,
+          "_id": "Celestial",
+          "_script": null,
+        },
+      },
+      "configName": "4 | Disco Egg",
+    },
+    {
+      "category": "Exclusive Eggs",
+      "collection": "Eggs",
+      "configData": {
+        "disableGold": true,
+        "disableModifiers": true,
+        "disableRainbow": false,
+        "egg": null,
+        "goldChance": 0,
+        "icon": "rbxassetid://18465449444",
+        "name": "Exclusive Valkyrie Egg",
+        "pets": [
           [
-            "Huge UV Cat",
+            "Valkyrie Dog",
+            50,
+          ],
+          [
+            "Valkyrie Dragon",
+            35,
+          ],
+          [
+            "Valkyrie Wolf",
+            13,
+          ],
+          [
+            "Huge Valkyrie Dog",
+            1.25,
+          ],
+          [
+            "Huge Valkyrie Wolf",
+            0.7,
+          ],
+          [
+            "Titanic Valkyrie Pegasus",
+            0.05,
+          ],
+        ],
+        "productIds": {
+          "10 Exclusive Eggs": 1874313205,
+          "100 Exclusive Eggs": 1874313337,
+          "3 Exclusive Eggs": 1874313122,
+          "Exclusive Egg": 1874312994,
+        },
+        "rainbowChance": 2,
+        "rarity": {
+          "Announce": true,
+          "Color": null,
+          "DisplayName": "Exclusive",
+          "Gradient": null,
+          "ItemSlot": null,
+          "Lootbag": null,
+          "Message": null,
+          "RarityNumber": 999,
+          "_id": "Exclusive",
+          "_script": null,
+        },
+        "shinyChance": 2,
+      },
+      "configName": "Exclusive Egg 30",
+    },
+    {
+      "category": "Rave",
+      "collection": "Eggs",
+      "configData": {
+        "currency": "RaveCoins",
+        "egg": null,
+        "goldenEgg": null,
+        "icon": "rbxassetid://15172355963",
+        "isCustomEgg": true,
+        "name": "Neon Swirl Egg",
+        "overrideCost": 8000,
+        "pets": [
+          [
+            "UV Kitsune",
+            99,
+          ],
+          [
+            "Rave Meebo in a Spaceship",
+            1,
+          ],
+          [
+            "Rave Cat",
+            0.01,
+          ],
+        ],
+        "rarity": {
+          "Announce": true,
+          "Color": null,
+          "DisplayName": "Celestial",
+          "Gradient": null,
+          "ItemSlot": null,
+          "Lootbag": null,
+          "Message": null,
+          "RarityNumber": 9,
+          "_id": "Celestial",
+          "_script": null,
+        },
+      },
+      "configName": "5 | Neon Swirl Egg",
+    },
+    {
+      "category": "Rave",
+      "collection": "Eggs",
+      "configData": {
+        "currency": "RaveCoins",
+        "egg": null,
+        "goldenEgg": null,
+        "icon": "rbxassetid://15172355963",
+        "isCustomEgg": true,
+        "name": "Rave Punk Egg",
+        "overrideCost": 32000,
+        "pets": [
+          [
+            "Rave Meebo in a Spaceship",
+            99,
+          ],
+          [
+            "Rave Cat",
+            1,
+          ],
+          [
+            "Rave Axolotl",
+            0.01,
+          ],
+        ],
+        "rarity": {
+          "Announce": true,
+          "Color": null,
+          "DisplayName": "Celestial",
+          "Gradient": null,
+          "ItemSlot": null,
+          "Lootbag": null,
+          "Message": null,
+          "RarityNumber": 9,
+          "_id": "Celestial",
+          "_script": null,
+        },
+      },
+      "configName": "6 | Rave Punk Egg",
+    },
+    {
+      "category": "Rave",
+      "collection": "Eggs",
+      "configData": {
+        "currency": "RaveCoins",
+        "egg": null,
+        "goldenEgg": null,
+        "icon": "rbxassetid://15172355963",
+        "isCustomEgg": true,
+        "name": "Festival Speaker Egg",
+        "overrideCost": 128000,
+        "pets": [
+          [
+            "Rave Cat",
+            89,
+          ],
+          [
+            "Rave Axolotl",
+            10,
+          ],
+          [
+            "Rave Jaguar",
+            1,
+          ],
+          [
+            "Rave Unicorn",
+            0.05,
+          ],
+          [
+            "Rave Butterfly",
+            0.005,
+          ],
+          [
+            "Disco Ball Dragon",
+            0.00005,
+          ],
+          [
+            "Huge Rave Butterfly",
             0.000006,
             "Insane",
           ],
@@ -22151,7 +22389,179 @@ exports[`Pet Simulator Public Live API Test Eggs shape 1`] = `
           "_script": null,
         },
       },
-      "configName": "4 | Disco Egg",
+      "configName": "7 | Festival Speaker Egg",
+    },
+    {
+      "category": "Update 21",
+      "collection": "Eggs",
+      "configData": {
+        "currency": "VoidCoins",
+        "egg": null,
+        "eggNumber": 227,
+        "goldenEgg": null,
+        "icon": "rbxassetid://15172355963",
+        "name": "Growing Egg",
+        "pets": [
+          [
+            "Humble Hen",
+            99,
+          ],
+          [
+            "Humble Rabbit",
+            1,
+            "Nice",
+          ],
+          [
+            "Fortress Dog",
+            0.1,
+            "Great",
+          ],
+        ],
+        "worldNumber": 3,
+      },
+      "configName": "227 | Growing Egg",
+    },
+    {
+      "category": "Update 21",
+      "collection": "Eggs",
+      "configData": {
+        "currency": "VoidCoins",
+        "egg": null,
+        "eggNumber": 228,
+        "goldenEgg": null,
+        "icon": "rbxassetid://15172355963",
+        "name": "Sturdy Egg",
+        "pets": [
+          [
+            "Humble Rabbit",
+            90,
+          ],
+          [
+            "Fortress Dog",
+            10,
+          ],
+          [
+            "Fortress Owl",
+            1,
+            "Nice",
+          ],
+          [
+            "Pristine Snake",
+            0.1,
+            "Great",
+          ],
+        ],
+        "worldNumber": 3,
+      },
+      "configName": "228 | Sturdy Egg",
+    },
+    {
+      "category": "Update 21",
+      "collection": "Eggs",
+      "configData": {
+        "currency": "VoidCoins",
+        "egg": null,
+        "eggNumber": 229,
+        "goldenEgg": null,
+        "icon": "rbxassetid://15172355963",
+        "name": "Established Egg",
+        "pets": [
+          [
+            "Fortress Owl",
+            90,
+          ],
+          [
+            "Pristine Snake",
+            10,
+          ],
+          [
+            "Pristine Poodle",
+            1,
+            "Nice",
+          ],
+          [
+            "Treasure Turtle",
+            0.1,
+            "Great",
+          ],
+        ],
+        "worldNumber": 3,
+      },
+      "configName": "229 | Established Egg",
+    },
+    {
+      "category": "Update 21",
+      "collection": "Eggs",
+      "configData": {
+        "currency": "VoidCoins",
+        "egg": null,
+        "eggNumber": 230,
+        "goldenEgg": null,
+        "icon": "rbxassetid://15172355963",
+        "name": "Elegant Egg",
+        "pets": [
+          [
+            "Pristine Poodle",
+            90,
+          ],
+          [
+            "Treasure Turtle",
+            10,
+          ],
+          [
+            "Elegant Eagle",
+            1,
+            "Nice",
+          ],
+          [
+            "Diamond Dragon",
+            0.1,
+            "Great",
+          ],
+        ],
+        "worldNumber": 3,
+      },
+      "configName": "230 | Elegant Egg",
+    },
+    {
+      "category": "Update 21",
+      "collection": "Eggs",
+      "configData": {
+        "bestEgg": true,
+        "currency": "VoidCoins",
+        "egg": null,
+        "eggNumber": 231,
+        "goldenEgg": null,
+        "icon": "rbxassetid://15172355963",
+        "name": "Luxe Egg",
+        "pets": [
+          [
+            "Elegant Eagle",
+            99,
+          ],
+          [
+            "Diamond Dragon",
+            1,
+          ],
+          [
+            "Luxe Axolotl",
+            0.001,
+            "Insane",
+          ],
+          [
+            "Luxe Peacock",
+            0.000025,
+            "Insane",
+          ],
+          [
+            "Huge Pristine Snake",
+            0.000001,
+            "Insane",
+          ],
+        ],
+        "worldNumber": 3,
+      },
+      "configName": "231 | Luxe Egg",
     },
   ],
   "status": "ok",
@@ -25191,7 +25601,7 @@ exports[`Pet Simulator Public Live API Test Fruits shape 1`] = `
             "Type": "Drops",
           },
         ],
-        "Desc": "Christmas snack for your pets! Increases chance for drops by 1.5%! 
+        "Desc": "Christmas snack for your pets! Increases chance for drops by <X>%! 
 (Stacks!)",
         "DisplayName": "Candycane",
         "Duration": 300,
@@ -25241,6 +25651,7 @@ exports[`Pet Simulator Public Live API Test Fruits shape 1`] = `
           "_id": "Rare",
           "_script": null,
         },
+        "ShinyIcon": "rbxassetid://18577433706",
       },
       "configName": "Fruit | Banana",
       "dateCreated": null,
@@ -25273,6 +25684,7 @@ exports[`Pet Simulator Public Live API Test Fruits shape 1`] = `
           "_id": "Rare",
           "_script": null,
         },
+        "ShinyIcon": "rbxassetid://18577433264",
       },
       "configName": "Fruit | Orange",
       "dateCreated": null,
@@ -25305,6 +25717,7 @@ exports[`Pet Simulator Public Live API Test Fruits shape 1`] = `
           "_id": "Rare",
           "_script": null,
         },
+        "ShinyIcon": "rbxassetid://18577434101",
       },
       "configName": "Fruit | Pineapple",
       "dateCreated": null,
@@ -25353,6 +25766,8 @@ exports[`Pet Simulator Public Live API Test Fruits shape 1`] = `
           "_id": "Legendary",
           "_script": null,
         },
+        "ShinyIcon": "rbxassetid://18577433891",
+        "preventShiny": true,
       },
       "configName": "Fruit | Rainbow",
       "dateCreated": null,
@@ -25385,6 +25800,7 @@ exports[`Pet Simulator Public Live API Test Fruits shape 1`] = `
           "_id": "Rare",
           "_script": null,
         },
+        "ShinyIcon": "rbxassetid://18577434379",
       },
       "configName": "Fruit | Apple",
       "dateCreated": null,
@@ -25401,7 +25817,7 @@ exports[`Pet Simulator Public Live API Test Fruits shape 1`] = `
             "Type": "Bonus",
           },
         ],
-        "Desc": "Tasty snack for your pets! Boosts chance of bonuses by 1%! 
+        "Desc": "Tasty snack for your pets! Boosts chance of bonuses by <X>%! 
 (Stacks!)",
         "DisplayName": "Watermelon",
         "Duration": 300,
@@ -25418,6 +25834,7 @@ exports[`Pet Simulator Public Live API Test Fruits shape 1`] = `
           "_id": "Rare",
           "_script": null,
         },
+        "ShinyIcon": "rbxassetid://18577639540",
       },
       "configName": "Fruit | Watermelon",
       "dateCreated": null,
@@ -25432,6 +25849,80 @@ exports[`Pet Simulator Public Live API Test Fruits shape 1`] = `
 exports[`Pet Simulator Public Live API Test GuildBattles shape 1`] = `
 {
   "data": [
+    {
+      "category": "GuildBattles",
+      "collection": "GuildBattles",
+      "configData": {
+        "FinishTime": 1722614400,
+        "PlacementRewards": [
+          {
+            "Best": 1,
+            "Item": {
+              "_data": {
+                "id": "Clan Gift",
+              },
+            },
+            "Worst": 500,
+          },
+          {
+            "Best": 1,
+            "Item": {
+              "_data": {
+                "id": "Clown",
+              },
+            },
+            "Worst": 50,
+          },
+          {
+            "Best": 1,
+            "Item": {
+              "_data": {
+                "id": "Clown",
+              },
+            },
+            "Worst": 10,
+          },
+          {
+            "Best": 1,
+            "Item": {
+              "_data": {
+                "id": "Huge Clown Cat",
+                "pt": 2,
+              },
+            },
+            "Worst": 1,
+          },
+          {
+            "Best": 2,
+            "Item": {
+              "_data": {
+                "id": "Huge Clown Cat",
+                "pt": 1,
+              },
+            },
+            "Worst": 3,
+          },
+          {
+            "Best": 4,
+            "Item": {
+              "_data": {
+                "id": "Huge Clown Cat",
+              },
+            },
+            "Worst": 10,
+          },
+        ],
+        "Rewards": {
+          "Bronze": [],
+          "Gold": [],
+          "Good": [],
+          "Silver": [],
+        },
+        "StartTime": 1721491200,
+        "Title": "Millionaire Run Battle",
+      },
+      "configName": "MillionaireRunBattle",
+    },
     {
       "category": "GuildBattles",
       "collection": "GuildBattles",
@@ -27864,6 +28355,187 @@ Found in the Hacker Pack!",
       },
       "configName": "Hoverboard | Rave",
     },
+    {
+      "category": "Hoverboards",
+      "collection": "Hoverboards",
+      "configData": {
+        "Animation": 11897877992,
+        "BobRate": 3,
+        "CanBeShiny": true,
+        "Desc": "Kick back and relax like royalty!",
+        "DisplayName": "Throne Hoverboard",
+        "HoverHeight": 6,
+        "Icon": "rbxassetid://18539294870",
+        "ProductId": 1881198159,
+        "Rarity": {
+          "Announce": true,
+          "Color": null,
+          "DisplayName": "Exclusive",
+          "Gradient": null,
+          "ItemSlot": null,
+          "Lootbag": null,
+          "Message": null,
+          "RarityNumber": 999,
+          "_id": "Exclusive",
+          "_script": null,
+        },
+        "RotationLimit": 0,
+        "ShinyParticleScale": 1,
+        "Sounds": {
+          "equip": [
+            "rbxassetid://18551758191",
+          ],
+          "idle": [
+            "rbxassetid://18552441652",
+          ],
+          "jump": [
+            "rbxassetid://18551759339",
+            "rbxassetid://18551757457",
+            "rbxassetid://18551757623",
+          ],
+        },
+        "Tradable": true,
+      },
+      "configName": "Hoverboard | Throne",
+    },
+    {
+      "category": "Hoverboards",
+      "collection": "Hoverboards",
+      "configData": {
+        "CanBeShiny": true,
+        "Desc": "With pepperoni, without pineapple!",
+        "DisplayName": "Pizza Hoverboard",
+        "Icon": "rbxassetid://18539295726",
+        "ProductId": 1881197707,
+        "Rarity": {
+          "Announce": true,
+          "Color": null,
+          "DisplayName": "Exclusive",
+          "Gradient": null,
+          "ItemSlot": null,
+          "Lootbag": null,
+          "Message": null,
+          "RarityNumber": 999,
+          "_id": "Exclusive",
+          "_script": null,
+        },
+        "ShinyParticleScale": 1,
+        "Sounds": {
+          "equip": [
+            "rbxassetid://18551757917",
+          ],
+          "idle": [
+            "rbxassetid://18551759877",
+          ],
+          "jump": [
+            "rbxassetid://18551758502",
+            "rbxassetid://18551758711",
+            "rbxassetid://18551759560",
+          ],
+        },
+        "Tradable": true,
+      },
+      "configName": "Hoverboard | Pizza",
+    },
+    {
+      "category": "Hoverboards",
+      "collection": "Hoverboards",
+      "configData": {
+        "Animator": null,
+        "CanBeShiny": true,
+        "Desc": ":3 pop :3 pop :3 pop",
+        "DisplayName": "Popcat Hoverboard",
+        "Icon": "rbxassetid://18539295537",
+        "ProductId": 1881197449,
+        "Rarity": {
+          "Announce": true,
+          "Color": null,
+          "DisplayName": "Exclusive",
+          "Gradient": null,
+          "ItemSlot": null,
+          "Lootbag": null,
+          "Message": null,
+          "RarityNumber": 999,
+          "_id": "Exclusive",
+          "_script": null,
+        },
+        "Setup": null,
+        "ShinyParticleScale": 1,
+        "Sounds": {
+          "equip": [
+            "rbxassetid://18551760110",
+          ],
+          "idle": [
+            "rbxassetid://18552854797",
+          ],
+          "jump": [
+            "rbxassetid://18552855278",
+            "rbxassetid://18552855479",
+            "rbxassetid://18552855059",
+          ],
+        },
+        "Tradable": true,
+      },
+      "configName": "Hoverboard | Popcat",
+    },
+    {
+      "category": "Hoverboards",
+      "collection": "Hoverboards",
+      "configData": {
+        "Desc": "Cha-ching! Dolla' dolla' bills ya'll!",
+        "DisplayName": "Millionaire Hoverboard",
+        "Icon": "rbxassetid://18539295902",
+        "Rarity": {
+          "Announce": false,
+          "Color": null,
+          "DisplayName": "Mythical",
+          "Gradient": null,
+          "ItemSlot": null,
+          "Lootbag": null,
+          "Message": null,
+          "RarityNumber": 5,
+          "_id": "Mythical",
+          "_script": null,
+        },
+        "Sounds": {
+          "equip": [
+            "rbxassetid://18551761750",
+          ],
+          "idle": [
+            "rbxassetid://18551762296",
+          ],
+          "jump": [
+            "rbxassetid://18551761986",
+            "rbxassetid://18551762896",
+            "rbxassetid://18551762594",
+          ],
+        },
+      },
+      "configName": "Hoverboard | Millionaire",
+    },
+    {
+      "category": "Hoverboards",
+      "collection": "Hoverboards",
+      "configData": {
+        "Desc": "⚔️ Rewarded to the top 10 clans in the 2024 Clown Clan Battle!",
+        "DisplayName": "Clown Hoverboard",
+        "Icon": "rbxassetid://18556730015",
+        "Rarity": {
+          "Announce": true,
+          "Color": null,
+          "DisplayName": "Exotic",
+          "Gradient": null,
+          "ItemSlot": null,
+          "Lootbag": null,
+          "Message": null,
+          "RarityNumber": 6,
+          "_id": "Exotic",
+          "_script": null,
+        },
+        "Sounds": [],
+      },
+      "configName": "Hoverboard | Clown",
+    },
   ],
   "status": "ok",
 }
@@ -30161,6 +30833,18 @@ exports[`Pet Simulator Public Live API Test Merchants shape 1`] = `
       "dateCreated": null,
       "dateModified": null,
       "hash": null,
+    },
+    {
+      "category": "Merchants",
+      "collection": "Merchants",
+      "configData": {
+        "DisplayName": "Raffle Merchant",
+        "GetOffers": null,
+        "MachineName": "RaffleMerchant",
+        "PriceMult": 1,
+        "RefreshRate": 3600,
+      },
+      "configName": "RaffleMerchant",
     },
   ],
   "status": "ok",
@@ -33673,6 +34357,98 @@ Click to equip!",
         },
       },
       "configName": "Ultra Lucky Tile",
+    },
+    {
+      "category": "Vouchers",
+      "collection": "MiscItems",
+      "configData": {
+        "Category": "Vouchers",
+        "Desc": "Used in the Lucky Tiles World for special upgrades!",
+        "DisplayName": "Rave Upgrade Ticket",
+        "Icon": "rbxassetid://18449105243",
+        "Rarity": {
+          "Announce": true,
+          "Color": null,
+          "DisplayName": "Celestial",
+          "Gradient": null,
+          "ItemSlot": null,
+          "Lootbag": null,
+          "Message": null,
+          "RarityNumber": 9,
+          "_id": "Celestial",
+          "_script": null,
+        },
+      },
+      "configName": "Rave Upgrade Ticket",
+    },
+    {
+      "category": "Miscellaneous",
+      "collection": "MiscItems",
+      "configData": {
+        "Category": "Miscellaneous",
+        "Desc": "Used in the Boost Exchange to boost your stats!",
+        "DisplayName": "Millionaire Bucks",
+        "Icon": "rbxassetid://18519989805",
+        "Rarity": {
+          "Announce": false,
+          "Color": null,
+          "DisplayName": "Legendary",
+          "Gradient": null,
+          "ItemSlot": null,
+          "Lootbag": null,
+          "Message": null,
+          "RarityNumber": 4,
+          "_id": "Legendary",
+          "_script": null,
+        },
+      },
+      "configName": "Millionaire Bucks",
+    },
+    {
+      "category": "Vouchers",
+      "collection": "MiscItems",
+      "configData": {
+        "Category": "Vouchers",
+        "Desc": "TODO",
+        "DisplayName": "Raffle Ticket",
+        "Icon": "rbxassetid://16038106883",
+        "Rarity": {
+          "Announce": true,
+          "Color": null,
+          "DisplayName": "Superior",
+          "Gradient": null,
+          "ItemSlot": null,
+          "Lootbag": null,
+          "Message": null,
+          "RarityNumber": 8,
+          "_id": "Superior",
+          "_script": null,
+        },
+      },
+      "configName": "Raffle Ticket",
+    },
+    {
+      "category": "Vouchers",
+      "collection": "MiscItems",
+      "configData": {
+        "Category": "Vouchers",
+        "Desc": "Used to enter the Millionaire World lottery!",
+        "DisplayName": "Millionaire Ticket",
+        "Icon": "rbxassetid://18519989607",
+        "Rarity": {
+          "Announce": true,
+          "Color": null,
+          "DisplayName": "Exotic",
+          "Gradient": null,
+          "ItemSlot": null,
+          "Lootbag": null,
+          "Message": null,
+          "RarityNumber": 6,
+          "_id": "Exotic",
+          "_script": null,
+        },
+      },
+      "configName": "Millionaire Ticket",
     },
   ],
   "status": "ok",
@@ -54507,7 +55283,6 @@ exports[`Pet Simulator Public Live API Test Pets shape 1`] = `
         "fromWorldNumber": 3,
         "fromZoneNumber": 214,
         "goldenThumbnail": "rbxassetid://17749017535",
-        "isFromLastZone": true,
         "name": "Hacked Skeleton",
         "thumbnail": "rbxassetid://17749017634",
       },
@@ -54540,7 +55315,6 @@ exports[`Pet Simulator Public Live API Test Pets shape 1`] = `
         "fromWorldNumber": 3,
         "fromZoneNumber": 214,
         "goldenThumbnail": "rbxassetid://17749018360",
-        "isFromLastZone": true,
         "name": "Masked Fox",
         "thumbnail": "rbxassetid://17749018458",
       },
@@ -54591,7 +55365,6 @@ exports[`Pet Simulator Public Live API Test Pets shape 1`] = `
         "fromWorldNumber": 3,
         "fromZoneNumber": 214,
         "goldenThumbnail": "rbxassetid://17749017298",
-        "isFromLastZone": true,
         "name": "Hacked Computer",
         "thumbnail": "rbxassetid://17749017401",
       },
@@ -55592,7 +56365,7 @@ exports[`Pet Simulator Public Live API Test Pets shape 1`] = `
       "configData": {
         "goldenThumbnail": "rbxassetid://18351655946",
         "huge": true,
-        "indexDesc": "Earned from the lucky tile event!",
+        "indexDesc": "Earned from the Lucky Tile Event!",
         "indexObtainable": true,
         "name": "Huge UV Kitsune",
         "thumbnail": "rbxassetid://18351655777",
@@ -55654,7 +56427,7 @@ exports[`Pet Simulator Public Live API Test Pets shape 1`] = `
         },
         "goldenThumbnail": "rbxassetid://18351655595",
         "huge": true,
-        "indexDesc": "Earned from the Rave World's final egg!",
+        "indexDesc": "Earned from the Lucky Tile Event's final egg!",
         "indexObtainable": true,
         "name": "Huge UV Cat",
         "thumbnail": "rbxassetid://18356987128",
@@ -55706,11 +56479,12 @@ exports[`Pet Simulator Public Live API Test Pets shape 1`] = `
       "collection": "Pets",
       "configData": {
         "cachedPower": [
-          10879828056671,
+          11135824010946,
         ],
         "fromWorldNumber": 3,
         "fromZoneNumber": 214,
         "goldenThumbnail": "rbxassetid://18351498243",
+        "indexDesc": "Hatched from eggs in the Lucky Tile Event!",
         "name": "UV Kitsune",
         "thumbnail": "rbxassetid://18351498436",
       },
@@ -55726,6 +56500,7 @@ exports[`Pet Simulator Public Live API Test Pets shape 1`] = `
         "fromWorldNumber": 3,
         "fromZoneNumber": 214,
         "goldenThumbnail": "rbxassetid://18351495708",
+        "indexDesc": "Hatched from eggs in the Lucky Tile Event!",
         "name": "DJ Panda",
         "thumbnail": "rbxassetid://18351514950",
       },
@@ -55741,6 +56516,7 @@ exports[`Pet Simulator Public Live API Test Pets shape 1`] = `
         "fromWorldNumber": 3,
         "fromZoneNumber": 214,
         "goldenThumbnail": "rbxassetid://18351496480",
+        "indexDesc": "Hatched from eggs in the Lucky Tile Event!",
         "name": "Rave Corgi",
         "thumbnail": "rbxassetid://18351496648",
       },
@@ -55805,6 +56581,7 @@ exports[`Pet Simulator Public Live API Test Pets shape 1`] = `
         "fromWorldNumber": 3,
         "fromZoneNumber": 214,
         "goldenThumbnail": "rbxassetid://18351497816",
+        "indexDesc": "Hatched from the Lucky Tile Event!",
         "name": "UV Cat",
         "thumbnail": "rbxassetid://18351497965",
       },
@@ -55821,6 +56598,7 @@ exports[`Pet Simulator Public Live API Test Pets shape 1`] = `
         "fromWorldNumber": 3,
         "fromZoneNumber": 214,
         "goldenThumbnail": "rbxassetid://18351496779",
+        "indexDesc": "Hatched from eggs in the Lucky Tile Event!",
         "name": "Rave Meebo in a Spaceship",
         "thumbnail": "rbxassetid://18351497185",
       },
@@ -55836,6 +56614,7 @@ exports[`Pet Simulator Public Live API Test Pets shape 1`] = `
         "fromWorldNumber": 3,
         "fromZoneNumber": 214,
         "goldenThumbnail": "rbxassetid://18351496011",
+        "indexDesc": "Hatched from eggs in the Lucky Tile Event!",
         "name": "Rave Bunny",
         "thumbnail": "rbxassetid://18351496333",
       },
@@ -55851,10 +56630,554 @@ exports[`Pet Simulator Public Live API Test Pets shape 1`] = `
         "fromWorldNumber": 3,
         "fromZoneNumber": 214,
         "goldenThumbnail": "rbxassetid://18351497548",
+        "indexDesc": "Hatched from eggs in the Lucky Tile Event!",
         "name": "Rave Troll",
         "thumbnail": "rbxassetid://18351497686",
       },
       "configName": "Rave Troll",
+    },
+    {
+      "category": "Huge",
+      "collection": "Pets",
+      "configData": {
+        "fly": true,
+        "goldenThumbnail": "rbxassetid://18458208354",
+        "huge": true,
+        "indexDesc": "Earned from the Lucky Tile Event's final egg!",
+        "indexObtainable": true,
+        "name": "Huge Rave Butterfly",
+        "thumbnail": "rbxassetid://18458208075",
+      },
+      "configName": "Huge Rave Butterfly",
+    },
+    {
+      "category": "Huge",
+      "collection": "Pets",
+      "configData": {
+        "fly": true,
+        "goldenThumbnail": "rbxassetid://18458208822",
+        "huge": true,
+        "indexDesc": "Found in the Disco Pack!",
+        "indexObtainable": true,
+        "name": "Huge Disco Ball Dragon",
+        "thumbnail": "rbxassetid://18458208582",
+      },
+      "configName": "Huge Disco Ball Dragon",
+    },
+    {
+      "category": "Huge",
+      "collection": "Pets",
+      "configData": {
+        "goldenThumbnail": "rbxassetid://18458263785",
+        "huge": true,
+        "indexDesc": "Earned from the Lucky Tile Event!",
+        "indexObtainable": true,
+        "name": "Huge Rave Jaguar",
+        "thumbnail": "rbxassetid://18458263548",
+      },
+      "configName": "Huge Rave Jaguar",
+    },
+    {
+      "category": "Huge",
+      "collection": "Pets",
+      "configData": {
+        "fly": true,
+        "goldenThumbnail": "rbxassetid://18465100470",
+        "huge": true,
+        "indexDesc": "Found in the Exclusive Valkyrie Egg!",
+        "indexObtainable": true,
+        "name": "Huge Valkyrie Wolf",
+        "thumbnail": "rbxassetid://18465100470",
+      },
+      "configName": "Huge Valkyrie Wolf",
+    },
+    {
+      "category": "Huge",
+      "collection": "Pets",
+      "configData": {
+        "fly": true,
+        "goldenThumbnail": "rbxassetid://18465101315",
+        "huge": true,
+        "indexDesc": "Found in the Exclusive Valkyrie Egg!",
+        "indexObtainable": true,
+        "name": "Huge Valkyrie Dog",
+        "thumbnail": "rbxassetid://18465101315",
+      },
+      "configName": "Huge Valkyrie Dog",
+    },
+    {
+      "category": "Titanic",
+      "collection": "Pets",
+      "configData": {
+        "goldenThumbnail": "rbxassetid://14977573985",
+        "indexDesc": "Comes with the Titanic Strawberry Cow plush!",
+        "indexObtainable": true,
+        "name": "Titanic Strawberry Cow",
+        "thumbnail": "rbxassetid://14976827001",
+        "titanic": true,
+      },
+      "configName": "Titanic Strawberry Cow",
+    },
+    {
+      "category": "Titanic",
+      "collection": "Pets",
+      "configData": {
+        "fly": true,
+        "flyingTitanic": true,
+        "flyingTitanicAlwaysFly": true,
+        "goldenThumbnail": "rbxassetid://18465212052",
+        "indexDesc": "Found in the Exclusive Valkyrie Egg!",
+        "indexObtainable": true,
+        "name": "Titanic Valkyrie Pegasus",
+        "thumbnail": "rbxassetid://18465212052",
+        "titanic": true,
+      },
+      "configName": "Titanic Valkyrie Pegasus",
+    },
+    {
+      "category": "Uncategorized",
+      "collection": "Pets",
+      "configData": {
+        "cachedPower": [
+          11951811115196,
+        ],
+        "fromWorldNumber": 3,
+        "fromZoneNumber": 214,
+        "goldenThumbnail": "rbxassetid://18447211927",
+        "indexDesc": "Hatched from eggs in the Lucky Tile Event!",
+        "name": "Rave Cat",
+        "thumbnail": "rbxassetid://18447211749",
+      },
+      "configName": "Rave Cat",
+    },
+    {
+      "category": "Uncategorized",
+      "collection": "Pets",
+      "configData": {
+        "cachedPower": [
+          12959795185153,
+        ],
+        "fromWorldNumber": 3,
+        "fromZoneNumber": 214,
+        "goldenThumbnail": "rbxassetid://18447211104",
+        "indexDesc": "Hatched from eggs in the Lucky Tile Event!",
+        "isFromLastZone": true,
+        "name": "Rave Unicorn",
+        "thumbnail": "rbxassetid://18447210854",
+      },
+      "configName": "Rave Unicorn",
+    },
+    {
+      "category": "Uncategorized",
+      "collection": "Pets",
+      "configData": {
+        "cachedPower": [
+          12671799736594,
+        ],
+        "fromWorldNumber": 3,
+        "fromZoneNumber": 214,
+        "goldenThumbnail": "rbxassetid://18447211542",
+        "indexDesc": "Hatched from eggs in the Lucky Tile Event!",
+        "isFromLastZone": true,
+        "name": "Rave Jaguar",
+        "thumbnail": "rbxassetid://18447211319",
+      },
+      "configName": "Rave Jaguar",
+    },
+    {
+      "category": "Uncategorized",
+      "collection": "Pets",
+      "configData": {
+        "cachedPower": [
+          13607784944410,
+        ],
+        "fly": true,
+        "fromWorldNumber": 3,
+        "fromZoneNumber": 214,
+        "goldenThumbnail": "rbxassetid://18447213533",
+        "indexDesc": "Hatched from eggs in the Lucky Tile Event!",
+        "isFromLastZone": true,
+        "name": "Disco Ball Dragon",
+        "thumbnail": "rbxassetid://18447213231",
+      },
+      "configName": "Disco Ball Dragon",
+    },
+    {
+      "category": "Uncategorized",
+      "collection": "Pets",
+      "configData": {
+        "cachedPower": [
+          13283790064781,
+        ],
+        "fly": true,
+        "fromWorldNumber": 3,
+        "fromZoneNumber": 214,
+        "goldenThumbnail": "rbxassetid://18447212560",
+        "indexDesc": "Hatched from eggs in the Lucky Tile Event!",
+        "isFromLastZone": true,
+        "name": "Rave Butterfly",
+        "thumbnail": "rbxassetid://18447212270",
+      },
+      "configName": "Rave Butterfly",
+    },
+    {
+      "category": "Uncategorized",
+      "collection": "Pets",
+      "configData": {
+        "cachedPower": [
+          12239806563755,
+        ],
+        "fromWorldNumber": 3,
+        "fromZoneNumber": 214,
+        "goldenThumbnail": "rbxassetid://18447213002",
+        "indexDesc": "Hatched from eggs in the Lucky Tile Event!",
+        "name": "Rave Axolotl",
+        "thumbnail": "rbxassetid://18447212767",
+      },
+      "configName": "Rave Axolotl",
+    },
+    {
+      "category": "Uncategorized",
+      "collection": "Pets",
+      "configData": {
+        "exclusiveLevel": 3,
+        "fly": true,
+        "goldenThumbnail": "rbxassetid://18464814909",
+        "name": "Valkyrie Wolf",
+        "thumbnail": "rbxassetid://18464814909",
+      },
+      "configName": "Valkyrie Wolf",
+    },
+    {
+      "category": "Uncategorized",
+      "collection": "Pets",
+      "configData": {
+        "exclusiveLevel": 2,
+        "fly": true,
+        "goldenThumbnail": "rbxassetid://18464815436",
+        "name": "Valkyrie Dragon",
+        "thumbnail": "rbxassetid://18464815436",
+      },
+      "configName": "Valkyrie Dragon",
+    },
+    {
+      "category": "Uncategorized",
+      "collection": "Pets",
+      "configData": {
+        "exclusiveLevel": 1,
+        "fly": true,
+        "goldenThumbnail": "rbxassetid://18464815689",
+        "name": "Valkyrie Dog",
+        "thumbnail": "rbxassetid://18464815689",
+      },
+      "configName": "Valkyrie Dog",
+    },
+    {
+      "category": "Huge",
+      "collection": "Pets",
+      "configData": {
+        "goldenThumbnail": "rbxassetid://18520054270",
+        "huge": true,
+        "indexDesc": "Reward in the 2024 Clown Clan Battle!",
+        "indexObtainable": true,
+        "name": "Huge Clown Cat",
+        "thumbnail": "rbxassetid://18520054035",
+      },
+      "configName": "Huge Clown Cat",
+    },
+    {
+      "category": "Huge",
+      "collection": "Pets",
+      "configData": {
+        "goldenThumbnail": "rbxassetid://18556267433",
+        "huge": true,
+        "indexDesc": "Found in the Millionaire Pack!",
+        "indexObtainable": true,
+        "name": "Huge Luxe Peacock",
+        "thumbnail": "rbxassetid://18556267256",
+      },
+      "configName": "Huge Luxe Peacock",
+    },
+    {
+      "category": "Huge",
+      "collection": "Pets",
+      "configData": {
+        "goldenThumbnail": "rbxassetid://18556268421",
+        "huge": true,
+        "indexDesc": "Earned from the Millionaire World's run minigame!",
+        "indexObtainable": true,
+        "name": "Huge Treasure Turtle",
+        "thumbnail": "rbxassetid://18556268254",
+      },
+      "configName": "Huge Treasure Turtle",
+    },
+    {
+      "category": "Huge",
+      "collection": "Pets",
+      "configData": {
+        "fly": true,
+        "goldenThumbnail": "rbxassetid://18556265842",
+        "huge": true,
+        "indexDesc": "Earned from Millionaire World's huge raffles!",
+        "indexObtainable": true,
+        "name": "Huge Elegant Eagle",
+        "thumbnail": "rbxassetid://18556265741",
+      },
+      "configName": "Huge Elegant Eagle",
+    },
+    {
+      "category": "Huge",
+      "collection": "Pets",
+      "configData": {
+        "animations": {
+          "vertexColorAnim": [
+            {
+              "Time": 0,
+              "Value": null,
+            },
+            {
+              "Time": 0.5,
+              "Value": null,
+            },
+            {
+              "Time": 1,
+              "Value": null,
+            },
+          ],
+          "vertexColorAnimSpeed": 0.5,
+        },
+        "cachedPower": [
+          17406469529035,
+        ],
+        "fromEgg": "Luxe Egg",
+        "fromWorldNumber": 3,
+        "fromZoneNumber": 219,
+        "goldenThumbnail": "rbxassetid://18556268101",
+        "huge": true,
+        "indexDesc": "Earned from Millionaire World's final egg!",
+        "indexObtainable": true,
+        "isFromLastZone": true,
+        "name": "Huge Pristine Snake",
+        "thumbnail": "rbxassetid://18556267952",
+      },
+      "configName": "Huge Pristine Snake",
+    },
+    {
+      "category": "Uncategorized",
+      "collection": "Pets",
+      "configData": {
+        "cachedPower": [
+          12518590281036,
+        ],
+        "fly": true,
+        "fromEgg": "Elegant Egg",
+        "fromWorldNumber": 3,
+        "fromZoneNumber": 218,
+        "goldenThumbnail": "rbxassetid://18556248780",
+        "isFromLastZone": true,
+        "name": "Diamond Dragon",
+        "thumbnail": "rbxassetid://18556248893",
+      },
+      "configName": "Diamond Dragon",
+    },
+    {
+      "category": "Uncategorized",
+      "collection": "Pets",
+      "configData": {
+        "cachedPower": [
+          7197630118855,
+        ],
+        "fromEgg": "Growing Egg",
+        "fromWorldNumber": 3,
+        "fromZoneNumber": 215,
+        "goldenThumbnail": "rbxassetid://18556249642",
+        "name": "Humble Hen",
+        "thumbnail": "rbxassetid://18556249774",
+      },
+      "configName": "Humble Hen",
+    },
+    {
+      "category": "Uncategorized",
+      "collection": "Pets",
+      "configData": {
+        "animations": {
+          "vertexColorAnim": [
+            {
+              "Time": 0,
+              "Value": null,
+            },
+            {
+              "Time": 0.5,
+              "Value": null,
+            },
+            {
+              "Time": 1,
+              "Value": null,
+            },
+          ],
+          "vertexColorAnimSpeed": 0.5,
+        },
+        "cachedPower": [
+          9891231826991,
+        ],
+        "fromEgg": "Sturdy Egg",
+        "fromWorldNumber": 3,
+        "fromZoneNumber": 216,
+        "goldenThumbnail": "rbxassetid://18556250778",
+        "name": "Pristine Snake",
+        "thumbnail": "rbxassetid://18556250868",
+      },
+      "configName": "Pristine Snake",
+    },
+    {
+      "category": "Uncategorized",
+      "collection": "Pets",
+      "configData": {
+        "cachedPower": [
+          15762749386615,
+        ],
+        "fromEgg": "Luxe Egg",
+        "fromWorldNumber": 3,
+        "fromZoneNumber": 219,
+        "goldenThumbnail": "rbxassetid://18556250074",
+        "isFromLastZone": true,
+        "name": "Luxe Axolotl",
+        "thumbnail": "rbxassetid://18556250211",
+      },
+      "configName": "Luxe Axolotl",
+    },
+    {
+      "category": "Uncategorized",
+      "collection": "Pets",
+      "configData": {
+        "cachedPower": [
+          8789864520766,
+        ],
+        "fromEgg": "Growing Egg",
+        "fromWorldNumber": 3,
+        "fromZoneNumber": 215,
+        "goldenThumbnail": "rbxassetid://18556249185",
+        "name": "Fortress Dog",
+        "thumbnail": "rbxassetid://18556249292",
+      },
+      "configName": "Fortress Dog",
+    },
+    {
+      "category": "Uncategorized",
+      "collection": "Pets",
+      "configData": {
+        "cachedPower": [
+          11742738823361,
+        ],
+        "fly": true,
+        "fromEgg": "Elegant Egg",
+        "fromWorldNumber": 3,
+        "fromZoneNumber": 218,
+        "goldenThumbnail": "rbxassetid://18556248984",
+        "isFromLastZone": true,
+        "name": "Elegant Eagle",
+        "thumbnail": "rbxassetid://18556249078",
+      },
+      "configName": "Elegant Eagle",
+    },
+    {
+      "category": "Uncategorized",
+      "collection": "Pets",
+      "configData": {
+        "cachedPower": [
+          9278213391298,
+        ],
+        "fly": true,
+        "fromEgg": "Sturdy Egg",
+        "fromWorldNumber": 3,
+        "fromZoneNumber": 216,
+        "goldenThumbnail": "rbxassetid://18556249416",
+        "name": "Fortress Owl",
+        "thumbnail": "rbxassetid://18556249535",
+      },
+      "configName": "Fortress Owl",
+    },
+    {
+      "category": "Uncategorized",
+      "collection": "Pets",
+      "configData": {
+        "cachedPower": [
+          16778082389892,
+        ],
+        "fromEgg": "Luxe Egg",
+        "fromWorldNumber": 3,
+        "fromZoneNumber": 219,
+        "goldenThumbnail": "rbxassetid://18556250340",
+        "isFromLastZone": true,
+        "name": "Luxe Peacock",
+        "thumbnail": "rbxassetid://18556250480",
+      },
+      "configName": "Luxe Peacock",
+    },
+    {
+      "category": "Uncategorized",
+      "collection": "Pets",
+      "configData": {
+        "animations": {
+          "vertexColorAnim": [
+            {
+              "Time": 0,
+              "Value": null,
+            },
+            {
+              "Time": 0.5,
+              "Value": null,
+            },
+            {
+              "Time": 1,
+              "Value": null,
+            },
+          ],
+          "vertexColorAnimSpeed": 0.5,
+        },
+        "cachedPower": [
+          10437990065210,
+        ],
+        "fromEgg": "Established Egg",
+        "fromWorldNumber": 3,
+        "fromZoneNumber": 217,
+        "goldenThumbnail": "rbxassetid://18556250595",
+        "name": "Pristine Poodle",
+        "thumbnail": "rbxassetid://18556250696",
+      },
+      "configName": "Pristine Poodle",
+    },
+    {
+      "category": "Uncategorized",
+      "collection": "Pets",
+      "configData": {
+        "cachedPower": [
+          8244991420763,
+        ],
+        "fromEgg": "Growing Egg",
+        "fromWorldNumber": 3,
+        "fromZoneNumber": 215,
+        "goldenThumbnail": "rbxassetid://18556249893",
+        "name": "Humble Rabbit",
+        "thumbnail": "rbxassetid://18556249987",
+      },
+      "configName": "Humble Rabbit",
+    },
+    {
+      "category": "Uncategorized",
+      "collection": "Pets",
+      "configData": {
+        "cachedPower": [
+          11127635805365,
+        ],
+        "fromEgg": "Established Egg",
+        "fromWorldNumber": 3,
+        "fromZoneNumber": 217,
+        "goldenThumbnail": "rbxassetid://18556250992",
+        "name": "Treasure Turtle",
+        "thumbnail": "rbxassetid://18556251133",
+      },
+      "configName": "Treasure Turtle",
     },
   ],
   "status": "ok",
@@ -57196,16 +58519,6 @@ exports[`Pet Simulator Public Live API Test Ranks shape 1`] = `
               "Type": 7,
               "Weight": 1,
             },
-            {
-              "Amount": 5,
-              "Type": 3,
-              "Weight": 1,
-            },
-            {
-              "Amount": 1,
-              "Type": 6,
-              "Weight": 1,
-            },
           ],
           [
             {
@@ -57331,41 +58644,6 @@ exports[`Pet Simulator Public Live API Test Ranks shape 1`] = `
         "Goals": [
           [
             {
-              "Amount": 1,
-              "Type": 22,
-              "Weight": 0.15,
-            },
-            {
-              "Amount": 1,
-              "Type": 29,
-              "Weight": 0.15,
-            },
-            {
-              "Amount": 1,
-              "Type": 28,
-              "Weight": 0.15,
-            },
-            {
-              "Amount": 1,
-              "Type": 27,
-              "Weight": 0.15,
-            },
-            {
-              "Amount": 1,
-              "Type": 36,
-              "Weight": 0.15,
-            },
-            {
-              "Amount": 1,
-              "Type": 23,
-              "Weight": 0.15,
-            },
-            {
-              "Amount": 1,
-              "Type": 24,
-              "Weight": 0.15,
-            },
-            {
               "Amount": 50,
               "Type": 1,
               "Weight": 1,
@@ -57417,22 +58695,6 @@ exports[`Pet Simulator Public Live API Test Ranks shape 1`] = `
             {
               "Amount": 1,
               "Type": 15,
-              "Weight": 1,
-            },
-            {
-              "Amount": 1,
-              "PotionTier": 1,
-              "Type": 34,
-              "Weight": 1,
-            },
-            {
-              "Amount": 1,
-              "Type": 35,
-              "Weight": 1,
-            },
-            {
-              "Amount": 20,
-              "Type": 20,
               "Weight": 1,
             },
           ],
@@ -57759,41 +59021,6 @@ exports[`Pet Simulator Public Live API Test Ranks shape 1`] = `
         "Goals": [
           [
             {
-              "Amount": 1,
-              "Type": 22,
-              "Weight": 0.15,
-            },
-            {
-              "Amount": 1,
-              "Type": 29,
-              "Weight": 0.15,
-            },
-            {
-              "Amount": 1,
-              "Type": 28,
-              "Weight": 0.15,
-            },
-            {
-              "Amount": 1,
-              "Type": 27,
-              "Weight": 0.15,
-            },
-            {
-              "Amount": 1,
-              "Type": 36,
-              "Weight": 0.15,
-            },
-            {
-              "Amount": 1,
-              "Type": 23,
-              "Weight": 0.15,
-            },
-            {
-              "Amount": 1,
-              "Type": 24,
-              "Weight": 0.15,
-            },
-            {
               "Amount": 200,
               "Type": 1,
               "Weight": 1,
@@ -57840,22 +59067,6 @@ exports[`Pet Simulator Public Live API Test Ranks shape 1`] = `
             {
               "Amount": 3,
               "Type": 15,
-              "Weight": 1,
-            },
-            {
-              "Amount": 2,
-              "PotionTier": 1,
-              "Type": 34,
-              "Weight": 1,
-            },
-            {
-              "Amount": 2,
-              "Type": 35,
-              "Weight": 1,
-            },
-            {
-              "Amount": 30,
-              "Type": 20,
               "Weight": 1,
             },
           ],
@@ -58187,41 +59398,6 @@ exports[`Pet Simulator Public Live API Test Ranks shape 1`] = `
         "Goals": [
           [
             {
-              "Amount": 1,
-              "Type": 22,
-              "Weight": 0.15,
-            },
-            {
-              "Amount": 1,
-              "Type": 29,
-              "Weight": 0.15,
-            },
-            {
-              "Amount": 1,
-              "Type": 28,
-              "Weight": 0.15,
-            },
-            {
-              "Amount": 1,
-              "Type": 27,
-              "Weight": 0.15,
-            },
-            {
-              "Amount": 1,
-              "Type": 36,
-              "Weight": 0.15,
-            },
-            {
-              "Amount": 1,
-              "Type": 23,
-              "Weight": 0.15,
-            },
-            {
-              "Amount": 1,
-              "Type": 24,
-              "Weight": 0.15,
-            },
-            {
               "Amount": 200,
               "Type": 21,
               "Weight": 1,
@@ -58239,22 +59415,6 @@ exports[`Pet Simulator Public Live API Test Ranks shape 1`] = `
             {
               "Amount": 6,
               "Type": 15,
-              "Weight": 1,
-            },
-            {
-              "Amount": 2,
-              "PotionTier": 2,
-              "Type": 34,
-              "Weight": 1,
-            },
-            {
-              "Amount": 5,
-              "Type": 35,
-              "Weight": 1,
-            },
-            {
-              "Amount": 50,
-              "Type": 20,
               "Weight": 1,
             },
           ],
@@ -58611,86 +59771,6 @@ exports[`Pet Simulator Public Live API Test Ranks shape 1`] = `
         "Goals": [
           [
             {
-              "Amount": 1,
-              "Type": 22,
-              "Weight": 0.15,
-            },
-            {
-              "Amount": 1,
-              "Type": 29,
-              "Weight": 0.15,
-            },
-            {
-              "Amount": 1,
-              "Type": 28,
-              "Weight": 0.15,
-            },
-            {
-              "Amount": 1,
-              "Type": 27,
-              "Weight": 0.15,
-            },
-            {
-              "Amount": 1,
-              "Type": 36,
-              "Weight": 0.15,
-            },
-            {
-              "Amount": 1,
-              "Type": 23,
-              "Weight": 0.15,
-            },
-            {
-              "Amount": 1,
-              "Type": 24,
-              "Weight": 0.15,
-            },
-            {
-              "Amount": 1,
-              "Type": 48,
-              "Weight": 0.15,
-            },
-            {
-              "Amount": 4,
-              "Type": 58,
-              "Weight": 0.15,
-            },
-            {
-              "Amount": 1,
-              "Type": 51,
-              "Weight": 0.1,
-            },
-            {
-              "Amount": 1,
-              "Type": 52,
-              "Weight": 0.1,
-            },
-            {
-              "Amount": 1,
-              "Type": 53,
-              "Weight": 0.1,
-            },
-            {
-              "Amount": 1,
-              "Type": 54,
-              "Weight": 0.1,
-            },
-            {
-              "Amount": 5,
-              "Type": 47,
-              "Weight": 1,
-            },
-            {
-              "Amount": 1,
-              "Type": 55,
-              "Weight": 1,
-            },
-            {
-              "Amount": 1,
-              "Type": 56,
-              "Weight": 1,
-            },
-            {
               "Amount": 250,
               "Type": 21,
               "Weight": 3,
@@ -58709,21 +59789,6 @@ exports[`Pet Simulator Public Live API Test Ranks shape 1`] = `
               "Amount": 5,
               "PotionTier": 2,
               "Type": 34,
-              "Weight": 1,
-            },
-            {
-              "Amount": 10,
-              "Type": 35,
-              "Weight": 1,
-            },
-            {
-              "Amount": 2,
-              "Type": 33,
-              "Weight": 1,
-            },
-            {
-              "Amount": 60,
-              "Type": 20,
               "Weight": 1,
             },
           ],
@@ -59146,86 +60211,6 @@ exports[`Pet Simulator Public Live API Test Ranks shape 1`] = `
         "Goals": [
           [
             {
-              "Amount": 1,
-              "Type": 22,
-              "Weight": 0.15,
-            },
-            {
-              "Amount": 1,
-              "Type": 29,
-              "Weight": 0.15,
-            },
-            {
-              "Amount": 1,
-              "Type": 28,
-              "Weight": 0.15,
-            },
-            {
-              "Amount": 1,
-              "Type": 27,
-              "Weight": 0.15,
-            },
-            {
-              "Amount": 1,
-              "Type": 36,
-              "Weight": 0.15,
-            },
-            {
-              "Amount": 1,
-              "Type": 23,
-              "Weight": 0.15,
-            },
-            {
-              "Amount": 1,
-              "Type": 24,
-              "Weight": 0.15,
-            },
-            {
-              "Amount": 1,
-              "Type": 48,
-              "Weight": 0.15,
-            },
-            {
-              "Amount": 4,
-              "Type": 58,
-              "Weight": 0.15,
-            },
-            {
-              "Amount": 1,
-              "Type": 51,
-              "Weight": 0.1,
-            },
-            {
-              "Amount": 1,
-              "Type": 52,
-              "Weight": 0.1,
-            },
-            {
-              "Amount": 1,
-              "Type": 53,
-              "Weight": 0.1,
-            },
-            {
-              "Amount": 1,
-              "Type": 54,
-              "Weight": 0.1,
-            },
-            {
-              "Amount": 5,
-              "Type": 47,
-              "Weight": 1,
-            },
-            {
-              "Amount": 1,
-              "Type": 55,
-              "Weight": 1,
-            },
-            {
-              "Amount": 1,
-              "Type": 56,
-              "Weight": 1,
-            },
-            {
               "Amount": 350,
               "Type": 21,
               "Weight": 3,
@@ -59245,21 +60230,6 @@ exports[`Pet Simulator Public Live API Test Ranks shape 1`] = `
               "PotionTier": 3,
               "Type": 34,
               "Weight": 1,
-            },
-            {
-              "Amount": 20,
-              "Type": 35,
-              "Weight": 1,
-            },
-            {
-              "Amount": 3,
-              "Type": 33,
-              "Weight": 1,
-            },
-            {
-              "Amount": 75,
-              "Type": 20,
-              "Weight": 2,
             },
           ],
           [
@@ -59730,86 +60700,6 @@ exports[`Pet Simulator Public Live API Test Ranks shape 1`] = `
         "Goals": [
           [
             {
-              "Amount": 1,
-              "Type": 22,
-              "Weight": 0.15,
-            },
-            {
-              "Amount": 1,
-              "Type": 29,
-              "Weight": 0.15,
-            },
-            {
-              "Amount": 1,
-              "Type": 28,
-              "Weight": 0.15,
-            },
-            {
-              "Amount": 1,
-              "Type": 27,
-              "Weight": 0.15,
-            },
-            {
-              "Amount": 1,
-              "Type": 36,
-              "Weight": 0.15,
-            },
-            {
-              "Amount": 1,
-              "Type": 23,
-              "Weight": 0.15,
-            },
-            {
-              "Amount": 1,
-              "Type": 24,
-              "Weight": 0.15,
-            },
-            {
-              "Amount": 1,
-              "Type": 48,
-              "Weight": 0.15,
-            },
-            {
-              "Amount": 4,
-              "Type": 58,
-              "Weight": 0.15,
-            },
-            {
-              "Amount": 1,
-              "Type": 51,
-              "Weight": 0.1,
-            },
-            {
-              "Amount": 1,
-              "Type": 52,
-              "Weight": 0.1,
-            },
-            {
-              "Amount": 1,
-              "Type": 53,
-              "Weight": 0.1,
-            },
-            {
-              "Amount": 1,
-              "Type": 54,
-              "Weight": 0.1,
-            },
-            {
-              "Amount": 5,
-              "Type": 47,
-              "Weight": 1,
-            },
-            {
-              "Amount": 1,
-              "Type": 55,
-              "Weight": 1,
-            },
-            {
-              "Amount": 1,
-              "Type": 56,
-              "Weight": 1,
-            },
-            {
               "Amount": 400,
               "Type": 21,
               "Weight": 1,
@@ -59832,32 +60722,6 @@ exports[`Pet Simulator Public Live API Test Ranks shape 1`] = `
             {
               "Amount": 15,
               "Type": 15,
-              "Weight": 1,
-            },
-            {
-              "Amount": 2,
-              "PotionTier": 4,
-              "Type": 34,
-              "Weight": 1,
-            },
-            {
-              "Amount": 20,
-              "Type": 35,
-              "Weight": 1,
-            },
-            {
-              "Amount": 5,
-              "Type": 33,
-              "Weight": 1,
-            },
-            {
-              "Amount": 100,
-              "Type": 20,
-              "Weight": 1,
-            },
-            {
-              "Amount": 100,
-              "Type": 20,
               "Weight": 1,
             },
           ],
@@ -60426,86 +61290,6 @@ exports[`Pet Simulator Public Live API Test Ranks shape 1`] = `
         "Goals": [
           [
             {
-              "Amount": 1,
-              "Type": 22,
-              "Weight": 0.15,
-            },
-            {
-              "Amount": 1,
-              "Type": 29,
-              "Weight": 0.15,
-            },
-            {
-              "Amount": 1,
-              "Type": 28,
-              "Weight": 0.15,
-            },
-            {
-              "Amount": 1,
-              "Type": 27,
-              "Weight": 0.15,
-            },
-            {
-              "Amount": 1,
-              "Type": 36,
-              "Weight": 0.15,
-            },
-            {
-              "Amount": 1,
-              "Type": 23,
-              "Weight": 0.15,
-            },
-            {
-              "Amount": 1,
-              "Type": 24,
-              "Weight": 0.15,
-            },
-            {
-              "Amount": 1,
-              "Type": 48,
-              "Weight": 0.15,
-            },
-            {
-              "Amount": 4,
-              "Type": 58,
-              "Weight": 0.15,
-            },
-            {
-              "Amount": 1,
-              "Type": 51,
-              "Weight": 0.1,
-            },
-            {
-              "Amount": 1,
-              "Type": 52,
-              "Weight": 0.1,
-            },
-            {
-              "Amount": 1,
-              "Type": 53,
-              "Weight": 0.1,
-            },
-            {
-              "Amount": 1,
-              "Type": 54,
-              "Weight": 0.1,
-            },
-            {
-              "Amount": 5,
-              "Type": 47,
-              "Weight": 1,
-            },
-            {
-              "Amount": 1,
-              "Type": 55,
-              "Weight": 1,
-            },
-            {
-              "Amount": 1,
-              "Type": 56,
-              "Weight": 1,
-            },
-            {
               "Amount": 750,
               "Type": 21,
               "Weight": 1,
@@ -60528,27 +61312,6 @@ exports[`Pet Simulator Public Live API Test Ranks shape 1`] = `
             {
               "Amount": 20,
               "Type": 15,
-              "Weight": 1,
-            },
-            {
-              "Amount": 2,
-              "PotionTier": 4,
-              "Type": 34,
-              "Weight": 1,
-            },
-            {
-              "Amount": 20,
-              "Type": 35,
-              "Weight": 1,
-            },
-            {
-              "Amount": 5,
-              "Type": 33,
-              "Weight": 1,
-            },
-            {
-              "Amount": 200,
-              "Type": 20,
               "Weight": 1,
             },
           ],
@@ -61150,86 +61913,6 @@ exports[`Pet Simulator Public Live API Test Ranks shape 1`] = `
         "Goals": [
           [
             {
-              "Amount": 1,
-              "Type": 22,
-              "Weight": 0.15,
-            },
-            {
-              "Amount": 1,
-              "Type": 29,
-              "Weight": 0.15,
-            },
-            {
-              "Amount": 1,
-              "Type": 28,
-              "Weight": 0.15,
-            },
-            {
-              "Amount": 1,
-              "Type": 27,
-              "Weight": 0.15,
-            },
-            {
-              "Amount": 1,
-              "Type": 36,
-              "Weight": 0.15,
-            },
-            {
-              "Amount": 1,
-              "Type": 23,
-              "Weight": 0.15,
-            },
-            {
-              "Amount": 1,
-              "Type": 24,
-              "Weight": 0.15,
-            },
-            {
-              "Amount": 1,
-              "Type": 48,
-              "Weight": 0.15,
-            },
-            {
-              "Amount": 4,
-              "Type": 58,
-              "Weight": 0.15,
-            },
-            {
-              "Amount": 1,
-              "Type": 51,
-              "Weight": 0.1,
-            },
-            {
-              "Amount": 1,
-              "Type": 52,
-              "Weight": 0.1,
-            },
-            {
-              "Amount": 1,
-              "Type": 53,
-              "Weight": 0.1,
-            },
-            {
-              "Amount": 1,
-              "Type": 54,
-              "Weight": 0.1,
-            },
-            {
-              "Amount": 5,
-              "Type": 47,
-              "Weight": 1,
-            },
-            {
-              "Amount": 1,
-              "Type": 55,
-              "Weight": 1,
-            },
-            {
-              "Amount": 1,
-              "Type": 56,
-              "Weight": 1,
-            },
-            {
               "Amount": 900,
               "Type": 21,
               "Weight": 1,
@@ -61252,27 +61935,6 @@ exports[`Pet Simulator Public Live API Test Ranks shape 1`] = `
             {
               "Amount": 25,
               "Type": 15,
-              "Weight": 1,
-            },
-            {
-              "Amount": 5,
-              "PotionTier": 4,
-              "Type": 34,
-              "Weight": 1,
-            },
-            {
-              "Amount": 30,
-              "Type": 35,
-              "Weight": 1,
-            },
-            {
-              "Amount": 8,
-              "Type": 33,
-              "Weight": 1,
-            },
-            {
-              "Amount": 500,
-              "Type": 20,
               "Weight": 1,
             },
           ],
@@ -61900,86 +62562,6 @@ exports[`Pet Simulator Public Live API Test Ranks shape 1`] = `
         "Goals": [
           [
             {
-              "Amount": 1,
-              "Type": 22,
-              "Weight": 0.15,
-            },
-            {
-              "Amount": 1,
-              "Type": 29,
-              "Weight": 0.15,
-            },
-            {
-              "Amount": 1,
-              "Type": 28,
-              "Weight": 0.15,
-            },
-            {
-              "Amount": 1,
-              "Type": 27,
-              "Weight": 0.15,
-            },
-            {
-              "Amount": 1,
-              "Type": 36,
-              "Weight": 0.15,
-            },
-            {
-              "Amount": 1,
-              "Type": 23,
-              "Weight": 0.15,
-            },
-            {
-              "Amount": 1,
-              "Type": 24,
-              "Weight": 0.15,
-            },
-            {
-              "Amount": 1,
-              "Type": 48,
-              "Weight": 0.15,
-            },
-            {
-              "Amount": 4,
-              "Type": 58,
-              "Weight": 0.15,
-            },
-            {
-              "Amount": 1,
-              "Type": 51,
-              "Weight": 0.1,
-            },
-            {
-              "Amount": 1,
-              "Type": 52,
-              "Weight": 0.1,
-            },
-            {
-              "Amount": 1,
-              "Type": 53,
-              "Weight": 0.1,
-            },
-            {
-              "Amount": 1,
-              "Type": 54,
-              "Weight": 0.1,
-            },
-            {
-              "Amount": 5,
-              "Type": 47,
-              "Weight": 1,
-            },
-            {
-              "Amount": 1,
-              "Type": 55,
-              "Weight": 1,
-            },
-            {
-              "Amount": 1,
-              "Type": 56,
-              "Weight": 1,
-            },
-            {
               "Amount": 1500,
               "Type": 21,
               "Weight": 1,
@@ -62002,21 +62584,6 @@ exports[`Pet Simulator Public Live API Test Ranks shape 1`] = `
             {
               "Amount": 35,
               "Type": 15,
-              "Weight": 1,
-            },
-            {
-              "Amount": 38,
-              "Type": 35,
-              "Weight": 1,
-            },
-            {
-              "Amount": 14,
-              "Type": 33,
-              "Weight": 1,
-            },
-            {
-              "Amount": 1000,
-              "Type": 20,
               "Weight": 1,
             },
           ],
@@ -62903,86 +63470,6 @@ exports[`Pet Simulator Public Live API Test Ranks shape 1`] = `
         "Goals": [
           [
             {
-              "Amount": 1,
-              "Type": 22,
-              "Weight": 0.15,
-            },
-            {
-              "Amount": 1,
-              "Type": 29,
-              "Weight": 0.15,
-            },
-            {
-              "Amount": 1,
-              "Type": 28,
-              "Weight": 0.15,
-            },
-            {
-              "Amount": 1,
-              "Type": 27,
-              "Weight": 0.15,
-            },
-            {
-              "Amount": 1,
-              "Type": 36,
-              "Weight": 0.15,
-            },
-            {
-              "Amount": 1,
-              "Type": 23,
-              "Weight": 0.15,
-            },
-            {
-              "Amount": 1,
-              "Type": 24,
-              "Weight": 0.15,
-            },
-            {
-              "Amount": 1,
-              "Type": 48,
-              "Weight": 0.15,
-            },
-            {
-              "Amount": 4,
-              "Type": 58,
-              "Weight": 0.15,
-            },
-            {
-              "Amount": 1,
-              "Type": 51,
-              "Weight": 0.1,
-            },
-            {
-              "Amount": 1,
-              "Type": 52,
-              "Weight": 0.1,
-            },
-            {
-              "Amount": 1,
-              "Type": 53,
-              "Weight": 0.1,
-            },
-            {
-              "Amount": 1,
-              "Type": 54,
-              "Weight": 0.1,
-            },
-            {
-              "Amount": 5,
-              "Type": 47,
-              "Weight": 1,
-            },
-            {
-              "Amount": 1,
-              "Type": 55,
-              "Weight": 1,
-            },
-            {
-              "Amount": 1,
-              "Type": 56,
-              "Weight": 1,
-            },
-            {
               "Amount": 1000,
               "Type": 21,
               "Weight": 1,
@@ -63005,27 +63492,6 @@ exports[`Pet Simulator Public Live API Test Ranks shape 1`] = `
             {
               "Amount": 28,
               "Type": 15,
-              "Weight": 1,
-            },
-            {
-              "Amount": 5,
-              "PotionTier": 4,
-              "Type": 34,
-              "Weight": 1,
-            },
-            {
-              "Amount": 32,
-              "Type": 35,
-              "Weight": 1,
-            },
-            {
-              "Amount": 10,
-              "Type": 33,
-              "Weight": 1,
-            },
-            {
-              "Amount": 600,
-              "Type": 20,
               "Weight": 1,
             },
           ],
@@ -63710,86 +64176,6 @@ exports[`Pet Simulator Public Live API Test Ranks shape 1`] = `
         "Goals": [
           [
             {
-              "Amount": 1,
-              "Type": 22,
-              "Weight": 0.15,
-            },
-            {
-              "Amount": 1,
-              "Type": 29,
-              "Weight": 0.15,
-            },
-            {
-              "Amount": 1,
-              "Type": 28,
-              "Weight": 0.15,
-            },
-            {
-              "Amount": 1,
-              "Type": 27,
-              "Weight": 0.15,
-            },
-            {
-              "Amount": 1,
-              "Type": 36,
-              "Weight": 0.15,
-            },
-            {
-              "Amount": 1,
-              "Type": 23,
-              "Weight": 0.15,
-            },
-            {
-              "Amount": 1,
-              "Type": 24,
-              "Weight": 0.15,
-            },
-            {
-              "Amount": 1,
-              "Type": 48,
-              "Weight": 0.15,
-            },
-            {
-              "Amount": 4,
-              "Type": 58,
-              "Weight": 0.15,
-            },
-            {
-              "Amount": 1,
-              "Type": 51,
-              "Weight": 0.1,
-            },
-            {
-              "Amount": 1,
-              "Type": 52,
-              "Weight": 0.1,
-            },
-            {
-              "Amount": 1,
-              "Type": 53,
-              "Weight": 0.1,
-            },
-            {
-              "Amount": 1,
-              "Type": 54,
-              "Weight": 0.1,
-            },
-            {
-              "Amount": 5,
-              "Type": 47,
-              "Weight": 1,
-            },
-            {
-              "Amount": 1,
-              "Type": 55,
-              "Weight": 1,
-            },
-            {
-              "Amount": 1,
-              "Type": 56,
-              "Weight": 1,
-            },
-            {
               "Amount": 1200,
               "Type": 21,
               "Weight": 1,
@@ -63812,27 +64198,6 @@ exports[`Pet Simulator Public Live API Test Ranks shape 1`] = `
             {
               "Amount": 30,
               "Type": 15,
-              "Weight": 1,
-            },
-            {
-              "Amount": 6,
-              "PotionTier": 4,
-              "Type": 34,
-              "Weight": 1,
-            },
-            {
-              "Amount": 35,
-              "Type": 35,
-              "Weight": 1,
-            },
-            {
-              "Amount": 12,
-              "Type": 33,
-              "Weight": 1,
-            },
-            {
-              "Amount": 750,
-              "Type": 20,
               "Weight": 1,
             },
           ],
@@ -64560,86 +64925,6 @@ exports[`Pet Simulator Public Live API Test Ranks shape 1`] = `
         "Goals": [
           [
             {
-              "Amount": 1,
-              "Type": 22,
-              "Weight": 0.15,
-            },
-            {
-              "Amount": 1,
-              "Type": 29,
-              "Weight": 0.15,
-            },
-            {
-              "Amount": 1,
-              "Type": 28,
-              "Weight": 0.15,
-            },
-            {
-              "Amount": 1,
-              "Type": 27,
-              "Weight": 0.15,
-            },
-            {
-              "Amount": 1,
-              "Type": 36,
-              "Weight": 0.15,
-            },
-            {
-              "Amount": 1,
-              "Type": 23,
-              "Weight": 0.15,
-            },
-            {
-              "Amount": 1,
-              "Type": 24,
-              "Weight": 0.15,
-            },
-            {
-              "Amount": 1,
-              "Type": 48,
-              "Weight": 0.15,
-            },
-            {
-              "Amount": 4,
-              "Type": 58,
-              "Weight": 0.15,
-            },
-            {
-              "Amount": 1,
-              "Type": 51,
-              "Weight": 0.1,
-            },
-            {
-              "Amount": 1,
-              "Type": 52,
-              "Weight": 0.1,
-            },
-            {
-              "Amount": 1,
-              "Type": 53,
-              "Weight": 0.1,
-            },
-            {
-              "Amount": 1,
-              "Type": 54,
-              "Weight": 0.1,
-            },
-            {
-              "Amount": 5,
-              "Type": 47,
-              "Weight": 1,
-            },
-            {
-              "Amount": 1,
-              "Type": 55,
-              "Weight": 1,
-            },
-            {
-              "Amount": 1,
-              "Type": 56,
-              "Weight": 1,
-            },
-            {
               "Amount": 1350,
               "Type": 21,
               "Weight": 1,
@@ -64662,27 +64947,6 @@ exports[`Pet Simulator Public Live API Test Ranks shape 1`] = `
             {
               "Amount": 32,
               "Type": 15,
-              "Weight": 1,
-            },
-            {
-              "Amount": 6,
-              "PotionTier": 4,
-              "Type": 34,
-              "Weight": 1,
-            },
-            {
-              "Amount": 38,
-              "Type": 35,
-              "Weight": 1,
-            },
-            {
-              "Amount": 14,
-              "Type": 33,
-              "Weight": 1,
-            },
-            {
-              "Amount": 850,
-              "Type": 20,
               "Weight": 1,
             },
           ],
@@ -65493,86 +65757,6 @@ exports[`Pet Simulator Public Live API Test Ranks shape 1`] = `
         "Goals": [
           [
             {
-              "Amount": 1,
-              "Type": 22,
-              "Weight": 0.15,
-            },
-            {
-              "Amount": 1,
-              "Type": 29,
-              "Weight": 0.15,
-            },
-            {
-              "Amount": 1,
-              "Type": 28,
-              "Weight": 0.15,
-            },
-            {
-              "Amount": 1,
-              "Type": 27,
-              "Weight": 0.15,
-            },
-            {
-              "Amount": 1,
-              "Type": 36,
-              "Weight": 0.15,
-            },
-            {
-              "Amount": 1,
-              "Type": 23,
-              "Weight": 0.15,
-            },
-            {
-              "Amount": 1,
-              "Type": 24,
-              "Weight": 0.15,
-            },
-            {
-              "Amount": 1,
-              "Type": 48,
-              "Weight": 0.15,
-            },
-            {
-              "Amount": 4,
-              "Type": 58,
-              "Weight": 0.15,
-            },
-            {
-              "Amount": 1,
-              "Type": 51,
-              "Weight": 0.1,
-            },
-            {
-              "Amount": 1,
-              "Type": 52,
-              "Weight": 0.1,
-            },
-            {
-              "Amount": 1,
-              "Type": 53,
-              "Weight": 0.1,
-            },
-            {
-              "Amount": 1,
-              "Type": 54,
-              "Weight": 0.1,
-            },
-            {
-              "Amount": 5,
-              "Type": 47,
-              "Weight": 1,
-            },
-            {
-              "Amount": 1,
-              "Type": 55,
-              "Weight": 1,
-            },
-            {
-              "Amount": 1,
-              "Type": 56,
-              "Weight": 1,
-            },
-            {
               "Amount": 1350,
               "Type": 21,
               "Weight": 1,
@@ -65595,27 +65779,6 @@ exports[`Pet Simulator Public Live API Test Ranks shape 1`] = `
             {
               "Amount": 32,
               "Type": 15,
-              "Weight": 1,
-            },
-            {
-              "Amount": 6,
-              "PotionTier": 4,
-              "Type": 34,
-              "Weight": 1,
-            },
-            {
-              "Amount": 38,
-              "Type": 35,
-              "Weight": 1,
-            },
-            {
-              "Amount": 14,
-              "Type": 33,
-              "Weight": 1,
-            },
-            {
-              "Amount": 850,
-              "Type": 20,
               "Weight": 1,
             },
           ],
@@ -66375,86 +66538,6 @@ exports[`Pet Simulator Public Live API Test Ranks shape 1`] = `
         "Goals": [
           [
             {
-              "Amount": 1,
-              "Type": 22,
-              "Weight": 0.15,
-            },
-            {
-              "Amount": 1,
-              "Type": 29,
-              "Weight": 0.15,
-            },
-            {
-              "Amount": 1,
-              "Type": 28,
-              "Weight": 0.15,
-            },
-            {
-              "Amount": 1,
-              "Type": 27,
-              "Weight": 0.15,
-            },
-            {
-              "Amount": 1,
-              "Type": 36,
-              "Weight": 0.15,
-            },
-            {
-              "Amount": 1,
-              "Type": 23,
-              "Weight": 0.15,
-            },
-            {
-              "Amount": 1,
-              "Type": 24,
-              "Weight": 0.15,
-            },
-            {
-              "Amount": 1,
-              "Type": 48,
-              "Weight": 0.15,
-            },
-            {
-              "Amount": 4,
-              "Type": 58,
-              "Weight": 0.15,
-            },
-            {
-              "Amount": 1,
-              "Type": 51,
-              "Weight": 0.1,
-            },
-            {
-              "Amount": 1,
-              "Type": 52,
-              "Weight": 0.1,
-            },
-            {
-              "Amount": 1,
-              "Type": 53,
-              "Weight": 0.1,
-            },
-            {
-              "Amount": 1,
-              "Type": 54,
-              "Weight": 0.1,
-            },
-            {
-              "Amount": 5,
-              "Type": 47,
-              "Weight": 1,
-            },
-            {
-              "Amount": 1,
-              "Type": 55,
-              "Weight": 1,
-            },
-            {
-              "Amount": 1,
-              "Type": 56,
-              "Weight": 1,
-            },
-            {
               "Amount": 1500,
               "Type": 21,
               "Weight": 1,
@@ -66477,21 +66560,6 @@ exports[`Pet Simulator Public Live API Test Ranks shape 1`] = `
             {
               "Amount": 35,
               "Type": 15,
-              "Weight": 1,
-            },
-            {
-              "Amount": 38,
-              "Type": 35,
-              "Weight": 1,
-            },
-            {
-              "Amount": 14,
-              "Type": 33,
-              "Weight": 1,
-            },
-            {
-              "Amount": 1000,
-              "Type": 20,
               "Weight": 1,
             },
           ],
@@ -67379,86 +67447,6 @@ exports[`Pet Simulator Public Live API Test Ranks shape 1`] = `
         "Goals": [
           [
             {
-              "Amount": 1,
-              "Type": 22,
-              "Weight": 0.15,
-            },
-            {
-              "Amount": 1,
-              "Type": 29,
-              "Weight": 0.15,
-            },
-            {
-              "Amount": 1,
-              "Type": 28,
-              "Weight": 0.15,
-            },
-            {
-              "Amount": 1,
-              "Type": 27,
-              "Weight": 0.15,
-            },
-            {
-              "Amount": 1,
-              "Type": 36,
-              "Weight": 0.15,
-            },
-            {
-              "Amount": 1,
-              "Type": 23,
-              "Weight": 0.15,
-            },
-            {
-              "Amount": 1,
-              "Type": 24,
-              "Weight": 0.15,
-            },
-            {
-              "Amount": 1,
-              "Type": 48,
-              "Weight": 0.15,
-            },
-            {
-              "Amount": 4,
-              "Type": 58,
-              "Weight": 0.15,
-            },
-            {
-              "Amount": 1,
-              "Type": 51,
-              "Weight": 0.1,
-            },
-            {
-              "Amount": 1,
-              "Type": 52,
-              "Weight": 0.1,
-            },
-            {
-              "Amount": 1,
-              "Type": 53,
-              "Weight": 0.1,
-            },
-            {
-              "Amount": 1,
-              "Type": 54,
-              "Weight": 0.1,
-            },
-            {
-              "Amount": 5,
-              "Type": 47,
-              "Weight": 1,
-            },
-            {
-              "Amount": 1,
-              "Type": 55,
-              "Weight": 1,
-            },
-            {
-              "Amount": 1,
-              "Type": 56,
-              "Weight": 1,
-            },
-            {
               "Amount": 1350,
               "Type": 21,
               "Weight": 1,
@@ -67481,27 +67469,6 @@ exports[`Pet Simulator Public Live API Test Ranks shape 1`] = `
             {
               "Amount": 32,
               "Type": 15,
-              "Weight": 1,
-            },
-            {
-              "Amount": 6,
-              "PotionTier": 4,
-              "Type": 34,
-              "Weight": 1,
-            },
-            {
-              "Amount": 38,
-              "Type": 35,
-              "Weight": 1,
-            },
-            {
-              "Amount": 14,
-              "Type": 33,
-              "Weight": 1,
-            },
-            {
-              "Amount": 850,
-              "Type": 20,
               "Weight": 1,
             },
           ],
@@ -68337,86 +68304,6 @@ exports[`Pet Simulator Public Live API Test Ranks shape 1`] = `
         "Goals": [
           [
             {
-              "Amount": 1,
-              "Type": 22,
-              "Weight": 0.15,
-            },
-            {
-              "Amount": 1,
-              "Type": 29,
-              "Weight": 0.15,
-            },
-            {
-              "Amount": 1,
-              "Type": 28,
-              "Weight": 0.15,
-            },
-            {
-              "Amount": 1,
-              "Type": 27,
-              "Weight": 0.15,
-            },
-            {
-              "Amount": 1,
-              "Type": 36,
-              "Weight": 0.15,
-            },
-            {
-              "Amount": 1,
-              "Type": 23,
-              "Weight": 0.15,
-            },
-            {
-              "Amount": 1,
-              "Type": 24,
-              "Weight": 0.15,
-            },
-            {
-              "Amount": 1,
-              "Type": 48,
-              "Weight": 0.15,
-            },
-            {
-              "Amount": 4,
-              "Type": 58,
-              "Weight": 0.15,
-            },
-            {
-              "Amount": 1,
-              "Type": 51,
-              "Weight": 0.1,
-            },
-            {
-              "Amount": 1,
-              "Type": 52,
-              "Weight": 0.1,
-            },
-            {
-              "Amount": 1,
-              "Type": 53,
-              "Weight": 0.1,
-            },
-            {
-              "Amount": 1,
-              "Type": 54,
-              "Weight": 0.1,
-            },
-            {
-              "Amount": 5,
-              "Type": 47,
-              "Weight": 1,
-            },
-            {
-              "Amount": 1,
-              "Type": 55,
-              "Weight": 1,
-            },
-            {
-              "Amount": 1,
-              "Type": 56,
-              "Weight": 1,
-            },
-            {
               "Amount": 1500,
               "Type": 21,
               "Weight": 1,
@@ -68439,21 +68326,6 @@ exports[`Pet Simulator Public Live API Test Ranks shape 1`] = `
             {
               "Amount": 35,
               "Type": 15,
-              "Weight": 1,
-            },
-            {
-              "Amount": 38,
-              "Type": 35,
-              "Weight": 1,
-            },
-            {
-              "Amount": 14,
-              "Type": 33,
-              "Weight": 1,
-            },
-            {
-              "Amount": 1000,
-              "Type": 20,
               "Weight": 1,
             },
           ],
@@ -69346,86 +69218,6 @@ exports[`Pet Simulator Public Live API Test Ranks shape 1`] = `
         "Goals": [
           [
             {
-              "Amount": 1,
-              "Type": 22,
-              "Weight": 0.15,
-            },
-            {
-              "Amount": 1,
-              "Type": 29,
-              "Weight": 0.15,
-            },
-            {
-              "Amount": 1,
-              "Type": 28,
-              "Weight": 0.15,
-            },
-            {
-              "Amount": 1,
-              "Type": 27,
-              "Weight": 0.15,
-            },
-            {
-              "Amount": 1,
-              "Type": 36,
-              "Weight": 0.15,
-            },
-            {
-              "Amount": 1,
-              "Type": 23,
-              "Weight": 0.15,
-            },
-            {
-              "Amount": 1,
-              "Type": 24,
-              "Weight": 0.15,
-            },
-            {
-              "Amount": 1,
-              "Type": 48,
-              "Weight": 0.15,
-            },
-            {
-              "Amount": 4,
-              "Type": 58,
-              "Weight": 0.15,
-            },
-            {
-              "Amount": 1,
-              "Type": 51,
-              "Weight": 0.1,
-            },
-            {
-              "Amount": 1,
-              "Type": 52,
-              "Weight": 0.1,
-            },
-            {
-              "Amount": 1,
-              "Type": 53,
-              "Weight": 0.1,
-            },
-            {
-              "Amount": 1,
-              "Type": 54,
-              "Weight": 0.1,
-            },
-            {
-              "Amount": 5,
-              "Type": 47,
-              "Weight": 1,
-            },
-            {
-              "Amount": 1,
-              "Type": 55,
-              "Weight": 1,
-            },
-            {
-              "Amount": 1,
-              "Type": 56,
-              "Weight": 1,
-            },
-            {
               "Amount": 1500,
               "Type": 21,
               "Weight": 1,
@@ -69448,21 +69240,6 @@ exports[`Pet Simulator Public Live API Test Ranks shape 1`] = `
             {
               "Amount": 35,
               "Type": 15,
-              "Weight": 1,
-            },
-            {
-              "Amount": 38,
-              "Type": 35,
-              "Weight": 1,
-            },
-            {
-              "Amount": 14,
-              "Type": 33,
-              "Weight": 1,
-            },
-            {
-              "Amount": 1000,
-              "Type": 20,
               "Weight": 1,
             },
           ],
@@ -70359,86 +70136,6 @@ exports[`Pet Simulator Public Live API Test Ranks shape 1`] = `
         "Goals": [
           [
             {
-              "Amount": 1,
-              "Type": 22,
-              "Weight": 0.15,
-            },
-            {
-              "Amount": 1,
-              "Type": 29,
-              "Weight": 0.15,
-            },
-            {
-              "Amount": 1,
-              "Type": 28,
-              "Weight": 0.15,
-            },
-            {
-              "Amount": 1,
-              "Type": 27,
-              "Weight": 0.15,
-            },
-            {
-              "Amount": 1,
-              "Type": 36,
-              "Weight": 0.15,
-            },
-            {
-              "Amount": 1,
-              "Type": 23,
-              "Weight": 0.15,
-            },
-            {
-              "Amount": 1,
-              "Type": 24,
-              "Weight": 0.15,
-            },
-            {
-              "Amount": 1,
-              "Type": 48,
-              "Weight": 0.15,
-            },
-            {
-              "Amount": 4,
-              "Type": 58,
-              "Weight": 0.15,
-            },
-            {
-              "Amount": 1,
-              "Type": 51,
-              "Weight": 0.1,
-            },
-            {
-              "Amount": 1,
-              "Type": 52,
-              "Weight": 0.1,
-            },
-            {
-              "Amount": 1,
-              "Type": 53,
-              "Weight": 0.1,
-            },
-            {
-              "Amount": 1,
-              "Type": 54,
-              "Weight": 0.1,
-            },
-            {
-              "Amount": 5,
-              "Type": 47,
-              "Weight": 1,
-            },
-            {
-              "Amount": 1,
-              "Type": 55,
-              "Weight": 1,
-            },
-            {
-              "Amount": 1,
-              "Type": 56,
-              "Weight": 1,
-            },
-            {
               "Amount": 1750,
               "Type": 21,
               "Weight": 1,
@@ -70461,21 +70158,6 @@ exports[`Pet Simulator Public Live API Test Ranks shape 1`] = `
             {
               "Amount": 40,
               "Type": 15,
-              "Weight": 1,
-            },
-            {
-              "Amount": 40,
-              "Type": 35,
-              "Weight": 1,
-            },
-            {
-              "Amount": 20,
-              "Type": 33,
-              "Weight": 1,
-            },
-            {
-              "Amount": 1250,
-              "Type": 20,
               "Weight": 1,
             },
           ],
@@ -71371,86 +71053,6 @@ exports[`Pet Simulator Public Live API Test Ranks shape 1`] = `
         "Goals": [
           [
             {
-              "Amount": 1,
-              "Type": 22,
-              "Weight": 0.15,
-            },
-            {
-              "Amount": 1,
-              "Type": 29,
-              "Weight": 0.15,
-            },
-            {
-              "Amount": 1,
-              "Type": 28,
-              "Weight": 0.15,
-            },
-            {
-              "Amount": 1,
-              "Type": 27,
-              "Weight": 0.15,
-            },
-            {
-              "Amount": 1,
-              "Type": 36,
-              "Weight": 0.15,
-            },
-            {
-              "Amount": 1,
-              "Type": 23,
-              "Weight": 0.15,
-            },
-            {
-              "Amount": 1,
-              "Type": 24,
-              "Weight": 0.15,
-            },
-            {
-              "Amount": 1,
-              "Type": 48,
-              "Weight": 0.15,
-            },
-            {
-              "Amount": 4,
-              "Type": 58,
-              "Weight": 0.15,
-            },
-            {
-              "Amount": 1,
-              "Type": 51,
-              "Weight": 0.1,
-            },
-            {
-              "Amount": 1,
-              "Type": 52,
-              "Weight": 0.1,
-            },
-            {
-              "Amount": 1,
-              "Type": 53,
-              "Weight": 0.1,
-            },
-            {
-              "Amount": 1,
-              "Type": 54,
-              "Weight": 0.1,
-            },
-            {
-              "Amount": 5,
-              "Type": 47,
-              "Weight": 1,
-            },
-            {
-              "Amount": 1,
-              "Type": 55,
-              "Weight": 1,
-            },
-            {
-              "Amount": 1,
-              "Type": 56,
-              "Weight": 1,
-            },
-            {
               "Amount": 1750,
               "Type": 21,
               "Weight": 1,
@@ -71473,21 +71075,6 @@ exports[`Pet Simulator Public Live API Test Ranks shape 1`] = `
             {
               "Amount": 40,
               "Type": 15,
-              "Weight": 1,
-            },
-            {
-              "Amount": 40,
-              "Type": 35,
-              "Weight": 1,
-            },
-            {
-              "Amount": 20,
-              "Type": 33,
-              "Weight": 1,
-            },
-            {
-              "Amount": 1250,
-              "Type": 20,
               "Weight": 1,
             },
           ],
@@ -72398,86 +71985,6 @@ exports[`Pet Simulator Public Live API Test Ranks shape 1`] = `
         "Goals": [
           [
             {
-              "Amount": 1,
-              "Type": 22,
-              "Weight": 0.15,
-            },
-            {
-              "Amount": 1,
-              "Type": 29,
-              "Weight": 0.15,
-            },
-            {
-              "Amount": 1,
-              "Type": 28,
-              "Weight": 0.15,
-            },
-            {
-              "Amount": 1,
-              "Type": 27,
-              "Weight": 0.15,
-            },
-            {
-              "Amount": 1,
-              "Type": 36,
-              "Weight": 0.15,
-            },
-            {
-              "Amount": 1,
-              "Type": 23,
-              "Weight": 0.15,
-            },
-            {
-              "Amount": 1,
-              "Type": 24,
-              "Weight": 0.15,
-            },
-            {
-              "Amount": 1,
-              "Type": 48,
-              "Weight": 0.15,
-            },
-            {
-              "Amount": 4,
-              "Type": 58,
-              "Weight": 0.15,
-            },
-            {
-              "Amount": 1,
-              "Type": 51,
-              "Weight": 0.1,
-            },
-            {
-              "Amount": 1,
-              "Type": 52,
-              "Weight": 0.1,
-            },
-            {
-              "Amount": 1,
-              "Type": 53,
-              "Weight": 0.1,
-            },
-            {
-              "Amount": 1,
-              "Type": 54,
-              "Weight": 0.1,
-            },
-            {
-              "Amount": 5,
-              "Type": 47,
-              "Weight": 1,
-            },
-            {
-              "Amount": 1,
-              "Type": 55,
-              "Weight": 1,
-            },
-            {
-              "Amount": 1,
-              "Type": 56,
-              "Weight": 1,
-            },
-            {
               "Amount": 1750,
               "Type": 21,
               "Weight": 1,
@@ -72500,21 +72007,6 @@ exports[`Pet Simulator Public Live API Test Ranks shape 1`] = `
             {
               "Amount": 40,
               "Type": 15,
-              "Weight": 1,
-            },
-            {
-              "Amount": 40,
-              "Type": 35,
-              "Weight": 1,
-            },
-            {
-              "Amount": 20,
-              "Type": 33,
-              "Weight": 1,
-            },
-            {
-              "Amount": 1250,
-              "Type": 20,
               "Weight": 1,
             },
           ],
@@ -73431,86 +72923,6 @@ exports[`Pet Simulator Public Live API Test Ranks shape 1`] = `
         "Goals": [
           [
             {
-              "Amount": 1,
-              "Type": 22,
-              "Weight": 0.15,
-            },
-            {
-              "Amount": 1,
-              "Type": 29,
-              "Weight": 0.15,
-            },
-            {
-              "Amount": 1,
-              "Type": 28,
-              "Weight": 0.15,
-            },
-            {
-              "Amount": 1,
-              "Type": 27,
-              "Weight": 0.15,
-            },
-            {
-              "Amount": 1,
-              "Type": 36,
-              "Weight": 0.15,
-            },
-            {
-              "Amount": 1,
-              "Type": 23,
-              "Weight": 0.15,
-            },
-            {
-              "Amount": 1,
-              "Type": 24,
-              "Weight": 0.15,
-            },
-            {
-              "Amount": 1,
-              "Type": 48,
-              "Weight": 0.15,
-            },
-            {
-              "Amount": 4,
-              "Type": 58,
-              "Weight": 0.15,
-            },
-            {
-              "Amount": 1,
-              "Type": 51,
-              "Weight": 0.1,
-            },
-            {
-              "Amount": 1,
-              "Type": 52,
-              "Weight": 0.1,
-            },
-            {
-              "Amount": 1,
-              "Type": 53,
-              "Weight": 0.1,
-            },
-            {
-              "Amount": 1,
-              "Type": 54,
-              "Weight": 0.1,
-            },
-            {
-              "Amount": 5,
-              "Type": 47,
-              "Weight": 1,
-            },
-            {
-              "Amount": 1,
-              "Type": 55,
-              "Weight": 1,
-            },
-            {
-              "Amount": 1,
-              "Type": 56,
-              "Weight": 1,
-            },
-            {
               "Amount": 2000,
               "Type": 21,
               "Weight": 1,
@@ -73533,21 +72945,6 @@ exports[`Pet Simulator Public Live API Test Ranks shape 1`] = `
             {
               "Amount": 50,
               "Type": 15,
-              "Weight": 1,
-            },
-            {
-              "Amount": 40,
-              "Type": 35,
-              "Weight": 1,
-            },
-            {
-              "Amount": 30,
-              "Type": 33,
-              "Weight": 1,
-            },
-            {
-              "Amount": 1500,
-              "Type": 20,
               "Weight": 1,
             },
           ],
@@ -74457,86 +73854,6 @@ exports[`Pet Simulator Public Live API Test Ranks shape 1`] = `
         "Goals": [
           [
             {
-              "Amount": 1,
-              "Type": 22,
-              "Weight": 0.15,
-            },
-            {
-              "Amount": 1,
-              "Type": 29,
-              "Weight": 0.15,
-            },
-            {
-              "Amount": 1,
-              "Type": 28,
-              "Weight": 0.15,
-            },
-            {
-              "Amount": 1,
-              "Type": 27,
-              "Weight": 0.15,
-            },
-            {
-              "Amount": 1,
-              "Type": 36,
-              "Weight": 0.15,
-            },
-            {
-              "Amount": 1,
-              "Type": 23,
-              "Weight": 0.15,
-            },
-            {
-              "Amount": 1,
-              "Type": 24,
-              "Weight": 0.15,
-            },
-            {
-              "Amount": 1,
-              "Type": 48,
-              "Weight": 0.15,
-            },
-            {
-              "Amount": 4,
-              "Type": 58,
-              "Weight": 0.15,
-            },
-            {
-              "Amount": 1,
-              "Type": 51,
-              "Weight": 0.1,
-            },
-            {
-              "Amount": 1,
-              "Type": 52,
-              "Weight": 0.1,
-            },
-            {
-              "Amount": 1,
-              "Type": 53,
-              "Weight": 0.1,
-            },
-            {
-              "Amount": 1,
-              "Type": 54,
-              "Weight": 0.1,
-            },
-            {
-              "Amount": 5,
-              "Type": 47,
-              "Weight": 1,
-            },
-            {
-              "Amount": 1,
-              "Type": 55,
-              "Weight": 1,
-            },
-            {
-              "Amount": 1,
-              "Type": 56,
-              "Weight": 1,
-            },
-            {
               "Amount": 2000,
               "Type": 21,
               "Weight": 1,
@@ -74559,21 +73876,6 @@ exports[`Pet Simulator Public Live API Test Ranks shape 1`] = `
             {
               "Amount": 50,
               "Type": 15,
-              "Weight": 1,
-            },
-            {
-              "Amount": 40,
-              "Type": 35,
-              "Weight": 1,
-            },
-            {
-              "Amount": 30,
-              "Type": 33,
-              "Weight": 1,
-            },
-            {
-              "Amount": 1500,
-              "Type": 20,
               "Weight": 1,
             },
           ],
@@ -75469,86 +74771,6 @@ exports[`Pet Simulator Public Live API Test Ranks shape 1`] = `
         "Goals": [
           [
             {
-              "Amount": 1,
-              "Type": 22,
-              "Weight": 0.15,
-            },
-            {
-              "Amount": 1,
-              "Type": 29,
-              "Weight": 0.15,
-            },
-            {
-              "Amount": 1,
-              "Type": 28,
-              "Weight": 0.15,
-            },
-            {
-              "Amount": 1,
-              "Type": 27,
-              "Weight": 0.15,
-            },
-            {
-              "Amount": 1,
-              "Type": 36,
-              "Weight": 0.15,
-            },
-            {
-              "Amount": 1,
-              "Type": 23,
-              "Weight": 0.15,
-            },
-            {
-              "Amount": 1,
-              "Type": 24,
-              "Weight": 0.15,
-            },
-            {
-              "Amount": 1,
-              "Type": 48,
-              "Weight": 0.15,
-            },
-            {
-              "Amount": 4,
-              "Type": 58,
-              "Weight": 0.15,
-            },
-            {
-              "Amount": 1,
-              "Type": 51,
-              "Weight": 0.1,
-            },
-            {
-              "Amount": 1,
-              "Type": 52,
-              "Weight": 0.1,
-            },
-            {
-              "Amount": 1,
-              "Type": 53,
-              "Weight": 0.1,
-            },
-            {
-              "Amount": 1,
-              "Type": 54,
-              "Weight": 0.1,
-            },
-            {
-              "Amount": 5,
-              "Type": 47,
-              "Weight": 1,
-            },
-            {
-              "Amount": 1,
-              "Type": 55,
-              "Weight": 1,
-            },
-            {
-              "Amount": 1,
-              "Type": 56,
-              "Weight": 1,
-            },
-            {
               "Amount": 2000,
               "Type": 21,
               "Weight": 1,
@@ -75571,21 +74793,6 @@ exports[`Pet Simulator Public Live API Test Ranks shape 1`] = `
             {
               "Amount": 50,
               "Type": 15,
-              "Weight": 1,
-            },
-            {
-              "Amount": 40,
-              "Type": 35,
-              "Weight": 1,
-            },
-            {
-              "Amount": 30,
-              "Type": 33,
-              "Weight": 1,
-            },
-            {
-              "Amount": 1500,
-              "Type": 20,
               "Weight": 1,
             },
           ],
@@ -76487,86 +75694,6 @@ exports[`Pet Simulator Public Live API Test Ranks shape 1`] = `
         "Goals": [
           [
             {
-              "Amount": 1,
-              "Type": 22,
-              "Weight": 0.15,
-            },
-            {
-              "Amount": 1,
-              "Type": 29,
-              "Weight": 0.15,
-            },
-            {
-              "Amount": 1,
-              "Type": 28,
-              "Weight": 0.15,
-            },
-            {
-              "Amount": 1,
-              "Type": 27,
-              "Weight": 0.15,
-            },
-            {
-              "Amount": 1,
-              "Type": 36,
-              "Weight": 0.15,
-            },
-            {
-              "Amount": 1,
-              "Type": 23,
-              "Weight": 0.15,
-            },
-            {
-              "Amount": 1,
-              "Type": 24,
-              "Weight": 0.15,
-            },
-            {
-              "Amount": 1,
-              "Type": 48,
-              "Weight": 0.15,
-            },
-            {
-              "Amount": 6,
-              "Type": 58,
-              "Weight": 0.15,
-            },
-            {
-              "Amount": 1,
-              "Type": 51,
-              "Weight": 0.1,
-            },
-            {
-              "Amount": 1,
-              "Type": 52,
-              "Weight": 0.1,
-            },
-            {
-              "Amount": 1,
-              "Type": 53,
-              "Weight": 0.1,
-            },
-            {
-              "Amount": 1,
-              "Type": 54,
-              "Weight": 0.1,
-            },
-            {
-              "Amount": 20,
-              "Type": 47,
-              "Weight": 1,
-            },
-            {
-              "Amount": 2,
-              "Type": 55,
-              "Weight": 1,
-            },
-            {
-              "Amount": 3,
-              "Type": 56,
-              "Weight": 1,
-            },
-            {
               "Amount": 2250,
               "Type": 21,
               "Weight": 1,
@@ -76589,21 +75716,6 @@ exports[`Pet Simulator Public Live API Test Ranks shape 1`] = `
             {
               "Amount": 60,
               "Type": 15,
-              "Weight": 1,
-            },
-            {
-              "Amount": 50,
-              "Type": 35,
-              "Weight": 1,
-            },
-            {
-              "Amount": 40,
-              "Type": 33,
-              "Weight": 1,
-            },
-            {
-              "Amount": 1750,
-              "Type": 20,
               "Weight": 1,
             },
           ],
@@ -77485,86 +76597,6 @@ exports[`Pet Simulator Public Live API Test Ranks shape 1`] = `
         "Goals": [
           [
             {
-              "Amount": 1,
-              "Type": 22,
-              "Weight": 0.15,
-            },
-            {
-              "Amount": 1,
-              "Type": 29,
-              "Weight": 0.15,
-            },
-            {
-              "Amount": 1,
-              "Type": 28,
-              "Weight": 0.15,
-            },
-            {
-              "Amount": 1,
-              "Type": 27,
-              "Weight": 0.15,
-            },
-            {
-              "Amount": 1,
-              "Type": 36,
-              "Weight": 0.15,
-            },
-            {
-              "Amount": 1,
-              "Type": 23,
-              "Weight": 0.15,
-            },
-            {
-              "Amount": 1,
-              "Type": 24,
-              "Weight": 0.15,
-            },
-            {
-              "Amount": 1,
-              "Type": 48,
-              "Weight": 0.15,
-            },
-            {
-              "Amount": 6,
-              "Type": 58,
-              "Weight": 0.15,
-            },
-            {
-              "Amount": 1,
-              "Type": 51,
-              "Weight": 0.1,
-            },
-            {
-              "Amount": 1,
-              "Type": 52,
-              "Weight": 0.1,
-            },
-            {
-              "Amount": 1,
-              "Type": 53,
-              "Weight": 0.1,
-            },
-            {
-              "Amount": 1,
-              "Type": 54,
-              "Weight": 0.1,
-            },
-            {
-              "Amount": 20,
-              "Type": 47,
-              "Weight": 1,
-            },
-            {
-              "Amount": 2,
-              "Type": 55,
-              "Weight": 1,
-            },
-            {
-              "Amount": 3,
-              "Type": 56,
-              "Weight": 1,
-            },
-            {
               "Amount": 2250,
               "Type": 21,
               "Weight": 1,
@@ -77587,21 +76619,6 @@ exports[`Pet Simulator Public Live API Test Ranks shape 1`] = `
             {
               "Amount": 60,
               "Type": 15,
-              "Weight": 1,
-            },
-            {
-              "Amount": 50,
-              "Type": 35,
-              "Weight": 1,
-            },
-            {
-              "Amount": 40,
-              "Type": 33,
-              "Weight": 1,
-            },
-            {
-              "Amount": 1750,
-              "Type": 20,
               "Weight": 1,
             },
           ],
@@ -78511,86 +77528,6 @@ exports[`Pet Simulator Public Live API Test Ranks shape 1`] = `
         "Goals": [
           [
             {
-              "Amount": 1,
-              "Type": 22,
-              "Weight": 0.15,
-            },
-            {
-              "Amount": 1,
-              "Type": 29,
-              "Weight": 0.15,
-            },
-            {
-              "Amount": 1,
-              "Type": 28,
-              "Weight": 0.15,
-            },
-            {
-              "Amount": 1,
-              "Type": 27,
-              "Weight": 0.15,
-            },
-            {
-              "Amount": 1,
-              "Type": 36,
-              "Weight": 0.15,
-            },
-            {
-              "Amount": 1,
-              "Type": 23,
-              "Weight": 0.15,
-            },
-            {
-              "Amount": 1,
-              "Type": 24,
-              "Weight": 0.15,
-            },
-            {
-              "Amount": 1,
-              "Type": 48,
-              "Weight": 0.15,
-            },
-            {
-              "Amount": 6,
-              "Type": 58,
-              "Weight": 0.15,
-            },
-            {
-              "Amount": 1,
-              "Type": 51,
-              "Weight": 0.1,
-            },
-            {
-              "Amount": 1,
-              "Type": 52,
-              "Weight": 0.1,
-            },
-            {
-              "Amount": 1,
-              "Type": 53,
-              "Weight": 0.1,
-            },
-            {
-              "Amount": 1,
-              "Type": 54,
-              "Weight": 0.1,
-            },
-            {
-              "Amount": 20,
-              "Type": 47,
-              "Weight": 1,
-            },
-            {
-              "Amount": 2,
-              "Type": 55,
-              "Weight": 1,
-            },
-            {
-              "Amount": 3,
-              "Type": 56,
-              "Weight": 1,
-            },
-            {
               "Amount": 2500,
               "Type": 21,
               "Weight": 1,
@@ -78613,21 +77550,6 @@ exports[`Pet Simulator Public Live API Test Ranks shape 1`] = `
             {
               "Amount": 65,
               "Type": 15,
-              "Weight": 1,
-            },
-            {
-              "Amount": 55,
-              "Type": 35,
-              "Weight": 1,
-            },
-            {
-              "Amount": 45,
-              "Type": 33,
-              "Weight": 1,
-            },
-            {
-              "Amount": 1900,
-              "Type": 20,
               "Weight": 1,
             },
           ],
@@ -79523,86 +78445,6 @@ exports[`Pet Simulator Public Live API Test Ranks shape 1`] = `
         "Goals": [
           [
             {
-              "Amount": 1,
-              "Type": 22,
-              "Weight": 0.15,
-            },
-            {
-              "Amount": 1,
-              "Type": 29,
-              "Weight": 0.15,
-            },
-            {
-              "Amount": 1,
-              "Type": 28,
-              "Weight": 0.15,
-            },
-            {
-              "Amount": 1,
-              "Type": 27,
-              "Weight": 0.15,
-            },
-            {
-              "Amount": 1,
-              "Type": 36,
-              "Weight": 0.15,
-            },
-            {
-              "Amount": 1,
-              "Type": 23,
-              "Weight": 0.15,
-            },
-            {
-              "Amount": 1,
-              "Type": 24,
-              "Weight": 0.15,
-            },
-            {
-              "Amount": 1,
-              "Type": 48,
-              "Weight": 0.15,
-            },
-            {
-              "Amount": 6,
-              "Type": 58,
-              "Weight": 0.15,
-            },
-            {
-              "Amount": 1,
-              "Type": 51,
-              "Weight": 0.1,
-            },
-            {
-              "Amount": 1,
-              "Type": 52,
-              "Weight": 0.1,
-            },
-            {
-              "Amount": 1,
-              "Type": 53,
-              "Weight": 0.1,
-            },
-            {
-              "Amount": 1,
-              "Type": 54,
-              "Weight": 0.1,
-            },
-            {
-              "Amount": 20,
-              "Type": 47,
-              "Weight": 1,
-            },
-            {
-              "Amount": 2,
-              "Type": 55,
-              "Weight": 1,
-            },
-            {
-              "Amount": 3,
-              "Type": 56,
-              "Weight": 1,
-            },
-            {
               "Amount": 2500,
               "Type": 21,
               "Weight": 1,
@@ -79625,21 +78467,6 @@ exports[`Pet Simulator Public Live API Test Ranks shape 1`] = `
             {
               "Amount": 65,
               "Type": 15,
-              "Weight": 1,
-            },
-            {
-              "Amount": 55,
-              "Type": 35,
-              "Weight": 1,
-            },
-            {
-              "Amount": 45,
-              "Type": 33,
-              "Weight": 1,
-            },
-            {
-              "Amount": 1900,
-              "Type": 20,
               "Weight": 1,
             },
           ],
@@ -80524,86 +79351,6 @@ exports[`Pet Simulator Public Live API Test Ranks shape 1`] = `
         "Goals": [
           [
             {
-              "Amount": 1,
-              "Type": 22,
-              "Weight": 0.15,
-            },
-            {
-              "Amount": 1,
-              "Type": 29,
-              "Weight": 0.15,
-            },
-            {
-              "Amount": 1,
-              "Type": 28,
-              "Weight": 0.15,
-            },
-            {
-              "Amount": 1,
-              "Type": 27,
-              "Weight": 0.15,
-            },
-            {
-              "Amount": 1,
-              "Type": 36,
-              "Weight": 0.15,
-            },
-            {
-              "Amount": 1,
-              "Type": 23,
-              "Weight": 0.15,
-            },
-            {
-              "Amount": 1,
-              "Type": 24,
-              "Weight": 0.15,
-            },
-            {
-              "Amount": 1,
-              "Type": 48,
-              "Weight": 0.15,
-            },
-            {
-              "Amount": 6,
-              "Type": 58,
-              "Weight": 0.15,
-            },
-            {
-              "Amount": 1,
-              "Type": 51,
-              "Weight": 0.1,
-            },
-            {
-              "Amount": 1,
-              "Type": 52,
-              "Weight": 0.1,
-            },
-            {
-              "Amount": 1,
-              "Type": 53,
-              "Weight": 0.1,
-            },
-            {
-              "Amount": 1,
-              "Type": 54,
-              "Weight": 0.1,
-            },
-            {
-              "Amount": 20,
-              "Type": 47,
-              "Weight": 1,
-            },
-            {
-              "Amount": 2,
-              "Type": 55,
-              "Weight": 1,
-            },
-            {
-              "Amount": 3,
-              "Type": 56,
-              "Weight": 1,
-            },
-            {
               "Amount": 2750,
               "Type": 21,
               "Weight": 1,
@@ -80626,21 +79373,6 @@ exports[`Pet Simulator Public Live API Test Ranks shape 1`] = `
             {
               "Amount": 70,
               "Type": 15,
-              "Weight": 1,
-            },
-            {
-              "Amount": 70,
-              "Type": 35,
-              "Weight": 1,
-            },
-            {
-              "Amount": 50,
-              "Type": 33,
-              "Weight": 1,
-            },
-            {
-              "Amount": 2000,
-              "Type": 20,
               "Weight": 1,
             },
           ],
@@ -81507,86 +80239,6 @@ exports[`Pet Simulator Public Live API Test Ranks shape 1`] = `
         "Goals": [
           [
             {
-              "Amount": 1,
-              "Type": 22,
-              "Weight": 0.15,
-            },
-            {
-              "Amount": 1,
-              "Type": 29,
-              "Weight": 0.15,
-            },
-            {
-              "Amount": 1,
-              "Type": 28,
-              "Weight": 0.15,
-            },
-            {
-              "Amount": 1,
-              "Type": 27,
-              "Weight": 0.15,
-            },
-            {
-              "Amount": 1,
-              "Type": 36,
-              "Weight": 0.15,
-            },
-            {
-              "Amount": 1,
-              "Type": 23,
-              "Weight": 0.15,
-            },
-            {
-              "Amount": 1,
-              "Type": 24,
-              "Weight": 0.15,
-            },
-            {
-              "Amount": 1,
-              "Type": 48,
-              "Weight": 0.15,
-            },
-            {
-              "Amount": 6,
-              "Type": 58,
-              "Weight": 0.15,
-            },
-            {
-              "Amount": 1,
-              "Type": 51,
-              "Weight": 0.1,
-            },
-            {
-              "Amount": 1,
-              "Type": 52,
-              "Weight": 0.1,
-            },
-            {
-              "Amount": 1,
-              "Type": 53,
-              "Weight": 0.1,
-            },
-            {
-              "Amount": 1,
-              "Type": 54,
-              "Weight": 0.1,
-            },
-            {
-              "Amount": 20,
-              "Type": 47,
-              "Weight": 1,
-            },
-            {
-              "Amount": 2,
-              "Type": 55,
-              "Weight": 1,
-            },
-            {
-              "Amount": 3,
-              "Type": 56,
-              "Weight": 1,
-            },
-            {
               "Amount": 2750,
               "Type": 21,
               "Weight": 1,
@@ -81609,21 +80261,6 @@ exports[`Pet Simulator Public Live API Test Ranks shape 1`] = `
             {
               "Amount": 70,
               "Type": 15,
-              "Weight": 1,
-            },
-            {
-              "Amount": 70,
-              "Type": 35,
-              "Weight": 1,
-            },
-            {
-              "Amount": 50,
-              "Type": 33,
-              "Weight": 1,
-            },
-            {
-              "Amount": 2000,
-              "Type": 20,
               "Weight": 1,
             },
           ],
@@ -87321,8 +85958,59 @@ exports[`Pet Simulator Public Live API Test Upgrades shape 1`] = `
           17500,
           80000,
           1150000,
+          3000000,
         ],
         "TierCurrencies": [
+          {
+            "BagTiers": [
+              {
+                "image": "rbxassetid://15058306297",
+                "value": 0,
+              },
+              {
+                "image": "rbxassetid://15058306546",
+                "value": 1000,
+              },
+              {
+                "image": "rbxassetid://15058306840",
+                "value": 10000,
+              },
+            ],
+            "Desc": "Diamonds!",
+            "DisplayName": "Diamonds",
+            "MaxAmount": 25000000000,
+            "Rarity": {
+              "Announce": false,
+              "Color": null,
+              "DisplayName": "Rare",
+              "Gradient": null,
+              "ItemSlot": null,
+              "Lootbag": null,
+              "Message": null,
+              "RarityNumber": 2,
+              "_id": "Rare",
+              "_script": null,
+            },
+            "Tiers": [
+              {
+                "Order": 1,
+                "imageOutline": "rbxassetid://14867116353",
+                "isBottom": true,
+                "orbImage": "rbxassetid://15466421090",
+                "rainData": {
+                  "LightEmission": 0.2,
+                },
+                "textColor": null,
+                "tierName": "Diamonds",
+                "tinyImage": "rbxassetid://15258327857",
+                "value": 1,
+              },
+            ],
+            "Tradable": true,
+            "_id": "Diamonds",
+            "_index": 4,
+            "_script": null,
+          },
           {
             "BagTiers": [
               {
@@ -87630,6 +86318,7 @@ exports[`Pet Simulator Public Live API Test Upgrades shape 1`] = `
           10,
           10,
           5,
+          3,
           3,
         ],
       },
@@ -88475,7 +87164,7 @@ exports[`Pet Simulator Public Live API Test Worlds shape 1`] = `
         "FallbackSpawnLocation": null,
         "Lighting": null,
         "MapName": "Map",
-        "PlaceId": 15502302041,
+        "PlaceId": 17473989780,
         "SpawnId": "Spawn",
         "WorldCurrency": "Coins",
         "WorldNumber": 1,
@@ -88514,7 +87203,7 @@ exports[`Pet Simulator Public Live API Test Worlds shape 1`] = `
         "FallbackSpawnLocation": null,
         "Lighting": null,
         "MapName": "Map3",
-        "PlaceId": 17473989780,
+        "PlaceId": 15502302041,
         "SpawnId": "Void Spawn",
         "WorldCurrency": "VoidCoins",
         "WorldNumber": 3,
@@ -88953,12 +87642,10 @@ exports[`Pet Simulator Public Live API Test Zones shape 1`] = `
               {
                 "Type": "Small Coins (Default)",
                 "Weight": 100,
-                "WorldNumber": 1,
               },
               {
                 "Type": "Medium Coins (Default)",
                 "Weight": 15,
-                "WorldNumber": 1,
               },
             ],
             "Settings": {
@@ -88972,12 +87659,10 @@ exports[`Pet Simulator Public Live API Test Zones shape 1`] = `
               {
                 "Type": "Medium Coins (Default)",
                 "Weight": 100,
-                "WorldNumber": 1,
               },
               {
                 "Type": "Large Coins (Default)",
                 "Weight": 25,
-                "WorldNumber": 1,
               },
             ],
             "Settings": {
@@ -88991,7 +87676,6 @@ exports[`Pet Simulator Public Live API Test Zones shape 1`] = `
               {
                 "Type": "VIP Diamond Pile",
                 "Weight": 1,
-                "WorldNumber": 1,
               },
             ],
             "Settings": {
@@ -89006,7 +87690,6 @@ exports[`Pet Simulator Public Live API Test Zones shape 1`] = `
         "MaximumAvailableEgg": 2,
         "Price": 0,
         "WorldNumber": 1,
-        "ZoneFolder": null,
         "ZoneName": "Spawn",
         "ZoneNumber": 1,
       },
@@ -89054,7 +87737,6 @@ exports[`Pet Simulator Public Live API Test Zones shape 1`] = `
         "GateHealth": 0,
         "MaximumAvailableEgg": 14,
         "WorldNumber": 1,
-        "ZoneFolder": null,
         "ZoneName": "Mine",
         "ZoneNumber": 10,
       },
@@ -89102,7 +87784,6 @@ exports[`Pet Simulator Public Live API Test Zones shape 1`] = `
         "GateHealth": 0,
         "MaximumAvailableEgg": 15,
         "WorldNumber": 1,
-        "ZoneFolder": null,
         "ZoneName": "Crystal Caverns",
         "ZoneNumber": 11,
       },
@@ -89197,7 +87878,6 @@ exports[`Pet Simulator Public Live API Test Zones shape 1`] = `
         },
         "MaximumAvailableEgg": 17,
         "WorldNumber": 1,
-        "ZoneFolder": null,
         "ZoneName": "Dead Forest",
         "ZoneNumber": 12,
       },
@@ -89300,7 +87980,6 @@ exports[`Pet Simulator Public Live API Test Zones shape 1`] = `
         },
         "MaximumAvailableEgg": 18,
         "WorldNumber": 1,
-        "ZoneFolder": null,
         "ZoneName": "Dark Forest",
         "ZoneNumber": 13,
       },
@@ -89344,7 +88023,6 @@ exports[`Pet Simulator Public Live API Test Zones shape 1`] = `
         "GateHealth": 0,
         "MaximumAvailableEgg": 20,
         "WorldNumber": 1,
-        "ZoneFolder": null,
         "ZoneName": "Mushroom Field",
         "ZoneNumber": 14,
       },
@@ -89388,7 +88066,6 @@ exports[`Pet Simulator Public Live API Test Zones shape 1`] = `
         "GateHealth": 0,
         "MaximumAvailableEgg": 22,
         "WorldNumber": 1,
-        "ZoneFolder": null,
         "ZoneName": "Crimson Forest",
         "ZoneNumber": 16,
       },
@@ -89436,7 +88113,6 @@ exports[`Pet Simulator Public Live API Test Zones shape 1`] = `
         "GateHealth": 0,
         "MaximumAvailableEgg": 21,
         "WorldNumber": 1,
-        "ZoneFolder": null,
         "ZoneName": "Enchanted Forest",
         "ZoneNumber": 15,
       },
@@ -89484,7 +88160,6 @@ exports[`Pet Simulator Public Live API Test Zones shape 1`] = `
         "GateHealth": 0,
         "MaximumAvailableEgg": 23,
         "WorldNumber": 1,
-        "ZoneFolder": null,
         "ZoneName": "Jungle",
         "ZoneNumber": 17,
       },
@@ -89536,7 +88211,6 @@ exports[`Pet Simulator Public Live API Test Zones shape 1`] = `
         "GateHealth": 0,
         "MaximumAvailableEgg": 25,
         "WorldNumber": 1,
-        "ZoneFolder": null,
         "ZoneName": "Jungle Temple",
         "ZoneNumber": 18,
       },
@@ -89584,7 +88258,6 @@ exports[`Pet Simulator Public Live API Test Zones shape 1`] = `
         "GateHealth": 0,
         "MaximumAvailableEgg": 27,
         "WorldNumber": 1,
-        "ZoneFolder": null,
         "ZoneName": "Oasis",
         "ZoneNumber": 19,
       },
@@ -89652,7 +88325,6 @@ exports[`Pet Simulator Public Live API Test Zones shape 1`] = `
         "GateHealth": 0,
         "MaximumAvailableEgg": 28,
         "WorldNumber": 1,
-        "ZoneFolder": null,
         "ZoneName": "Beach",
         "ZoneNumber": 20,
       },
@@ -89671,17 +88343,14 @@ exports[`Pet Simulator Public Live API Test Zones shape 1`] = `
               {
                 "Type": "Medium Coins (Default)",
                 "Weight": 40,
-                "WorldNumber": 1,
               },
               {
                 "Type": "Large Coins (Default)",
                 "Weight": 80,
-                "WorldNumber": 1,
               },
               {
                 "Type": "Crate (Default)",
                 "Weight": 15,
-                "WorldNumber": 1,
               },
             ],
             "Settings": {
@@ -89695,7 +88364,6 @@ exports[`Pet Simulator Public Live API Test Zones shape 1`] = `
         "GateHealth": 0,
         "MaximumAvailableEgg": 3,
         "WorldNumber": 1,
-        "ZoneFolder": null,
         "ZoneName": "Colorful Forest",
         "ZoneNumber": 2,
       },
@@ -89797,7 +88465,6 @@ exports[`Pet Simulator Public Live API Test Zones shape 1`] = `
         },
         "MaximumAvailableEgg": 29,
         "WorldNumber": 1,
-        "ZoneFolder": null,
         "ZoneName": "Coral Reef",
         "ZoneNumber": 21,
       },
@@ -89903,7 +88570,6 @@ exports[`Pet Simulator Public Live API Test Zones shape 1`] = `
         },
         "MaximumAvailableEgg": 30,
         "WorldNumber": 1,
-        "ZoneFolder": null,
         "ZoneName": "Shipwreck",
         "ZoneNumber": 22,
       },
@@ -90013,7 +88679,6 @@ exports[`Pet Simulator Public Live API Test Zones shape 1`] = `
         },
         "MaximumAvailableEgg": 31,
         "WorldNumber": 1,
-        "ZoneFolder": null,
         "ZoneName": "Atlantis",
         "ZoneNumber": 23,
       },
@@ -90065,7 +88730,6 @@ exports[`Pet Simulator Public Live API Test Zones shape 1`] = `
         "GateHealth": 0,
         "MaximumAvailableEgg": 33,
         "WorldNumber": 1,
-        "ZoneFolder": null,
         "ZoneName": "Palm Beach",
         "ZoneNumber": 24,
       },
@@ -90109,7 +88773,6 @@ exports[`Pet Simulator Public Live API Test Zones shape 1`] = `
         "GateHealth": 0,
         "MaximumAvailableEgg": 34,
         "WorldNumber": 1,
-        "ZoneFolder": null,
         "ZoneName": "Tiki",
         "ZoneNumber": 25,
       },
@@ -90153,7 +88816,6 @@ exports[`Pet Simulator Public Live API Test Zones shape 1`] = `
         "GateHealth": 0,
         "MaximumAvailableEgg": 4,
         "WorldNumber": 1,
-        "ZoneFolder": null,
         "ZoneName": "Castle",
         "ZoneNumber": 3,
       },
@@ -90205,7 +88867,6 @@ exports[`Pet Simulator Public Live API Test Zones shape 1`] = `
         "GateHealth": 0,
         "MaximumAvailableEgg": 5,
         "WorldNumber": 1,
-        "ZoneFolder": null,
         "ZoneName": "Green Forest",
         "ZoneNumber": 4,
       },
@@ -90245,7 +88906,6 @@ exports[`Pet Simulator Public Live API Test Zones shape 1`] = `
         "GateHealth": 0,
         "MaximumAvailableEgg": 7,
         "WorldNumber": 1,
-        "ZoneFolder": null,
         "ZoneName": "Autumn",
         "ZoneNumber": 5,
       },
@@ -90289,7 +88949,6 @@ exports[`Pet Simulator Public Live API Test Zones shape 1`] = `
         "GateHealth": 0,
         "MaximumAvailableEgg": 8,
         "WorldNumber": 1,
-        "ZoneFolder": null,
         "ZoneName": "Cherry Blossom",
         "ZoneNumber": 6,
       },
@@ -90341,7 +89000,6 @@ exports[`Pet Simulator Public Live API Test Zones shape 1`] = `
         "GateHealth": 0,
         "MaximumAvailableEgg": 9,
         "WorldNumber": 1,
-        "ZoneFolder": null,
         "ZoneName": "Farm",
         "ZoneNumber": 7,
       },
@@ -90393,7 +89051,6 @@ exports[`Pet Simulator Public Live API Test Zones shape 1`] = `
         "GateHealth": 0,
         "MaximumAvailableEgg": 11,
         "WorldNumber": 1,
-        "ZoneFolder": null,
         "ZoneName": "Backyard",
         "ZoneNumber": 8,
       },
@@ -90445,7 +89102,6 @@ exports[`Pet Simulator Public Live API Test Zones shape 1`] = `
         "GateHealth": 0,
         "MaximumAvailableEgg": 12,
         "WorldNumber": 1,
-        "ZoneFolder": null,
         "ZoneName": "Misty Falls",
         "ZoneNumber": 9,
       },
@@ -90493,7 +89149,6 @@ exports[`Pet Simulator Public Live API Test Zones shape 1`] = `
         "GateHealth": 0,
         "MaximumAvailableEgg": 36,
         "WorldNumber": 1,
-        "ZoneFolder": null,
         "ZoneName": "Pirate Cove",
         "ZoneNumber": 26,
       },
@@ -90596,7 +89251,6 @@ exports[`Pet Simulator Public Live API Test Zones shape 1`] = `
         },
         "MaximumAvailableEgg": 42,
         "WorldNumber": 1,
-        "ZoneFolder": null,
         "ZoneName": "Desert Village",
         "ZoneNumber": 29,
       },
@@ -90703,7 +89357,6 @@ exports[`Pet Simulator Public Live API Test Zones shape 1`] = `
         },
         "MaximumAvailableEgg": 43,
         "WorldNumber": 1,
-        "ZoneFolder": null,
         "ZoneName": "Fossil Digsite",
         "ZoneNumber": 30,
       },
@@ -90758,7 +89411,6 @@ exports[`Pet Simulator Public Live API Test Zones shape 1`] = `
         "GateHealth": 0,
         "MaximumAvailableEgg": 52,
         "WorldNumber": 1,
-        "ZoneFolder": null,
         "ZoneName": "Ice Rink",
         "ZoneNumber": 39,
       },
@@ -90809,7 +89461,6 @@ exports[`Pet Simulator Public Live API Test Zones shape 1`] = `
         "GateHealth": 0,
         "MaximumAvailableEgg": 51,
         "WorldNumber": 1,
-        "ZoneFolder": null,
         "ZoneName": "Icy Peaks",
         "ZoneNumber": 38,
       },
@@ -90856,7 +89507,6 @@ exports[`Pet Simulator Public Live API Test Zones shape 1`] = `
         "GateHealth": 0,
         "MaximumAvailableEgg": 50,
         "WorldNumber": 1,
-        "ZoneFolder": null,
         "ZoneName": "Snow Village",
         "ZoneNumber": 37,
       },
@@ -90923,7 +89573,6 @@ exports[`Pet Simulator Public Live API Test Zones shape 1`] = `
         "GateHealth": 0,
         "MaximumAvailableEgg": 53,
         "WorldNumber": 1,
-        "ZoneFolder": null,
         "ZoneName": "Ski Town",
         "ZoneNumber": 40,
       },
@@ -90971,7 +89620,6 @@ exports[`Pet Simulator Public Live API Test Zones shape 1`] = `
         "GateHealth": 0,
         "MaximumAvailableEgg": 49,
         "WorldNumber": 1,
-        "ZoneFolder": null,
         "ZoneName": "Mountains",
         "ZoneNumber": 36,
       },
@@ -91027,7 +89675,6 @@ exports[`Pet Simulator Public Live API Test Zones shape 1`] = `
         "GateHealth": 0,
         "MaximumAvailableEgg": 54,
         "WorldNumber": 1,
-        "ZoneFolder": null,
         "ZoneName": "Hot Springs",
         "ZoneNumber": 41,
       },
@@ -91083,7 +89730,6 @@ exports[`Pet Simulator Public Live API Test Zones shape 1`] = `
         "GateHealth": 0,
         "MaximumAvailableEgg": 38,
         "WorldNumber": 1,
-        "ZoneFolder": null,
         "ZoneName": "Pirate Tavern",
         "ZoneNumber": 27,
       },
@@ -91186,7 +89832,6 @@ exports[`Pet Simulator Public Live API Test Zones shape 1`] = `
         },
         "MaximumAvailableEgg": 40,
         "WorldNumber": 1,
-        "ZoneFolder": null,
         "ZoneName": "Shanty Town",
         "ZoneNumber": 28,
       },
@@ -91288,7 +89933,6 @@ exports[`Pet Simulator Public Live API Test Zones shape 1`] = `
         },
         "MaximumAvailableEgg": 44,
         "WorldNumber": 1,
-        "ZoneFolder": null,
         "ZoneName": "Desert Pyramids",
         "ZoneNumber": 31,
       },
@@ -91394,7 +90038,6 @@ exports[`Pet Simulator Public Live API Test Zones shape 1`] = `
         },
         "MaximumAvailableEgg": 45,
         "WorldNumber": 1,
-        "ZoneFolder": null,
         "ZoneName": "Red Desert",
         "ZoneNumber": 32,
       },
@@ -91500,7 +90143,6 @@ exports[`Pet Simulator Public Live API Test Zones shape 1`] = `
         },
         "MaximumAvailableEgg": 46,
         "WorldNumber": 1,
-        "ZoneFolder": null,
         "ZoneName": "Wild West",
         "ZoneNumber": 33,
       },
@@ -91606,7 +90248,6 @@ exports[`Pet Simulator Public Live API Test Zones shape 1`] = `
         },
         "MaximumAvailableEgg": 47,
         "WorldNumber": 1,
-        "ZoneFolder": null,
         "ZoneName": "Grand Canyons",
         "ZoneNumber": 34,
       },
@@ -91654,7 +90295,6 @@ exports[`Pet Simulator Public Live API Test Zones shape 1`] = `
         "GateHealth": 0,
         "MaximumAvailableEgg": 48,
         "WorldNumber": 1,
-        "ZoneFolder": null,
         "ZoneName": "Safari",
         "ZoneNumber": 35,
       },
@@ -91738,7 +90378,6 @@ exports[`Pet Simulator Public Live API Test Zones shape 1`] = `
         "GateHealth": 0,
         "MaximumAvailableEgg": 55,
         "WorldNumber": 1,
-        "ZoneFolder": null,
         "ZoneName": "Fire and Ice",
         "ZoneNumber": 42,
       },
@@ -91794,7 +90433,6 @@ exports[`Pet Simulator Public Live API Test Zones shape 1`] = `
         "GateHealth": 0,
         "MaximumAvailableEgg": 57,
         "WorldNumber": 1,
-        "ZoneFolder": null,
         "ZoneName": "Obsidian Cave",
         "ZoneNumber": 44,
       },
@@ -91883,10 +90521,23 @@ exports[`Pet Simulator Public Live API Test Zones shape 1`] = `
           "GeographicLatitude": 44,
           "OutdoorAmbient": null,
           "ShadowSoftness": 0.5,
+          "Sky": {
+            "CelestialBodiesShown": false,
+            "MoonAngularSize": 11,
+            "MoonTextureId": "",
+            "SkyboxBk": "rbxassetid://11808532452",
+            "SkyboxDn": "rbxassetid://15513336382",
+            "SkyboxFt": "rbxassetid://11808532318",
+            "SkyboxLf": "rbxassetid://11808532171",
+            "SkyboxRt": "rbxassetid://11808532685",
+            "SkyboxUp": "rbxassetid://11808533003",
+            "StarCount": 0,
+            "SunAngularSize": 10,
+            "SunTextureId": "rbxasset://sky/sun.jpg",
+          },
         },
         "MaximumAvailableEgg": 58,
         "WorldNumber": 1,
-        "ZoneFolder": null,
         "ZoneName": "Lava Forest",
         "ZoneNumber": 45,
       },
@@ -91938,7 +90589,6 @@ exports[`Pet Simulator Public Live API Test Zones shape 1`] = `
         "GateHealth": 0,
         "MaximumAvailableEgg": 56,
         "WorldNumber": 1,
-        "ZoneFolder": null,
         "ZoneName": "Volcano",
         "ZoneNumber": 43,
       },
@@ -92039,10 +90689,23 @@ exports[`Pet Simulator Public Live API Test Zones shape 1`] = `
           "GeographicLatitude": 44,
           "OutdoorAmbient": null,
           "ShadowSoftness": 0.5,
+          "Sky": {
+            "CelestialBodiesShown": false,
+            "MoonAngularSize": 11,
+            "MoonTextureId": "",
+            "SkyboxBk": "rbxassetid://11808532452",
+            "SkyboxDn": "rbxassetid://15513336382",
+            "SkyboxFt": "rbxassetid://11808532318",
+            "SkyboxLf": "rbxassetid://11808532171",
+            "SkyboxRt": "rbxassetid://11808532685",
+            "SkyboxUp": "rbxassetid://11808533003",
+            "StarCount": 0,
+            "SunAngularSize": 10,
+            "SunTextureId": "rbxasset://sky/sun.jpg",
+          },
         },
         "MaximumAvailableEgg": 59,
         "WorldNumber": 1,
-        "ZoneFolder": null,
         "ZoneName": "Underworld",
         "ZoneNumber": 46,
       },
@@ -92131,10 +90794,23 @@ exports[`Pet Simulator Public Live API Test Zones shape 1`] = `
           "GeographicLatitude": 44,
           "OutdoorAmbient": null,
           "ShadowSoftness": 0.5,
+          "Sky": {
+            "CelestialBodiesShown": false,
+            "MoonAngularSize": 11,
+            "MoonTextureId": "",
+            "SkyboxBk": "rbxassetid://11808532452",
+            "SkyboxDn": "rbxassetid://15513336382",
+            "SkyboxFt": "rbxassetid://11808532318",
+            "SkyboxLf": "rbxassetid://11808532171",
+            "SkyboxRt": "rbxassetid://11808532685",
+            "SkyboxUp": "rbxassetid://11808533003",
+            "StarCount": 0,
+            "SunAngularSize": 10,
+            "SunTextureId": "rbxasset://sky/sun.jpg",
+          },
         },
         "MaximumAvailableEgg": 60,
         "WorldNumber": 1,
-        "ZoneFolder": null,
         "ZoneName": "Underworld Bridge",
         "ZoneNumber": 47,
       },
@@ -92227,10 +90903,23 @@ exports[`Pet Simulator Public Live API Test Zones shape 1`] = `
           "GeographicLatitude": 44,
           "OutdoorAmbient": null,
           "ShadowSoftness": 0.5,
+          "Sky": {
+            "CelestialBodiesShown": false,
+            "MoonAngularSize": 11,
+            "MoonTextureId": "",
+            "SkyboxBk": "rbxassetid://11808532452",
+            "SkyboxDn": "rbxassetid://15513336382",
+            "SkyboxFt": "rbxassetid://11808532318",
+            "SkyboxLf": "rbxassetid://11808532171",
+            "SkyboxRt": "rbxassetid://11808532685",
+            "SkyboxUp": "rbxassetid://11808533003",
+            "StarCount": 0,
+            "SunAngularSize": 10,
+            "SunTextureId": "rbxasset://sky/sun.jpg",
+          },
         },
         "MaximumAvailableEgg": 61,
         "WorldNumber": 1,
-        "ZoneFolder": null,
         "ZoneName": "Underworld Castle",
         "ZoneNumber": 48,
       },
@@ -92315,10 +91004,23 @@ exports[`Pet Simulator Public Live API Test Zones shape 1`] = `
           "GeographicLatitude": 44,
           "OutdoorAmbient": null,
           "ShadowSoftness": 0.5,
+          "Sky": {
+            "CelestialBodiesShown": false,
+            "MoonAngularSize": 11,
+            "MoonTextureId": "",
+            "SkyboxBk": "rbxassetid://11808532452",
+            "SkyboxDn": "rbxassetid://15513336382",
+            "SkyboxFt": "rbxassetid://11808532318",
+            "SkyboxLf": "rbxassetid://11808532171",
+            "SkyboxRt": "rbxassetid://11808532685",
+            "SkyboxUp": "rbxassetid://11808533003",
+            "StarCount": 0,
+            "SunAngularSize": 10,
+            "SunTextureId": "rbxasset://sky/sun.jpg",
+          },
         },
         "MaximumAvailableEgg": 62,
         "WorldNumber": 1,
-        "ZoneFolder": null,
         "ZoneName": "Metal Dojo",
         "ZoneNumber": 49,
       },
@@ -92375,7 +91077,6 @@ exports[`Pet Simulator Public Live API Test Zones shape 1`] = `
           63,
         ],
         "WorldNumber": 1,
-        "ZoneFolder": null,
         "ZoneName": "Fire Dojo",
         "ZoneNumber": 50,
       },
@@ -92427,7 +91128,6 @@ exports[`Pet Simulator Public Live API Test Zones shape 1`] = `
         "GateHealth": 0,
         "MaximumAvailableEgg": 64,
         "WorldNumber": 1,
-        "ZoneFolder": null,
         "ZoneName": "Samurai Village",
         "ZoneNumber": 51,
       },
@@ -92475,7 +91175,6 @@ exports[`Pet Simulator Public Live API Test Zones shape 1`] = `
         "GateHealth": 0,
         "MaximumAvailableEgg": 65,
         "WorldNumber": 1,
-        "ZoneFolder": null,
         "ZoneName": "Bamboo Forest",
         "ZoneNumber": 52,
       },
@@ -92523,7 +91222,6 @@ exports[`Pet Simulator Public Live API Test Zones shape 1`] = `
         "GateHealth": 0,
         "MaximumAvailableEgg": 66,
         "WorldNumber": 1,
-        "ZoneFolder": null,
         "ZoneName": "Zen Garden",
         "ZoneNumber": 53,
       },
@@ -92563,7 +91261,6 @@ exports[`Pet Simulator Public Live API Test Zones shape 1`] = `
         "GateHealth": 0,
         "MaximumAvailableEgg": 67,
         "WorldNumber": 1,
-        "ZoneFolder": null,
         "ZoneName": "Flower Field",
         "ZoneNumber": 54,
       },
@@ -92611,7 +91308,6 @@ exports[`Pet Simulator Public Live API Test Zones shape 1`] = `
         "GateHealth": 0,
         "MaximumAvailableEgg": 68,
         "WorldNumber": 1,
-        "ZoneFolder": null,
         "ZoneName": "Fairytale Meadows",
         "ZoneNumber": 55,
       },
@@ -92659,7 +91355,6 @@ exports[`Pet Simulator Public Live API Test Zones shape 1`] = `
         "GateHealth": 0,
         "MaximumAvailableEgg": 69,
         "WorldNumber": 1,
-        "ZoneFolder": null,
         "ZoneName": "Fairytale Castle",
         "ZoneNumber": 56,
       },
@@ -92711,7 +91406,6 @@ exports[`Pet Simulator Public Live API Test Zones shape 1`] = `
         "GateHealth": 0,
         "MaximumAvailableEgg": 70,
         "WorldNumber": 1,
-        "ZoneFolder": null,
         "ZoneName": "Royal Kingdom",
         "ZoneNumber": 57,
       },
@@ -92763,7 +91457,6 @@ exports[`Pet Simulator Public Live API Test Zones shape 1`] = `
         "GateHealth": 0,
         "MaximumAvailableEgg": 71,
         "WorldNumber": 1,
-        "ZoneFolder": null,
         "ZoneName": "Fairy Castle",
         "ZoneNumber": 58,
       },
@@ -92816,7 +91509,6 @@ exports[`Pet Simulator Public Live API Test Zones shape 1`] = `
           71,
         ],
         "WorldNumber": 1,
-        "ZoneFolder": null,
         "ZoneName": "Cozy Village",
         "ZoneNumber": 59,
       },
@@ -92860,7 +91552,6 @@ exports[`Pet Simulator Public Live API Test Zones shape 1`] = `
         "GateHealth": 0,
         "MaximumAvailableEgg": 73,
         "WorldNumber": 1,
-        "ZoneFolder": null,
         "ZoneName": "Rainbow River",
         "ZoneNumber": 60,
       },
@@ -92915,7 +91606,6 @@ exports[`Pet Simulator Public Live API Test Zones shape 1`] = `
           50,
         ],
         "WorldNumber": 1,
-        "ZoneFolder": null,
         "ZoneName": "Colorful Mines",
         "ZoneNumber": 61,
       },
@@ -92975,7 +91665,6 @@ exports[`Pet Simulator Public Live API Test Zones shape 1`] = `
           50,
         ],
         "WorldNumber": 1,
-        "ZoneFolder": null,
         "ZoneName": "Colorful Mountains",
         "ZoneNumber": 62,
       },
@@ -93050,7 +91739,6 @@ exports[`Pet Simulator Public Live API Test Zones shape 1`] = `
           50,
         ],
         "WorldNumber": 1,
-        "ZoneFolder": null,
         "ZoneName": "Frost Mountains",
         "ZoneNumber": 63,
       },
@@ -93094,7 +91782,6 @@ exports[`Pet Simulator Public Live API Test Zones shape 1`] = `
         "GateHealth": 0,
         "MaximumAvailableEgg": 77,
         "WorldNumber": 1,
-        "ZoneFolder": null,
         "ZoneName": "Ice Sculptures",
         "ZoneNumber": 64,
       },
@@ -93146,7 +91833,6 @@ exports[`Pet Simulator Public Live API Test Zones shape 1`] = `
         "GateHealth": 0,
         "MaximumAvailableEgg": 78,
         "WorldNumber": 1,
-        "ZoneFolder": null,
         "ZoneName": "Snowman Town",
         "ZoneNumber": 65,
       },
@@ -93202,7 +91888,6 @@ exports[`Pet Simulator Public Live API Test Zones shape 1`] = `
         "GateHealth": 0,
         "MaximumAvailableEgg": 79,
         "WorldNumber": 1,
-        "ZoneFolder": null,
         "ZoneName": "Ice Castle",
         "ZoneNumber": 66,
       },
@@ -93254,7 +91939,6 @@ exports[`Pet Simulator Public Live API Test Zones shape 1`] = `
         "GateHealth": 0,
         "MaximumAvailableEgg": 80,
         "WorldNumber": 1,
-        "ZoneFolder": null,
         "ZoneName": "Polar Express",
         "ZoneNumber": 67,
       },
@@ -93310,7 +91994,6 @@ exports[`Pet Simulator Public Live API Test Zones shape 1`] = `
         "GateHealth": 0,
         "MaximumAvailableEgg": 81,
         "WorldNumber": 1,
-        "ZoneFolder": null,
         "ZoneName": "Firefly Cold Forest",
         "ZoneNumber": 68,
       },
@@ -93366,7 +92049,6 @@ exports[`Pet Simulator Public Live API Test Zones shape 1`] = `
         "GateHealth": 0,
         "MaximumAvailableEgg": 82,
         "WorldNumber": 1,
-        "ZoneFolder": null,
         "ZoneName": "Golden Road",
         "ZoneNumber": 69,
       },
@@ -93439,7 +92121,6 @@ exports[`Pet Simulator Public Live API Test Zones shape 1`] = `
           60,
         ],
         "WorldNumber": 1,
-        "ZoneFolder": null,
         "ZoneName": "No Path Forest",
         "ZoneNumber": 70,
       },
@@ -93495,7 +92176,6 @@ exports[`Pet Simulator Public Live API Test Zones shape 1`] = `
         "GateHealth": 0,
         "MaximumAvailableEgg": 84,
         "WorldNumber": 1,
-        "ZoneFolder": null,
         "ZoneName": "Ancient Ruins",
         "ZoneNumber": 71,
       },
@@ -93551,7 +92231,6 @@ exports[`Pet Simulator Public Live API Test Zones shape 1`] = `
         "GateHealth": 0,
         "MaximumAvailableEgg": 85,
         "WorldNumber": 1,
-        "ZoneFolder": null,
         "ZoneName": "Runic Altar",
         "ZoneNumber": 72,
       },
@@ -93607,7 +92286,6 @@ exports[`Pet Simulator Public Live API Test Zones shape 1`] = `
         "GateHealth": 0,
         "MaximumAvailableEgg": 86,
         "WorldNumber": 1,
-        "ZoneFolder": null,
         "ZoneName": "Wizard Tower",
         "ZoneNumber": 73,
       },
@@ -93663,7 +92341,6 @@ exports[`Pet Simulator Public Live API Test Zones shape 1`] = `
         "GateHealth": 0,
         "MaximumAvailableEgg": 87,
         "WorldNumber": 1,
-        "ZoneFolder": null,
         "ZoneName": "Witch Marsh",
         "ZoneNumber": 74,
       },
@@ -93719,7 +92396,6 @@ exports[`Pet Simulator Public Live API Test Zones shape 1`] = `
         "GateHealth": 0,
         "MaximumAvailableEgg": 88,
         "WorldNumber": 1,
-        "ZoneFolder": null,
         "ZoneName": "Haunted Forest",
         "ZoneNumber": 75,
       },
@@ -93763,7 +92439,6 @@ exports[`Pet Simulator Public Live API Test Zones shape 1`] = `
         "GateHealth": 0,
         "MaximumAvailableEgg": 89,
         "WorldNumber": 1,
-        "ZoneFolder": null,
         "ZoneName": "Haunted Graveyard",
         "ZoneNumber": 76,
       },
@@ -93819,7 +92494,6 @@ exports[`Pet Simulator Public Live API Test Zones shape 1`] = `
         "GateHealth": 0,
         "MaximumAvailableEgg": 90,
         "WorldNumber": 1,
-        "ZoneFolder": null,
         "ZoneName": "Haunted Mansion",
         "ZoneNumber": 77,
       },
@@ -93875,7 +92549,6 @@ exports[`Pet Simulator Public Live API Test Zones shape 1`] = `
         "GateHealth": 0,
         "MaximumAvailableEgg": 91,
         "WorldNumber": 1,
-        "ZoneFolder": null,
         "ZoneName": "Dungeon Entrance",
         "ZoneNumber": 78,
       },
@@ -93931,7 +92604,6 @@ exports[`Pet Simulator Public Live API Test Zones shape 1`] = `
         "GateHealth": 0,
         "MaximumAvailableEgg": 92,
         "WorldNumber": 1,
-        "ZoneFolder": null,
         "ZoneName": "Dungeon",
         "ZoneNumber": 79,
       },
@@ -93975,7 +92647,6 @@ exports[`Pet Simulator Public Live API Test Zones shape 1`] = `
         "GateHealth": 0,
         "MaximumAvailableEgg": 93,
         "WorldNumber": 1,
-        "ZoneFolder": null,
         "ZoneName": "Treasure Dungeon",
         "ZoneNumber": 80,
       },
@@ -94023,7 +92694,6 @@ exports[`Pet Simulator Public Live API Test Zones shape 1`] = `
         "GateHealth": 0,
         "MaximumAvailableEgg": 94,
         "WorldNumber": 1,
-        "ZoneFolder": null,
         "ZoneName": "Empyrean Dungeon",
         "ZoneNumber": 81,
       },
@@ -94079,7 +92749,6 @@ exports[`Pet Simulator Public Live API Test Zones shape 1`] = `
         "GateHealth": 0,
         "MaximumAvailableEgg": 95,
         "WorldNumber": 1,
-        "ZoneFolder": null,
         "ZoneName": "Mythic Dungeon",
         "ZoneNumber": 82,
       },
@@ -94135,7 +92804,6 @@ exports[`Pet Simulator Public Live API Test Zones shape 1`] = `
         "GateHealth": 0,
         "MaximumAvailableEgg": 96,
         "WorldNumber": 1,
-        "ZoneFolder": null,
         "ZoneName": "Cotton Candy Forest",
         "ZoneNumber": 83,
       },
@@ -94183,7 +92851,6 @@ exports[`Pet Simulator Public Live API Test Zones shape 1`] = `
         "GateHealth": 0,
         "MaximumAvailableEgg": 97,
         "WorldNumber": 1,
-        "ZoneFolder": null,
         "ZoneName": "Gummy Forest",
         "ZoneNumber": 84,
       },
@@ -94239,7 +92906,6 @@ exports[`Pet Simulator Public Live API Test Zones shape 1`] = `
         "GateHealth": 0,
         "MaximumAvailableEgg": 98,
         "WorldNumber": 1,
-        "ZoneFolder": null,
         "ZoneName": "Chocolate Waterfall",
         "ZoneNumber": 85,
       },
@@ -94295,7 +92961,6 @@ exports[`Pet Simulator Public Live API Test Zones shape 1`] = `
         "GateHealth": 0,
         "MaximumAvailableEgg": 99,
         "WorldNumber": 1,
-        "ZoneFolder": null,
         "ZoneName": "Sweets",
         "ZoneNumber": 86,
       },
@@ -94351,7 +93016,6 @@ exports[`Pet Simulator Public Live API Test Zones shape 1`] = `
         "GateHealth": 0,
         "MaximumAvailableEgg": 100,
         "WorldNumber": 1,
-        "ZoneFolder": null,
         "ZoneName": "Toys and Blocks",
         "ZoneNumber": 87,
       },
@@ -94402,7 +93066,6 @@ exports[`Pet Simulator Public Live API Test Zones shape 1`] = `
           99,
         ],
         "WorldNumber": 1,
-        "ZoneFolder": null,
         "ZoneName": "Carnival",
         "ZoneNumber": 88,
       },
@@ -94458,7 +93121,6 @@ exports[`Pet Simulator Public Live API Test Zones shape 1`] = `
         "GateHealth": 0,
         "MaximumAvailableEgg": 102,
         "WorldNumber": 1,
-        "ZoneFolder": null,
         "ZoneName": "Theme Park",
         "ZoneNumber": 89,
       },
@@ -94502,7 +93164,6 @@ exports[`Pet Simulator Public Live API Test Zones shape 1`] = `
         "GateHealth": 0,
         "MaximumAvailableEgg": 103,
         "WorldNumber": 1,
-        "ZoneFolder": null,
         "ZoneName": "Clouds",
         "ZoneNumber": 90,
       },
@@ -94558,7 +93219,6 @@ exports[`Pet Simulator Public Live API Test Zones shape 1`] = `
         "GateHealth": 0,
         "MaximumAvailableEgg": 104,
         "WorldNumber": 1,
-        "ZoneFolder": null,
         "ZoneName": "Cloud Garden",
         "ZoneNumber": 91,
       },
@@ -94614,7 +93274,6 @@ exports[`Pet Simulator Public Live API Test Zones shape 1`] = `
         "GateHealth": 0,
         "MaximumAvailableEgg": 105,
         "WorldNumber": 1,
-        "ZoneFolder": null,
         "ZoneName": "Cloud Forest",
         "ZoneNumber": 92,
       },
@@ -94670,7 +93329,6 @@ exports[`Pet Simulator Public Live API Test Zones shape 1`] = `
         "GateHealth": 0,
         "MaximumAvailableEgg": 106,
         "WorldNumber": 1,
-        "ZoneFolder": null,
         "ZoneName": "Cloud Houses",
         "ZoneNumber": 93,
       },
@@ -94726,7 +93384,6 @@ exports[`Pet Simulator Public Live API Test Zones shape 1`] = `
         "GateHealth": 0,
         "MaximumAvailableEgg": 107,
         "WorldNumber": 1,
-        "ZoneFolder": null,
         "ZoneName": "Cloud Palace",
         "ZoneNumber": 94,
       },
@@ -94786,7 +93443,6 @@ exports[`Pet Simulator Public Live API Test Zones shape 1`] = `
         "GateHealth": 0,
         "MaximumAvailableEgg": 108,
         "WorldNumber": 1,
-        "ZoneFolder": null,
         "ZoneName": "Heaven Gates",
         "ZoneNumber": 95,
       },
@@ -94826,7 +93482,6 @@ exports[`Pet Simulator Public Live API Test Zones shape 1`] = `
         "GateHealth": 0,
         "MaximumAvailableEgg": 109,
         "WorldNumber": 1,
-        "ZoneFolder": null,
         "ZoneName": "Heaven",
         "ZoneNumber": 96,
       },
@@ -94882,7 +93537,6 @@ exports[`Pet Simulator Public Live API Test Zones shape 1`] = `
         "GateHealth": 0,
         "MaximumAvailableEgg": 110,
         "WorldNumber": 1,
-        "ZoneFolder": null,
         "ZoneName": "Heaven Golden Castle",
         "ZoneNumber": 97,
       },
@@ -94938,7 +93592,6 @@ exports[`Pet Simulator Public Live API Test Zones shape 1`] = `
         "GateHealth": 0,
         "MaximumAvailableEgg": 111,
         "WorldNumber": 1,
-        "ZoneFolder": null,
         "ZoneName": "Colorful Clouds",
         "ZoneNumber": 98,
       },
@@ -94997,7 +93650,6 @@ exports[`Pet Simulator Public Live API Test Zones shape 1`] = `
           88,
         ],
         "WorldNumber": 1,
-        "ZoneFolder": null,
         "ZoneName": "Rainbow Road",
         "ZoneNumber": 99,
       },
@@ -100259,10 +98911,12 @@ exports[`Pet Simulator Public Live API Test Zones shape 1`] = `
               {
                 "Type": "Medium Coins (Void)",
                 "Weight": 100,
+                "WorldNumber": 3,
               },
               {
                 "Type": "Large Coins (Void)",
                 "Weight": 25,
+                "WorldNumber": 3,
               },
             ],
             "Settings": {
@@ -100275,6 +98929,7 @@ exports[`Pet Simulator Public Live API Test Zones shape 1`] = `
               {
                 "Type": "VIP Diamond Pile",
                 "Weight": 1,
+                "WorldNumber": 3,
               },
             ],
             "Settings": {
@@ -100289,6 +98944,7 @@ exports[`Pet Simulator Public Live API Test Zones shape 1`] = `
         "ExtraDropTable": null,
         "MaximumAvailableEgg": 213,
         "WorldNumber": 3,
+        "ZoneFolder": null,
         "ZoneName": "Prison Tower",
         "ZoneNumber": 200,
       },
@@ -100307,18 +98963,22 @@ exports[`Pet Simulator Public Live API Test Zones shape 1`] = `
               {
                 "Type": "Medium Coins (Void)",
                 "Weight": 25,
+                "WorldNumber": 3,
               },
               {
                 "Type": "Large Coins (Void)",
                 "Weight": 50,
+                "WorldNumber": 3,
               },
               {
                 "Type": "Crate (Void Prison)",
                 "Weight": 15,
+                "WorldNumber": 3,
               },
               {
                 "Type": "Present (Void Prison)",
                 "Weight": 25,
+                "WorldNumber": 3,
               },
             ],
             "Settings": {
@@ -100338,6 +98998,7 @@ exports[`Pet Simulator Public Live API Test Zones shape 1`] = `
           },
         ],
         "WorldNumber": 3,
+        "ZoneFolder": null,
         "ZoneName": "Prison Block",
         "ZoneNumber": 201,
       },
@@ -100399,6 +99060,7 @@ exports[`Pet Simulator Public Live API Test Zones shape 1`] = `
           },
         ],
         "WorldNumber": 3,
+        "ZoneFolder": null,
         "ZoneName": "Prison Cafeteria",
         "ZoneNumber": 202,
       },
@@ -100460,6 +99122,7 @@ exports[`Pet Simulator Public Live API Test Zones shape 1`] = `
           },
         ],
         "WorldNumber": 3,
+        "ZoneFolder": null,
         "ZoneName": "Prison Yard",
         "ZoneNumber": 203,
       },
@@ -100577,6 +99240,7 @@ exports[`Pet Simulator Public Live API Test Zones shape 1`] = `
           },
         ],
         "WorldNumber": 3,
+        "ZoneFolder": null,
         "ZoneName": "Prison HQ",
         "ZoneNumber": 204,
       },
@@ -100627,6 +99291,7 @@ exports[`Pet Simulator Public Live API Test Zones shape 1`] = `
         ],
         "TeleportToZoneOnFall": true,
         "WorldNumber": 3,
+        "ZoneFolder": null,
         "ZoneName": "Beach Island",
         "ZoneNumber": 205,
       },
@@ -100685,6 +99350,7 @@ exports[`Pet Simulator Public Live API Test Zones shape 1`] = `
         ],
         "TeleportToZoneOnFall": true,
         "WorldNumber": 3,
+        "ZoneFolder": null,
         "ZoneName": "Ocean Island",
         "ZoneNumber": 206,
       },
@@ -100747,6 +99413,7 @@ exports[`Pet Simulator Public Live API Test Zones shape 1`] = `
         ],
         "TeleportToZoneOnFall": true,
         "WorldNumber": 3,
+        "ZoneFolder": null,
         "ZoneName": "Tiki Island",
         "ZoneNumber": 207,
       },
@@ -100805,6 +99472,7 @@ exports[`Pet Simulator Public Live API Test Zones shape 1`] = `
         ],
         "TeleportToZoneOnFall": true,
         "WorldNumber": 3,
+        "ZoneFolder": null,
         "ZoneName": "Jungle Island",
         "ZoneNumber": 208,
       },
@@ -100872,6 +99540,7 @@ exports[`Pet Simulator Public Live API Test Zones shape 1`] = `
         ],
         "TeleportToZoneOnFall": true,
         "WorldNumber": 3,
+        "ZoneFolder": null,
         "ZoneName": "Volcano Island",
         "ZoneNumber": 209,
       },
@@ -100976,6 +99645,7 @@ exports[`Pet Simulator Public Live API Test Zones shape 1`] = `
         ],
         "TeleportToZoneOnFall": true,
         "WorldNumber": 3,
+        "ZoneFolder": null,
         "ZoneName": "Hacker Matrix",
         "ZoneNumber": 210,
       },
@@ -101081,6 +99751,7 @@ exports[`Pet Simulator Public Live API Test Zones shape 1`] = `
         ],
         "TeleportToZoneOnFall": true,
         "WorldNumber": 3,
+        "ZoneFolder": null,
         "ZoneName": "Hacker Lab",
         "ZoneNumber": 213,
       },
@@ -101099,14 +99770,10 @@ exports[`Pet Simulator Public Live API Test Zones shape 1`] = `
               {
                 "Type": "Crate (Hacker)",
                 "Weight": 15,
-                "WorldNumber": 3,
-                "ZoneNumber": 214,
               },
               {
                 "Type": "Present (Hacker)",
                 "Weight": 25,
-                "WorldNumber": 3,
-                "ZoneNumber": 214,
               },
             ],
             "Settings": {
@@ -101169,6 +99836,7 @@ exports[`Pet Simulator Public Live API Test Zones shape 1`] = `
             "SunTextureId": "",
           },
         },
+        "LinkedOwnership": "Dirt Village",
         "MaximumAvailableEgg": 226,
         "QuestsRequired": [
           {
@@ -101186,6 +99854,7 @@ exports[`Pet Simulator Public Live API Test Zones shape 1`] = `
         ],
         "TeleportToZoneOnFall": true,
         "WorldNumber": 3,
+        "ZoneFolder": null,
         "ZoneName": "Hacker Mainframe",
         "ZoneNumber": 214,
       },
@@ -101295,6 +99964,7 @@ exports[`Pet Simulator Public Live API Test Zones shape 1`] = `
         ],
         "TeleportToZoneOnFall": true,
         "WorldNumber": 3,
+        "ZoneFolder": null,
         "ZoneName": "Hacker Fortress",
         "ZoneNumber": 211,
       },
@@ -101408,10 +100078,328 @@ exports[`Pet Simulator Public Live API Test Zones shape 1`] = `
         ],
         "TeleportToZoneOnFall": true,
         "WorldNumber": 3,
+        "ZoneFolder": null,
         "ZoneName": "Hacker Cave",
         "ZoneNumber": 212,
       },
       "configName": "212 | Hacker Cave",
+    },
+    {
+      "category": "Update 21",
+      "collection": "Zones",
+      "configData": {
+        "Ambience": {
+          "SoundId": "rbxassetid://18571690993",
+        },
+        "Breakables": {
+          "Main": {
+            "Data": [
+              {
+                "Type": "Medium Coins (Void)",
+                "Weight": 10,
+              },
+              {
+                "Type": "Large Coins (Void)",
+                "Weight": 20,
+              },
+              {
+                "Type": "Crate (Millionaire)",
+                "Weight": 15,
+              },
+              {
+                "Type": "Present (Millionaire)",
+                "Weight": 25,
+              },
+            ],
+            "Settings": {
+              "Maximum": 35,
+              "RespawnTime": 0.05,
+            },
+          },
+        },
+        "CannonGroupId": 4,
+        "Currency": "VoidCoins",
+        "ExtraDropTable": null,
+        "MaximumAvailableEgg": 227,
+        "QuestsRequired": [
+          {
+            "Amount": 500,
+            "Type": 1,
+          },
+        ],
+        "TeleportToZoneOnFall": true,
+        "WorldNumber": 3,
+        "ZoneFolder": null,
+        "ZoneName": "Dirt Village",
+        "ZoneNumber": 215,
+      },
+      "configName": "215 | Dirt Village",
+    },
+    {
+      "category": "Update 21",
+      "collection": "Zones",
+      "configData": {
+        "Ambience": {
+          "SoundId": "rbxassetid://18571690993",
+        },
+        "Breakables": {
+          "Main": {
+            "Data": [
+              {
+                "Type": "Small Coins (Void)",
+                "Weight": 6,
+              },
+              {
+                "Type": "Medium Coins (Void)",
+                "Weight": 10,
+              },
+              {
+                "Type": "Large Coins (Void)",
+                "Weight": 10,
+              },
+              {
+                "Type": "Crate (Millionaire)",
+                "Weight": 10,
+              },
+              {
+                "Type": "Present (Millionaire)",
+                "Weight": 18,
+              },
+              {
+                "Type": "Safe (Millionaire)",
+                "Weight": 4,
+              },
+              {
+                "Type": "Vault (Millionaire)",
+                "Weight": 3,
+              },
+            ],
+            "Settings": {
+              "Maximum": 35,
+              "RespawnTime": 0.05,
+            },
+          },
+        },
+        "CannonGroupId": 4,
+        "Currency": "VoidCoins",
+        "ExtraDropTable": null,
+        "MaximumAvailableEgg": 228,
+        "QuestsRequired": [
+          {
+            "Amount": 100,
+            "Type": 20,
+          },
+        ],
+        "TeleportToZoneOnFall": true,
+        "WorldNumber": 3,
+        "ZoneFolder": null,
+        "ZoneName": "Stone Forts",
+        "ZoneNumber": 216,
+      },
+      "configName": "216 | Stone Forts",
+    },
+    {
+      "category": "Update 21",
+      "collection": "Zones",
+      "configData": {
+        "Ambience": {
+          "SoundId": "rbxassetid://18571690993",
+        },
+        "Breakables": {
+          "Main": {
+            "Data": [
+              {
+                "Type": "Medium Coins (Void)",
+                "Weight": 6,
+              },
+              {
+                "Type": "Large Coins (Void)",
+                "Weight": 11,
+              },
+              {
+                "Type": "Crate (Millionaire)",
+                "Weight": 12,
+              },
+              {
+                "Type": "Present (Millionaire)",
+                "Weight": 10,
+              },
+              {
+                "Type": "Safe (Millionaire)",
+                "Weight": 3,
+              },
+              {
+                "Type": "Vault (Millionaire)",
+                "Weight": 3,
+              },
+            ],
+            "Settings": {
+              "Maximum": 35,
+              "RespawnTime": 0.05,
+            },
+          },
+        },
+        "CannonGroupId": 4,
+        "Currency": "VoidCoins",
+        "ExtraDropTable": null,
+        "MaximumAvailableEgg": 229,
+        "QuestsRequired": [
+          {
+            "Amount": 10,
+            "Type": 40,
+          },
+          {
+            "Amount": 3,
+            "Type": 37,
+          },
+        ],
+        "TeleportToZoneOnFall": true,
+        "WorldNumber": 3,
+        "ZoneFolder": null,
+        "ZoneName": "Silver City",
+        "ZoneNumber": 217,
+      },
+      "configName": "217 | Silver City",
+    },
+    {
+      "category": "Update 21",
+      "collection": "Zones",
+      "configData": {
+        "Ambience": {
+          "SoundId": "rbxassetid://18571690993",
+        },
+        "Breakables": {
+          "Main": {
+            "Data": [
+              {
+                "Type": "Medium Coins (Void)",
+                "Weight": 5,
+              },
+              {
+                "Type": "Large Coins (Void)",
+                "Weight": 11,
+              },
+              {
+                "Type": "Crate (Millionaire)",
+                "Weight": 15,
+              },
+              {
+                "Type": "Present (Millionaire)",
+                "Weight": 17,
+              },
+              {
+                "Type": "Vault (Millionaire)",
+                "Weight": 3,
+              },
+            ],
+            "Settings": {
+              "Maximum": 35,
+              "RespawnTime": 0.05,
+            },
+          },
+        },
+        "CannonGroupId": 4,
+        "Currency": "VoidCoins",
+        "ExtraDropTable": null,
+        "MaximumAvailableEgg": 230,
+        "QuestsRequired": [
+          {
+            "Amount": 10,
+            "Type": 41,
+          },
+        ],
+        "TeleportToZoneOnFall": true,
+        "WorldNumber": 3,
+        "ZoneFolder": null,
+        "ZoneName": "Golden Metropolis",
+        "ZoneNumber": 218,
+      },
+      "configName": "218 | Golden Metropolis",
+    },
+    {
+      "category": "Update 21",
+      "collection": "Zones",
+      "configData": {
+        "Ambience": {
+          "SoundId": "rbxassetid://18571690993",
+        },
+        "Breakables": {
+          "Main": {
+            "Data": [
+              {
+                "Type": "Small Coins (Void)",
+                "Weight": 2,
+                "WorldNumber": 3,
+                "ZoneNumber": 219,
+              },
+              {
+                "Type": "Medium Coins (Void)",
+                "Weight": 6,
+                "WorldNumber": 3,
+                "ZoneNumber": 219,
+              },
+              {
+                "Type": "Large Coins (Void)",
+                "Weight": 11,
+                "WorldNumber": 3,
+                "ZoneNumber": 219,
+              },
+              {
+                "Type": "Crate (Millionaire)",
+                "Weight": 18,
+                "WorldNumber": 3,
+                "ZoneNumber": 219,
+              },
+              {
+                "Type": "Present (Millionaire)",
+                "Weight": 18,
+                "WorldNumber": 3,
+                "ZoneNumber": 219,
+              },
+              {
+                "Type": "Safe (Millionaire)",
+                "Weight": 4,
+                "WorldNumber": 3,
+                "ZoneNumber": 219,
+              },
+              {
+                "Type": "Vault (Millionaire)",
+                "Weight": 3,
+                "WorldNumber": 3,
+                "ZoneNumber": 219,
+              },
+            ],
+            "Settings": {
+              "Maximum": 35,
+              "RespawnTime": 0.05,
+            },
+          },
+        },
+        "CannonGroupId": 4,
+        "Currency": "VoidCoins",
+        "ExtraDropTable": null,
+        "MaximumAvailableEgg": 231,
+        "QuestsRequired": [
+          {
+            "Amount": 5,
+            "Type": 38,
+          },
+          {
+            "Amount": 5,
+            "Type": 37,
+          },
+          {
+            "Amount": 1000,
+            "Type": 1,
+          },
+        ],
+        "TeleportToZoneOnFall": true,
+        "WorldNumber": 3,
+        "ZoneFolder": null,
+        "ZoneName": "Diamond Mega City",
+        "ZoneNumber": 219,
+      },
+      "configName": "219 | Diamond Mega City",
     },
   ],
   "status": "ok",
