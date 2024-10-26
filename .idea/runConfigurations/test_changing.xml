@@ -5,7 +5,7 @@
     <working-dir value="$PROJECT_DIR$" />
     <envs />
     <scope-kind value="TEST_FILE" />
-    <test-file value="src/__tests__/ps99-api-changes.ts" />
+    <test-file value="$PROJECT_DIR$/src/__tests__/ps99-api-changes.ts" />
     <method v="2" />
   </configuration>
 </component>
