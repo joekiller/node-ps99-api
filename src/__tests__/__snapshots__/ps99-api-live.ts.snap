@@ -4898,6 +4898,174 @@ Found in Rave Gifts!",
       },
       "configName": "Booth | Rave Crab",
     },
+    {
+      "category": "Booths",
+      "collection": "Booths",
+      "configData": {
+        "Desc": "⚔️ Rewarded to the top 50 clans in the 2024 Upside Down Clan Battle!",
+        "DisplayName": "Reversed Booth",
+        "Icon": "rbxassetid://92516703556038",
+        "Model": null,
+        "Rarity": {
+          "Announce": true,
+          "Color": null,
+          "DisplayName": "Exotic",
+          "Gradient": null,
+          "ItemSlot": null,
+          "Lootbag": null,
+          "Message": null,
+          "RarityNumber": 6,
+          "_id": "Exotic",
+          "_script": null,
+        },
+      },
+      "configName": "Booth | Reversed",
+    },
+    {
+      "category": "Booths",
+      "collection": "Booths",
+      "configData": {
+        "Desc": "Hot to cold, real quick!",
+        "DisplayName": "Elemental Booth",
+        "Icon": "rbxassetid://123291639842612",
+        "Model": null,
+        "Rarity": {
+          "Announce": true,
+          "Color": null,
+          "DisplayName": "Superior",
+          "Gradient": null,
+          "ItemSlot": null,
+          "Lootbag": null,
+          "Message": null,
+          "RarityNumber": 8,
+          "_id": "Superior",
+          "_script": null,
+        },
+        "Tradable": true,
+      },
+      "configName": "Booth | Elemental",
+    },
+    {
+      "category": "Booths",
+      "collection": "Booths",
+      "configData": {
+        "Desc": "Found in the Pumpkin Gift!",
+        "DisplayName": "Pumpkin Cat Booth",
+        "Icon": "rbxassetid://78631128412163",
+        "Model": null,
+        "Rarity": {
+          "Announce": true,
+          "Color": null,
+          "DisplayName": "Superior",
+          "Gradient": null,
+          "ItemSlot": null,
+          "Lootbag": null,
+          "Message": null,
+          "RarityNumber": 8,
+          "_id": "Superior",
+          "_script": null,
+        },
+        "Tradable": true,
+      },
+      "configName": "Booth | Pumpkin Cat",
+    },
+    {
+      "category": "Booths",
+      "collection": "Booths",
+      "configData": {
+        "Desc": "Obtained from the Halloween 2024 Quests!",
+        "DisplayName": "Haunted Booth",
+        "Icon": "rbxassetid://84447484401361",
+        "Model": null,
+        "Rarity": {
+          "Announce": true,
+          "Color": null,
+          "DisplayName": "Superior",
+          "Gradient": null,
+          "ItemSlot": null,
+          "Lootbag": null,
+          "Message": null,
+          "RarityNumber": 8,
+          "_id": "Superior",
+          "_script": null,
+        },
+        "Tradable": true,
+      },
+      "configName": "Booth | Haunted",
+    },
+    {
+      "category": "Booths",
+      "collection": "Booths",
+      "configData": {
+        "Desc": "⚔️ Rewarded to the top 50 clans in the 2024 Ghost Clan Battle!",
+        "DisplayName": "Ghost Cat Booth",
+        "Icon": "rbxassetid://93214200492370",
+        "Model": null,
+        "Rarity": {
+          "Announce": true,
+          "Color": null,
+          "DisplayName": "Exotic",
+          "Gradient": null,
+          "ItemSlot": null,
+          "Lootbag": null,
+          "Message": null,
+          "RarityNumber": 6,
+          "_id": "Exotic",
+          "_script": null,
+        },
+        "Tradable": true,
+      },
+      "configName": "Booth | Ghost Cat",
+    },
+    {
+      "category": "Booths",
+      "collection": "Booths",
+      "configData": {
+        "Desc": "Found in the Spider Pack!",
+        "DisplayName": "Vampire Booth",
+        "Icon": "rbxassetid://71075446811250",
+        "Model": null,
+        "Rarity": {
+          "Announce": true,
+          "Color": null,
+          "DisplayName": "Superior",
+          "Gradient": null,
+          "ItemSlot": null,
+          "Lootbag": null,
+          "Message": null,
+          "RarityNumber": 8,
+          "_id": "Superior",
+          "_script": null,
+        },
+        "Sittable": true,
+        "Tradable": true,
+      },
+      "configName": "Booth | Vampire",
+    },
+    {
+      "category": "Booths",
+      "collection": "Booths",
+      "configData": {
+        "Desc": "Found in the Candy Corn Gift!",
+        "DisplayName": "Cauldron Booth",
+        "Icon": "rbxassetid://118769625385144",
+        "Model": null,
+        "Rarity": {
+          "Announce": true,
+          "Color": null,
+          "DisplayName": "Superior",
+          "Gradient": null,
+          "ItemSlot": null,
+          "Lootbag": null,
+          "Message": null,
+          "RarityNumber": 8,
+          "_id": "Superior",
+          "_script": null,
+        },
+        "Tradable": true,
+      },
+      "configName": "Booth | Cauldron",
+    },
   ],
   "status": "ok",
 }
@@ -6034,7 +6202,7 @@ exports[`Pet Simulator Public Live API Test Currency shape 1`] = `
           },
         ],
         "Tradable": false,
-        "_index": 14,
+        "_index": 15,
       },
       "configName": "Currency | TechCoins",
       "dateCreated": null,
@@ -6188,7 +6356,7 @@ exports[`Pet Simulator Public Live API Test Currency shape 1`] = `
         "Desc": "Void!",
         "DisplayName": "Coins",
         "IsWorldCurrency": true,
-        "MaxAmount": 5000000000000000,
+        "MaxAmount": 200000000000000000,
         "Rarity": {
           "Announce": false,
           "Color": null,
@@ -6277,7 +6445,7 @@ exports[`Pet Simulator Public Live API Test Currency shape 1`] = `
           },
         ],
         "Tradable": false,
-        "_index": 15,
+        "_index": 16,
       },
       "configName": "Currency | VoidCoins",
       "dateCreated": null,
@@ -6318,7 +6486,7 @@ exports[`Pet Simulator Public Live API Test Currency shape 1`] = `
           },
         ],
         "Tradable": false,
-        "_index": 13,
+        "_index": 14,
       },
       "configName": "Currency | SummerCoins",
       "dateCreated": null,
@@ -6409,7 +6577,7 @@ exports[`Pet Simulator Public Live API Test Currency shape 1`] = `
           },
         ],
         "Tradable": false,
-        "_index": 11,
+        "_index": 12,
       },
       "configName": "Currency | RaveCoins",
     },
@@ -6497,7 +6665,7 @@ exports[`Pet Simulator Public Live API Test Currency shape 1`] = `
           },
         ],
         "Tradable": false,
-        "_index": 12,
+        "_index": 13,
       },
       "configName": "Currency | RngCoins",
     },
@@ -6544,6 +6712,50 @@ exports[`Pet Simulator Public Live API Test Currency shape 1`] = `
         "_index": 4,
       },
       "configName": "Currency | ColorCoins",
+    },
+    {
+      "category": "Currency",
+      "collection": "Currency",
+      "configData": {
+        "BagTiers": [
+          {
+            "image": "rbxassetid://75134390965970",
+            "value": 0,
+          },
+        ],
+        "Desc": "Spooky!",
+        "DisplayName": "Halloween Candy",
+        "IsWorldCurrency": false,
+        "MaxAmount": 99999999999,
+        "PermitAutoLootScaling": true,
+        "Rarity": {
+          "Announce": false,
+          "Color": null,
+          "DisplayName": "Basic",
+          "Gradient": null,
+          "ItemSlot": null,
+          "Lootbag": null,
+          "Message": null,
+          "RarityNumber": 1,
+          "_id": "Basic",
+          "_script": null,
+        },
+        "Tiers": [
+          {
+            "Order": 1,
+            "imageOutline": "rbxassetid://75134390965970",
+            "isBottom": true,
+            "orbImage": "rbxassetid://103840258916135",
+            "textColor": null,
+            "tierName": "Halloween Candy",
+            "tinyImage": "rbxassetid://109049002662412",
+            "value": 1,
+          },
+        ],
+        "Tradable": false,
+        "_index": 11,
+      },
+      "configName": "Currency | HalloweenCandy",
     },
   ],
   "status": "ok",
@@ -14543,15 +14755,19 @@ exports[`Pet Simulator Public Live API Test Eggs shape 1`] = `
         "name": "Active Huge Egg",
         "pets": [
           [
-            "Huge Mermaid Cat",
+            "Huge Crocodile",
             1,
           ],
           [
-            "Huge Punksky",
+            "Huge Elephant",
             1,
           ],
           [
-            "Huge Kangaroo",
+            "Huge Bee",
+            1,
+          ],
+          [
+            "Huge Skateboard Bulldog",
             1,
           ],
         ],
@@ -23473,7 +23689,6 @@ exports[`Pet Simulator Public Live API Test Eggs shape 1`] = `
       "category": "Update 26",
       "collection": "Eggs",
       "configData": {
-        "bestEgg": true,
         "currency": "VoidCoins",
         "eggNumber": 236,
         "icon": "rbxassetid://15172355963",
@@ -23748,12 +23963,7 @@ exports[`Pet Simulator Public Live API Test Eggs shape 1`] = `
             0.05,
           ],
         ],
-        "productIds": {
-          "10 Exclusive Eggs": 1928069996,
-          "100 Exclusive Eggs": 1928070066,
-          "3 Exclusive Eggs": 1928069919,
-          "Exclusive Egg": 1928069716,
-        },
+        "productIds": [],
         "rainbowChance": 2,
         "rarity": {
           "Announce": true,
@@ -23925,6 +24135,1314 @@ exports[`Pet Simulator Public Live API Test Eggs shape 1`] = `
         },
       },
       "configName": "8 | Colorful Graffiti Egg",
+    },
+    {
+      "category": "Exclusive Eggs",
+      "collection": "Eggs",
+      "configData": {
+        "disableGold": true,
+        "disableModifiers": true,
+        "disableRainbow": false,
+        "goldChance": 0,
+        "icon": "rbxassetid://72844454700436",
+        "name": "Exclusive Soul Egg",
+        "pets": [
+          [
+            "Soul Cat",
+            50,
+          ],
+          [
+            "Soul Bat",
+            35,
+          ],
+          [
+            "Soul Dragon",
+            13,
+          ],
+          [
+            "Huge Soul Cat",
+            1.25,
+          ],
+          [
+            "Huge Soul Dragon",
+            0.7,
+          ],
+          [
+            "Titanic Soul Owl",
+            0.05,
+          ],
+        ],
+        "productIds": {
+          "10 Exclusive Eggs": 1936849681,
+          "100 Exclusive Eggs": 1936849731,
+          "3 Exclusive Eggs": 1936849641,
+          "Exclusive Egg": 1936849596,
+        },
+        "rainbowChance": 2,
+        "rarity": {
+          "Announce": true,
+          "Color": null,
+          "DisplayName": "Exclusive",
+          "Gradient": null,
+          "ItemSlot": null,
+          "Lootbag": null,
+          "Message": null,
+          "RarityNumber": 999,
+          "_id": "Exclusive",
+          "_script": null,
+        },
+        "shinyChance": 2,
+      },
+      "configName": "Exclusive Egg 35",
+    },
+    {
+      "category": "Update 29",
+      "collection": "Eggs",
+      "configData": {
+        "currency": "VoidCoins",
+        "eggNumber": 237,
+        "icon": "rbxassetid://15172355963",
+        "name": "Grass Type Egg",
+        "pets": [
+          [
+            "Grass Bunny",
+            99,
+          ],
+          [
+            "Rock Monkey",
+            1,
+            "Nice",
+          ],
+          [
+            "Ice Snake",
+            0.1,
+            "Great",
+          ],
+        ],
+        "worldNumber": 3,
+      },
+      "configName": "237 | Grass Type Egg",
+    },
+    {
+      "category": "Update 29",
+      "collection": "Eggs",
+      "configData": {
+        "currency": "VoidCoins",
+        "eggNumber": 238,
+        "icon": "rbxassetid://15172355963",
+        "name": "Rock Type Egg",
+        "pets": [
+          [
+            "Rock Monkey",
+            90,
+          ],
+          [
+            "Ice Snake",
+            10,
+          ],
+          [
+            "Poison Turtle",
+            1,
+            "Nice",
+          ],
+          [
+            "Water Zebra",
+            0.1,
+            "Great",
+          ],
+        ],
+        "worldNumber": 3,
+      },
+      "configName": "238 | Rock Type Egg",
+    },
+    {
+      "category": "Update 29",
+      "collection": "Eggs",
+      "configData": {
+        "currency": "VoidCoins",
+        "eggNumber": 239,
+        "icon": "rbxassetid://15172355963",
+        "name": "Water Type Egg",
+        "pets": [
+          [
+            "Poison Turtle",
+            90,
+          ],
+          [
+            "Water Zebra",
+            10,
+          ],
+          [
+            "Storm Griffin",
+            1,
+            "Nice",
+          ],
+          [
+            "Electric Penguin",
+            0.1,
+            "Great",
+          ],
+        ],
+        "worldNumber": 3,
+      },
+      "configName": "239 | Water Type Egg",
+    },
+    {
+      "category": "Update 29",
+      "collection": "Eggs",
+      "configData": {
+        "currency": "VoidCoins",
+        "eggNumber": 240,
+        "icon": "rbxassetid://15172355963",
+        "name": "Electric Type Egg",
+        "pets": [
+          [
+            "Storm Griffin",
+            90,
+          ],
+          [
+            "Electric Penguin",
+            10,
+          ],
+          [
+            "Psychic Seal",
+            1,
+            "Great",
+          ],
+          [
+            "Fire Bat",
+            0.1,
+            "Nice",
+          ],
+        ],
+        "worldNumber": 3,
+      },
+      "configName": "240 | Electric Type Egg",
+    },
+    {
+      "category": "Update 29",
+      "collection": "Eggs",
+      "configData": {
+        "bestEgg": true,
+        "currency": "VoidCoins",
+        "eggNumber": 241,
+        "icon": "rbxassetid://15172355963",
+        "name": "Fire Type Egg",
+        "pets": [
+          [
+            "Psychic Seal",
+            99,
+          ],
+          [
+            "Fire Bat",
+            1,
+          ],
+          [
+            "Dark Dragon",
+            0.001,
+            "Great",
+          ],
+          [
+            "Ghost Axolotl",
+            0.00025,
+            "Insane",
+          ],
+          [
+            "Elemental Phoenix",
+            0.0000185,
+            "Insane",
+          ],
+          [
+            "Huge Electric Penguin",
+            0.000001,
+            "Insane",
+          ],
+        ],
+        "worldNumber": 3,
+      },
+      "configName": "241 | Fire Type Egg",
+    },
+    {
+      "category": "Exclusive Eggs",
+      "collection": "Eggs",
+      "configData": {
+        "disableGold": true,
+        "disableModifiers": true,
+        "disableRainbow": false,
+        "goldChance": 0,
+        "icon": "rbxassetid://133438295958475",
+        "name": "Exclusive Horror Egg",
+        "pets": [
+          [
+            "Slasher Sloth",
+            50,
+          ],
+          [
+            "Cannibal Meerkat",
+            35,
+          ],
+          [
+            "Machete Dog",
+            13,
+          ],
+          [
+            "Huge Slasher Sloth",
+            1.25,
+          ],
+          [
+            "Huge Machete Dog",
+            0.7,
+          ],
+          [
+            "Titanic Ghostface Cat",
+            0.05,
+          ],
+        ],
+        "productIds": {
+          "10 Exclusive Eggs": 2317380800,
+          "100 Exclusive Eggs": 2317380902,
+          "3 Exclusive Eggs": 2317380699,
+          "Exclusive Egg": 2317380619,
+        },
+        "rainbowChance": 2,
+        "rarity": {
+          "Announce": true,
+          "Color": null,
+          "DisplayName": "Exclusive",
+          "Gradient": null,
+          "ItemSlot": null,
+          "Lootbag": null,
+          "Message": null,
+          "RarityNumber": 999,
+          "_id": "Exclusive",
+          "_script": null,
+        },
+        "shinyChance": 2,
+      },
+      "configName": "Exclusive Egg 36",
+    },
+    {
+      "category": "Halloween",
+      "collection": "Eggs",
+      "configData": {
+        "currency": "HalloweenCandy",
+        "icon": "rbxassetid://15172355963",
+        "isCustomEgg": true,
+        "name": "Halloween Pumpkin Egg",
+        "overrideCost": 250,
+        "pets": [
+          [
+            "Albino Bat",
+            90,
+          ],
+          [
+            "Pumpkin Cat",
+            10,
+          ],
+          [
+            "Zombie Deer",
+            0.1,
+            "Nice",
+          ],
+        ],
+        "rarity": {
+          "Announce": true,
+          "Color": null,
+          "DisplayName": "Celestial",
+          "Gradient": null,
+          "ItemSlot": null,
+          "Lootbag": null,
+          "Message": null,
+          "RarityNumber": 9,
+          "_id": "Celestial",
+          "_script": null,
+        },
+      },
+      "configName": "1 | Halloween Pumpkin Egg",
+    },
+    {
+      "category": "Halloween",
+      "collection": "Eggs",
+      "configData": {
+        "currency": "HalloweenCandy",
+        "icon": "rbxassetid://15172355963",
+        "isCustomEgg": true,
+        "name": "Halloween Spooky Egg",
+        "overrideCost": 500,
+        "pets": [
+          [
+            "Pumpkin Cat",
+            90,
+          ],
+          [
+            "Zombie Deer",
+            10,
+          ],
+          [
+            "Little Melty",
+            0.1,
+            "Nice",
+          ],
+        ],
+        "rarity": {
+          "Announce": true,
+          "Color": null,
+          "DisplayName": "Celestial",
+          "Gradient": null,
+          "ItemSlot": null,
+          "Lootbag": null,
+          "Message": null,
+          "RarityNumber": 9,
+          "_id": "Celestial",
+          "_script": null,
+        },
+      },
+      "configName": "2 | Halloween Spooky Egg",
+    },
+    {
+      "category": "Halloween",
+      "collection": "Eggs",
+      "configData": {
+        "currency": "HalloweenCandy",
+        "icon": "rbxassetid://15172355963",
+        "isCustomEgg": true,
+        "name": "Halloween Bat Egg",
+        "overrideCost": 1000,
+        "pets": [
+          [
+            "Zombie Deer",
+            90,
+          ],
+          [
+            "Little Melty",
+            10,
+          ],
+          [
+            "Broomstick Cat",
+            0.1,
+            "Nice",
+          ],
+        ],
+        "rarity": {
+          "Announce": true,
+          "Color": null,
+          "DisplayName": "Celestial",
+          "Gradient": null,
+          "ItemSlot": null,
+          "Lootbag": null,
+          "Message": null,
+          "RarityNumber": 9,
+          "_id": "Celestial",
+          "_script": null,
+        },
+      },
+      "configName": "3 | Halloween Bat Egg",
+    },
+    {
+      "category": "Halloween",
+      "collection": "Eggs",
+      "configData": {
+        "currency": "HalloweenCandy",
+        "icon": "rbxassetid://15172355963",
+        "isCustomEgg": true,
+        "name": "Halloween Ghost Egg",
+        "overrideCost": 2000,
+        "pets": [
+          [
+            "Little Melty",
+            90,
+          ],
+          [
+            "Broomstick Cat",
+            10,
+          ],
+          [
+            "Skeleton Cat",
+            0.1,
+            "Nice",
+          ],
+        ],
+        "rarity": {
+          "Announce": true,
+          "Color": null,
+          "DisplayName": "Celestial",
+          "Gradient": null,
+          "ItemSlot": null,
+          "Lootbag": null,
+          "Message": null,
+          "RarityNumber": 9,
+          "_id": "Celestial",
+          "_script": null,
+        },
+      },
+      "configName": "4 | Halloween Ghost Egg",
+    },
+    {
+      "category": "Halloween",
+      "collection": "Eggs",
+      "configData": {
+        "currency": "HalloweenCandy",
+        "icon": "rbxassetid://15172355963",
+        "isCustomEgg": true,
+        "name": "Halloween Cauldron Egg",
+        "overrideCost": 4000,
+        "pets": [
+          [
+            "Broomstick Cat",
+            89.05,
+          ],
+          [
+            "Skeleton Cat",
+            10,
+          ],
+          [
+            "Glowy the Ghost",
+            1,
+            "Nice",
+          ],
+          [
+            "Hippokin",
+            0.005,
+            "Insane",
+          ],
+          [
+            "Pumpkin Scarecrow",
+            0.00005,
+            "Insane",
+          ],
+        ],
+        "rarity": {
+          "Announce": true,
+          "Color": null,
+          "DisplayName": "Celestial",
+          "Gradient": null,
+          "ItemSlot": null,
+          "Lootbag": null,
+          "Message": null,
+          "RarityNumber": 9,
+          "_id": "Celestial",
+          "_script": null,
+        },
+      },
+      "configName": "5 | Halloween Cauldron Egg",
+    },
+    {
+      "category": "Backrooms",
+      "collection": "Eggs",
+      "configData": {
+        "currency": "BackroomsCoins",
+        "egg": null,
+        "goldenEgg": null,
+        "icon": "",
+        "isCustomEgg": true,
+        "name": "Backrooms Jack o Lantern Egg 1x",
+        "oddsFFlags": {
+          "Huge Glowy the Ghost": "EggMultiplier_D2",
+        },
+        "overrideCost": 200,
+        "pets": [
+          [
+            "Albino Bat",
+            69.985,
+          ],
+          [
+            "Pumpkin Cat",
+            29,
+          ],
+          [
+            "Zombie Deer",
+            0.9,
+          ],
+          [
+            "Little Melty",
+            0.1,
+          ],
+          [
+            "Broomstick Cat",
+            0.015,
+          ],
+          [
+            "Huge Glowy the Ghost",
+            0.000002,
+          ],
+        ],
+        "rarity": {
+          "Announce": true,
+          "Color": null,
+          "DisplayName": "Celestial",
+          "Gradient": null,
+          "ItemSlot": null,
+          "Lootbag": null,
+          "Message": null,
+          "RarityNumber": 9,
+          "_id": "Celestial",
+          "_script": null,
+        },
+      },
+      "configName": "1 | Backrooms Jack o Lantern Egg 1x",
+    },
+    {
+      "category": "Backrooms",
+      "collection": "Eggs",
+      "configData": {
+        "currency": "BackroomsCoins",
+        "egg": null,
+        "goldenEgg": null,
+        "icon": "",
+        "isCustomEgg": true,
+        "name": "Backrooms Jack o Lantern Egg 2x",
+        "oddsFFlags": {
+          "Huge Glowy the Ghost": "EggMultiplier_D2",
+        },
+        "overrideCost": 200,
+        "pets": [
+          [
+            "Albino Bat",
+            69.985,
+          ],
+          [
+            "Pumpkin Cat",
+            29,
+          ],
+          [
+            "Zombie Deer",
+            0.9,
+          ],
+          [
+            "Little Melty",
+            0.1,
+          ],
+          [
+            "Broomstick Cat",
+            0.015,
+          ],
+          [
+            "Huge Glowy the Ghost",
+            0.000004,
+          ],
+        ],
+        "rarity": {
+          "Announce": true,
+          "Color": null,
+          "DisplayName": "Celestial",
+          "Gradient": null,
+          "ItemSlot": null,
+          "Lootbag": null,
+          "Message": null,
+          "RarityNumber": 9,
+          "_id": "Celestial",
+          "_script": null,
+        },
+      },
+      "configName": "1 | Backrooms Jack o Lantern Egg 2x",
+    },
+    {
+      "category": "Backrooms",
+      "collection": "Eggs",
+      "configData": {
+        "currency": "BackroomsCoins",
+        "egg": null,
+        "goldenEgg": null,
+        "icon": "",
+        "isCustomEgg": true,
+        "name": "Backrooms Jack o Lantern Egg 3x",
+        "oddsFFlags": {
+          "Huge Glowy the Ghost": "EggMultiplier_D2",
+        },
+        "overrideCost": 200,
+        "pets": [
+          [
+            "Albino Bat",
+            69.985,
+          ],
+          [
+            "Pumpkin Cat",
+            29,
+          ],
+          [
+            "Zombie Deer",
+            0.9,
+          ],
+          [
+            "Little Melty",
+            0.1,
+          ],
+          [
+            "Broomstick Cat",
+            0.015,
+          ],
+          [
+            "Huge Glowy the Ghost",
+            0.000006,
+          ],
+        ],
+        "rarity": {
+          "Announce": true,
+          "Color": null,
+          "DisplayName": "Celestial",
+          "Gradient": null,
+          "ItemSlot": null,
+          "Lootbag": null,
+          "Message": null,
+          "RarityNumber": 9,
+          "_id": "Celestial",
+          "_script": null,
+        },
+      },
+      "configName": "1 | Backrooms Jack o Lantern Egg 3x",
+    },
+    {
+      "category": "Backrooms",
+      "collection": "Eggs",
+      "configData": {
+        "currency": "BackroomsCoins",
+        "egg": null,
+        "goldenEgg": null,
+        "icon": "",
+        "isCustomEgg": true,
+        "name": "Backrooms Cyclops Egg 10x",
+        "oddsFFlags": {
+          "Huge Glowy the Ghost": "EggMultiplier_D2",
+        },
+        "overrideCost": 250,
+        "pets": [
+          [
+            "Pumpkin Cat",
+            80.4325,
+          ],
+          [
+            "Zombie Deer",
+            19,
+          ],
+          [
+            "Little Melty",
+            0.5,
+          ],
+          [
+            "Broomstick Cat",
+            0.06,
+          ],
+          [
+            "Skeleton Cat",
+            0.0075,
+          ],
+          [
+            "Huge Glowy the Ghost",
+            0.00002,
+          ],
+        ],
+        "rarity": {
+          "Announce": true,
+          "Color": null,
+          "DisplayName": "Celestial",
+          "Gradient": null,
+          "ItemSlot": null,
+          "Lootbag": null,
+          "Message": null,
+          "RarityNumber": 9,
+          "_id": "Celestial",
+          "_script": null,
+        },
+      },
+      "configName": "2 | Backrooms Cyclops Egg 10x",
+    },
+    {
+      "category": "Backrooms",
+      "collection": "Eggs",
+      "configData": {
+        "currency": "BackroomsCoins",
+        "egg": null,
+        "goldenEgg": null,
+        "icon": "",
+        "isCustomEgg": true,
+        "name": "Backrooms Cyclops Egg 15x",
+        "oddsFFlags": {
+          "Huge Glowy the Ghost": "EggMultiplier_D2",
+        },
+        "overrideCost": 250,
+        "pets": [
+          [
+            "Pumpkin Cat",
+            80.4325,
+          ],
+          [
+            "Zombie Deer",
+            19,
+          ],
+          [
+            "Little Melty",
+            0.5,
+          ],
+          [
+            "Broomstick Cat",
+            0.06,
+          ],
+          [
+            "Skeleton Cat",
+            0.0075,
+          ],
+          [
+            "Huge Glowy the Ghost",
+            0.00003,
+          ],
+        ],
+        "rarity": {
+          "Announce": true,
+          "Color": null,
+          "DisplayName": "Celestial",
+          "Gradient": null,
+          "ItemSlot": null,
+          "Lootbag": null,
+          "Message": null,
+          "RarityNumber": 9,
+          "_id": "Celestial",
+          "_script": null,
+        },
+      },
+      "configName": "2 | Backrooms Cyclops Egg 15x",
+    },
+    {
+      "category": "Backrooms",
+      "collection": "Eggs",
+      "configData": {
+        "currency": "BackroomsCoins",
+        "egg": null,
+        "goldenEgg": null,
+        "icon": "",
+        "isCustomEgg": true,
+        "name": "Backrooms Cyclops Egg 5x",
+        "oddsFFlags": {
+          "Huge Glowy the Ghost": "EggMultiplier_D2",
+        },
+        "overrideCost": 250,
+        "pets": [
+          [
+            "Pumpkin Cat",
+            80.4325,
+          ],
+          [
+            "Zombie Deer",
+            19,
+          ],
+          [
+            "Little Melty",
+            0.5,
+          ],
+          [
+            "Broomstick Cat",
+            0.06,
+          ],
+          [
+            "Skeleton Cat",
+            0.0075,
+          ],
+          [
+            "Huge Glowy the Ghost",
+            0.00001,
+          ],
+        ],
+        "rarity": {
+          "Announce": true,
+          "Color": null,
+          "DisplayName": "Celestial",
+          "Gradient": null,
+          "ItemSlot": null,
+          "Lootbag": null,
+          "Message": null,
+          "RarityNumber": 9,
+          "_id": "Celestial",
+          "_script": null,
+        },
+      },
+      "configName": "2 | Backrooms Cyclops Egg 5x",
+    },
+    {
+      "category": "Backrooms",
+      "collection": "Eggs",
+      "configData": {
+        "currency": "BackroomsCoins",
+        "egg": null,
+        "goldenEgg": null,
+        "icon": "",
+        "isCustomEgg": true,
+        "name": "Backrooms Ghostface Egg 20x",
+        "oddsFFlags": {
+          "Huge Glowy the Ghost": "EggMultiplier_D2",
+        },
+        "overrideCost": 300,
+        "pets": [
+          [
+            "Glowy the Ghost",
+            82.463,
+          ],
+          [
+            "Hippokin",
+            17,
+          ],
+          [
+            "Evil Wolverine",
+            0.4,
+          ],
+          [
+            "Tarantula",
+            0.1,
+          ],
+          [
+            "Mummy Bunny",
+            0.03,
+          ],
+          [
+            "Reaper Cat",
+            0.007,
+          ],
+          [
+            "Huge Glowy the Ghost",
+            0.00004,
+          ],
+        ],
+        "rarity": {
+          "Announce": true,
+          "Color": null,
+          "DisplayName": "Celestial",
+          "Gradient": null,
+          "ItemSlot": null,
+          "Lootbag": null,
+          "Message": null,
+          "RarityNumber": 9,
+          "_id": "Celestial",
+          "_script": null,
+        },
+      },
+      "configName": "3 | Backrooms Ghostface Egg 20x",
+    },
+    {
+      "category": "Backrooms",
+      "collection": "Eggs",
+      "configData": {
+        "currency": "BackroomsCoins",
+        "egg": null,
+        "goldenEgg": null,
+        "icon": "",
+        "isCustomEgg": true,
+        "name": "Backrooms Ghostface Egg 25x",
+        "oddsFFlags": {
+          "Huge Glowy the Ghost": "EggMultiplier_D2",
+        },
+        "overrideCost": 300,
+        "pets": [
+          [
+            "Glowy the Ghost",
+            82.463,
+          ],
+          [
+            "Hippokin",
+            17,
+          ],
+          [
+            "Evil Wolverine",
+            0.4,
+          ],
+          [
+            "Tarantula",
+            0.1,
+          ],
+          [
+            "Mummy Bunny",
+            0.03,
+          ],
+          [
+            "Reaper Cat",
+            0.007,
+          ],
+          [
+            "Huge Glowy the Ghost",
+            0.00005,
+          ],
+        ],
+        "rarity": {
+          "Announce": true,
+          "Color": null,
+          "DisplayName": "Celestial",
+          "Gradient": null,
+          "ItemSlot": null,
+          "Lootbag": null,
+          "Message": null,
+          "RarityNumber": 9,
+          "_id": "Celestial",
+          "_script": null,
+        },
+      },
+      "configName": "3 | Backrooms Ghostface Egg 25x",
+    },
+    {
+      "category": "Backrooms",
+      "collection": "Eggs",
+      "configData": {
+        "currency": "BackroomsCoins",
+        "egg": null,
+        "goldenEgg": null,
+        "icon": "",
+        "isCustomEgg": true,
+        "name": "Backrooms Ghostface Egg 30x",
+        "oddsFFlags": {
+          "Huge Glowy the Ghost": "EggMultiplier_D2",
+        },
+        "overrideCost": 300,
+        "pets": [
+          [
+            "Glowy the Ghost",
+            82.463,
+          ],
+          [
+            "Hippokin",
+            17,
+          ],
+          [
+            "Evil Wolverine",
+            0.4,
+          ],
+          [
+            "Tarantula",
+            0.1,
+          ],
+          [
+            "Mummy Bunny",
+            0.03,
+          ],
+          [
+            "Reaper Cat",
+            0.007,
+          ],
+          [
+            "Huge Glowy the Ghost",
+            0.00006,
+          ],
+        ],
+        "rarity": {
+          "Announce": true,
+          "Color": null,
+          "DisplayName": "Celestial",
+          "Gradient": null,
+          "ItemSlot": null,
+          "Lootbag": null,
+          "Message": null,
+          "RarityNumber": 9,
+          "_id": "Celestial",
+          "_script": null,
+        },
+      },
+      "configName": "3 | Backrooms Ghostface Egg 30x",
+    },
+    {
+      "category": "Backrooms",
+      "collection": "Eggs",
+      "configData": {
+        "currency": "BackroomsCoins",
+        "egg": null,
+        "goldenEgg": null,
+        "icon": "",
+        "isCustomEgg": true,
+        "name": "Backrooms Clown Egg 100x",
+        "oddsFFlags": {
+          "Huge Glowy the Ghost": "EggMultiplier_D2",
+        },
+        "overrideCost": 500,
+        "pets": [
+          [
+            "Evil Wolverine",
+            86.585,
+          ],
+          [
+            "Tarantula",
+            13,
+          ],
+          [
+            "Mummy Bunny",
+            0.32,
+          ],
+          [
+            "Reaper Cat",
+            0.07,
+          ],
+          [
+            "Vampire Dragon",
+            0.02,
+          ],
+          [
+            "Abomination",
+            0.001,
+          ],
+          [
+            "Huge Glowy the Ghost",
+            0.0002,
+          ],
+        ],
+        "rarity": {
+          "Announce": true,
+          "Color": null,
+          "DisplayName": "Celestial",
+          "Gradient": null,
+          "ItemSlot": null,
+          "Lootbag": null,
+          "Message": null,
+          "RarityNumber": 9,
+          "_id": "Celestial",
+          "_script": null,
+        },
+      },
+      "configName": "4 | Backrooms Clown Egg 100x",
+    },
+    {
+      "category": "Backrooms",
+      "collection": "Eggs",
+      "configData": {
+        "currency": "BackroomsCoins",
+        "egg": null,
+        "goldenEgg": null,
+        "icon": "",
+        "isCustomEgg": true,
+        "name": "Backrooms Clown Egg 50x",
+        "oddsFFlags": {
+          "Huge Glowy the Ghost": "EggMultiplier_D2",
+        },
+        "overrideCost": 500,
+        "pets": [
+          [
+            "Evil Wolverine",
+            86.585,
+          ],
+          [
+            "Tarantula",
+            13,
+          ],
+          [
+            "Mummy Bunny",
+            0.32,
+          ],
+          [
+            "Reaper Cat",
+            0.07,
+          ],
+          [
+            "Vampire Dragon",
+            0.02,
+          ],
+          [
+            "Abomination",
+            0.001,
+          ],
+          [
+            "Huge Glowy the Ghost",
+            0.0001,
+          ],
+        ],
+        "rarity": {
+          "Announce": true,
+          "Color": null,
+          "DisplayName": "Celestial",
+          "Gradient": null,
+          "ItemSlot": null,
+          "Lootbag": null,
+          "Message": null,
+          "RarityNumber": 9,
+          "_id": "Celestial",
+          "_script": null,
+        },
+      },
+      "configName": "4 | Backrooms Clown Egg 50x",
+    },
+    {
+      "category": "Backrooms",
+      "collection": "Eggs",
+      "configData": {
+        "currency": "BackroomsCoins",
+        "egg": null,
+        "goldenEgg": null,
+        "icon": "",
+        "isCustomEgg": true,
+        "name": "Backrooms Clown Egg 75x",
+        "oddsFFlags": {
+          "Huge Glowy the Ghost": "EggMultiplier_D2",
+        },
+        "overrideCost": 500,
+        "pets": [
+          [
+            "Evil Wolverine",
+            86.585,
+          ],
+          [
+            "Tarantula",
+            13,
+          ],
+          [
+            "Mummy Bunny",
+            0.32,
+          ],
+          [
+            "Reaper Cat",
+            0.07,
+          ],
+          [
+            "Vampire Dragon",
+            0.02,
+          ],
+          [
+            "Abomination",
+            0.001,
+          ],
+          [
+            "Huge Glowy the Ghost",
+            0.00015,
+          ],
+        ],
+        "rarity": {
+          "Announce": true,
+          "Color": null,
+          "DisplayName": "Celestial",
+          "Gradient": null,
+          "ItemSlot": null,
+          "Lootbag": null,
+          "Message": null,
+          "RarityNumber": 9,
+          "_id": "Celestial",
+          "_script": null,
+        },
+      },
+      "configName": "4 | Backrooms Clown Egg 75x",
+    },
+    {
+      "category": "Halloween",
+      "collection": "Eggs",
+      "configData": {
+        "currency": "HalloweenCandy",
+        "icon": "rbxassetid://15172355963",
+        "isCustomEgg": true,
+        "name": "Halloween Cobweb Egg",
+        "overrideCost": 8000,
+        "pets": [
+          [
+            "Pumpkin Scarecrow",
+            90,
+          ],
+          [
+            "Evil Wolverine",
+            10,
+          ],
+          [
+            "Tarantula",
+            1,
+          ],
+        ],
+        "rarity": {
+          "Announce": true,
+          "Color": null,
+          "DisplayName": "Celestial",
+          "Gradient": null,
+          "ItemSlot": null,
+          "Lootbag": null,
+          "Message": null,
+          "RarityNumber": 9,
+          "_id": "Celestial",
+          "_script": null,
+        },
+      },
+      "configName": "6 | Halloween Cobweb Egg",
+    },
+    {
+      "category": "Halloween",
+      "collection": "Eggs",
+      "configData": {
+        "currency": "HalloweenCandy",
+        "icon": "rbxassetid://15172355963",
+        "isCustomEgg": true,
+        "name": "Halloween Scythe Egg",
+        "overrideCost": 16000,
+        "pets": [
+          [
+            "Tarantula",
+            90,
+          ],
+          [
+            "Mummy Bunny",
+            10,
+          ],
+          [
+            "Reaper Cat",
+            1,
+            "Nice",
+          ],
+        ],
+        "rarity": {
+          "Announce": true,
+          "Color": null,
+          "DisplayName": "Celestial",
+          "Gradient": null,
+          "ItemSlot": null,
+          "Lootbag": null,
+          "Message": null,
+          "RarityNumber": 9,
+          "_id": "Celestial",
+          "_script": null,
+        },
+      },
+      "configName": "7 | Halloween Scythe Egg",
+    },
+    {
+      "category": "Halloween",
+      "collection": "Eggs",
+      "configData": {
+        "currency": "HalloweenCandy",
+        "icon": "rbxassetid://15172355963",
+        "isCustomEgg": true,
+        "name": "Halloween Coffin Egg",
+        "oddsFFlags": {
+          "Titanic Pumpkin Cat": "EggMultiplier_D3",
+        },
+        "overrideCost": 32000,
+        "pets": [
+          [
+            "Mummy Bunny",
+            90,
+          ],
+          [
+            "Reaper Cat",
+            10,
+          ],
+          [
+            "Vampire Dragon",
+            0.05,
+            "Great",
+          ],
+          [
+            "Abomination",
+            0.0001,
+            "Insane",
+          ],
+          [
+            "Huge Abomination",
+            0.000006,
+            "Insane",
+          ],
+          [
+            "Titanic Pumpkin Cat",
+            1.5e-7,
+            "Insane",
+          ],
+        ],
+        "rarity": {
+          "Announce": true,
+          "Color": null,
+          "DisplayName": "Celestial",
+          "Gradient": null,
+          "ItemSlot": null,
+          "Lootbag": null,
+          "Message": null,
+          "RarityNumber": 9,
+          "_id": "Celestial",
+          "_script": null,
+        },
+      },
+      "configName": "8 | Halloween Coffin Egg",
     },
   ],
   "status": "ok",
@@ -26758,6 +28276,40 @@ exports[`Pet Simulator Public Live API Test Enchants shape 1`] = `
       },
       "configName": "Enchant | Diamond Orb",
     },
+    {
+      "category": "Exclusive",
+      "collection": "Enchants",
+      "configData": {
+        "BaseTier": 1,
+        "DiminishPowerThreshold": 40,
+        "MaxPage": 0,
+        "MaxTier": 1,
+        "ProductId": 2313608101,
+        "Tiers": [
+          {
+            "Desc": "Adds +1 RARE Active Huge to hatch!
+
+Increases Active Huge hatch luck by 40%!",
+            "DisplayName": "Active Huge Overload",
+            "Icon": "rbxassetid://90697119855056",
+            "Power": 40,
+            "Rarity": {
+              "Announce": true,
+              "Color": null,
+              "DisplayName": "Exclusive",
+              "Gradient": null,
+              "ItemSlot": null,
+              "Lootbag": null,
+              "Message": null,
+              "RarityNumber": 999,
+              "_id": "Exclusive",
+              "_script": null,
+            },
+          },
+        ],
+      },
+      "configName": "Enchant | Active Huge Overload",
+    },
   ],
   "status": "ok",
 }
@@ -27370,6 +28922,154 @@ exports[`Pet Simulator Public Live API Test Fruits shape 1`] = `
 exports[`Pet Simulator Public Live API Test GuildBattles shape 1`] = `
 {
   "data": [
+    {
+      "category": "GuildBattles",
+      "collection": "GuildBattles",
+      "configData": {
+        "FinishTime": 1730476800,
+        "PlacementRewards": [
+          {
+            "Best": 1,
+            "Item": {
+              "_data": {
+                "id": "Clan Gift",
+              },
+            },
+            "Worst": 500,
+          },
+          {
+            "Best": 1,
+            "Item": {
+              "_data": {
+                "id": "Ghost Cat",
+              },
+            },
+            "Worst": 50,
+          },
+          {
+            "Best": 1,
+            "Item": {
+              "_data": {
+                "id": "Ghost",
+              },
+            },
+            "Worst": 10,
+          },
+          {
+            "Best": 1,
+            "Item": {
+              "_data": {
+                "id": "Huge Ghost Cat",
+                "pt": 2,
+              },
+            },
+            "Worst": 1,
+          },
+          {
+            "Best": 2,
+            "Item": {
+              "_data": {
+                "id": "Huge Ghost Cat",
+                "pt": 1,
+              },
+            },
+            "Worst": 3,
+          },
+          {
+            "Best": 4,
+            "Item": {
+              "_data": {
+                "id": "Huge Ghost Cat",
+              },
+            },
+            "Worst": 10,
+          },
+        ],
+        "Rewards": {
+          "Bronze": [],
+          "Gold": [],
+          "Good": [],
+          "Silver": [],
+        },
+        "StartTime": 1729353600,
+        "Title": "Ghost Battle",
+      },
+      "configName": "HalloweenBattle",
+    },
+    {
+      "category": "GuildBattles",
+      "collection": "GuildBattles",
+      "configData": {
+        "FinishTime": 1728057600,
+        "PlacementRewards": [
+          {
+            "Best": 1,
+            "Item": {
+              "_data": {
+                "id": "Clan Gift",
+              },
+            },
+            "Worst": 500,
+          },
+          {
+            "Best": 1,
+            "Item": {
+              "_data": {
+                "id": "Reversed",
+              },
+            },
+            "Worst": 50,
+          },
+          {
+            "Best": 1,
+            "Item": {
+              "_data": {
+                "id": "Reversed",
+              },
+            },
+            "Worst": 10,
+          },
+          {
+            "Best": 1,
+            "Item": {
+              "_data": {
+                "id": "Huge Reversed Cat",
+                "pt": 2,
+              },
+            },
+            "Worst": 1,
+          },
+          {
+            "Best": 2,
+            "Item": {
+              "_data": {
+                "id": "Huge Reversed Cat",
+                "pt": 1,
+              },
+            },
+            "Worst": 3,
+          },
+          {
+            "Best": 4,
+            "Item": {
+              "_data": {
+                "id": "Huge Reversed Cat",
+              },
+            },
+            "Worst": 10,
+          },
+        ],
+        "Rewards": {
+          "Bronze": [],
+          "Gold": [],
+          "Good": [],
+          "Silver": [],
+        },
+        "StartTime": 1726934400,
+        "Title": "Catching Battle",
+      },
+      "configName": "CatchingBattle",
+    },
     {
       "category": "GuildBattles",
       "collection": "GuildBattles",
@@ -28506,7 +30206,17 @@ exports[`Pet Simulator Public Live API Test Hoverboards shape 1`] = `
           "_id": "Exotic",
           "_script": null,
         },
-        "Sounds": [],
+        "Sounds": {
+          "equip": [
+            "rbxassetid://86531740191291",
+          ],
+          "idle": [
+            "rbxassetid://129244790082201",
+          ],
+          "jump": [
+            "rbxassetid://78403942185285",
+          ],
+        },
         "Tradable": false,
       },
       "configName": "Hoverboard | Blue Flying Carpet",
@@ -28537,6 +30247,12 @@ exports[`Pet Simulator Public Live API Test Hoverboards shape 1`] = `
           "equip": [
             "rbxassetid://16572012076",
           ],
+          "idle": [
+            "rbxassetid://85358657413140",
+          ],
+          "jump": [
+            "rbxassetid://94203575324510",
+          ],
         },
       },
       "configName": "Hoverboard | Cat",
@@ -28563,7 +30279,17 @@ exports[`Pet Simulator Public Live API Test Hoverboards shape 1`] = `
           "_id": "Mythical",
           "_script": null,
         },
-        "Sounds": [],
+        "Sounds": {
+          "equip": [
+            "rbxassetid://91610397255708",
+          ],
+          "idle": [
+            "rbxassetid://80774788338224",
+          ],
+          "jump": [
+            "rbxassetid://98520429060386",
+          ],
+        },
         "Tradable": true,
       },
       "configName": "Hoverboard | Doodle",
@@ -28643,7 +30369,17 @@ exports[`Pet Simulator Public Live API Test Hoverboards shape 1`] = `
           "_id": "Mythical",
           "_script": null,
         },
-        "Sounds": [],
+        "Sounds": {
+          "equip": [
+            "rbxassetid://97349550837141",
+          ],
+          "idle": [
+            "rbxassetid://77162821297775",
+          ],
+          "jump": [
+            "rbxassetid://134060758230484",
+          ],
+        },
         "Tradable": false,
       },
       "configName": "Hoverboard | Red Flying Carpet",
@@ -28800,7 +30536,17 @@ exports[`Pet Simulator Public Live API Test Hoverboards shape 1`] = `
           "_id": "Exotic",
           "_script": null,
         },
-        "Sounds": [],
+        "Sounds": {
+          "equip": [
+            "rbxassetid://84069480219233",
+          ],
+          "idle": [
+            "rbxassetid://109990362589216",
+          ],
+          "jump": [
+            "rbxassetid://130951213809044",
+          ],
+        },
       },
       "configName": "Hoverboard | Watermelon",
       "dateCreated": null,
@@ -28826,7 +30572,17 @@ exports[`Pet Simulator Public Live API Test Hoverboards shape 1`] = `
           "_id": "Exclusive",
           "_script": null,
         },
-        "Sounds": [],
+        "Sounds": {
+          "equip": [
+            "rbxassetid://126295444855791",
+          ],
+          "idle": [
+            "rbxassetid://103714009591937",
+          ],
+          "jump": [
+            "rbxassetid://95188937985287",
+          ],
+        },
         "Tradable": false,
       },
       "configName": "Hoverboard | Axolotl",
@@ -28879,7 +30635,17 @@ exports[`Pet Simulator Public Live API Test Hoverboards shape 1`] = `
           "_id": "Exotic",
           "_script": null,
         },
-        "Sounds": [],
+        "Sounds": {
+          "equip": [
+            "rbxassetid://75802008091018",
+          ],
+          "idle": [
+            "rbxassetid://96160069704153",
+          ],
+          "jump": [
+            "rbxassetid://104673605067650",
+          ],
+        },
       },
       "configName": "Hoverboard | Pegasus",
       "dateCreated": null,
@@ -29089,7 +30855,17 @@ exports[`Pet Simulator Public Live API Test Hoverboards shape 1`] = `
           "_id": "Exotic",
           "_script": null,
         },
-        "Sounds": [],
+        "Sounds": {
+          "equip": [
+            "rbxassetid://85687969435784",
+          ],
+          "idle": [
+            "rbxassetid://118206736797563",
+          ],
+          "jump": [
+            "rbxassetid://123768149210741",
+          ],
+        },
       },
       "configName": "Hoverboard | Ducky",
       "dateCreated": null,
@@ -29301,7 +31077,17 @@ exports[`Pet Simulator Public Live API Test Hoverboards shape 1`] = `
           "_id": "Exclusive",
           "_script": null,
         },
-        "Sounds": [],
+        "Sounds": {
+          "equip": [
+            "rbxassetid://88643014063908",
+          ],
+          "idle": [
+            "rbxassetid://102587410191498",
+          ],
+          "jump": [
+            "rbxassetid://82114109506343",
+          ],
+        },
       },
       "configName": "Hoverboard | Tiger",
       "dateCreated": null,
@@ -29562,7 +31348,6 @@ exports[`Pet Simulator Public Live API Test Hoverboards shape 1`] = `
       "category": "Hoverboards",
       "collection": "Hoverboards",
       "configData": {
-        "CanBeShiny": true,
         "Desc": "Screeeeeech out of there!",
         "DisplayName": "Night Terror Hoverboard",
         "Icon": "rbxassetid://17375210703",
@@ -30415,6 +32200,237 @@ Found in the Hacker Pack!",
       },
       "configName": "Hoverboard | Rave Crab",
     },
+    {
+      "category": "Hoverboards",
+      "collection": "Hoverboards",
+      "configData": {
+        "Desc": "⚔️ Rewarded to the top 10 clans in the 2024 Upside Down Clan Battle!",
+        "DisplayName": "Reversed Hoverboard",
+        "Icon": "rbxassetid://104003058332482",
+        "Rarity": {
+          "Announce": true,
+          "Color": null,
+          "DisplayName": "Exotic",
+          "Gradient": null,
+          "ItemSlot": null,
+          "Lootbag": null,
+          "Message": null,
+          "RarityNumber": 6,
+          "_id": "Exotic",
+          "_script": null,
+        },
+        "Sounds": {
+          "equip": [
+            "rbxassetid://131657036440279",
+          ],
+          "idle": [
+            "rbxassetid://109008992005347",
+          ],
+          "jump": [
+            "rbxassetid://75433948107955",
+          ],
+        },
+      },
+      "configName": "Hoverboard | Reversed",
+    },
+    {
+      "category": "Hoverboards",
+      "collection": "Hoverboards",
+      "configData": {
+        "Desc": "Earth, fire, water, ice, and all that!",
+        "DisplayName": "Elemental Hoverboard",
+        "Icon": "rbxassetid://101555005426126",
+        "Rarity": {
+          "Announce": false,
+          "Color": null,
+          "DisplayName": "Mythical",
+          "Gradient": null,
+          "ItemSlot": null,
+          "Lootbag": null,
+          "Message": null,
+          "RarityNumber": 5,
+          "_id": "Mythical",
+          "_script": null,
+        },
+        "Sounds": {
+          "equip": [
+            "rbxassetid://127087646371704",
+          ],
+          "idle": [
+            "rbxassetid://78875846999309",
+          ],
+          "jump": [
+            "rbxassetid://104811511655918",
+          ],
+        },
+      },
+      "configName": "Hoverboard | Elemental",
+    },
+    {
+      "category": "Hoverboards",
+      "collection": "Hoverboards",
+      "configData": {
+        "Desc": "Found in the Pumpkin Gift!",
+        "DisplayName": "Pumpkin Cat Hoverboard",
+        "Icon": "rbxassetid://92900937122832",
+        "Rarity": {
+          "Announce": false,
+          "Color": null,
+          "DisplayName": "Mythical",
+          "Gradient": null,
+          "ItemSlot": null,
+          "Lootbag": null,
+          "Message": null,
+          "RarityNumber": 5,
+          "_id": "Mythical",
+          "_script": null,
+        },
+        "Sounds": {
+          "equip": [
+            "rbxassetid://71928776553803",
+          ],
+          "idle": [
+            "rbxassetid://95108682670473",
+          ],
+          "jump": [
+            "rbxassetid://82122552299009",
+          ],
+        },
+      },
+      "configName": "Hoverboard | Pumpkin Cat",
+    },
+    {
+      "category": "Hoverboards",
+      "collection": "Hoverboards",
+      "configData": {
+        "Desc": "Found in the Spider Pack!",
+        "DisplayName": "Web Hoverboard",
+        "Icon": "rbxassetid://76504501851707",
+        "Rarity": {
+          "Announce": false,
+          "Color": null,
+          "DisplayName": "Mythical",
+          "Gradient": null,
+          "ItemSlot": null,
+          "Lootbag": null,
+          "Message": null,
+          "RarityNumber": 5,
+          "_id": "Mythical",
+          "_script": null,
+        },
+        "Sounds": {
+          "equip": [
+            "rbxassetid://100828934639695",
+          ],
+          "idle": [
+            "rbxassetid://81170050373448",
+          ],
+          "jump": [
+            "rbxassetid://73955618282141",
+          ],
+        },
+      },
+      "configName": "Hoverboard | Web",
+    },
+    {
+      "category": "Hoverboards",
+      "collection": "Hoverboards",
+      "configData": {
+        "Desc": "Obtained from the Halloween 2024 Quests!",
+        "DisplayName": "Vampire Bat Hoverboard",
+        "Icon": "rbxassetid://111125773128350",
+        "Rarity": {
+          "Announce": false,
+          "Color": null,
+          "DisplayName": "Mythical",
+          "Gradient": null,
+          "ItemSlot": null,
+          "Lootbag": null,
+          "Message": null,
+          "RarityNumber": 5,
+          "_id": "Mythical",
+          "_script": null,
+        },
+        "Sounds": {
+          "equip": [
+            "rbxassetid://136004587128798",
+          ],
+          "idle": [
+            "rbxassetid://100081183731600",
+          ],
+          "jump": [
+            "rbxassetid://82874763227894",
+          ],
+        },
+      },
+      "configName": "Hoverboard | Vampire Bat",
+    },
+    {
+      "category": "Hoverboards",
+      "collection": "Hoverboards",
+      "configData": {
+        "Desc": "Found in the Candy Corn Gift!",
+        "DisplayName": "Witch Cat Hoverboard",
+        "Icon": "rbxassetid://103768732773689",
+        "Rarity": {
+          "Announce": false,
+          "Color": null,
+          "DisplayName": "Mythical",
+          "Gradient": null,
+          "ItemSlot": null,
+          "Lootbag": null,
+          "Message": null,
+          "RarityNumber": 5,
+          "_id": "Mythical",
+          "_script": null,
+        },
+        "Sounds": {
+          "equip": [
+            "rbxassetid://124186610783745",
+          ],
+          "idle": [
+            "rbxassetid://125636908316423",
+          ],
+          "jump": [
+            "rbxassetid://100081183731600",
+          ],
+        },
+      },
+      "configName": "Hoverboard | Witch Cat",
+    },
+    {
+      "category": "Hoverboards",
+      "collection": "Hoverboards",
+      "configData": {
+        "Desc": "⚔️ Rewarded to the top 10 clans in the 2024 Ghost Clan Battle!",
+        "DisplayName": "Ghost Hoverboard",
+        "Icon": "rbxassetid://135978414574016",
+        "Rarity": {
+          "Announce": true,
+          "Color": null,
+          "DisplayName": "Exotic",
+          "Gradient": null,
+          "ItemSlot": null,
+          "Lootbag": null,
+          "Message": null,
+          "RarityNumber": 6,
+          "_id": "Exotic",
+          "_script": null,
+        },
+        "Sounds": {
+          "equip": [
+            "rbxassetid://124083915816008",
+          ],
+          "idle": [
+            "rbxassetid://74603654873510",
+          ],
+          "jump": [
+            "rbxassetid://118563623791477",
+          ],
+        },
+      },
+      "configName": "Hoverboard | Ghost",
+    },
   ],
   "status": "ok",
 }
@@ -31025,6 +33041,94 @@ Chance for the Huge Lunar Moth!",
       },
       "configName": "Graffiti Gift",
     },
+    {
+      "category": "Lootboxes",
+      "collection": "Lootboxes",
+      "configData": {
+        "Desc": "Reward for catching pets in the Elemental World! Chance for a HUGE!",
+        "DisplayName": "Elemental Gift",
+        "Icon": "rbxassetid://128952309639623",
+        "Rarity": {
+          "Announce": true,
+          "Color": null,
+          "DisplayName": "Exotic",
+          "Gradient": null,
+          "ItemSlot": null,
+          "Lootbag": null,
+          "Message": null,
+          "RarityNumber": 6,
+          "_id": "Exotic",
+          "_script": null,
+        },
+      },
+      "configName": "Elemental Gift",
+    },
+    {
+      "category": "Lootboxes",
+      "collection": "Lootboxes",
+      "configData": {
+        "Desc": "Made from Pumpkins in the Haunted Backrooms. Chance for a HUGE!",
+        "DisplayName": "Pumpkin Gift",
+        "Icon": "rbxassetid://114513766713319",
+        "Rarity": {
+          "Announce": true,
+          "Color": null,
+          "DisplayName": "Exotic",
+          "Gradient": null,
+          "ItemSlot": null,
+          "Lootbag": null,
+          "Message": null,
+          "RarityNumber": 6,
+          "_id": "Exotic",
+          "_script": null,
+        },
+      },
+      "configName": "Pumpkin Gift",
+    },
+    {
+      "category": "Lootboxes",
+      "collection": "Lootboxes",
+      "configData": {
+        "Desc": "Made from Candy Corn in the Halloween Event. Chance for a HUGE!",
+        "DisplayName": "Candy Corn Gift",
+        "Icon": "rbxassetid://107004803757637",
+        "Rarity": {
+          "Announce": true,
+          "Color": null,
+          "DisplayName": "Exotic",
+          "Gradient": null,
+          "ItemSlot": null,
+          "Lootbag": null,
+          "Message": null,
+          "RarityNumber": 6,
+          "_id": "Exotic",
+          "_script": null,
+        },
+      },
+      "configName": "Candy Corn Gift",
+    },
+    {
+      "category": "Lootboxes",
+      "collection": "Lootboxes",
+      "configData": {
+        "Desc": "Dropped in the Halloween Event's neighborhoods.",
+        "DisplayName": "Ghostface Gift",
+        "Icon": "rbxassetid://111099902427867",
+        "Rarity": {
+          "Announce": true,
+          "Color": null,
+          "DisplayName": "Exotic",
+          "Gradient": null,
+          "ItemSlot": null,
+          "Lootbag": null,
+          "Message": null,
+          "RarityNumber": 6,
+          "_id": "Exotic",
+          "_script": null,
+        },
+      },
+      "configName": "Ghostface Gift",
+    },
   ],
   "status": "ok",
 }
@@ -31437,6 +33541,13 @@ exports[`Pet Simulator Public Live API Test Mastery shape 1`] = `
               "Power": 1,
               "Text": "-1 potion required for upgrade",
               "Title": "Better Crafting I",
+            },
+          ],
+          "BulkConsume": [
+            {
+              "Level": 50,
+              "Text": "Ability to drink multiple potions at once",
+              "Title": "Bulk Consumption",
             },
           ],
           "BulkCrafting": [
@@ -31869,6 +33980,13 @@ exports[`Pet Simulator Public Live API Test Mastery shape 1`] = `
               "Title": "Automatic Eating",
             },
           ],
+          "AutoEatShinyFruit": [
+            {
+              "Level": 99,
+              "Text": "Automatically eat shiny fruit in your inventory (toggleable)",
+              "Title": "Automatic Eating Shiny",
+            },
+          ],
           "FruitBonus": [
             {
               "Level": 90,
@@ -31946,6 +34064,7 @@ exports[`Pet Simulator Public Live API Test Mastery shape 1`] = `
         },
         "ToggleablePerks": {
           "AutoEat": true,
+          "AutoEatShinyFruit": true,
         },
       },
       "configName": "Mastery | Fruit",
@@ -32882,6 +35001,21 @@ exports[`Pet Simulator Public Live API Test Merchants shape 1`] = `
         ],
       },
       "configName": "LuckyDiceMerchant",
+    },
+    {
+      "category": "Merchants",
+      "collection": "Merchants",
+      "configData": {
+        "DisplayName": "Pet Cube Store",
+        "GetOffers": null,
+        "HideNotification": true,
+        "HideRespect": true,
+        "IsStatic": false,
+        "MachineName": "PetCubeStore",
+        "PriceMult": 1,
+        "RefreshRate": 1500,
+      },
+      "configName": "PetCubeStore",
     },
   ],
   "status": "ok",
@@ -36797,6 +38931,151 @@ Click to equip!",
         },
       },
       "configName": "Graffiti Can",
+    },
+    {
+      "category": "Tools",
+      "collection": "MiscItems",
+      "configData": {
+        "Category": "Tools",
+        "Desc": "Throw at roaming pets in Elemental World to catch them!
+
+Tap pets in Elemental World to throw!",
+        "DisplayName": "Pet Cube",
+        "Icon": "rbxassetid://113496508867455",
+        "Rarity": {
+          "Announce": false,
+          "Color": null,
+          "DisplayName": "Legendary",
+          "Gradient": null,
+          "ItemSlot": null,
+          "Lootbag": null,
+          "Message": null,
+          "RarityNumber": 4,
+          "_id": "Legendary",
+          "_script": null,
+        },
+      },
+      "configName": "Pet Cube",
+    },
+    {
+      "category": "Tools",
+      "collection": "MiscItems",
+      "configData": {
+        "Category": "Tools",
+        "Desc": "Throw at roaming pets in Elemental World to catch them! Better odds!
+
+Tap pets in Elemental World to throw!",
+        "DisplayName": "Ultra Pet Cube",
+        "Icon": "rbxassetid://120583016270769",
+        "Rarity": {
+          "Announce": false,
+          "Color": null,
+          "DisplayName": "Mythical",
+          "Gradient": null,
+          "ItemSlot": null,
+          "Lootbag": null,
+          "Message": null,
+          "RarityNumber": 5,
+          "_id": "Mythical",
+          "_script": null,
+        },
+      },
+      "configName": "Ultra Pet Cube",
+    },
+    {
+      "category": "Keys",
+      "collection": "MiscItems",
+      "configData": {
+        "Category": "Keys",
+        "Desc": "Access locked backrooms for loot! Found in the haunted backrooms!",
+        "DisplayName": "Haunted Backrooms Key",
+        "Icon": "rbxassetid://105807127077254",
+        "Rarity": {
+          "Announce": false,
+          "Color": null,
+          "DisplayName": "Mythical",
+          "Gradient": null,
+          "ItemSlot": null,
+          "Lootbag": null,
+          "Message": null,
+          "RarityNumber": 5,
+          "_id": "Mythical",
+          "_script": null,
+        },
+        "Tradable": false,
+      },
+      "configName": "Haunted Backrooms Key",
+    },
+    {
+      "category": "Event",
+      "collection": "MiscItems",
+      "configData": {
+        "Category": "Event",
+        "Desc": "Can be combined into Pumpkin Gifts using the Pumpkin Machine!",
+        "DisplayName": "Pumpkin",
+        "Icon": "rbxassetid://81573313864367",
+        "Rarity": {
+          "Announce": false,
+          "Color": null,
+          "DisplayName": "Legendary",
+          "Gradient": null,
+          "ItemSlot": null,
+          "Lootbag": null,
+          "Message": null,
+          "RarityNumber": 4,
+          "_id": "Legendary",
+          "_script": null,
+        },
+        "Tradable": true,
+      },
+      "configName": "Pumpkin",
+    },
+    {
+      "category": "Event",
+      "collection": "MiscItems",
+      "configData": {
+        "Category": "Event",
+        "Desc": "Can be combined into Candy Corn Gifts using the Candy Corn Machine!",
+        "DisplayName": "Candy Corn",
+        "Icon": "rbxassetid://135856815241766",
+        "Rarity": {
+          "Announce": false,
+          "Color": null,
+          "DisplayName": "Legendary",
+          "Gradient": null,
+          "ItemSlot": null,
+          "Lootbag": null,
+          "Message": null,
+          "RarityNumber": 4,
+          "_id": "Legendary",
+          "_script": null,
+        },
+        "Tradable": true,
+      },
+      "configName": "Candy Corn",
+    },
+    {
+      "category": "Event",
+      "collection": "MiscItems",
+      "configData": {
+        "Category": "Event",
+        "Desc": "Used to enter the Trick or Treat Neighborhoods!",
+        "DisplayName": "Halloween Mask",
+        "Icon": "rbxassetid://113232694279062",
+        "Rarity": {
+          "Announce": false,
+          "Color": null,
+          "DisplayName": "Legendary",
+          "Gradient": null,
+          "ItemSlot": null,
+          "Lootbag": null,
+          "Message": null,
+          "RarityNumber": 4,
+          "_id": "Legendary",
+          "_script": null,
+        },
+      },
+      "configName": "Halloween Mask",
     },
   ],
   "status": "ok",
@@ -63495,6 +65774,98 @@ exports[`Pet Simulator Public Live API Test Pets shape 1`] = `
       },
       "configName": "Titanic Pumpkin Cat",
     },
+    {
+      "category": "Uncategorized",
+      "collection": "Pets",
+      "configData": {
+        "cachedPower": [
+          59588363139356,
+        ],
+        "fromWorldNumber": 3,
+        "fromZoneNumber": 229,
+        "goldenThumbnail": "rbxassetid://83642998757908",
+        "name": "Evil Wolverine",
+        "thumbnail": "rbxassetid://113761166558023",
+      },
+      "configName": "Evil Wolverine",
+    },
+    {
+      "category": "Uncategorized",
+      "collection": "Pets",
+      "configData": {
+        "cachedPower": [
+          61044782629494,
+        ],
+        "fromWorldNumber": 3,
+        "fromZoneNumber": 229,
+        "goldenThumbnail": "rbxassetid://91010721002877",
+        "name": "Tarantula",
+        "thumbnail": "rbxassetid://73078316333134",
+      },
+      "configName": "Tarantula",
+    },
+    {
+      "category": "Uncategorized",
+      "collection": "Pets",
+      "configData": {
+        "cachedPower": [
+          66287892793990,
+        ],
+        "fly": true,
+        "fromWorldNumber": 3,
+        "fromZoneNumber": 229,
+        "goldenThumbnail": "rbxassetid://131979523441145",
+        "name": "Vampire Dragon",
+        "thumbnail": "rbxassetid://114237887654774",
+      },
+      "configName": "Vampire Dragon",
+    },
+    {
+      "category": "Uncategorized",
+      "collection": "Pets",
+      "configData": {
+        "cachedPower": [
+          64789861318420,
+        ],
+        "fromWorldNumber": 3,
+        "fromZoneNumber": 229,
+        "goldenThumbnail": "rbxassetid://125242320052036",
+        "name": "Reaper Cat",
+        "thumbnail": "rbxassetid://125242320052036",
+      },
+      "configName": "Reaper Cat",
+    },
+    {
+      "category": "Uncategorized",
+      "collection": "Pets",
+      "configData": {
+        "cachedPower": [
+          63291829842849,
+        ],
+        "fromWorldNumber": 3,
+        "fromZoneNumber": 229,
+        "goldenThumbnail": "rbxassetid://120537522205833",
+        "name": "Mummy Bunny",
+        "thumbnail": "rbxassetid://86064284363349",
+      },
+      "configName": "Mummy Bunny",
+    },
+    {
+      "category": "Uncategorized",
+      "collection": "Pets",
+      "configData": {
+        "cachedPower": [
+          67832737753172,
+        ],
+        "fly": true,
+        "fromWorldNumber": 3,
+        "fromZoneNumber": 229,
+        "goldenThumbnail": "rbxassetid://74975020012890",
+        "name": "Abomination",
+        "thumbnail": "rbxassetid://88470325736458",
+      },
+      "configName": "Abomination",
+    },
   ],
   "status": "ok",
 }
@@ -88624,6 +90995,893 @@ exports[`Pet Simulator Public Live API Test Ranks shape 1`] = `
       },
       "configName": "31 | Supreme Oracle",
     },
+    {
+      "category": "Ranks",
+      "collection": "Ranks",
+      "configData": {
+        "Goals": [
+          [
+            {
+              "Amount": 3000,
+              "Type": 21,
+              "Weight": 1,
+            },
+            {
+              "Amount": 3000,
+              "Type": 21,
+              "Weight": 1,
+            },
+            {
+              "Amount": 3000,
+              "Type": 21,
+              "Weight": 1,
+            },
+            {
+              "Amount": 80,
+              "Type": 14,
+              "Weight": 1,
+            },
+            {
+              "Amount": 80,
+              "Type": 15,
+              "Weight": 1,
+            },
+            {
+              "Amount": 50,
+              "Type": 9,
+              "Weight": 1,
+            },
+          ],
+          [
+            {
+              "Amount": 3750,
+              "Type": 21,
+              "Weight": 1,
+            },
+            {
+              "Amount": 3750,
+              "Type": 21,
+              "Weight": 1,
+            },
+            {
+              "Amount": 3750,
+              "Type": 21,
+              "Weight": 1,
+            },
+            {
+              "Amount": 100,
+              "Type": 14,
+              "Weight": 1,
+            },
+            {
+              "Amount": 100,
+              "Type": 15,
+              "Weight": 1,
+            },
+            {
+              "Amount": 60,
+              "PotionTier": 4,
+              "Type": 34,
+              "Weight": 1,
+            },
+            {
+              "Amount": 5,
+              "Type": 44,
+              "Weight": 1,
+            },
+            {
+              "Amount": 5,
+              "Type": 43,
+              "Weight": 1,
+            },
+            {
+              "Amount": 5,
+              "Type": 38,
+              "Weight": 1,
+            },
+            {
+              "Amount": 5,
+              "Type": 37,
+              "Weight": 1,
+            },
+            {
+              "Amount": 5,
+              "Type": 39,
+              "Weight": 1,
+            },
+            {
+              "Amount": 1,
+              "Type": 76,
+              "Weight": 1,
+            },
+            {
+              "Amount": 2750,
+              "Type": 20,
+              "Weight": 1,
+            },
+            {
+              "Amount": 2750,
+              "Type": 20,
+              "Weight": 1,
+            },
+            {
+              "Amount": 1500,
+              "Type": 40,
+              "Weight": 1,
+            },
+            {
+              "Amount": 150,
+              "Type": 41,
+              "Weight": 1,
+            },
+            {
+              "Amount": 60,
+              "Type": 26,
+              "Weight": 1,
+            },
+            {
+              "Amount": 60,
+              "Type": 25,
+              "Weight": 1,
+            },
+            {
+              "Amount": 80,
+              "Type": 46,
+              "Weight": 1,
+            },
+            {
+              "Amount": 80,
+              "Type": 45,
+              "Weight": 1,
+            },
+          ],
+          [
+            {
+              "Amount": 3900,
+              "Type": 21,
+              "Weight": 1,
+            },
+            {
+              "Amount": 3900,
+              "Type": 21,
+              "Weight": 1,
+            },
+            {
+              "Amount": 3900,
+              "Type": 21,
+              "Weight": 1,
+            },
+            {
+              "Amount": 1000,
+              "Type": 9,
+              "Weight": 1,
+            },
+            {
+              "Amount": 15000,
+              "CurrencyID": "Diamonds",
+              "Type": 7,
+              "Weight": 1,
+            },
+            {
+              "Amount": 70,
+              "PotionTier": 3,
+              "Type": 12,
+              "Weight": 1,
+            },
+            {
+              "Amount": 70,
+              "EnchantTier": 3,
+              "Type": 13,
+              "Weight": 1,
+            },
+            {
+              "Amount": 70,
+              "PotionTier": 4,
+              "Type": 34,
+              "Weight": 1,
+            },
+            {
+              "Amount": 6,
+              "Type": 44,
+              "Weight": 1,
+            },
+            {
+              "Amount": 6,
+              "Type": 43,
+              "Weight": 1,
+            },
+            {
+              "Amount": 6,
+              "Type": 38,
+              "Weight": 1,
+            },
+            {
+              "Amount": 6,
+              "Type": 37,
+              "Weight": 1,
+            },
+            {
+              "Amount": 6,
+              "Type": 39,
+              "Weight": 1,
+            },
+            {
+              "Amount": 2,
+              "Type": 76,
+              "Weight": 1,
+            },
+            {
+              "Amount": 3250,
+              "Type": 20,
+              "Weight": 1,
+            },
+            {
+              "Amount": 3250,
+              "Type": 20,
+              "Weight": 1,
+            },
+            {
+              "Amount": 1600,
+              "Type": 40,
+              "Weight": 1,
+            },
+            {
+              "Amount": 150,
+              "Type": 41,
+              "Weight": 1,
+            },
+            {
+              "Amount": 1,
+              "Type": 6,
+              "Weight": 1,
+            },
+            {
+              "Amount": 1,
+              "Type": 6,
+              "Weight": 1,
+            },
+            {
+              "Amount": 1,
+              "Type": 6,
+              "Weight": 1,
+            },
+          ],
+          [
+            {
+              "Amount": 4750,
+              "Type": 21,
+              "Weight": 1,
+            },
+            {
+              "Amount": 4750,
+              "Type": 21,
+              "Weight": 1,
+            },
+            {
+              "Amount": 4750,
+              "Type": 21,
+              "Weight": 1,
+            },
+            {
+              "Amount": 1400,
+              "Type": 9,
+              "Weight": 1,
+            },
+            {
+              "Amount": 15000,
+              "CurrencyID": "Diamonds",
+              "Type": 7,
+              "Weight": 1,
+            },
+            {
+              "Amount": 60,
+              "Type": 42,
+              "Weight": 1,
+            },
+            {
+              "Amount": 8,
+              "Type": 38,
+              "Weight": 1,
+            },
+            {
+              "Amount": 8,
+              "Type": 37,
+              "Weight": 1,
+            },
+            {
+              "Amount": 8,
+              "Type": 39,
+              "Weight": 1,
+            },
+            {
+              "Amount": 2,
+              "Type": 76,
+              "Weight": 1,
+            },
+          ],
+        ],
+        "MaxEnchantsEquipped": 6,
+        "MaximumActiveGoals": 4,
+        "RankNumber": 32,
+        "RankUpRewards": [
+          {
+            "_data": {
+              "_am": 5000000,
+              "id": "Diamonds",
+            },
+          },
+          {
+            "_data": {
+              "_am": 50,
+              "id": "Large Enchant Bundle",
+            },
+          },
+          {
+            "_data": {
+              "_am": 50,
+              "id": "Large Potion Bundle",
+            },
+          },
+          {
+            "_data": {
+              "_am": 15,
+              "id": "Rainbow Mini Chest",
+            },
+          },
+        ],
+        "Rewards": [
+          {
+            "Item": {
+              "_data": {
+                "_am": 20,
+                "id": "Large Enchant Bundle",
+              },
+            },
+            "StarsRequired": 7,
+          },
+          {
+            "Item": {
+              "_data": {
+                "_am": 240,
+                "id": "Rainbow",
+              },
+            },
+            "StarsRequired": 7,
+          },
+          {
+            "Item": {
+              "_data": {
+                "_am": 85,
+                "id": "Rainbow Flag",
+              },
+            },
+            "StarsRequired": 7,
+          },
+          {
+            "Item": {
+              "_data": {
+                "_am": 15,
+                "id": "Large Enchant Bundle",
+              },
+            },
+            "StarsRequired": 7,
+          },
+          {
+            "Item": {
+              "_data": {
+                "_am": 100,
+                "id": "Shiny Flag",
+              },
+            },
+            "StarsRequired": 8,
+          },
+          {
+            "Item": {
+              "_data": {
+                "_am": 155,
+                "id": "Toy Bone",
+              },
+            },
+            "StarsRequired": 8,
+          },
+          {
+            "Item": {
+              "_data": {
+                "_am": 125,
+                "id": "Squeaky Toy",
+              },
+            },
+            "StarsRequired": 8,
+          },
+          {
+            "Item": {
+              "_data": {
+                "_am": 300,
+                "id": "Rainbow",
+              },
+            },
+            "StarsRequired": 8,
+          },
+          {
+            "Item": {
+              "_data": {
+                "_am": 15,
+                "id": "Toy Bundle",
+              },
+            },
+            "StarsRequired": 9,
+          },
+          {
+            "Item": {
+              "_data": {
+                "_am": 270,
+                "id": "Banana",
+              },
+            },
+            "StarsRequired": 9,
+          },
+          {
+            "Item": {
+              "_data": {
+                "_am": 140,
+                "id": "Banana",
+              },
+            },
+            "StarsRequired": 9,
+          },
+          {
+            "Item": {
+              "_data": {
+                "_am": 235,
+                "id": "Magnet Flag",
+              },
+            },
+            "StarsRequired": 9,
+          },
+          {
+            "Item": {
+              "_data": {
+                "_am": 235,
+                "id": "Diamonds Flag",
+              },
+            },
+            "StarsRequired": 10,
+          },
+          {
+            "Item": {
+              "_data": {
+                "_am": 30,
+                "id": "Toy Bundle",
+              },
+            },
+            "StarsRequired": 10,
+          },
+          {
+            "Item": {
+              "_data": {
+                "_am": 230,
+                "id": "Toy Ball",
+              },
+            },
+            "StarsRequired": 10,
+          },
+          {
+            "Item": {
+              "_data": {
+                "_am": 20,
+                "id": "Coins",
+                "tn": 5,
+              },
+            },
+            "StarsRequired": 10,
+          },
+          {
+            "Item": {
+              "_data": {
+                "_am": 15,
+                "id": "Basic Coin Jar",
+              },
+            },
+            "StarsRequired": 11,
+          },
+          {
+            "Item": {
+              "_data": {
+                "_am": 20,
+                "id": "Enchant Essence",
+              },
+            },
+            "StarsRequired": 11,
+          },
+          {
+            "Item": {
+              "_data": {
+                "_am": 20,
+                "id": "Treasure Hideout Key Lower Half",
+              },
+            },
+            "StarsRequired": 11,
+          },
+          {
+            "Item": {
+              "_data": {
+                "_am": 25,
+                "id": "Millionaire Ticket",
+              },
+            },
+            "StarsRequired": 11,
+          },
+          {
+            "Item": {
+              "_data": {
+                "_am": 20,
+                "id": "Void Key Lower Half",
+              },
+            },
+            "StarsRequired": 12,
+          },
+          {
+            "Item": {
+              "_data": {
+                "_am": 15,
+                "id": "Gift Bag",
+              },
+            },
+            "StarsRequired": 12,
+          },
+          {
+            "Item": {
+              "_data": {
+                "_am": 8,
+                "id": "Prison Key",
+              },
+            },
+            "StarsRequired": 12,
+          },
+          {
+            "Item": {
+              "_data": {
+                "_am": 2,
+                "id": "Charm Chisel",
+              },
+            },
+            "StarsRequired": 12,
+          },
+          {
+            "Item": {
+              "_data": {
+                "_am": 30,
+                "id": "Damage",
+                "tn": 10,
+              },
+            },
+            "StarsRequired": 13,
+          },
+          {
+            "Item": {
+              "_data": {
+                "_am": 3,
+                "id": "Magic Shard",
+              },
+            },
+            "StarsRequired": 13,
+          },
+          {
+            "Item": {
+              "_data": {
+                "_am": 15,
+                "id": "Seed Bag",
+              },
+            },
+            "StarsRequired": 13,
+          },
+          {
+            "Item": {
+              "_data": {
+                "_am": 15,
+                "id": "Coins",
+                "tn": 6,
+              },
+            },
+            "StarsRequired": 14,
+          },
+          {
+            "Item": {
+              "_data": {
+                "_am": 4,
+                "id": "Void Spinny Wheel Ticket",
+              },
+            },
+            "StarsRequired": 14,
+          },
+          {
+            "Item": {
+              "_data": {
+                "id": "Charm Chisel",
+              },
+            },
+            "StarsRequired": 14,
+          },
+          {
+            "Item": {
+              "_data": {
+                "_am": 20,
+                "id": "Tech Spinny Wheel Ticket",
+              },
+            },
+            "StarsRequired": 15,
+          },
+          {
+            "Item": {
+              "_data": {
+                "_am": 15,
+                "id": "Charm Stone",
+              },
+            },
+            "StarsRequired": 15,
+          },
+          {
+            "Item": {
+              "_data": {
+                "_am": 15,
+                "id": "Void Key Lower Half",
+              },
+            },
+            "StarsRequired": 15,
+          },
+          {
+            "Item": {
+              "_data": {
+                "_am": 20,
+                "id": "Lucky Tile",
+              },
+            },
+            "StarsRequired": 16,
+          },
+          {
+            "Item": {
+              "_data": {
+                "_am": 25,
+                "id": "Treasure Hideout Key Upper Half",
+              },
+            },
+            "StarsRequired": 16,
+          },
+          {
+            "Item": {
+              "_data": {
+                "_am": 15,
+                "id": "Gift Bag",
+              },
+            },
+            "StarsRequired": 16,
+          },
+          {
+            "Item": {
+              "_data": {
+                "_am": 4,
+                "id": "Mini Chest",
+              },
+            },
+            "StarsRequired": 17,
+          },
+          {
+            "Item": {
+              "_data": {
+                "_am": 9,
+                "id": "Millionaire Bucks",
+              },
+            },
+            "StarsRequired": 17,
+          },
+          {
+            "Item": {
+              "_data": {
+                "_am": 15,
+                "id": "Mini Chest",
+              },
+            },
+            "StarsRequired": 17,
+          },
+          {
+            "Item": {
+              "_data": {
+                "_am": 15,
+                "id": "Spinny Wheel Ticket",
+              },
+            },
+            "StarsRequired": 18,
+          },
+          {
+            "Item": {
+              "_data": {
+                "_am": 3,
+                "id": "Secret Key",
+              },
+            },
+            "StarsRequired": 18,
+          },
+          {
+            "Item": {
+              "_data": {
+                "id": "Charm Chisel",
+              },
+            },
+            "StarsRequired": 18,
+          },
+          {
+            "Item": {
+              "_data": {
+                "_am": 25,
+                "id": "Damage",
+                "tn": 6,
+              },
+            },
+            "StarsRequired": 19,
+          },
+          {
+            "Item": {
+              "_data": {
+                "_am": 15,
+                "id": "Treasure Hideout Key",
+              },
+            },
+            "StarsRequired": 19,
+          },
+          {
+            "Item": {
+              "_data": {
+                "_am": 5,
+                "id": "Spinny Wheel Ticket",
+              },
+            },
+            "StarsRequired": 19,
+          },
+          {
+            "Item": {
+              "_data": {
+                "_am": 15,
+                "id": "Diamonds",
+                "tn": 7,
+              },
+            },
+            "StarsRequired": 20,
+          },
+          {
+            "Item": {
+              "_data": {
+                "id": "Mini Pinata",
+              },
+            },
+            "StarsRequired": 20,
+          },
+          {
+            "Item": {
+              "_data": {
+                "id": "Booth Slot Voucher",
+              },
+            },
+            "StarsRequired": 20,
+          },
+          {
+            "Item": {
+              "_data": {
+                "_am": 2,
+                "id": "Coins",
+                "tn": 11,
+              },
+            },
+            "StarsRequired": 21,
+          },
+          {
+            "Item": {
+              "_data": {
+                "_am": 6,
+                "id": "Bucket O' Magic",
+              },
+            },
+            "StarsRequired": 21,
+          },
+          {
+            "Item": {
+              "_data": {
+                "_am": 2,
+                "id": "Lucky",
+                "tn": 9,
+              },
+            },
+            "StarsRequired": 21,
+          },
+          {
+            "Item": {
+              "_data": {
+                "_am": 2,
+                "id": "Charm Chisel",
+              },
+            },
+            "StarsRequired": 22,
+          },
+          {
+            "Item": {
+              "_data": {
+                "_am": 40,
+                "id": "TNT Crate",
+              },
+            },
+            "StarsRequired": 22,
+          },
+          {
+            "Item": {
+              "_data": {
+                "_am": 8,
+                "id": "Mini Chest",
+              },
+            },
+            "StarsRequired": 22,
+          },
+          {
+            "Item": {
+              "_data": {
+                "_am": 3,
+                "id": "Lucky",
+                "tn": 9,
+              },
+            },
+            "StarsRequired": 24,
+          },
+          {
+            "Item": {
+              "_data": {
+                "id": "Secret Key",
+              },
+            },
+            "StarsRequired": 24,
+          },
+          {
+            "Item": {
+              "_data": {
+                "_am": 4,
+                "id": "Damage",
+                "tn": 10,
+              },
+            },
+            "StarsRequired": 24,
+          },
+          {
+            "Item": {
+              "_data": {
+                "_am": 2,
+                "id": "Void Key",
+              },
+            },
+            "StarsRequired": 25,
+          },
+          {
+            "Item": {
+              "_data": {
+                "_am": 25,
+                "id": "Treasure Hunter",
+                "tn": 8,
+              },
+            },
+            "StarsRequired": 25,
+          },
+          {
+            "Item": {
+              "_data": {
+                "_am": 6,
+                "id": "Large Gift Bag",
+              },
+            },
+            "StarsRequired": 25,
+          },
+        ],
+        "Title": "Radiant Titan",
+        "UnlockableEggSlots": 0,
+        "UnlockablePetSlots": 0,
+      },
+      "configName": "32 | Radiant Titan",
+    },
   ],
   "status": "ok",
 }
@@ -92698,8 +95956,59 @@ exports[`Pet Simulator Public Live API Test Upgrades shape 1`] = `
           100000,
           300000,
           3000000,
+          10000000,
         ],
         "TierCurrencies": [
+          {
+            "BagTiers": [
+              {
+                "image": "rbxassetid://15058306297",
+                "value": 0,
+              },
+              {
+                "image": "rbxassetid://15058306546",
+                "value": 1000,
+              },
+              {
+                "image": "rbxassetid://15058306840",
+                "value": 10000,
+              },
+            ],
+            "Desc": "Diamonds!",
+            "DisplayName": "Diamonds",
+            "MaxAmount": 25000000000,
+            "Rarity": {
+              "Announce": false,
+              "Color": null,
+              "DisplayName": "Rare",
+              "Gradient": null,
+              "ItemSlot": null,
+              "Lootbag": null,
+              "Message": null,
+              "RarityNumber": 2,
+              "_id": "Rare",
+              "_script": null,
+            },
+            "Tiers": [
+              {
+                "Order": 1,
+                "imageOutline": "rbxassetid://14867116353",
+                "isBottom": true,
+                "orbImage": "rbxassetid://15466421090",
+                "rainData": {
+                  "LightEmission": 0.2,
+                },
+                "textColor": null,
+                "tierName": "Diamonds",
+                "tinyImage": "rbxassetid://15258327857",
+                "value": 1,
+              },
+            ],
+            "Tradable": true,
+            "_id": "Diamonds",
+            "_index": 5,
+            "_script": null,
+          },
           {
             "BagTiers": [
               {
@@ -93108,6 +96417,7 @@ exports[`Pet Simulator Public Live API Test Upgrades shape 1`] = `
           5,
           5,
           5,
+          2,
           2,
           2,
         ],
@@ -95231,7 +98541,6 @@ exports[`Pet Simulator Public Live API Test Zones shape 1`] = `
               {
                 "Type": "Medium Coins (Default)",
                 "Weight": 15,
-                "WorldNumber": 1,
               },
             ],
             "Settings": {
@@ -95457,12 +98766,12 @@ exports[`Pet Simulator Public Live API Test Zones shape 1`] = `
             "CelestialBodiesShown": false,
             "MoonAngularSize": 11,
             "MoonTextureId": "",
-            "SkyboxBk": "rbxassetid://11808532452",
-            "SkyboxDn": "rbxassetid://15513336382",
-            "SkyboxFt": "rbxassetid://11808532318",
-            "SkyboxLf": "rbxassetid://11808532171",
-            "SkyboxRt": "rbxassetid://11808532685",
-            "SkyboxUp": "rbxassetid://11808533003",
+            "SkyboxBk": "rbxassetid://91067904138603",
+            "SkyboxDn": "rbxassetid://108518032479801",
+            "SkyboxFt": "rbxassetid://124281980642036",
+            "SkyboxLf": "rbxassetid://75217903494143",
+            "SkyboxRt": "rbxassetid://89476515610354",
+            "SkyboxUp": "rbxassetid://105613864923327",
             "StarCount": 0,
             "SunAngularSize": 10,
             "SunTextureId": "rbxasset://sky/sun.jpg",
@@ -95560,12 +98869,12 @@ exports[`Pet Simulator Public Live API Test Zones shape 1`] = `
             "CelestialBodiesShown": false,
             "MoonAngularSize": 11,
             "MoonTextureId": "",
-            "SkyboxBk": "rbxassetid://11808532452",
-            "SkyboxDn": "rbxassetid://15513336382",
-            "SkyboxFt": "rbxassetid://11808532318",
-            "SkyboxLf": "rbxassetid://11808532171",
-            "SkyboxRt": "rbxassetid://11808532685",
-            "SkyboxUp": "rbxassetid://11808533003",
+            "SkyboxBk": "rbxassetid://91067904138603",
+            "SkyboxDn": "rbxassetid://108518032479801",
+            "SkyboxFt": "rbxassetid://124281980642036",
+            "SkyboxLf": "rbxassetid://75217903494143",
+            "SkyboxRt": "rbxassetid://89476515610354",
+            "SkyboxUp": "rbxassetid://105613864923327",
             "StarCount": 0,
             "SunAngularSize": 10,
             "SunTextureId": "rbxasset://sky/sun.jpg",
@@ -96057,12 +99366,12 @@ exports[`Pet Simulator Public Live API Test Zones shape 1`] = `
             "CelestialBodiesShown": false,
             "MoonAngularSize": 11,
             "MoonTextureId": "",
-            "SkyboxBk": "rbxassetid://11808532452",
-            "SkyboxDn": "rbxassetid://15513336382",
-            "SkyboxFt": "rbxassetid://11808532318",
-            "SkyboxLf": "rbxassetid://11808532171",
-            "SkyboxRt": "rbxassetid://11808532685",
-            "SkyboxUp": "rbxassetid://11808533003",
+            "SkyboxBk": "rbxassetid://91067904138603",
+            "SkyboxDn": "rbxassetid://108518032479801",
+            "SkyboxFt": "rbxassetid://124281980642036",
+            "SkyboxLf": "rbxassetid://75217903494143",
+            "SkyboxRt": "rbxassetid://89476515610354",
+            "SkyboxUp": "rbxassetid://105613864923327",
             "StarCount": 0,
             "SunAngularSize": 10,
             "SunTextureId": "rbxasset://sky/sun.jpg",
@@ -96163,12 +99472,12 @@ exports[`Pet Simulator Public Live API Test Zones shape 1`] = `
             "CelestialBodiesShown": false,
             "MoonAngularSize": 11,
             "MoonTextureId": "",
-            "SkyboxBk": "rbxassetid://11808532452",
-            "SkyboxDn": "rbxassetid://15513336382",
-            "SkyboxFt": "rbxassetid://11808532318",
-            "SkyboxLf": "rbxassetid://11808532171",
-            "SkyboxRt": "rbxassetid://11808532685",
-            "SkyboxUp": "rbxassetid://11808533003",
+            "SkyboxBk": "rbxassetid://91067904138603",
+            "SkyboxDn": "rbxassetid://108518032479801",
+            "SkyboxFt": "rbxassetid://124281980642036",
+            "SkyboxLf": "rbxassetid://75217903494143",
+            "SkyboxRt": "rbxassetid://89476515610354",
+            "SkyboxUp": "rbxassetid://105613864923327",
             "StarCount": 0,
             "SunAngularSize": 10,
             "SunTextureId": "rbxasset://sky/sun.jpg",
@@ -96273,12 +99582,12 @@ exports[`Pet Simulator Public Live API Test Zones shape 1`] = `
             "CelestialBodiesShown": false,
             "MoonAngularSize": 11,
             "MoonTextureId": "",
-            "SkyboxBk": "rbxassetid://11808532452",
-            "SkyboxDn": "rbxassetid://15513336382",
-            "SkyboxFt": "rbxassetid://11808532318",
-            "SkyboxLf": "rbxassetid://11808532171",
-            "SkyboxRt": "rbxassetid://11808532685",
-            "SkyboxUp": "rbxassetid://11808533003",
+            "SkyboxBk": "rbxassetid://91067904138603",
+            "SkyboxDn": "rbxassetid://108518032479801",
+            "SkyboxFt": "rbxassetid://124281980642036",
+            "SkyboxLf": "rbxassetid://75217903494143",
+            "SkyboxRt": "rbxassetid://89476515610354",
+            "SkyboxUp": "rbxassetid://105613864923327",
             "StarCount": 0,
             "SunAngularSize": 10,
             "SunTextureId": "rbxasset://sky/sun.jpg",
@@ -96856,12 +100165,12 @@ exports[`Pet Simulator Public Live API Test Zones shape 1`] = `
             "CelestialBodiesShown": false,
             "MoonAngularSize": 11,
             "MoonTextureId": "",
-            "SkyboxBk": "rbxassetid://11808532452",
-            "SkyboxDn": "rbxassetid://15513336382",
-            "SkyboxFt": "rbxassetid://11808532318",
-            "SkyboxLf": "rbxassetid://11808532171",
-            "SkyboxRt": "rbxassetid://11808532685",
-            "SkyboxUp": "rbxassetid://11808533003",
+            "SkyboxBk": "rbxassetid://91067904138603",
+            "SkyboxDn": "rbxassetid://108518032479801",
+            "SkyboxFt": "rbxassetid://124281980642036",
+            "SkyboxLf": "rbxassetid://75217903494143",
+            "SkyboxRt": "rbxassetid://89476515610354",
+            "SkyboxUp": "rbxassetid://105613864923327",
             "StarCount": 0,
             "SunAngularSize": 10,
             "SunTextureId": "rbxasset://sky/sun.jpg",
@@ -96963,12 +100272,12 @@ exports[`Pet Simulator Public Live API Test Zones shape 1`] = `
             "CelestialBodiesShown": false,
             "MoonAngularSize": 11,
             "MoonTextureId": "",
-            "SkyboxBk": "rbxassetid://11808532452",
-            "SkyboxDn": "rbxassetid://15513336382",
-            "SkyboxFt": "rbxassetid://11808532318",
-            "SkyboxLf": "rbxassetid://11808532171",
-            "SkyboxRt": "rbxassetid://11808532685",
-            "SkyboxUp": "rbxassetid://11808533003",
+            "SkyboxBk": "rbxassetid://91067904138603",
+            "SkyboxDn": "rbxassetid://108518032479801",
+            "SkyboxFt": "rbxassetid://124281980642036",
+            "SkyboxLf": "rbxassetid://75217903494143",
+            "SkyboxRt": "rbxassetid://89476515610354",
+            "SkyboxUp": "rbxassetid://105613864923327",
             "StarCount": 0,
             "SunAngularSize": 10,
             "SunTextureId": "rbxasset://sky/sun.jpg",
@@ -97446,12 +100755,12 @@ exports[`Pet Simulator Public Live API Test Zones shape 1`] = `
             "CelestialBodiesShown": false,
             "MoonAngularSize": 11,
             "MoonTextureId": "",
-            "SkyboxBk": "rbxassetid://11808532452",
-            "SkyboxDn": "rbxassetid://15513336382",
-            "SkyboxFt": "rbxassetid://11808532318",
-            "SkyboxLf": "rbxassetid://11808532171",
-            "SkyboxRt": "rbxassetid://11808532685",
-            "SkyboxUp": "rbxassetid://11808533003",
+            "SkyboxBk": "rbxassetid://91067904138603",
+            "SkyboxDn": "rbxassetid://108518032479801",
+            "SkyboxFt": "rbxassetid://124281980642036",
+            "SkyboxLf": "rbxassetid://75217903494143",
+            "SkyboxRt": "rbxassetid://89476515610354",
+            "SkyboxUp": "rbxassetid://105613864923327",
             "StarCount": 0,
             "SunAngularSize": 10,
             "SunTextureId": "rbxasset://sky/sun.jpg",
@@ -97548,12 +100857,12 @@ exports[`Pet Simulator Public Live API Test Zones shape 1`] = `
             "CelestialBodiesShown": false,
             "MoonAngularSize": 11,
             "MoonTextureId": "",
-            "SkyboxBk": "rbxassetid://11808532452",
-            "SkyboxDn": "rbxassetid://15513336382",
-            "SkyboxFt": "rbxassetid://11808532318",
-            "SkyboxLf": "rbxassetid://11808532171",
-            "SkyboxRt": "rbxassetid://11808532685",
-            "SkyboxUp": "rbxassetid://11808533003",
+            "SkyboxBk": "rbxassetid://91067904138603",
+            "SkyboxDn": "rbxassetid://108518032479801",
+            "SkyboxFt": "rbxassetid://124281980642036",
+            "SkyboxLf": "rbxassetid://75217903494143",
+            "SkyboxRt": "rbxassetid://89476515610354",
+            "SkyboxUp": "rbxassetid://105613864923327",
             "StarCount": 0,
             "SunAngularSize": 10,
             "SunTextureId": "rbxasset://sky/sun.jpg",
@@ -97654,12 +100963,12 @@ exports[`Pet Simulator Public Live API Test Zones shape 1`] = `
             "CelestialBodiesShown": false,
             "MoonAngularSize": 11,
             "MoonTextureId": "",
-            "SkyboxBk": "rbxassetid://11808532452",
-            "SkyboxDn": "rbxassetid://15513336382",
-            "SkyboxFt": "rbxassetid://11808532318",
-            "SkyboxLf": "rbxassetid://11808532171",
-            "SkyboxRt": "rbxassetid://11808532685",
-            "SkyboxUp": "rbxassetid://11808533003",
+            "SkyboxBk": "rbxassetid://91067904138603",
+            "SkyboxDn": "rbxassetid://108518032479801",
+            "SkyboxFt": "rbxassetid://124281980642036",
+            "SkyboxLf": "rbxassetid://75217903494143",
+            "SkyboxRt": "rbxassetid://89476515610354",
+            "SkyboxUp": "rbxassetid://105613864923327",
             "StarCount": 0,
             "SunAngularSize": 10,
             "SunTextureId": "rbxasset://sky/sun.jpg",
@@ -97760,12 +101069,12 @@ exports[`Pet Simulator Public Live API Test Zones shape 1`] = `
             "CelestialBodiesShown": false,
             "MoonAngularSize": 11,
             "MoonTextureId": "",
-            "SkyboxBk": "rbxassetid://11808532452",
-            "SkyboxDn": "rbxassetid://15513336382",
-            "SkyboxFt": "rbxassetid://11808532318",
-            "SkyboxLf": "rbxassetid://11808532171",
-            "SkyboxRt": "rbxassetid://11808532685",
-            "SkyboxUp": "rbxassetid://11808533003",
+            "SkyboxBk": "rbxassetid://91067904138603",
+            "SkyboxDn": "rbxassetid://108518032479801",
+            "SkyboxFt": "rbxassetid://124281980642036",
+            "SkyboxLf": "rbxassetid://75217903494143",
+            "SkyboxRt": "rbxassetid://89476515610354",
+            "SkyboxUp": "rbxassetid://105613864923327",
             "StarCount": 0,
             "SunAngularSize": 10,
             "SunTextureId": "rbxasset://sky/sun.jpg",
@@ -97866,12 +101175,12 @@ exports[`Pet Simulator Public Live API Test Zones shape 1`] = `
             "CelestialBodiesShown": false,
             "MoonAngularSize": 11,
             "MoonTextureId": "",
-            "SkyboxBk": "rbxassetid://11808532452",
-            "SkyboxDn": "rbxassetid://15513336382",
-            "SkyboxFt": "rbxassetid://11808532318",
-            "SkyboxLf": "rbxassetid://11808532171",
-            "SkyboxRt": "rbxassetid://11808532685",
-            "SkyboxUp": "rbxassetid://11808533003",
+            "SkyboxBk": "rbxassetid://91067904138603",
+            "SkyboxDn": "rbxassetid://108518032479801",
+            "SkyboxFt": "rbxassetid://124281980642036",
+            "SkyboxLf": "rbxassetid://75217903494143",
+            "SkyboxRt": "rbxassetid://89476515610354",
+            "SkyboxUp": "rbxassetid://105613864923327",
             "StarCount": 0,
             "SunAngularSize": 10,
             "SunTextureId": "rbxasset://sky/sun.jpg",
@@ -98160,12 +101469,12 @@ exports[`Pet Simulator Public Live API Test Zones shape 1`] = `
             "CelestialBodiesShown": false,
             "MoonAngularSize": 11,
             "MoonTextureId": "",
-            "SkyboxBk": "rbxassetid://11808532452",
-            "SkyboxDn": "rbxassetid://15513336382",
-            "SkyboxFt": "rbxassetid://11808532318",
-            "SkyboxLf": "rbxassetid://11808532171",
-            "SkyboxRt": "rbxassetid://11808532685",
-            "SkyboxUp": "rbxassetid://11808533003",
+            "SkyboxBk": "rbxassetid://91067904138603",
+            "SkyboxDn": "rbxassetid://108518032479801",
+            "SkyboxFt": "rbxassetid://124281980642036",
+            "SkyboxLf": "rbxassetid://75217903494143",
+            "SkyboxRt": "rbxassetid://89476515610354",
+            "SkyboxUp": "rbxassetid://105613864923327",
             "StarCount": 0,
             "SunAngularSize": 10,
             "SunTextureId": "rbxasset://sky/sun.jpg",
@@ -98330,12 +101639,12 @@ exports[`Pet Simulator Public Live API Test Zones shape 1`] = `
             "CelestialBodiesShown": false,
             "MoonAngularSize": 11,
             "MoonTextureId": "",
-            "SkyboxBk": "rbxassetid://11808532452",
-            "SkyboxDn": "rbxassetid://15513336382",
-            "SkyboxFt": "rbxassetid://11808532318",
-            "SkyboxLf": "rbxassetid://11808532171",
-            "SkyboxRt": "rbxassetid://11808532685",
-            "SkyboxUp": "rbxassetid://11808533003",
+            "SkyboxBk": "rbxassetid://91067904138603",
+            "SkyboxDn": "rbxassetid://108518032479801",
+            "SkyboxFt": "rbxassetid://124281980642036",
+            "SkyboxLf": "rbxassetid://75217903494143",
+            "SkyboxRt": "rbxassetid://89476515610354",
+            "SkyboxUp": "rbxassetid://105613864923327",
             "StarCount": 0,
             "SunAngularSize": 10,
             "SunTextureId": "rbxasset://sky/sun.jpg",
@@ -98436,12 +101745,12 @@ exports[`Pet Simulator Public Live API Test Zones shape 1`] = `
             "CelestialBodiesShown": false,
             "MoonAngularSize": 11,
             "MoonTextureId": "",
-            "SkyboxBk": "rbxassetid://11808532452",
-            "SkyboxDn": "rbxassetid://15513336382",
-            "SkyboxFt": "rbxassetid://11808532318",
-            "SkyboxLf": "rbxassetid://11808532171",
-            "SkyboxRt": "rbxassetid://11808532685",
-            "SkyboxUp": "rbxassetid://11808533003",
+            "SkyboxBk": "rbxassetid://91067904138603",
+            "SkyboxDn": "rbxassetid://108518032479801",
+            "SkyboxFt": "rbxassetid://124281980642036",
+            "SkyboxLf": "rbxassetid://75217903494143",
+            "SkyboxRt": "rbxassetid://89476515610354",
+            "SkyboxUp": "rbxassetid://105613864923327",
             "StarCount": 0,
             "SunAngularSize": 10,
             "SunTextureId": "rbxasset://sky/sun.jpg",
@@ -98546,12 +101855,12 @@ exports[`Pet Simulator Public Live API Test Zones shape 1`] = `
             "CelestialBodiesShown": false,
             "MoonAngularSize": 11,
             "MoonTextureId": "",
-            "SkyboxBk": "rbxassetid://11808532452",
-            "SkyboxDn": "rbxassetid://15513336382",
-            "SkyboxFt": "rbxassetid://11808532318",
-            "SkyboxLf": "rbxassetid://11808532171",
-            "SkyboxRt": "rbxassetid://11808532685",
-            "SkyboxUp": "rbxassetid://11808533003",
+            "SkyboxBk": "rbxassetid://91067904138603",
+            "SkyboxDn": "rbxassetid://108518032479801",
+            "SkyboxFt": "rbxassetid://124281980642036",
+            "SkyboxLf": "rbxassetid://75217903494143",
+            "SkyboxRt": "rbxassetid://89476515610354",
+            "SkyboxUp": "rbxassetid://105613864923327",
             "StarCount": 0,
             "SunAngularSize": 10,
             "SunTextureId": "rbxasset://sky/sun.jpg",
@@ -98648,12 +101957,12 @@ exports[`Pet Simulator Public Live API Test Zones shape 1`] = `
             "CelestialBodiesShown": false,
             "MoonAngularSize": 11,
             "MoonTextureId": "",
-            "SkyboxBk": "rbxassetid://11808532452",
-            "SkyboxDn": "rbxassetid://15513336382",
-            "SkyboxFt": "rbxassetid://11808532318",
-            "SkyboxLf": "rbxassetid://11808532171",
-            "SkyboxRt": "rbxassetid://11808532685",
-            "SkyboxUp": "rbxassetid://11808533003",
+            "SkyboxBk": "rbxassetid://91067904138603",
+            "SkyboxDn": "rbxassetid://108518032479801",
+            "SkyboxFt": "rbxassetid://124281980642036",
+            "SkyboxLf": "rbxassetid://75217903494143",
+            "SkyboxRt": "rbxassetid://89476515610354",
+            "SkyboxUp": "rbxassetid://105613864923327",
             "StarCount": 0,
             "SunAngularSize": 10,
             "SunTextureId": "rbxasset://sky/sun.jpg",
@@ -108580,6 +111889,7 @@ exports[`Pet Simulator Public Live API Test Zones shape 1`] = `
             "SunTextureId": "",
           },
         },
+        "LinkedOwnership": "Grassy Plains",
         "MaximumAvailableEgg": 236,
         "QuestsRequired": [
           {
@@ -108601,6 +111911,303 @@ exports[`Pet Simulator Public Live API Test Zones shape 1`] = `
         "ZoneNumber": 224,
       },
       "configName": "224 | Kawaii Temple",
+    },
+    {
+      "category": "Update 29",
+      "collection": "Zones",
+      "configData": {
+        "Breakables": {
+          "Main": {
+            "Data": [
+              {
+                "Type": "Medium Coins (Void)",
+                "Weight": 15,
+              },
+              {
+                "Type": "Large Coins (Void)",
+                "Weight": 30,
+              },
+              {
+                "Type": "Crate (Elemental)",
+                "Weight": 18,
+              },
+              {
+                "Type": "Present (Elemental)",
+                "Weight": 25,
+              },
+            ],
+            "Settings": {
+              "Maximum": 35,
+              "RespawnTime": 0.05,
+            },
+          },
+        },
+        "CannonGroupId": 6,
+        "Currency": "VoidCoins",
+        "ExtraDropTable": null,
+        "MaximumAvailableEgg": 237,
+        "QuestsRequired": [
+          {
+            "Amount": 600,
+            "Type": 1,
+          },
+        ],
+        "TeleportToZoneOnFall": true,
+        "WorldNumber": 3,
+        "ZoneName": "Grassy Plains",
+        "ZoneNumber": 225,
+      },
+      "configName": "225 | Grassy Plains",
+    },
+    {
+      "category": "Update 29",
+      "collection": "Zones",
+      "configData": {
+        "Breakables": {
+          "Main": {
+            "Data": [
+              {
+                "Type": "Small Coins (Void)",
+                "Weight": 6,
+              },
+              {
+                "Type": "Medium Coins (Void)",
+                "Weight": 12,
+              },
+              {
+                "Type": "Large Coins (Void)",
+                "Weight": 14,
+              },
+              {
+                "Type": "Crate (Elemental)",
+                "Weight": 10,
+              },
+              {
+                "Type": "Present (Elemental)",
+                "Weight": 18,
+              },
+              {
+                "Type": "Safe (Elemental)",
+                "Weight": 4,
+              },
+              {
+                "Type": "Vault (Elemental)",
+                "Weight": 3,
+              },
+            ],
+            "Settings": {
+              "Maximum": 35,
+              "RespawnTime": 0.05,
+            },
+          },
+        },
+        "CannonGroupId": 6,
+        "Currency": "VoidCoins",
+        "ExtraDropTable": null,
+        "MaximumAvailableEgg": 238,
+        "QuestsRequired": [
+          {
+            "Amount": 125,
+            "Type": 20,
+          },
+        ],
+        "TeleportToZoneOnFall": true,
+        "WorldNumber": 3,
+        "ZoneName": "Rocky Ridge",
+        "ZoneNumber": 226,
+      },
+      "configName": "226 | Rocky Ridge",
+    },
+    {
+      "category": "Update 29",
+      "collection": "Zones",
+      "configData": {
+        "Breakables": {
+          "Main": {
+            "Data": [
+              {
+                "Type": "Medium Coins (Void)",
+                "Weight": 6,
+              },
+              {
+                "Type": "Large Coins (Void)",
+                "Weight": 11,
+              },
+              {
+                "Type": "Crate (Elemental)",
+                "Weight": 12,
+              },
+              {
+                "Type": "Present (Elemental)",
+                "Weight": 13,
+              },
+              {
+                "Type": "Safe (Elemental)",
+                "Weight": 3,
+              },
+              {
+                "Type": "Vault (Elemental)",
+                "Weight": 3,
+              },
+            ],
+            "Settings": {
+              "Maximum": 35,
+              "RespawnTime": 0.05,
+            },
+          },
+        },
+        "CannonGroupId": 6,
+        "Currency": "VoidCoins",
+        "ExtraDropTable": null,
+        "MaximumAvailableEgg": 239,
+        "QuestsRequired": [
+          {
+            "Amount": 8,
+            "Type": 40,
+          },
+          {
+            "Amount": 6,
+            "Type": 37,
+          },
+        ],
+        "TeleportToZoneOnFall": true,
+        "WorldNumber": 3,
+        "ZoneName": "Crystal Lake",
+        "ZoneNumber": 227,
+      },
+      "configName": "227 | Crystal Lake",
+    },
+    {
+      "category": "Update 29",
+      "collection": "Zones",
+      "configData": {
+        "Breakables": {
+          "Main": {
+            "Data": [
+              {
+                "Type": "Medium Coins (Void)",
+                "Weight": 4,
+              },
+              {
+                "Type": "Large Coins (Void)",
+                "Weight": 12,
+              },
+              {
+                "Type": "Crate (Elemental)",
+                "Weight": 15,
+              },
+              {
+                "Type": "Present (Elemental)",
+                "Weight": 17,
+              },
+              {
+                "Type": "Vault (Elemental)",
+                "Weight": 3,
+              },
+            ],
+            "Settings": {
+              "Maximum": 35,
+              "RespawnTime": 0.05,
+            },
+          },
+        },
+        "CannonGroupId": 6,
+        "Currency": "VoidCoins",
+        "ExtraDropTable": null,
+        "MaximumAvailableEgg": 240,
+        "QuestsRequired": [
+          {
+            "Amount": 10,
+            "Type": 41,
+          },
+        ],
+        "TeleportToZoneOnFall": true,
+        "WorldNumber": 3,
+        "ZoneName": "Electro Forge",
+        "ZoneNumber": 228,
+      },
+      "configName": "228 | Electro Forge",
+    },
+    {
+      "category": "Update 29",
+      "collection": "Zones",
+      "configData": {
+        "Breakables": {
+          "Main": {
+            "Data": [
+              {
+                "Type": "Small Coins (Void)",
+                "Weight": 2,
+              },
+              {
+                "Type": "Medium Coins (Void)",
+                "Weight": 6,
+              },
+              {
+                "Type": "Large Coins (Void)",
+                "Weight": 11,
+              },
+              {
+                "Type": "Crate (Elemental)",
+                "Weight": 18,
+              },
+              {
+                "Type": "Present (Elemental)",
+                "Weight": 18,
+              },
+              {
+                "Type": "Safe (Elemental)",
+                "Weight": 4,
+              },
+              {
+                "Type": "Vault (Elemental)",
+                "Weight": 3,
+              },
+            ],
+            "Settings": {
+              "Maximum": 35,
+              "RespawnTime": 0.05,
+            },
+          },
+        },
+        "CannonGroupId": 6,
+        "Chests": {
+          "Boss": {
+            "Data": [
+              {
+                "Rotation": 0,
+                "Type": "ElementalChest",
+                "Weight": 100,
+              },
+            ],
+            "DifficultyMultKey": "Elemental_Chest_Health",
+            "DifficultyScale": 165,
+            "RespawnTime": 300,
+          },
+        },
+        "Currency": "VoidCoins",
+        "ExtraDropTable": null,
+        "MaximumAvailableEgg": 241,
+        "QuestsRequired": [
+          {
+            "Amount": 5,
+            "Type": 38,
+          },
+          {
+            "Amount": 5,
+            "Type": 37,
+          },
+          {
+            "Amount": 1250,
+            "Type": 1,
+          },
+        ],
+        "TeleportToZoneOnFall": true,
+        "WorldNumber": 3,
+        "ZoneName": "Elemental Realm",
+        "ZoneNumber": 229,
+      },
+      "configName": "229 | Elemental Realm",
     },
   ],
   "status": "ok",
