@@ -1,291 +1,291 @@
-import React, { useEffect, useState } from "react";
-import {
-  CollectionConfigData,
-  CollectionData,
-  PetSimulator99API,
-  PetData,
-  EnchantmentData,
-  PotionData,
-  MiscItemData,
-  CurrencyData,
-} from "ps99-api";
+import React from "react";
+import { CollectionConfigData } from "ps99-api";
 import ImageComponent from "./ImageComponent";
+import { useItemResolution } from "../hooks/useItemResolution";
 
 const RanksComponent: React.FC<{
   configData: CollectionConfigData<"Ranks">;
 }> = ({ configData }) => {
-  const [enchants, setEnchants] = useState<EnchantmentData[]>([]);
-  const [potions, setPotions] = useState<PotionData[]>([]);
-  const [miscItems, setMiscItems] = useState<MiscItemData[]>([]);
-  const [currencies, setCurrencies] = useState<CurrencyData[]>([]);
-  const [loading, setLoading] = useState(true);
-
-  useEffect(() => {
-    const fetchData = async () => {
-      const api = new PetSimulator99API();
-      const [
-        enchantsResponse,
-        potionsResponse,
-        miscItemsResponse,
-        currencyResponse,
-      ] = await Promise.all([
-        api.getCollection("Enchants"),
-        api.getCollection("Potions"),
-        api.getCollection("MiscItems"),
-        api.getCollection("Currency"),
-      ]);
-
-      if (enchantsResponse.status === "ok") {
-        setEnchants(enchantsResponse.data);
-      }
-      if (potionsResponse.status === "ok") {
-        setPotions(potionsResponse.data);
-      }
-      if (miscItemsResponse.status === "ok") {
-        setMiscItems(miscItemsResponse.data);
-      }
-      if (currencyResponse.status === "ok") {
-        setCurrencies(currencyResponse.data);
-      }
-      setLoading(false);
-    };
-    fetchData();
-  }, []);
-
-  const resolveItemImage = (id: string, tn?: number) => {
-    // Check Currency
-    const currency = currencies.find(
-      (item) => item.configName === id || item.configName === `Currency | ${id}`,
-    );
-    if (currency && currency.configData.Tiers && currency.configData.Tiers.length > 0) {
-      return currency.configData.Tiers[0].tinyImage;
-    }
-
-    // Check MiscItems
-    const miscItem = miscItems.find(
-      (item) => item.configData.DisplayName === id,
-    );
-    if (miscItem && miscItem.configData.Icon) {
-      return miscItem.configData.Icon;
-    }
-
-    // Check Enchants
-    // Enchants usually match by name with "Enchant | " prefix.
-    const enchant = enchants.find(
-      (item) => item.configName === id || item.configName === `Enchant | ${id}`,
-    );
-    if (enchant && tn) {
-      // tn is 1-based tier, Tiers array is 0-based
-      const tier = enchant.configData.Tiers[tn - 1];
-      if (tier && tier.Icon) {
-        return tier.Icon;
-      }
-    }
-
-    // Check Potions
-    const potion = potions.find(
-      (item) => item.configName === id || item.configName === `Potion | ${id}`,
-    );
-    if (potion && tn) {
-      // tn is 1-based tier, Tiers array is 0-based
-      const tier = potion.configData.Tiers[tn - 1];
-      if (tier && tier.Icon) {
-        return tier.Icon;
-      }
-    }
-
-    return null;
-  };
-
-  const getRewardImage = (rewardItem: {
-    _data: { id: string; tn?: number };
-  }) => {
-    return resolveItemImage(rewardItem._data.id, rewardItem._data.tn);
-  };
+  const { loading, resolveItem, getRarityColor } = useItemResolution();
 
   if (loading) {
-    return <div>Loading reference data...</div>;
+    return (
+      <div style={{
+        display: "flex",
+        justifyContent: "center",
+        alignItems: "center",
+        height: "100vh",
+        fontSize: "1.5rem",
+        color: "#888"
+      }}>
+        Loading reference data...
+      </div>
+    );
   }
 
-  return (
-    <div>
-      <h2>Rank: {configData.Title}</h2>
-      <p>Rank Number: {configData.RankNumber}</p>
-      <p>Max Enchants Equipped: {configData.MaxEnchantsEquipped}</p>
-      <p>Maximum Active Goals: {configData.MaximumActiveGoals}</p>
-      <p>Unlockable Egg Slots: {configData.UnlockableEggSlots}</p>
-      <p>Unlockable Pet Slots: {configData.UnlockablePetSlots}</p>
-      {configData.RequiredRebirth && (
-        <p>Required Rebirth: {configData.RequiredRebirth}</p>
-      )}
-      {configData.RequiredZone && (
-        <p>Required Zone: {configData.RequiredZone}</p>
-      )}
+  const renderItemCard = (id: string, amount: string | number, label: string, tn?: number, weight?: number, typeId?: number) => {
+    const itemData = resolveItem(id, tn);
+    const rarityColor = itemData?.rarity ? getRarityColor(itemData.rarity) : '#e0e0e0';
 
-      <div>
-        <h3>Goals:</h3>
-        {configData.Goals.map((goalSet, index) => (
-          <div key={index}>
-            <h4>Goal Set {index + 1}</h4>
-            <ul style={{ listStyle: "none", padding: 0 }}>
-              {goalSet.map((goal, goalIndex) => {
-                let goalImage = null;
-                if (goal.CurrencyID) {
-                  goalImage = resolveItemImage(goal.CurrencyID);
-                }
+    // Use resolved name if available, otherwise fallback to provided label
+    const displayLabel = itemData?.name || label;
 
-                return (
-                  <li
-                    key={goalIndex}
-                    style={{
-                      display: "flex",
-                      alignItems: "center",
-                      marginBottom: "0.5em",
-                      border: "1px solid #ddd",
-                      padding: "0.5em",
-                      borderRadius: "4px",
-                    }}
-                  >
-                    <div style={{ marginRight: "1em" }}>
-                      {goalImage ? (
-                        <div style={{ width: "50px", height: "50px" }}>
-                          <ImageComponent src={goalImage} alt={goal.CurrencyID || "Goal"} />
-                        </div>
-                      ) : (
-                        <div
-                          style={{
-                            width: "50px",
-                            height: "50px",
-                            backgroundColor: "#eee",
-                            display: "flex",
-                            alignItems: "center",
-                            justifyContent: "center",
-                            fontSize: "0.8em",
-                          }}
-                        >
-                          No Img
-                        </div>
-                      )}
-                    </div>
-                    <div>
-                      <p style={{ margin: 0 }}>Type: {goal.Type}</p>
-                      <p style={{ margin: 0 }}>Amount: {goal.Amount}</p>
-                      <p style={{ margin: 0 }}>Weight: {goal.Weight}</p>
-                      {goal.CurrencyID && <p style={{ margin: 0 }}>Currency ID: {goal.CurrencyID}</p>}
-                      {goal.BreakableType && (
-                        <p style={{ margin: 0 }}>Breakable Type: {goal.BreakableType}</p>
-                      )}
-                      {goal.PotionTier && <p style={{ margin: 0 }}>Potion Tier: {goal.PotionTier}</p>}
-                      {goal.EnchantTier && <p style={{ margin: 0 }}>Enchant Tier: {goal.EnchantTier}</p>}
-                    </div>
-                  </li>
-                );
-              })}
-            </ul>
-          </div>
-        ))}
-      </div>
+    return (
+      <div
+        key={`${id}-${tn}-${typeId}-${Math.random()}`}
+        style={{
+          display: "flex",
+          flexDirection: "column",
+          alignItems: "center",
+          justifyContent: "space-between",
+          border: `2px solid ${rarityColor}`,
+          borderRadius: "16px",
+          padding: "16px",
+          backgroundColor: "#ffffff",
+          boxShadow: `0 4px 15px ${rarityColor}40`, // 40 = 25% opacity
+          transition: "transform 0.2s ease, box-shadow 0.2s ease",
+          cursor: "pointer",
+          width: "100%",
+          minHeight: "220px",
+          position: "relative",
+          overflow: "hidden"
+        }}
+        onMouseEnter={(e) => {
+          e.currentTarget.style.transform = "translateY(-5px)";
+          e.currentTarget.style.boxShadow = `0 8px 25px ${rarityColor}60`;
+        }}
+        onMouseLeave={(e) => {
+          e.currentTarget.style.transform = "translateY(0)";
+          e.currentTarget.style.boxShadow = `0 4px 15px ${rarityColor}40`;
+        }}
+      >
+        {/* Rarity Glow Background */}
+        <div style={{
+          position: "absolute",
+          top: "-20%",
+          left: "50%",
+          transform: "translateX(-50%)",
+          width: "150%",
+          height: "150px",
+          background: `radial-gradient(circle, ${rarityColor}33 0%, transparent 70%)`,
+          zIndex: 0,
+          pointerEvents: "none"
+        }} />
 
-      <div>
-        <h3>Rewards:</h3>
-        <ul style={{ listStyle: "none", padding: 0 }}>
-          {configData.Rewards.map((reward, rewardIndex) => {
-            const imageUrl = getRewardImage(reward.Item);
-            return (
-              <li
-                key={rewardIndex}
-                style={{
-                  display: "flex",
-                  alignItems: "center",
-                  marginBottom: "0.5em",
-                  border: "1px solid #ddd",
-                  padding: "0.5em",
-                  borderRadius: "4px",
-                }}
-              >
-                <div style={{ marginRight: "1em" }}>
-                  {imageUrl ? (
-                    <div style={{ width: "50px", height: "50px" }}>
-                      <ImageComponent src={imageUrl} alt={reward.Item._data.id} />
-                    </div>
-                  ) : (
-                    <div
-                      style={{
-                        width: "50px",
-                        height: "50px",
-                        backgroundColor: "#eee",
-                        display: "flex",
-                        alignItems: "center",
-                        justifyContent: "center",
-                        fontSize: "0.8em",
-                      }}
-                    >
-                      No Img
-                    </div>
-                  )}
-                </div>
-                <div>
-                  <p style={{ margin: 0, fontWeight: "bold" }}>
-                    {reward.Item._data.id} {reward.Item._data.tn ? `(Tier ${reward.Item._data.tn})` : ""}
-                  </p>
-                  <p style={{ margin: 0 }}>Stars Required: {reward.StarsRequired}</p>
-                  {reward.Item._data._am && <p style={{ margin: 0 }}>Amount: {reward.Item._data._am}</p>}
-                </div>
-              </li>
-            );
-          })}
-        </ul>
-      </div>
-
-      {configData.RankUpRewards && (
-        <div>
-          <h3>Rank Up Rewards:</h3>
-          <ul style={{ listStyle: "none", padding: 0 }}>
-            {configData.RankUpRewards.map((reward, rewardIndex) => {
-              const imageUrl = getRewardImage({ _data: reward._data }); // Adapter for consistent interface
-              return (
-                <li key={rewardIndex} style={{
-                  display: "flex",
-                  alignItems: "center",
-                  marginBottom: "0.5em",
-                  border: "1px solid #ddd",
-                  padding: "0.5em",
-                  borderRadius: "4px",
-                }}>
-                  <div style={{ marginRight: "1em" }}>
-                    {imageUrl ? (
-                      <div style={{ width: "50px", height: "50px" }}>
-                        <ImageComponent src={imageUrl} alt={reward._data.id} />
-                      </div>
-                    ) : (
-                      <div
-                        style={{
-                          width: "50px",
-                          height: "50px",
-                          backgroundColor: "#eee",
-                          display: "flex",
-                          alignItems: "center",
-                          justifyContent: "center",
-                          fontSize: "0.8em",
-                        }}
-                      >
-                        No Img
-                      </div>
-                    )}
-                  </div>
-                  <div>
-                    <p style={{ margin: 0, fontWeight: "bold" }}>Reward Item ID: {reward._data.id}</p>
-                    {reward._data._am && <p style={{ margin: 0 }}>Amount: {reward._data._am}</p>}
-                    {reward._data.tn && <p style={{ margin: 0 }}>TN: {reward._data.tn}</p>}
-                  </div>
-                </li>
-              )
-            })}
-          </ul>
+        <div style={{
+          position: "relative",
+          width: "80px",
+          height: "80px",
+          marginBottom: "12px",
+          display: "flex",
+          alignItems: "center",
+          justifyContent: "center",
+          zIndex: 1
+        }}>
+          {itemData && itemData.icon ? (
+            <div style={{ width: "100%", height: "100%", display: "flex", alignItems: "center", justifyContent: "center" }}>
+              <ImageComponent src={itemData.icon} alt={displayLabel} />
+            </div>
+          ) : (
+            <div style={{
+              width: "60px",
+              height: "60px",
+              borderRadius: "50%",
+              background: "#f0f0f0",
+              display: "flex",
+              alignItems: "center",
+              justifyContent: "center",
+              fontSize: "10px",
+              color: "#999",
+              border: "2px dashed #ccc"
+            }}>No Img</div>
+          )}
         </div>
-      )}
+
+        <div style={{ textAlign: "center", zIndex: 1, width: '100%' }}>
+          <div style={{
+            fontWeight: "800",
+            fontSize: "20px",
+            color: "#333",
+            marginBottom: "4px"
+          }}>
+            {typeof amount === 'number' ? `x${amount}` : amount}
+          </div>
+
+          <div style={{
+            fontWeight: "700",
+            fontSize: "14px",
+            color: rarityColor,
+            marginBottom: "8px",
+            textTransform: "uppercase",
+            letterSpacing: "0.5px",
+            lineHeight: "1.2"
+          }}>
+            {displayLabel}
+            {tn && !displayLabel.includes(String(tn)) ? ` (Tier ${tn})` : ""}
+          </div>
+
+          {(weight !== undefined || typeId !== undefined) && (
+            <div style={{
+              fontSize: "11px",
+              color: "#888",
+              marginTop: "8px",
+              borderTop: "1px solid #eee",
+              paddingTop: "8px",
+              display: "flex",
+              justifyContent: "center",
+              gap: "8px"
+            }}>
+              {weight !== undefined && <span>W: {weight}</span>}
+              {typeId !== undefined && <span>ID: {typeId}</span>}
+            </div>
+          )}
+        </div>
+      </div>
+    );
+  };
+
+  return (
+    <div style={{ padding: "40px", fontFamily: "'Nunito', 'Segoe UI', sans-serif", backgroundColor: "#f9f9f9", minHeight: "100vh" }}>
+      <h1 style={{ color: "#333", textAlign: "center", marginBottom: "10px", fontSize: "3rem", fontWeight: "800" }}>{configData.Title}</h1>
+      <p style={{ textAlign: "center", color: "#666", fontSize: "1.2rem", marginBottom: "40px" }}>Rank {configData.RankNumber}</p>
+
+      <div style={{ maxWidth: "1200px", margin: "0 auto" }}>
+
+        {/* Info Grid */}
+        <div style={{
+          display: "grid",
+          gridTemplateColumns: "repeat(auto-fit, minmax(180px, 1fr))",
+          gap: "16px",
+          marginBottom: "60px",
+          background: "#ffffff",
+          padding: "24px",
+          borderRadius: "20px",
+          boxShadow: "0 4px 20px rgba(0,0,0,0.05)"
+        }}>
+          <InfoItem label="Max Enchants" value={configData.MaxEnchantsEquipped} />
+          <InfoItem label="Max Goals" value={configData.MaximumActiveGoals} />
+          <InfoItem label="Egg Slots" value={configData.UnlockableEggSlots} />
+          <InfoItem label="Pet Slots" value={configData.UnlockablePetSlots} />
+          {configData.RequiredRebirth && <InfoItem label="Rebirth Req" value={configData.RequiredRebirth} />}
+          {configData.RequiredZone && <InfoItem label="Zone Req" value={configData.RequiredZone} />}
+        </div>
+
+        {/* Rewards Section */}
+        {configData.Rewards && configData.Rewards.length > 0 && (
+          <div style={{ marginBottom: "60px" }}>
+            <SectionTitle title="Rewards" />
+            <div style={{
+              display: "grid",
+              gridTemplateColumns: "repeat(auto-fill, minmax(200px, 1fr))",
+              gap: "24px"
+            }}>
+              {configData.Rewards.map((reward: any, i: number) => {
+                // Handle inconsistent reward structure if necessary
+                const data = reward.Item?._data || reward.Item || reward._data || reward;
+                const id = data.id || data._id || "Reward";
+                const amount = data._am || data.Amount || 1;
+                const tn = data.tn || data.Tier;
+                return renderItemCard(id, amount, id, tn);
+              })}
+            </div>
+          </div>
+        )}
+
+        {/* Goals Section */}
+        {configData.Goals && (
+          <div>
+            <SectionTitle title="Goals" />
+            <div style={{ display: "flex", flexDirection: "column", gap: "40px" }}>
+              {Array.isArray(configData.Goals) ? configData.Goals.map((goalSet: any[], setIndex: number) => (
+                <div key={setIndex} style={{
+                  background: "#fff",
+                  borderRadius: "24px",
+                  padding: "30px",
+                  boxShadow: "0 2px 10px rgba(0,0,0,0.03)"
+                }}>
+                  <div style={{
+                    display: "flex",
+                    alignItems: "center",
+                    marginBottom: "24px",
+                    gap: "12px"
+                  }}>
+                    <div style={{
+                      background: "#ffcc00",
+                      width: "8px",
+                      height: "32px",
+                      borderRadius: "4px"
+                    }} />
+                    <h3 style={{
+                      fontSize: "1.5rem",
+                      color: "#444",
+                      fontWeight: "700",
+                      margin: 0
+                    }}>Goal Set {setIndex + 1}</h3>
+                  </div>
+
+                  <div style={{
+                    display: "grid",
+                    gridTemplateColumns: "repeat(auto-fill, minmax(180px, 1fr))",
+                    gap: "20px"
+                  }}>
+                    {goalSet.map((goal: any, index: number) => {
+                      // Determine ID and Label
+                      // Goals usually have Type (numeric) which we need to resolve
+                      // Sometimes they might have CurrencyID
+                      const id = String(goal.CurrencyID || goal.Type);
+                      const tn = goal.EnchantTier || goal.PotionTier || goal.Tier;
+                      // Label can be tricky, resolveItem will give us data, but for fallback prompt we use ID
+                      return renderItemCard(
+                        id,
+                        goal.Amount,
+                        id,
+                        tn,
+                        goal.Weight,
+                        goal.Type
+                      );
+                    })}
+                  </div>
+                </div>
+              )) : (
+                <div>No goals structure found</div>
+              )}
+            </div>
+          </div>
+        )}
+      </div>
     </div>
   );
 };
+
+// Helper Components
+const InfoItem = ({ label, value }: { label: string, value: any }) => (
+  <div style={{ display: "flex", flexDirection: "column", alignItems: "center" }}>
+    <span style={{ fontSize: "12px", color: "#999", textTransform: "uppercase", fontWeight: "700" }}>{label}</span>
+    <span style={{ fontSize: "18px", color: "#333", fontWeight: "800" }}>{value}</span>
+  </div>
+);
+
+const SectionTitle = ({ title }: { title: string }) => (
+  <h2 style={{
+    fontSize: "2.2rem",
+    color: "#444",
+    marginBottom: "30px",
+    textAlign: "center",
+    position: "relative",
+    display: "inline-block",
+    left: "50%",
+    transform: "translateX(-50%)"
+  }}>
+    {title}
+    <div style={{
+      width: "60px",
+      height: "4px",
+      background: "#ffcc00",
+      borderRadius: "2px",
+      margin: "10px auto 0"
+    }} />
+  </h2>
+);
 
 export default RanksComponent;
