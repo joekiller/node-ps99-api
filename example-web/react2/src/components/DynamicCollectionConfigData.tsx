@@ -20,15 +20,30 @@ const DynamicCollectionConfigData: React.FC<
   const collectionName = props.collectionName || params.collectionName;
   const configName = props.configName || params.configName;
 
-  if (!collectionName || !configName) {
+  /*
+   * We need to use useMemo here to prevent the component from being re-created
+   * on every render. This usage of useMemo is safe because the import path
+   * depends only on collectionName, and we want to re-create the component
+   * only when collectionName changes.
+   */
+  const Component = React.useMemo(() => {
+    if (!collectionName) return null;
+    return lazy(() => import(`./${collectionName}Component`));
+  }, [collectionName]);
+
+  if (!collectionName || !configName || !Component) {
     return <div>Invalid collection or config name</div>;
   }
-
-  const Component = lazy(() => import(`./${collectionName}Component`));
 
   return (
     <Suspense fallback={<div>Loading...</div>}>
       <GenericFetchComponent
+        // We use the key prop to force a re-mount of the component when the
+        // collectionName or configName changes. This ensures that the internal
+        // state of the GenericFetchComponent is reset and the new data is
+        // fetched correctly, preventing stale data from being passed to the
+        // child component.
+        key={`${collectionName}-${configName}`}
         collectionName={collectionName}
         configName={configName}
         render={
