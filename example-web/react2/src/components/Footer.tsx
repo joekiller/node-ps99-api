@@ -1,10 +1,23 @@
 import React, { useState, useEffect } from "react";
+import { useLocation } from "react-router-dom";
 import { useOnlineStatus } from "../hooks/useOnlineStatus";
 
 const Footer: React.FC = () => {
   const isOnline = useOnlineStatus();
   const [lastUpdate, setLastUpdate] = useState<string | null>(null);
   const [loading, setLoading] = useState(false);
+
+  const location = useLocation();
+  const isCollectionsRoute = location.pathname.startsWith("/collections");
+  const [isMobile, setIsMobile] = useState(window.innerWidth < 768);
+
+  useEffect(() => {
+    const handleResize = () => setIsMobile(window.innerWidth < 768);
+    window.addEventListener("resize", handleResize);
+    return () => window.removeEventListener("resize", handleResize);
+  }, []);
+
+
 
   const updateLastUpdate = () => {
     setLastUpdate(new Date().toLocaleString());
@@ -29,6 +42,10 @@ const Footer: React.FC = () => {
       window.removeEventListener("offline", updateLastUpdate);
     };
   }, []);
+
+  if (isMobile && isCollectionsRoute) {
+    return null;
+  }
 
   return (
     <footer className="game-footer">

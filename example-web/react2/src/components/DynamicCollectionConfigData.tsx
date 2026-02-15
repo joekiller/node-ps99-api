@@ -30,9 +30,18 @@ const DynamicCollectionConfigData: React.FC<
    * depends only on collectionName, and we want to re-create the component
    * only when collectionName changes.
    */
+  /*
+   * We need to use useMemo here to prevent the component from being re-created
+   * on every render. This usage of useMemo is safe because the import path
+   * depends only on collectionName, and we want to re-create the component
+   * only when collectionName changes.
+   */
   const Component = React.useMemo(() => {
     if (!collectionName) return null;
-    return lazy(() => import(`./${collectionName}Component`));
+    // Capitalize first letter to match file naming convention (e.g. "pets" -> "Pets")
+    // This fixes issues where navigation uses lowercase but files are Capitalized
+    const formattedName = collectionName.charAt(0).toUpperCase() + collectionName.slice(1);
+    return lazy(() => import(`./${formattedName}Component`));
   }, [collectionName]);
 
   if (!collectionName || !configName || !Component) {

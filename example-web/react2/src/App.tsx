@@ -7,20 +7,23 @@ import CollectionConfigIndex from "./components/CollectionConfigIndex";
 import DynamicCollectionConfigData from "./components/DynamicCollectionConfigData";
 import CollectionsLayout from "./components/CollectionsLayout";
 import Footer from "./components/Footer";
+import { ScrollProvider } from "./context/ScrollContext";
 
 const App: React.FC = () => {
   return (
     <Router>
-      <Header />
-      <Routes>
-        <Route path="/" element={<HomePage />} />
-        <Route path="/collections" element={<CollectionsIndex />} />
-        <Route element={<CollectionsLayout />}>
-          <Route path="/collections/:collectionName" element={<CollectionConfigIndex />} />
-          <Route path="/collections/:collectionName/:configName" element={<DynamicCollectionConfigData />} />
-        </Route>
-      </Routes>
-      <Footer />
+      <ScrollProvider>
+        <Header />
+        <Routes>
+          <Route path="/" element={<HomePage />} />
+          <Route path="/collections" element={<CollectionsIndex />} />
+          <Route element={<CollectionsLayout />}>
+            <Route path="/collections/:collectionName" element={<CollectionConfigIndex />} />
+            <Route path="/collections/:collectionName/:configName" element={<DynamicCollectionConfigData />} />
+          </Route>
+        </Routes>
+        <Footer />
+      </ScrollProvider>
     </Router>
   );
 };

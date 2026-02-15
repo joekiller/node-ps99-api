@@ -2,6 +2,8 @@ import React from "react";
 import { CollectionConfigData } from "ps99-api";
 import ItemCard from "./ItemCard";
 
+import { formatGigantix } from "../utils/gigantix";
+
 const CurrencyComponent: React.FC<{
   configData: CollectionConfigData<"Currency">;
 }> = ({ configData }) => {
@@ -12,7 +14,7 @@ const CurrencyComponent: React.FC<{
       <div style={{ marginBottom: '20px', textAlign: 'center' }}>
         <p style={{ fontStyle: 'italic', marginBottom: '10px' }}>{configData.Desc}</p>
         <div style={{ display: 'flex', flexWrap: 'wrap', gap: '8px', justifyContent: 'center' }}>
-          <span className="badge">Max: {configData.MaxAmount}</span>
+          <span className="badge">Max: {formatGigantix(configData.MaxAmount)}</span>
           {configData.Rarity && <span className="badge" style={{ borderColor: (configData.Rarity.Color as string) }}>Rarity: {configData.Rarity.DisplayName}</span>}
           {configData.Tradable && <span className="badge">Tradable</span>}
           {configData.IsWorldCurrency && <span className="badge">World Currency</span>}

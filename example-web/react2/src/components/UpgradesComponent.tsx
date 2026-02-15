@@ -3,6 +3,7 @@ import { CollectionConfigData } from "ps99-api";
 import ItemCard from "./ItemCard";
 import ImageComponent from "./ImageComponent";
 import { useExpandableList } from "../hooks/useExpandableList";
+import { formatGigantix } from "../utils/gigantix";
 
 const UpgradeComponent: React.FC<{
   configData: CollectionConfigData<"Upgrades">;
@@ -23,7 +24,7 @@ const UpgradeComponent: React.FC<{
           <ul style={{ listStyle: 'none', padding: 0, textAlign: 'left' }}>
             {configData.TierPowers.map((power, index) => (
               <li key={index} style={{ padding: '5px 0', borderBottom: '1px dashed #eee' }}>
-                <strong>Tier {index + 1}:</strong> {power}
+                <strong>Tier {index + 1}:</strong> {formatGigantix(power)}
               </li>
             ))}
           </ul>
@@ -33,7 +34,7 @@ const UpgradeComponent: React.FC<{
           <ul style={{ listStyle: 'none', padding: 0, textAlign: 'left' }}>
             {configData.TierCosts.map((cost, index) => (
               <li key={index} style={{ padding: '5px 0', borderBottom: '1px dashed #eee' }}>
-                <strong>Tier {index + 1}:</strong> {cost}
+                <strong>Tier {index + 1}:</strong> {formatGigantix(cost)}
               </li>
             ))}
           </ul>
@@ -58,7 +59,7 @@ const UpgradeComponent: React.FC<{
               <div style={{ display: 'flex', gap: '10px', justifyContent: 'center', marginBottom: '10px' }}>
                 <span className="badge" style={{ borderColor: (currency.Rarity?.Color as string) || '#ccc' }}>{currency.Rarity?.DisplayName}</span>
                 {currency.Tradable && <span className="badge">Tradable</span>}
-                <span className="badge">Max: {currency.MaxAmount}</span>
+                <span className="badge">Max: {formatGigantix(currency.MaxAmount)}</span>
               </div>
             </div>
 

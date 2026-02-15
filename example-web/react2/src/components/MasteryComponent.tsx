@@ -1,46 +1,113 @@
 import React from "react";
 import { CollectionConfigData } from "ps99-api";
 import ItemCard from "./ItemCard";
-import { useExpandableList } from "../hooks/useExpandableList";
 
 const MasteryComponent: React.FC<{
   configData: CollectionConfigData<"Mastery">;
 }> = ({ configData }) => {
-  const perksEntries = React.useMemo(() => configData.Perks ? Object.entries(configData.Perks) : [], [configData.Perks]);
-  const { expandedIndices, toggle, expandAll, collapseAll, isExpanded } = useExpandableList(perksEntries.length);
+  const groupedPerks = React.useMemo(() => {
+    if (!configData.Perks) return [];
+    const groups = new Map<number, any[]>();
 
-  const renderPerks = () => {
-    return perksEntries.map(
-      ([perkType, perkDetails]: [string, any], index: number) => (
-        <div key={perkType} style={{ marginBottom: '15px', textAlign: 'left', background: '#f9f9f9', padding: '10px', borderRadius: '8px' }}>
-          <h4
-            onClick={() => toggle(index)}
-            style={{ margin: '0 0 10px 0', color: '#333', cursor: 'pointer', display: 'flex', alignItems: 'center', gap: '8px' }}
-          >
-            {isExpanded(index) ? '▼' : '▶'} {perkType}
-          </h4>
-          {isExpanded(index) && (
-            <div>
-              {perkDetails.map((detail: any, idx: number) => (
-                <div key={idx} style={{ marginBottom: '8px', paddingLeft: '10px', borderLeft: '2px solid #ddd' }}>
-                  <div style={{ fontWeight: 'bold', fontSize: '0.9em' }}>Lvl {detail.Level}: {detail.Title}</div>
-                  <div style={{ fontSize: '0.9em', color: '#666' }}>{detail.Text}</div>
-                  {detail.Power && <div style={{ fontSize: '0.8em', color: '#1976d2' }}>Power: {detail.Power}</div>}
-                </div>
-              ))}
-            </div>
-          )}
+    Object.entries(configData.Perks).forEach(([type, levels]) => {
+      if (Array.isArray(levels)) {
+        levels.forEach((levelDetail: any) => {
+          const level = levelDetail.Level;
+          if (!groups.has(level)) {
+            groups.set(level, []);
+          }
+          groups.get(level)?.push({ ...levelDetail, type });
+        });
+      }
+    });
+
+    // Sort levels
+    const sortedLevels = Array.from(groups.keys()).sort((a, b) => a - b);
+    return sortedLevels.map(level => ({
+      level,
+      perks: groups.get(level) || []
+    }));
+  }, [configData.Perks]);
+
+  const renderGroupedPerks = () => {
+    return groupedPerks.map((group) => (
+      <div key={group.level} style={{
+        marginBottom: '20px',
+        background: '#fff',
+        borderRadius: '16px',
+        overflow: 'hidden',
+        boxShadow: '0 4px 6px rgba(0,0,0,0.05)',
+        border: '1px solid #eee'
+      }}>
+        {/* Level Header */}
+        <div style={{
+          background: 'linear-gradient(90deg, #4CAF50 0%, #45a049 100%)',
+          padding: '12px 20px',
+          color: 'white',
+          fontWeight: 'bold',
+          fontSize: '1.2em',
+          display: 'flex',
+          alignItems: 'center',
+          gap: '10px'
+        }}>
+          <span style={{ background: 'rgba(255,255,255,0.2)', padding: '4px 10px', borderRadius: '8px', fontSize: '0.9em' }}>
+            Lvl {group.level}
+          </span>
+          <span>Unlocks</span>
         </div>
-      ),
-    );
+
+        {/* Perks List */}
+        <div style={{ padding: '0' }}>
+          {group.perks.map((perk: any, index: number) => (
+            <div key={index} style={{
+              padding: '15px 20px',
+              borderBottom: index < group.perks.length - 1 ? '1px solid #f0f0f0' : 'none',
+              display: 'flex',
+              flexDirection: 'column',
+              gap: '4px'
+            }}>
+              <div style={{ display: 'flex', justifyContent: 'space-between', alignItems: 'flex-start' }}>
+                <div style={{ fontWeight: '700', color: '#333', fontSize: '1.05em' }}>{perk.Title}</div>
+                <div style={{
+                  fontSize: '0.75em',
+                  color: '#888',
+                  background: '#f5f5f5',
+                  padding: '2px 8px',
+                  borderRadius: '4px',
+                  textTransform: 'uppercase',
+                  fontWeight: '600',
+                  letterSpacing: '0.5px'
+                }}>
+                  {perk.type}
+                </div>
+              </div>
+              <div style={{ color: '#555', lineHeight: '1.4' }}>{perk.Text}</div>
+              {perk.Power && (
+                <div style={{
+                  color: '#1976d2',
+                  fontWeight: '600',
+                  fontSize: '0.9em',
+                  marginTop: '4px',
+                  display: 'inline-flex',
+                  alignItems: 'center',
+                  gap: '4px'
+                }}>
+                  ⚡ Power: {perk.Power}
+                </div>
+              )}
+            </div>
+          ))}
+        </div>
+      </div>
+    ));
   };
 
   return (
     <div style={{ width: '100%', height: '100%', boxSizing: 'border-box' }}>
 
       <div style={{
-        display: 'grid',
-        gridTemplateColumns: 'minmax(300px, 1fr) 2fr',
+        display: 'flex',
+        flexWrap: 'wrap',
         gap: '40px',
         height: '100%',
         alignItems: 'start'
@@ -48,6 +115,7 @@ const MasteryComponent: React.FC<{
 
         {/* Left Column: Icon */}
         <div style={{
+          flex: '1 1 300px',
           display: 'flex',
           flexDirection: 'column',
           alignItems: 'center',
@@ -74,7 +142,13 @@ const MasteryComponent: React.FC<{
         </div>
 
         {/* Right Column: Perks */}
-        <div style={{ display: 'flex', flexDirection: 'column', gap: '20px' }}>
+        <div style={{
+          flex: '2 1 300px',
+          display: 'flex',
+          flexDirection: 'column',
+          gap: '20px',
+          minWidth: '300px'
+        }}>
 
           {configData.ToggleablePerks && (
             <div style={{ background: '#fff', padding: '20px', borderRadius: '16px', border: '1px solid #eee', boxShadow: '0 2px 4px rgba(0,0,0,0.02)' }}>
@@ -93,12 +167,8 @@ const MasteryComponent: React.FC<{
             <div style={{ background: '#fff' }}>
               <div style={{ display: 'flex', justifyContent: 'space-between', alignItems: 'center', marginBottom: '15px' }}>
                 <h3 style={{ fontSize: '1.4em', margin: 0 }}>Mastery Perks</h3>
-                <div style={{ display: 'flex', gap: '10px' }}>
-                  <button onClick={expandAll} style={{ padding: '6px 12px', borderRadius: '6px', border: '1px solid #ddd', background: '#fff', cursor: 'pointer', fontSize: '0.9rem' }}>Expand All</button>
-                  <button onClick={collapseAll} style={{ padding: '6px 12px', borderRadius: '6px', border: '1px solid #ddd', background: '#fff', cursor: 'pointer', fontSize: '0.9rem' }}>Collapse All</button>
-                </div>
               </div>
-              {renderPerks()}
+              {renderGroupedPerks()}
             </div>
           )}
 
@@ -108,5 +178,7 @@ const MasteryComponent: React.FC<{
     </div>
   );
 };
+
+
 
 export default MasteryComponent;
