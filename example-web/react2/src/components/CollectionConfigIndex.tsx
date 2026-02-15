@@ -493,7 +493,7 @@ const CollectionConfigIndex: React.FC<CollectionConfigIndexProps> = () => {
   });
 
   // Pull To Refresh Logic
-  const { isRefreshing, pullDistance, onTouchStart, onTouchMove, onTouchEnd, updateScrollTop } = usePullToRefresh({
+  const { isRefreshing, pullDistance, onTouchStart, onTouchMove, onTouchEnd, updateScrollTop, isDragging } = usePullToRefresh({
     onRefresh: async () => {
       // Simple reload to fetch new data
       window.location.reload();
@@ -683,9 +683,10 @@ const CollectionConfigIndex: React.FC<CollectionConfigIndexProps> = () => {
           alignItems: 'center',
           justifyContent: 'center',
           overflow: 'hidden',
+          overflow: 'hidden',
           backgroundColor: '#f5f5f5',
           zIndex: 5,
-          transition: isDragging.current ? 'none' : 'height 0.3s ease'
+          transition: isDragging ? 'none' : 'height 0.3s ease'
         }}>
           {isRefreshing ? (
             <div className="spinner" style={{ width: 24, height: 24, border: '3px solid #ccc', borderTopColor: '#333', borderRadius: '50%' }}></div>
