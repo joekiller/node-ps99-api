@@ -21,22 +21,23 @@
     "pet simulator 99"
   ],
   "devDependencies": {
-    "@jest/globals": "^29.7.0",
+    "@jest/globals": "^30.2.0",
     "@semantic-release/git": "^10.0.1",
     "@tsconfig/node20": "^20.1.4",
-    "@types/jest": "^29.5.12",
-    "@types/node": "^20.14.10",
+    "@tsconfig/node22": "^22.0.5",
+    "@types/jest": "^30.0.0",
+    "@types/node": "^25.2.3",
     "cz-conventional-changelog": "^3.3.0",
-    "dets": "^0.16.0",
-    "esbuild": "0.21.5",
-    "jest": "^29.7.0",
-    "prettier": "^3.3.2",
-    "semantic-release": "^24.0.0",
-    "ts-jest": "^29.1.5",
-    "typescript": "^5.5.3"
+    "dets": "^0.17.0",
+    "esbuild": "^0.27.3",
+    "jest": "^30.2.0",
+    "prettier": "^3.8.1",
+    "semantic-release": "^25.0.3",
+    "ts-jest": "^29.4.6",
+    "typescript": "^5.9.3"
   },
   "dependencies": {
-    "axios": "^1.7.2"
+    "axios": "^1.13.5"
   },
   "repository": {
     "type": "git",
