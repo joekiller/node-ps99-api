@@ -16,7 +16,7 @@ export const useCollapsibleHeader = (options: UseCollapsibleHeaderOptions = {}) 
     const lastScrollTop = useRef(0);
     const scrollRef = useRef<number>(0);
 
-    const handleScroll = ({ scrollOffset, scrollTop }: { scrollOffset?: number, scrollTop?: number }) => {
+    const handleScroll = ({ scrollOffset, scrollTop, scrollHeight, clientHeight }: { scrollOffset?: number, scrollTop?: number, scrollHeight?: number, clientHeight?: number }) => {
         if (disabled) {
             setShowHeader(true);
             return;
@@ -25,6 +25,14 @@ export const useCollapsibleHeader = (options: UseCollapsibleHeaderOptions = {}) 
         const currentScrollTop = scrollTop ?? scrollOffset ?? 0;
         const scrollDelta = currentScrollTop - lastScrollTop.current;
 
+        // Bounce Protection: Detect if we are near the bottom
+        // If we are at the bottom, a "scroll up" might be a bounce.
+        let isNearBottom = false;
+        if (scrollHeight && clientHeight) {
+            // Buffer of 100px to be safe
+            isNearBottom = (currentScrollTop + clientHeight) >= (scrollHeight - 100);
+        }
+
         // Threshold to prevent jitter
         if (Math.abs(scrollDelta) > threshold) {
             if (scrollDelta > 0 && currentScrollTop > triggerStart) {
@@ -32,7 +40,10 @@ export const useCollapsibleHeader = (options: UseCollapsibleHeaderOptions = {}) 
                 setShowHeader(false);
             } else if (scrollDelta < 0) {
                 // Scrolling Up
-                setShowHeader(true);
+                // ONLY show header if we are NOT at the very bottom (prevent bounce triggering it)
+                if (!isNearBottom) {
+                    setShowHeader(true);
+                }
             }
         }
         lastScrollTop.current = currentScrollTop;

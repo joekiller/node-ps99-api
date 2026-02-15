@@ -22,7 +22,11 @@ export const FixedSizeList = ({ children, itemCount, itemSize, height, width, on
         <div
             ref={ref}
             style={{ height, width, overflow: "auto", position: 'relative' }}
-            onScroll={(e) => onScroll && onScroll({ scrollOffset: e.currentTarget.scrollTop })}
+            onScroll={(e) => onScroll && onScroll({
+                scrollOffset: e.currentTarget.scrollTop,
+                scrollHeight: e.currentTarget.scrollHeight,
+                clientHeight: e.currentTarget.clientHeight
+            })}
         >
             {items}
             {bottomPadding > 0 && <div style={{ height: bottomPadding }} />}
@@ -64,7 +68,11 @@ export const FixedSizeGrid = ({ children, columnCount, rowCount, columnWidth, ro
         <div
             ref={ref}
             style={{ height, width, overflowY: "auto", overflowX: "hidden", position: 'relative', ...style }}
-            onScroll={(e) => onScroll && onScroll({ scrollTop: e.currentTarget.scrollTop })}
+            onScroll={(e) => onScroll && onScroll({
+                scrollTop: e.currentTarget.scrollTop,
+                scrollHeight: e.currentTarget.scrollHeight,
+                clientHeight: e.currentTarget.clientHeight
+            })}
         >
             <div style={{ height: rowCount * rowHeight + bottomPadding, width: columnWidth * columnCount }}>
                 {items}
