@@ -788,7 +788,7 @@ const CollectionConfigIndex: React.FC<CollectionConfigIndexProps> = () => {
       </div>
 
       {/* Virtualized and AutoSized Content */}
-      <div style={{ height: "100%", width: "100%", flex: 1, paddingTop: isMobile ? contentPadding : "0px", transition: "padding-top 0.3s ease-in-out" }}>
+      <div style={{ height: `calc(100% - ${contentPadding})`, width: "100%", flex: 1, marginTop: contentPadding, transition: "margin-top 0.3s ease-in-out, height 0.3s ease-in-out" }}>
         {/* @ts-ignore */}
         <AutoSizer style={{ width: "100%", height: "100%" }} renderProp={({ height, width }: { height: number; width: number }) => {
           const GAP = 10;
@@ -836,28 +836,41 @@ const CollectionConfigIndex: React.FC<CollectionConfigIndexProps> = () => {
                 </FixedSizeList>
               ) : (
                 /* @ts-ignore */
-                <FixedSizeGrid
-                  columnCount={Math.floor(width / 150) || 1}
-                  columnWidth={width / (Math.floor(width / 150) || 1)}
-                  height={height}
-                  rowCount={Math.ceil(finalItems.length / (Math.floor(width / 150) || 1))}
-                  rowHeight={220}
-                  width={width}
-                  initialScrollOffset={initialScrollOffset}
-                  onScroll={handleScroll}
-                  itemData={{
-                    items: finalItems,
-                    columnCount: Math.floor(width / 150) || 1,
-                    navigate,
-                    collectionName,
-                    variantFilter,
-                    shinyFilter,
-                    resolveIcon,
-                    GAP
-                  }}
-                >
-                  {GridCellRenderer}
-                </FixedSizeGrid>
+                /* @ts-ignore */
+                (() => {
+                  const SCROLLBAR_WIDTH = 40;
+                  const effectiveWidth = width - SCROLLBAR_WIDTH;
+                  const colCount = Math.floor(effectiveWidth / 150) || 1;
+                  const colWidth = effectiveWidth / colCount;
+
+                  return (
+                    <FixedSizeGrid
+                      columnCount={colCount}
+                      columnWidth={colWidth}
+                      height={height}
+                      rowCount={Math.ceil(finalItems.length / colCount)}
+                      rowHeight={220}
+                      width={width}
+                      initialScrollOffset={initialScrollOffset}
+                      onScroll={handleScroll}
+                      style={{ overflowX: "hidden" }}
+                      itemData={{
+                        items: finalItems,
+                        columnCount: colCount,
+                        navigate,
+                        collectionName,
+                        variantFilter,
+                        shinyFilter,
+                        resolveIcon,
+                        GAP
+                      }}
+                    >
+                      {/* @ts-ignore */}
+                      {GridCellRenderer}
+                    </FixedSizeGrid>
+                  );
+                })()
+
               )}
             </>
           );
