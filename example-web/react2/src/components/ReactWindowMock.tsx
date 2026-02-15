@@ -1,6 +1,6 @@
 import React, { useRef, useEffect } from 'react';
 
-export const FixedSizeList = ({ children, itemCount, itemSize, height, width, onScroll, initialScrollOffset, itemData, bottomPadding = 0 }: any) => {
+export const FixedSizeList = ({ children, itemCount, itemSize, height, width, onScroll, initialScrollOffset, itemData, bottomPadding = 0, onTouchStart, onTouchMove, onTouchEnd }: any) => {
     const items = [];
     for (let i = 0; i < itemCount; i++) {
         items.push(
@@ -27,6 +27,9 @@ export const FixedSizeList = ({ children, itemCount, itemSize, height, width, on
                 scrollHeight: e.currentTarget.scrollHeight,
                 clientHeight: e.currentTarget.clientHeight
             })}
+            onTouchStart={onTouchStart}
+            onTouchMove={onTouchMove}
+            onTouchEnd={onTouchEnd}
         >
             {items}
             {bottomPadding > 0 && <div style={{ height: bottomPadding }} />}
@@ -34,7 +37,7 @@ export const FixedSizeList = ({ children, itemCount, itemSize, height, width, on
     );
 };
 
-export const FixedSizeGrid = ({ children, columnCount, rowCount, columnWidth, rowHeight, height, width, onScroll, initialScrollOffset, itemData, style, bottomPadding = 0 }: any) => {
+export const FixedSizeGrid = ({ children, columnCount, rowCount, columnWidth, rowHeight, height, width, onScroll, initialScrollOffset, itemData, style, bottomPadding = 0, onTouchStart, onTouchMove, onTouchEnd }: any) => {
     const items = [];
     for (let rowIndex = 0; rowIndex < rowCount; rowIndex++) {
         for (let columnIndex = 0; columnIndex < columnCount; columnIndex++) {
@@ -73,6 +76,9 @@ export const FixedSizeGrid = ({ children, columnCount, rowCount, columnWidth, ro
                 scrollHeight: e.currentTarget.scrollHeight,
                 clientHeight: e.currentTarget.clientHeight
             })}
+            onTouchStart={onTouchStart}
+            onTouchMove={onTouchMove}
+            onTouchEnd={onTouchEnd}
         >
             <div style={{ height: rowCount * rowHeight + bottomPadding, width: columnWidth * columnCount }}>
                 {items}

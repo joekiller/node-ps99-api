@@ -13,6 +13,7 @@ import { FixedSizeGrid, FixedSizeList } from "./ReactWindowMock";
 import AutoSizer from "./AutoSizer";
 import { useScrollPersistence } from "../context/ScrollContext";
 import { useCollapsibleHeader } from '../hooks/useCollapsibleHeader';
+import { usePullToRefresh } from '../hooks/usePullToRefresh';
 import { formatGigantix } from "../utils/gigantix";
 
 // const FixedSizeGrid = Grid;
@@ -491,6 +492,20 @@ const CollectionConfigIndex: React.FC<CollectionConfigIndexProps> = () => {
     disabled: isShortContent // Disable collapsing if content is short
   });
 
+  // Pull To Refresh Logic
+  const { isRefreshing, pullDistance, onTouchStart, onTouchMove, onTouchEnd, updateScrollTop } = usePullToRefresh({
+    onRefresh: async () => {
+      // Simple reload to fetch new data
+      window.location.reload();
+    }
+  });
+
+  // Update scroll top for PTR
+  const onScroll = (scrollInfo: { scrollOffset?: number, scrollTop?: number, scrollHeight?: number, clientHeight?: number }) => {
+    handleScroll(scrollInfo);
+    updateScrollTop(scrollInfo.scrollTop ?? scrollInfo.scrollOffset ?? 0);
+  };
+
   // Loading State
   if (loading) {
     return (
@@ -656,6 +671,31 @@ const CollectionConfigIndex: React.FC<CollectionConfigIndexProps> = () => {
         position: 'relative' // Context for absolute header
       }}
     >
+      {/* Pull To Refresh Indicator */}
+      {(pullDistance > 0 || isRefreshing) && (
+        <div style={{
+          position: 'absolute',
+          top: showHeader ? headerHeight + 5 : 0, // Adjust based on header
+          left: 0,
+          right: 0,
+          height: isRefreshing ? 60 : pullDistance,
+          display: 'flex',
+          alignItems: 'center',
+          justifyContent: 'center',
+          overflow: 'hidden',
+          backgroundColor: '#f5f5f5',
+          zIndex: 5,
+          transition: isDragging.current ? 'none' : 'height 0.3s ease'
+        }}>
+          {isRefreshing ? (
+            <div className="spinner" style={{ width: 24, height: 24, border: '3px solid #ccc', borderTopColor: '#333', borderRadius: '50%' }}></div>
+          ) : (
+            <span style={{ opacity: Math.min(pullDistance / 60, 1), transform: `rotate(${pullDistance * 2}deg)` }}>
+              ⬇️
+            </span>
+          )}
+        </div>
+      )}
       {/* Header Bar inside Window */}
       <div
         ref={headerRef}
@@ -828,8 +868,11 @@ const CollectionConfigIndex: React.FC<CollectionConfigIndexProps> = () => {
                   itemSize={80} // List view row height
                   width={width}
                   initialScrollOffset={initialScrollOffset}
-                  onScroll={handleScroll}
+                  onScroll={onScroll} // Use wrapped handler
                   bottomPadding={120} // Account for Android footer/nav
+                  onTouchStart={onTouchStart}
+                  onTouchMove={onTouchMove}
+                  onTouchEnd={onTouchEnd}
                   itemData={{
                     items: finalItems,
                     navigate,
@@ -861,9 +904,12 @@ const CollectionConfigIndex: React.FC<CollectionConfigIndexProps> = () => {
                       rowHeight={220}
                       width={width}
                       initialScrollOffset={initialScrollOffset}
-                      onScroll={handleScroll}
+                      onScroll={onScroll} // Use wrapped handler
                       style={{ overflowX: "hidden" }}
                       bottomPadding={120} // Account for Android footer/nav
+                      onTouchStart={onTouchStart}
+                      onTouchMove={onTouchMove}
+                      onTouchEnd={onTouchEnd}
                       itemData={{
                         items: finalItems,
                         columnCount: colCount,
