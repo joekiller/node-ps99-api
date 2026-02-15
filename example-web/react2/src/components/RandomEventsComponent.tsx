@@ -1,38 +1,47 @@
 import React from "react";
 import { CollectionConfigData } from "ps99-api";
-import ImageComponent from "./ImageComponent";
+import ItemCard from "./ItemCard";
 
 const RandomEventsComponent: React.FC<{
   configData: CollectionConfigData<"RandomEvents">;
 }> = ({ configData }) => {
   return (
-    <div>
-      <h2>Random Event: {configData.Name}</h2>
-      <div>
-        <ImageComponent src={configData.Icon} alt={configData.Name} />
-        <p>Color: {configData.Color}</p>
-        <p>Duration: {configData.Duration} seconds</p>
-        <p>Breaking Requirement: {configData.BreakingRequirement}</p>
-        <p>Playtime Requirement: {configData.PlaytimeRequirement} minutes</p>
-        <p>Chance: {configData.Chance}</p>
-        <p>Allow in Zones: {configData.AllowInZones ? "Yes" : "No"}</p>
-        <p>Allow in Instances: {configData.AllowInInstances ? "Yes" : "No"}</p>
-        <p>Allow Multiple: {configData.AllowMultiple ? "Yes" : "No"}</p>
-        {configData.MinimumZone && (
-          <p>Minimum Zone: {configData.MinimumZone}</p>
-        )}
+    <div style={{ width: '100%', height: '100%', boxSizing: 'border-box' }}>
+
+      <div style={{ maxWidth: '300px', margin: '0 auto 15px auto' }}>
+        <ItemCard
+          id={configData.Name}
+          amount={1}
+          label={configData.Name}
+          itemData={{
+            icon: configData.Icon,
+            rarity: undefined,
+            name: configData.Name
+          }}
+          rarityColor={configData.Color}
+        />
       </div>
-      <div>
-        <h3>Area Whitelist:</h3>
-        <ul>
+
+      <div style={{ display: 'grid', gridTemplateColumns: '1fr 1fr', gap: '10px', marginBottom: '20px', textAlign: 'left' }}>
+        <p><strong>Color:</strong> <span style={{ color: configData.Color }}>{configData.Color}</span></p>
+        <p><strong>Duration:</strong> {configData.Duration}s</p>
+        <p><strong>Chance:</strong> {configData.Chance}</p>
+        {configData.BreakingRequirement && <p><strong>Break Req:</strong> {configData.BreakingRequirement}</p>}
+      </div>
+
+      <div style={{ borderTop: '1px solid #eee', paddingTop: '15px' }}>
+        <h3 style={{ fontSize: '1.1em', marginBottom: '10px' }}>Area Whitelist</h3>
+        <div style={{ display: 'flex', flexWrap: 'wrap', gap: '5px', justifyContent: 'center' }}>
           {Object.entries(configData.AreaWhitelist).map(
             ([area, allowed], index) => (
-              <li key={index}>
-                {area.replace("_", " ")}: {allowed ? "Yes" : "No"}
-              </li>
+              allowed && (
+                <span key={index} className="badge">
+                  {area.replace(/_/g, " ")}
+                </span>
+              )
             ),
           )}
-        </ul>
+        </div>
       </div>
     </div>
   );

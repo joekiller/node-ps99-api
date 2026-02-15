@@ -1,58 +1,74 @@
 import React from "react";
 import { CollectionConfigData } from "ps99-api";
-import ImageComponent from "./ImageComponent";
+import ItemCard from "./ItemCard";
 
 const CurrencyComponent: React.FC<{
   configData: CollectionConfigData<"Currency">;
 }> = ({ configData }) => {
   return (
-    <div>
-      <h2>{configData.DisplayName}</h2>
-      <p>Description: {configData.Desc}</p>
-      <p>Max Amount: {configData.MaxAmount}</p>
-      <p>Rarity: {configData.Rarity.DisplayName}</p>
-      <p>Rarity Number: {configData.Rarity.RarityNumber}</p>
-      {configData.Tradable && <p>Tradable: Yes</p>}
-      {configData.IsWorldCurrency && <p>World Currency: Yes</p>}
-      {configData.PermitAutoLootScaling && <p>Permit Auto Loot Scaling: Yes</p>}
-      <h3>Tiers:</h3>
-      <ul>
-        {configData.Tiers.map((tier, index) => (
-          <li key={index}>
-            <ImageComponent src={tier.orbImage} alt={tier.tierName} />
-            <p>Tier Name: {tier.tierName}</p>
-            <p>Order: {tier.Order}</p>
-            <p>Value: {tier.value}</p>
-            <ImageComponent
-              src={tier.imageOutline}
-              alt={`${tier.tierName} outline`}
-            />
-            {tier.isBottom && <p>Is Bottom: Yes</p>}
-            <ImageComponent
-              src={tier.tinyImage}
-              alt={`${tier.tierName} tiny`}
-            />
-          </li>
-        ))}
-      </ul>
+
+    <div style={{ width: '100%', height: '100%', boxSizing: 'border-box' }}>
+
+      <div style={{ marginBottom: '20px', textAlign: 'center' }}>
+        <p style={{ fontStyle: 'italic', marginBottom: '10px' }}>{configData.Desc}</p>
+        <div style={{ display: 'flex', flexWrap: 'wrap', gap: '8px', justifyContent: 'center' }}>
+          <span className="badge">Max: {configData.MaxAmount}</span>
+          {configData.Rarity && <span className="badge" style={{ borderColor: (configData.Rarity.Color as string) }}>Rarity: {configData.Rarity.DisplayName}</span>}
+          {configData.Tradable && <span className="badge">Tradable</span>}
+          {configData.IsWorldCurrency && <span className="badge">World Currency</span>}
+          {configData.PermitAutoLootScaling && <span className="badge">Auto Loot</span>}
+        </div>
+      </div>
+
+      <div style={{ marginBottom: '20px' }}>
+        <h3 style={{ fontSize: '1.2em', borderBottom: '1px solid #eee', paddingBottom: '5px' }}>Tiers</h3>
+        <div style={{ display: "grid", gridTemplateColumns: "repeat(auto-fill, minmax(150px, 1fr))", gap: "10px", marginTop: '15px' }}>
+          {configData.Tiers.map((tier, index) => (
+            <div key={index}>
+              <ItemCard
+                id={tier.tierName}
+                amount={tier.value}
+                label={tier.tierName}
+                itemData={{
+                  icon: tier.orbImage,
+                  rarity: configData.Rarity,
+                  name: tier.tierName
+                }}
+                rarityColor={(configData.Rarity?.Color as string) || null}
+              />
+              <div style={{ textAlign: 'center', fontSize: '0.8em', color: '#666', marginTop: '4px' }}>
+                Order: {tier.Order}
+              </div>
+            </div>
+          ))}
+        </div>
+      </div>
+
       {configData.BagTiers && (
         <div>
-          <h3>Bag Tiers:</h3>
-          <ul>
+          <h3 style={{ fontSize: '1.2em', borderBottom: '1px solid #eee', paddingBottom: '5px' }}>Bag Tiers</h3>
+          <div style={{ display: "grid", gridTemplateColumns: "repeat(auto-fill, minmax(150px, 1fr))", gap: "10px", marginTop: '15px' }}>
             {configData.BagTiers.map((bagTier, index) => (
-              <li key={index}>
-                <ImageComponent
-                  src={bagTier.image}
-                  alt={`Bag tier ${index + 1}`}
+              <div key={index}>
+                <ItemCard
+                  id={`bag-tier-${index}`}
+                  amount={bagTier.value}
+                  label={`Bag Tier ${index + 1}`}
+                  itemData={{
+                    icon: bagTier.image,
+                    rarity: configData.Rarity,
+                    name: `Bag Tier ${index + 1}`
+                  }}
+                  rarityColor={(configData.Rarity?.Color as string) || null}
                 />
-                <p>Value: {bagTier.value}</p>
-              </li>
+              </div>
             ))}
-          </ul>
+          </div>
         </div>
       )}
     </div>
   );
 };
+
 
 export default CurrencyComponent;

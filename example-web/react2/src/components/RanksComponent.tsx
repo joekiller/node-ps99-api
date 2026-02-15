@@ -1,12 +1,16 @@
 import React from "react";
 import { CollectionConfigData } from "ps99-api";
-import ImageComponent from "./ImageComponent";
+
 import { useItemResolution } from "../hooks/useItemResolution";
+import ItemCard from "./ItemCard";
+import { useExpandableList } from "../hooks/useExpandableList";
 
 const RanksComponent: React.FC<{
   configData: CollectionConfigData<"Ranks">;
 }> = ({ configData }) => {
   const { loading, resolveItem, getRarityColor } = useItemResolution();
+  const goalsLength = React.useMemo(() => Array.isArray(configData.Goals) ? configData.Goals.length : 0, [configData.Goals]);
+  const { expandedIndices, toggle, expandAll, collapseAll, isExpanded } = useExpandableList(goalsLength);
 
   if (loading) {
     return (
@@ -23,134 +27,11 @@ const RanksComponent: React.FC<{
     );
   }
 
-  const renderItemCard = (id: string, amount: string | number, label: string, tn?: number, weight?: number, typeId?: number) => {
-    const itemData = resolveItem(id, tn);
-    const rarityColor = itemData?.rarity ? getRarityColor(itemData.rarity) : '#e0e0e0';
-
-    // Use resolved name if available, otherwise fallback to provided label
-    const displayLabel = itemData?.name || label;
-
-    return (
-      <div
-        key={`${id}-${tn}-${typeId}-${Math.random()}`}
-        style={{
-          display: "flex",
-          flexDirection: "column",
-          alignItems: "center",
-          justifyContent: "space-between",
-          border: `2px solid ${rarityColor}`,
-          borderRadius: "16px",
-          padding: "16px",
-          backgroundColor: "#ffffff",
-          boxShadow: `0 4px 15px ${rarityColor}40`, // 40 = 25% opacity
-          transition: "transform 0.2s ease, box-shadow 0.2s ease",
-          cursor: "pointer",
-          width: "100%",
-          minHeight: "220px",
-          position: "relative",
-          overflow: "hidden"
-        }}
-        onMouseEnter={(e) => {
-          e.currentTarget.style.transform = "translateY(-5px)";
-          e.currentTarget.style.boxShadow = `0 8px 25px ${rarityColor}60`;
-        }}
-        onMouseLeave={(e) => {
-          e.currentTarget.style.transform = "translateY(0)";
-          e.currentTarget.style.boxShadow = `0 4px 15px ${rarityColor}40`;
-        }}
-      >
-        {/* Rarity Glow Background */}
-        <div style={{
-          position: "absolute",
-          top: "-20%",
-          left: "50%",
-          transform: "translateX(-50%)",
-          width: "150%",
-          height: "150px",
-          background: `radial-gradient(circle, ${rarityColor}33 0%, transparent 70%)`,
-          zIndex: 0,
-          pointerEvents: "none"
-        }} />
-
-        <div style={{
-          position: "relative",
-          width: "80px",
-          height: "80px",
-          marginBottom: "12px",
-          display: "flex",
-          alignItems: "center",
-          justifyContent: "center",
-          zIndex: 1
-        }}>
-          {itemData && itemData.icon ? (
-            <div style={{ width: "100%", height: "100%", display: "flex", alignItems: "center", justifyContent: "center" }}>
-              <ImageComponent src={itemData.icon} alt={displayLabel} />
-            </div>
-          ) : (
-            <div style={{
-              width: "60px",
-              height: "60px",
-              borderRadius: "50%",
-              background: "#f0f0f0",
-              display: "flex",
-              alignItems: "center",
-              justifyContent: "center",
-              fontSize: "10px",
-              color: "#999",
-              border: "2px dashed #ccc"
-            }}>No Img</div>
-          )}
-        </div>
-
-        <div style={{ textAlign: "center", zIndex: 1, width: '100%' }}>
-          <div style={{
-            fontWeight: "800",
-            fontSize: "20px",
-            color: "#333",
-            marginBottom: "4px"
-          }}>
-            {typeof amount === 'number' ? `x${amount}` : amount}
-          </div>
-
-          <div style={{
-            fontWeight: "700",
-            fontSize: "14px",
-            color: rarityColor,
-            marginBottom: "8px",
-            textTransform: "uppercase",
-            letterSpacing: "0.5px",
-            lineHeight: "1.2"
-          }}>
-            {displayLabel}
-            {tn && !displayLabel.includes(String(tn)) ? ` (Tier ${tn})` : ""}
-          </div>
-
-          {(weight !== undefined || typeId !== undefined) && (
-            <div style={{
-              fontSize: "11px",
-              color: "#888",
-              marginTop: "8px",
-              borderTop: "1px solid #eee",
-              paddingTop: "8px",
-              display: "flex",
-              justifyContent: "center",
-              gap: "8px"
-            }}>
-              {weight !== undefined && <span>W: {weight}</span>}
-              {typeId !== undefined && <span>ID: {typeId}</span>}
-            </div>
-          )}
-        </div>
-      </div>
-    );
-  };
+  /* renderItemCard logic moved to ItemCard.tsx */
 
   return (
-    <div style={{ padding: "40px", fontFamily: "'Nunito', 'Segoe UI', sans-serif", backgroundColor: "#f9f9f9", minHeight: "100vh" }}>
-      <h1 style={{ color: "#333", textAlign: "center", marginBottom: "10px", fontSize: "3rem", fontWeight: "800" }}>{configData.Title}</h1>
-      <p style={{ textAlign: "center", color: "#666", fontSize: "1.2rem", marginBottom: "40px" }}>Rank {configData.RankNumber}</p>
-
-      <div style={{ maxWidth: "1200px", margin: "0 auto" }}>
+    <div style={{ width: "100%", height: "100%", boxSizing: "border-box" }}>
+      <div style={{ width: "100%" }}>
 
         {/* Info Grid */}
         <div style={{
@@ -186,7 +67,18 @@ const RanksComponent: React.FC<{
                 const id = data.id || data._id || "Reward";
                 const amount = data._am || data.Amount || 1;
                 const tn = data.tn || data.Tier;
-                return renderItemCard(id, amount, id, tn);
+                const itemData = resolveItem(id, tn);
+                return (
+                  <ItemCard
+                    key={`${id}-${tn}-${i}`}
+                    id={id}
+                    amount={amount}
+                    label={id}
+                    tn={tn}
+                    itemData={itemData}
+                    rarityColor={itemData?.rarity ? getRarityColor(itemData.rarity) : null}
+                  />
+                );
               })}
             </div>
           </div>
@@ -196,7 +88,13 @@ const RanksComponent: React.FC<{
         {configData.Goals && (
           <div>
             <SectionTitle title="Goals" />
-            <div style={{ display: "flex", flexDirection: "column", gap: "40px" }}>
+
+            <div style={{ marginBottom: '20px', display: 'flex', gap: '10px', justifyContent: 'center' }}>
+              <button onClick={expandAll} style={{ padding: '8px 16px', borderRadius: '8px', border: '1px solid #ddd', background: '#fff', cursor: 'pointer' }}>Expand All</button>
+              <button onClick={collapseAll} style={{ padding: '8px 16px', borderRadius: '8px', border: '1px solid #ddd', background: '#fff', cursor: 'pointer' }}>Collapse All</button>
+            </div>
+
+            <div style={{ display: "flex", flexDirection: "column", gap: "20px" }}>
               {Array.isArray(configData.Goals) ? configData.Goals.map((goalSet: any[], setIndex: number) => (
                 <div key={setIndex} style={{
                   background: "#fff",
@@ -204,12 +102,16 @@ const RanksComponent: React.FC<{
                   padding: "30px",
                   boxShadow: "0 2px 10px rgba(0,0,0,0.03)"
                 }}>
-                  <div style={{
-                    display: "flex",
-                    alignItems: "center",
-                    marginBottom: "24px",
-                    gap: "12px"
-                  }}>
+                  <div
+                    onClick={() => toggle(setIndex)}
+                    style={{
+                      display: "flex",
+                      alignItems: "center",
+                      gap: "12px",
+                      cursor: "pointer",
+                      marginBottom: isExpanded(setIndex) ? "24px" : "0"
+                    }}
+                  >
                     <div style={{
                       background: "#ffcc00",
                       width: "8px",
@@ -221,31 +123,41 @@ const RanksComponent: React.FC<{
                       color: "#444",
                       fontWeight: "700",
                       margin: 0
-                    }}>Goal Set {setIndex + 1}</h3>
+                    }}>
+                      {isExpanded(setIndex) ? '▼' : '▶'} Goal Set {setIndex + 1}
+                    </h3>
                   </div>
 
-                  <div style={{
-                    display: "grid",
-                    gridTemplateColumns: "repeat(auto-fill, minmax(180px, 1fr))",
-                    gap: "20px"
-                  }}>
-                    {goalSet.map((goal: any, index: number) => {
-                      // Determine ID and Label
-                      // Goals usually have Type (numeric) which we need to resolve
-                      // Sometimes they might have CurrencyID
-                      const id = String(goal.CurrencyID || goal.Type);
-                      const tn = goal.EnchantTier || goal.PotionTier || goal.Tier;
-                      // Label can be tricky, resolveItem will give us data, but for fallback prompt we use ID
-                      return renderItemCard(
-                        id,
-                        goal.Amount,
-                        id,
-                        tn,
-                        goal.Weight,
-                        goal.Type
-                      );
-                    })}
-                  </div>
+                  {isExpanded(setIndex) && (
+                    <div style={{
+                      display: "grid",
+                      gridTemplateColumns: "repeat(auto-fill, minmax(180px, 1fr))",
+                      gap: "20px"
+                    }}>
+                      {goalSet.map((goal: any, index: number) => {
+                        // Determine ID and Label
+                        // Goals usually have Type (numeric) which we need to resolve
+                        // Sometimes they might have CurrencyID
+                        const id = String(goal.CurrencyID || goal.Type);
+                        const tn = goal.EnchantTier || goal.PotionTier || goal.Tier;
+                        const itemData = resolveItem(id, tn);
+                        // Label can be tricky, resolveItem will give us data, but for fallback prompt we use ID
+                        return (
+                          <ItemCard
+                            key={`${id}-${tn}-${index}`}
+                            id={id}
+                            amount={goal.Amount}
+                            label={id}
+                            tn={tn}
+                            weight={goal.Weight}
+                            typeId={goal.Type}
+                            itemData={itemData}
+                            rarityColor={itemData?.rarity ? getRarityColor(itemData.rarity) : null}
+                          />
+                        );
+                      })}
+                    </div>
+                  )}
                 </div>
               )) : (
                 <div>No goals structure found</div>
@@ -262,7 +174,7 @@ const RanksComponent: React.FC<{
 const InfoItem = ({ label, value }: { label: string, value: any }) => (
   <div style={{ display: "flex", flexDirection: "column", alignItems: "center" }}>
     <span style={{ fontSize: "12px", color: "#999", textTransform: "uppercase", fontWeight: "700" }}>{label}</span>
-    <span style={{ fontSize: "18px", color: "#333", fontWeight: "800" }}>{value}</span>
+    <span style={{ fontSize: "18px", color: "#333", fontWeight: "800" }}>{typeof value === 'number' ? value.toLocaleString() : value}</span>
   </div>
 );
 

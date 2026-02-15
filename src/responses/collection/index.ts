@@ -1,4 +1,5 @@
 import { AchievementData } from "./achievement";
+export * from "./collection-data";
 import { BoostData } from "./boost";
 import { BoothData } from "./booth";
 import { BoxData } from "./box";

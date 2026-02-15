@@ -7,28 +7,53 @@ const MerchantsComponent: React.FC<{
   const renderStockRange = (stockRange: number[][] | undefined) => {
     if (!stockRange) return null;
     return stockRange.map((range, index) => (
-      <div key={index}>
-        <p>
-          Level {index + 1}: {range[0]} - {range[1]}
-        </p>
+      <div key={index} style={{ background: '#e1f5fe', padding: '8px', borderRadius: '4px', textAlign: 'center' }}>
+        <strong>Lvl {index + 1}</strong>
+        <div>{range[0]} - {range[1]} items</div>
       </div>
     ));
   };
 
   return (
-    <div>
-      <h2>{configData.DisplayName}</h2>
-      <p>Price Multiplier: {configData.PriceMult}</p>
-      <p>Machine Name: {configData.MachineName}</p>
-      <p>Refresh Rate: {configData.RefreshRate} seconds</p>
-      {configData.HideNotification && <p>Notification: Hidden</p>}
-      {configData.HideRespect && <p>Respect: Hidden</p>}
-      {configData.IsStatic && <p>Static Merchant</p>}
-      {renderStockRange(configData.StockRangeByRespectLevel)}
+    <div style={{ width: '100%', height: '100%', boxSizing: 'border-box' }}>
+      <div style={{ textAlign: 'left', width: '100%', marginBottom: '15px' }}>
+        <p><strong>Machine:</strong> {configData.MachineName}</p>
+        <p><strong>Price Mult:</strong> {configData.PriceMult}x</p>
+        <p><strong>Refresh:</strong> {configData.RefreshRate}s</p>
+        {configData.IsStatic && <p><strong>Type:</strong> Static Merchant</p>}
+      </div>
+
+      {configData.StockRangeByRespectLevel && (
+        <div style={{ width: '100%', marginBottom: '15px' }}>
+          <h4>Stock Ranges</h4>
+          <div style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fit, minmax(120px, 1fr))', gap: '10px' }}>
+            {renderStockRange(configData.StockRangeByRespectLevel)}
+          </div>
+        </div>
+      )}
+
       {configData.SlotRespectLevels && (
-        <div>
-          <h3>Slot Respect Levels</h3>
-          <p>{configData.SlotRespectLevels.join(", ")}</p>
+        <div style={{ width: '100%' }}>
+          <h4>Slot Respect Levels</h4>
+          <div style={{ display: 'flex', flexWrap: 'wrap', gap: '8px', justifyContent: 'center' }}>
+            {configData.SlotRespectLevels.map((level, idx) => (
+              <span key={idx} style={{
+                background: '#fff9c4',
+                color: '#fbc02d',
+                padding: '5px 10px',
+                borderRadius: '50%',
+                width: '30px',
+                height: '30px',
+                display: 'flex',
+                alignItems: 'center',
+                justifyContent: 'center',
+                fontWeight: 'bold',
+                border: '2px solid #fbc02d'
+              }}>
+                {level}
+              </span>
+            ))}
+          </div>
         </div>
       )}
     </div>
