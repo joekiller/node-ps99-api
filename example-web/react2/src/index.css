@@ -1,5 +1,4 @@
-/* Import a cute, rounded font */
-@import url('https://fonts.googleapis.com/css2?family=Fredoka:wght@300;400;500;600;700&display=swap');
+/* Import a cute, rounded font - Moved to index.html for better performance */
 
 :root {
     --bg-color: #e0f7fa;
@@ -30,7 +29,8 @@ body,
 
 body {
     margin: 0;
-    font-family: 'Fredoka', sans-serif;
+    /* improved font stack */
+    font-family: 'Fredoka', 'Nunito', 'Segoe UI', 'Roboto', 'Helvetica Neue', Arial, sans-serif;
     background-color: var(--bg-color);
     color: var(--text-color);
     -webkit-font-smoothing: antialiased;
