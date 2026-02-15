@@ -497,7 +497,8 @@ const CollectionConfigIndex: React.FC<CollectionConfigIndexProps> = () => {
     onRefresh: async () => {
       // Simple reload to fetch new data
       window.location.reload();
-    }
+    },
+    disabled: !isMobile
   });
 
   // Update scroll top for PTR

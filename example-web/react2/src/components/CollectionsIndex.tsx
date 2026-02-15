@@ -6,6 +6,7 @@ import { FixedSizeGrid, FixedSizeList } from "./ReactWindowMock";
 import AutoSizer from "./AutoSizer";
 import { useScrollPersistence } from "../context/ScrollContext";
 import { useCollapsibleHeader } from '../hooks/useCollapsibleHeader';
+import { usePullToRefresh } from '../hooks/usePullToRefresh';
 
 const FixedSizeGridAny = FixedSizeGrid;
 const FixedSizeListAny = FixedSizeList;
@@ -140,6 +141,19 @@ const CollectionsIndex: React.FC = () => {
     const [viewMode, setViewMode] = useState<'grid' | 'list'>('grid');
     const { showHeader, handleScroll, scrollRef, headerRef, headerHeight, contentPadding } = useCollapsibleHeader({ deps: [collections] });
 
+    // Pull To Refresh Logic
+    const { isRefreshing, pullDistance, onTouchStart, onTouchMove, onTouchEnd, updateScrollTop, isDragging } = usePullToRefresh({
+        onRefresh: async () => {
+            window.location.reload();
+        },
+        disabled: !isMobile
+    });
+
+    const onScroll = (scrollInfo: { scrollOffset?: number, scrollTop?: number, scrollHeight?: number, clientHeight?: number }) => {
+        handleScroll(scrollInfo);
+        updateScrollTop(scrollInfo.scrollTop ?? scrollInfo.scrollOffset ?? 0);
+    };
+
     useEffect(() => {
         const fetchCollections = async () => {
             const api = new PetSimulator99API();
@@ -234,6 +248,7 @@ const CollectionsIndex: React.FC = () => {
                         position: "absolute", // Changed to absolute for hiding
                         top: 0,
                         left: 0,
+                        left: 0,
                         right: 0,
                         zIndex: 10,
                         transition: "transform 0.3s ease-in-out",
@@ -322,6 +337,33 @@ const CollectionsIndex: React.FC = () => {
                         </div>
                     )}
                 </div>
+
+                {/* Pull To Refresh Indicator */}
+                {(pullDistance > 0 || isRefreshing) && (
+                    <div style={{
+                        position: 'absolute',
+                        top: showHeader ? headerHeight : 0,
+                        left: 0,
+                        right: 0,
+                        height: isRefreshing ? 60 : pullDistance,
+                        display: 'flex',
+                        alignItems: 'center',
+                        justifyContent: 'center',
+                        overflow: 'hidden',
+                        backgroundColor: '#f5f5f5',
+                        zIndex: 5,
+                        transition: isDragging ? 'none' : 'height 0.3s ease'
+                    }}>
+                        {isRefreshing ? (
+                            <div className="spinner" style={{ width: 24, height: 24, border: '3px solid #ccc', borderTopColor: '#333', borderRadius: '50%' }}></div>
+                        ) : (
+                            <span style={{ opacity: Math.min(pullDistance / 60, 1), transform: `rotate(${pullDistance * 2}deg)` }}>
+                                ⬇️
+                            </span>
+                        )}
+                    </div>
+                )}
+
                 {/* Content */}
                 <div style={{ height: "100%", width: "100%", flex: 1, paddingTop: isMobile ? contentPadding : "0px", transition: "padding-top 0.3s ease-in-out" }}>
                     {/* @ts-ignore */}
@@ -336,7 +378,10 @@ const CollectionsIndex: React.FC = () => {
                                     itemSize={80}
                                     width={width}
                                     initialScrollOffset={initialScrollOffset}
-                                    onScroll={handleScroll}
+                                    onScroll={onScroll}
+                                    onTouchStart={onTouchStart}
+                                    onTouchMove={onTouchMove}
+                                    onTouchEnd={onTouchEnd}
                                     itemData={{
                                         items: filteredCollections,
                                         navigate
@@ -364,7 +409,10 @@ const CollectionsIndex: React.FC = () => {
                                     rowHeight={rowHeight}
                                     width={width}
                                     initialScrollOffset={initialScrollOffset}
-                                    onScroll={handleScroll}
+                                    onScroll={onScroll}
+                                    onTouchStart={onTouchStart}
+                                    onTouchMove={onTouchMove}
+                                    onTouchEnd={onTouchEnd}
                                     itemData={{
                                         items: filteredCollections,
                                         columnCount,
