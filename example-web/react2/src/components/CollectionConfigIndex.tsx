@@ -871,7 +871,7 @@ const CollectionConfigIndex: React.FC<CollectionConfigIndexProps> = () => {
                   width={width}
                   initialScrollOffset={initialScrollOffset}
                   onScroll={onScroll} // Use wrapped handler
-                  bottomPadding={120} // Account for Android footer/nav
+                  bottomPadding={0} // Account for Android footer/nav
                   onTouchStart={onTouchStart}
                   onTouchMove={onTouchMove}
                   onTouchEnd={onTouchEnd}
@@ -908,7 +908,7 @@ const CollectionConfigIndex: React.FC<CollectionConfigIndexProps> = () => {
                       initialScrollOffset={initialScrollOffset}
                       onScroll={onScroll} // Use wrapped handler
                       style={{ overflowX: "hidden" }}
-                      bottomPadding={120} // Account for Android footer/nav
+                      bottomPadding={0} // Account for Android footer/nav
                       onTouchStart={onTouchStart}
                       onTouchMove={onTouchMove}
                       onTouchEnd={onTouchEnd}

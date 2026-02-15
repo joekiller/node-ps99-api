@@ -8,11 +8,17 @@ const EnchantsComponent: React.FC<{
 }> = ({ configData }) => {
   const { getRarityColor } = useItemResolution();
 
+  // Manual Patch for Superior Chest Mimic Icon (Global)
+  const anyConfig = configData as any;
+  if ((anyConfig.Name === "Superior Chest Mimic" || configData.Tiers[0]?.DisplayName === "Superior Chest Mimic") && configData.Tiers[0] && !configData.Tiers[0].Icon) {
+    configData.Tiers[0].Icon = "rbxassetid://17602729261";
+  }
 
   const isSingleTier = configData.Tiers.length === 1;
 
   if (isSingleTier) {
     const tier = configData.Tiers[0];
+
     const rarityColor = tier.Rarity ? getRarityColor(tier.Rarity) : null;
 
     return (
@@ -30,13 +36,13 @@ const EnchantsComponent: React.FC<{
           justifyContent: 'center',
           marginBottom: '20px'
         }}>
-          <img src={tier.Icon} alt={tier.DisplayName} style={{ width: '100%', height: '100%', objectFit: 'contain' }} />
+          <img src={tier.Icon?.startsWith('rbxassetid://') ? `https://biggamesapi.io/image/${tier.Icon.split('://')[1]}` : tier.Icon} alt={tier.DisplayName} style={{ width: '100%', height: '100%', objectFit: 'contain' }} />
         </div>
 
         <div style={{ textAlign: 'center', maxWidth: '400px' }}>
           {configData.BaseTier !== 1 && <p><strong>Base Tier:</strong> {configData.BaseTier}</p>}
           {configData.MaxTier !== 1 && <p><strong>Max Tier:</strong> {configData.MaxTier}</p>}
-          {configData.DiminishPowerThreshold && <p><strong>Diminish:</strong> {configData.DiminishPowerThreshold}</p>}
+          {configData.DiminishPowerThreshold && <p><strong>Diminish:</strong> {Number(configData.DiminishPowerThreshold).toFixed(2)}</p>}
           {configData.EmpoweredBoost && <p><strong>Empowered Boost:</strong> {configData.EmpoweredBoost}</p>}
 
           <h3 style={{ margin: '10px 0', fontSize: '1.5em', color: '#333' }}>{tier.DisplayName}</h3>
@@ -54,7 +60,7 @@ const EnchantsComponent: React.FC<{
         <p><strong>Max Tier:</strong> {configData.MaxTier}</p>
         <p><strong>Max Page:</strong> {configData.MaxPage}</p>
         {configData.DiminishPowerThreshold && (
-          <p><strong>Diminish Threshold:</strong> {configData.DiminishPowerThreshold}</p>
+          <p><strong>Diminish Threshold:</strong> {Number(configData.DiminishPowerThreshold).toFixed(2)}</p>
         )}
         {configData.EmpoweredBoost && (
           <p><strong>Empowered Boost:</strong> {configData.EmpoweredBoost}</p>

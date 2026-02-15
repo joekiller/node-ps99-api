@@ -84,6 +84,14 @@ export const useItemResolution = () => {
                     }
                 });
 
+                // Manual Patch for Superior Chest Mimic Enchant
+                const scmEnchant = enchants.find((e: any) => e.configName === "Superior Chest Mimic" || e.configData.DisplayName === "Superior Chest Mimic");
+                if (scmEnchant) {
+                    if (!scmEnchant.configData.Tiers[0].Icon) {
+                        scmEnchant.configData.Tiers[0].Icon = "rbxassetid://17602729261"; // Reusing the chest icon
+                    }
+                }
+
                 // Force rebuild check
                 console.log("Seeds (v2) loaded:", seeds.length);
                 seeds.forEach((s: any) => {

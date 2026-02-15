@@ -4,9 +4,10 @@ interface PullToRefreshOptions {
     onRefresh: () => Promise<void> | void;
     threshold?: number; // px to pull down to trigger
     disabled?: boolean;
+    overrideScrollCheck?: (e: React.TouchEvent) => boolean;
 }
 
-export const usePullToRefresh = ({ onRefresh, threshold = 80, disabled = false }: PullToRefreshOptions) => {
+export const usePullToRefresh = ({ onRefresh, threshold = 80, disabled = false, overrideScrollCheck }: PullToRefreshOptions) => {
     const [isRefreshing, setIsRefreshing] = useState(false);
     const [pullDistance, setPullDistance] = useState(0);
     const startY = useRef<number>(0);
@@ -15,17 +16,21 @@ export const usePullToRefresh = ({ onRefresh, threshold = 80, disabled = false }
     // We need to know the scroll position to only allow pull when at top
     const scrollTopRef = useRef(0);
 
+    const isOverrideActive = useRef(false);
+
     const onTouchStart = (e: React.TouchEvent) => {
         if (disabled) return;
-        if (scrollTopRef.current === 0) {
+        const shouldOverride = overrideScrollCheck ? overrideScrollCheck(e) : false;
+        if (scrollTopRef.current === 0 || shouldOverride) {
             startY.current = e.touches[0].clientY;
             isDragging.current = true;
+            isOverrideActive.current = shouldOverride;
         }
     };
 
     const onTouchMove = (e: React.TouchEvent) => {
         if (!isDragging.current) return;
-        if (scrollTopRef.current > 0) {
+        if (scrollTopRef.current > 0 && !isOverrideActive.current) {
             isDragging.current = false;
             setPullDistance(0);
             return;
