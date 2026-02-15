@@ -480,8 +480,16 @@ const CollectionConfigIndex: React.FC<CollectionConfigIndexProps> = () => {
   }, [isMobile, collectionName, finalItems.length]); // Re-evaluate on collection change or mobile resize, or items load
 
 
-  // Scroll Direction  // Header Logic
-  const { showHeader, handleScroll, scrollRef, headerRef, headerHeight, contentPadding } = useCollapsibleHeader({ deps: [loading] });
+  // Scroll Direction / Header Logic
+  // Check if content is short to disable collapsible header (prevents popping)
+  const ITEM_HEIGHT = viewMode === 'list' ? 100 : 150; // Approximate
+  const estimatedContentHeight = finalItems.length * ITEM_HEIGHT / (viewMode === 'grid' ? 2 : 1); // Rough estimate
+  const isShortContent = estimatedContentHeight < window.innerHeight * 1.5;
+
+  const { showHeader, handleScroll, scrollRef, headerRef, headerHeight, contentPadding } = useCollapsibleHeader({
+    deps: [loading, finalItems.length, viewMode],
+    disabled: isShortContent // Disable collapsing if content is short
+  });
 
   // Loading State
   if (loading) {
@@ -644,7 +652,7 @@ const CollectionConfigIndex: React.FC<CollectionConfigIndexProps> = () => {
         flexDirection: "column",
         overflow: "hidden",
         backgroundColor: "#ffffff",
-        height: "100%", // ensure it fills parent
+        height: "100dvh", // ensure it fills parent with dynamic viewport height
         position: 'relative' // Context for absolute header
       }}
     >
@@ -821,6 +829,7 @@ const CollectionConfigIndex: React.FC<CollectionConfigIndexProps> = () => {
                   width={width}
                   initialScrollOffset={initialScrollOffset}
                   onScroll={handleScroll}
+                  bottomPadding={120} // Account for Android footer/nav
                   itemData={{
                     items: finalItems,
                     navigate,
@@ -854,6 +863,7 @@ const CollectionConfigIndex: React.FC<CollectionConfigIndexProps> = () => {
                       initialScrollOffset={initialScrollOffset}
                       onScroll={handleScroll}
                       style={{ overflowX: "hidden" }}
+                      bottomPadding={120} // Account for Android footer/nav
                       itemData={{
                         items: finalItems,
                         columnCount: colCount,

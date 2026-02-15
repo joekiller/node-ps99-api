@@ -5,10 +5,11 @@ interface UseCollapsibleHeaderOptions {
     triggerStart?: number; // Scroll position to start checking
     threshold?: number;   // Scroll delta threshold
     deps?: any[];         // Dependencies to re-run the ResizeObserver effect
+    disabled?: boolean;   // Disable collapsing behavior
 }
 
 export const useCollapsibleHeader = (options: UseCollapsibleHeaderOptions = {}) => {
-    const { defaultHeight = 120, triggerStart = 50, threshold = 10, deps = [] } = options;
+    const { defaultHeight = 120, triggerStart = 50, threshold = 10, deps = [], disabled = false } = options;
 
     // Header Visibility Logic
     const [showHeader, setShowHeader] = useState(true);
@@ -16,6 +17,11 @@ export const useCollapsibleHeader = (options: UseCollapsibleHeaderOptions = {}) 
     const scrollRef = useRef<number>(0);
 
     const handleScroll = ({ scrollOffset, scrollTop }: { scrollOffset?: number, scrollTop?: number }) => {
+        if (disabled) {
+            setShowHeader(true);
+            return;
+        }
+
         const currentScrollTop = scrollTop ?? scrollOffset ?? 0;
         const scrollDelta = currentScrollTop - lastScrollTop.current;
 

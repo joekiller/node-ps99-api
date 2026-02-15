@@ -1,6 +1,6 @@
 import React, { useRef, useEffect } from 'react';
 
-export const FixedSizeList = ({ children, itemCount, itemSize, height, width, onScroll, initialScrollOffset, itemData }: any) => {
+export const FixedSizeList = ({ children, itemCount, itemSize, height, width, onScroll, initialScrollOffset, itemData, bottomPadding = 0 }: any) => {
     const items = [];
     for (let i = 0; i < itemCount; i++) {
         items.push(
@@ -25,11 +25,12 @@ export const FixedSizeList = ({ children, itemCount, itemSize, height, width, on
             onScroll={(e) => onScroll && onScroll({ scrollOffset: e.currentTarget.scrollTop })}
         >
             {items}
+            {bottomPadding > 0 && <div style={{ height: bottomPadding }} />}
         </div>
     );
 };
 
-export const FixedSizeGrid = ({ children, columnCount, rowCount, columnWidth, rowHeight, height, width, onScroll, initialScrollOffset, itemData, style }: any) => {
+export const FixedSizeGrid = ({ children, columnCount, rowCount, columnWidth, rowHeight, height, width, onScroll, initialScrollOffset, itemData, style, bottomPadding = 0 }: any) => {
     const items = [];
     for (let rowIndex = 0; rowIndex < rowCount; rowIndex++) {
         for (let columnIndex = 0; columnIndex < columnCount; columnIndex++) {
@@ -65,7 +66,7 @@ export const FixedSizeGrid = ({ children, columnCount, rowCount, columnWidth, ro
             style={{ height, width, overflowY: "auto", overflowX: "hidden", position: 'relative', ...style }}
             onScroll={(e) => onScroll && onScroll({ scrollTop: e.currentTarget.scrollTop })}
         >
-            <div style={{ height: rowCount * rowHeight, width: columnWidth * columnCount }}>
+            <div style={{ height: rowCount * rowHeight + bottomPadding, width: columnWidth * columnCount }}>
                 {items}
             </div>
         </div>
