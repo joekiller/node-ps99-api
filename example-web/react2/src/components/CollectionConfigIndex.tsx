@@ -253,7 +253,7 @@ const ListRowRenderer = ({ index, style, data }: any) => {
             whiteSpace: "nowrap",
             overflow: "hidden",
             textOverflow: "ellipsis",
-            fontFamily: "'Fredoka One', cursive, sans-serif",
+            fontFamily: "'Fredoka', 'Fredoka One', sans-serif",
           }}>
             {name}
           </div>
@@ -270,7 +270,7 @@ const ListRowRenderer = ({ index, style, data }: any) => {
               lineHeight: "1.2em",
               maxHeight: "2.4em"
             }}>
-              {cleanSubtext}
+              {cleanSubtext.replace("{amount}", itemConfig.Amount ? itemConfig.Amount.toLocaleString() : "...")}
             </div>
           )}
 
