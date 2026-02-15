@@ -44,7 +44,7 @@ const Sidebar: React.FC<SidebarProps> = ({ currentCollection }) => {
                 fontSize: "1.5rem",
                 fontWeight: "900",
                 textShadow: "2px 2px 0px #eee",
-                fontFamily: "'Fredoka One', cursive, sans-serif", // Assuming font availability or fallback
+                fontFamily: "'Fredoka', 'Fredoka One', sans-serif", // Assuming font availability or fallback
             }}>
                 Terminal!
             </h3>

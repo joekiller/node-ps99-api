@@ -59,7 +59,7 @@ const GridCellRenderer = ({ columnIndex, rowIndex, style, data }: any) => {
                         fontWeight: "900",
                         color: "#333",
                         textAlign: "center",
-                        fontFamily: "'Fredoka One', cursive, sans-serif",
+                        fontFamily: "'Fredoka', 'Fredoka One', sans-serif",
                     }}>
                         {collection}
                     </span>
@@ -118,7 +118,7 @@ const ListRowRenderer = ({ index, style, data }: any) => {
                         whiteSpace: "nowrap",
                         overflow: "hidden",
                         textOverflow: "ellipsis",
-                        fontFamily: "'Fredoka One', cursive, sans-serif",
+                        fontFamily: "'Fredoka', 'Fredoka One', sans-serif",
                     }}>
                         {collection}
                     </div>
@@ -246,7 +246,7 @@ const CollectionsIndex: React.FC = () => {
                             fontWeight: "900",
                             color: "#333",
                             textShadow: isMobile ? "1px 1px 0px #eee" : "3px 3px 0px #eee",
-                            fontFamily: "'Fredoka One', cursive, sans-serif",
+                            fontFamily: "'Fredoka', 'Fredoka One', sans-serif",
                             letterSpacing: "1px",
                         }}>
                             Collections

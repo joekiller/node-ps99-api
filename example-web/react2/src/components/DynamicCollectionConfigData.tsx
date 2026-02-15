@@ -85,7 +85,7 @@ const DynamicCollectionConfigData: React.FC<
             fontWeight: "900",
             color: "#333",
             textShadow: "2px 2px 0px #eee",
-            fontFamily: "'Fredoka One', cursive, sans-serif",
+            fontFamily: "'Fredoka', 'Fredoka One', sans-serif",
             textTransform: "capitalize",
           }}>
             {configName}

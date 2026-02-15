@@ -675,7 +675,7 @@ const CollectionConfigIndex: React.FC<CollectionConfigIndexProps> = () => {
               fontWeight: "900",
               color: "#333",
               textShadow: isMobile ? "2px 2px 0px #eee" : "3px 3px 0px #eee",
-              fontFamily: "'Fredoka One', cursive, sans-serif",
+              fontFamily: "'Fredoka', 'Fredoka One', sans-serif",
               letterSpacing: "1px",
               overflow: "hidden", textOverflow: "ellipsis", whiteSpace: "nowrap",
               maxWidth: isMobile ? "60%" : "auto"
