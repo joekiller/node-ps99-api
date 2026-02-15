@@ -13,16 +13,18 @@ const App: React.FC = () => {
   return (
     <Router>
       <ScrollProvider>
-        <Header />
-        <Routes>
-          <Route path="/" element={<HomePage />} />
-          <Route path="/collections" element={<CollectionsIndex />} />
-          <Route element={<CollectionsLayout />}>
-            <Route path="/collections/:collectionName" element={<CollectionConfigIndex />} />
-            <Route path="/collections/:collectionName/:configName" element={<DynamicCollectionConfigData />} />
-          </Route>
-        </Routes>
-        <Footer />
+        <ScrollProvider>
+          <Header />
+          <Routes>
+            <Route path="/" element={<HomePage />} />
+            <Route path="/collections" element={<CollectionsIndex />} />
+            <Route element={<CollectionsLayout />}>
+              <Route path="/collections/:collectionName" element={<CollectionConfigIndex />} />
+              <Route path="/collections/:collectionName/:configName" element={<DynamicCollectionConfigData />} />
+            </Route>
+          </Routes>
+          <Footer />
+        </ScrollProvider>
       </ScrollProvider>
     </Router>
   );

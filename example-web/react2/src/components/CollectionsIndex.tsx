@@ -139,7 +139,10 @@ const CollectionsIndex: React.FC = () => {
     const [searchTerm, setSearchTerm] = useState("");
     const [windowWidth, setWindowWidth] = useState(window.innerWidth);
     const [viewMode, setViewMode] = useState<'grid' | 'list'>('grid');
+    const isMobile = windowWidth < 768; // Defined before use
     const { showHeader, handleScroll, scrollRef, headerRef, headerHeight, contentPadding } = useCollapsibleHeader({ deps: [collections] });
+
+    // Pull To Refresh Logic
 
     // Pull To Refresh Logic
     const { isRefreshing, pullDistance, onTouchStart, onTouchMove, onTouchEnd, updateScrollTop, isDragging } = usePullToRefresh({
@@ -171,7 +174,6 @@ const CollectionsIndex: React.FC = () => {
         return () => window.removeEventListener("resize", handleResize);
     }, []);
 
-    const isMobile = windowWidth < 768;
 
     // Scroll Persistence
     const { saveScrollPosition, getScrollPosition } = useScrollPersistence();
@@ -247,7 +249,6 @@ const CollectionsIndex: React.FC = () => {
                         backgroundColor: "#fff",
                         position: "absolute", // Changed to absolute for hiding
                         top: 0,
-                        left: 0,
                         left: 0,
                         right: 0,
                         zIndex: 10,

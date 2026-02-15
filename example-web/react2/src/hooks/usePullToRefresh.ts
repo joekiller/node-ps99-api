@@ -3,9 +3,10 @@ import { useState, useEffect, useRef } from 'react';
 interface PullToRefreshOptions {
     onRefresh: () => Promise<void> | void;
     threshold?: number; // px to pull down to trigger
+    disabled?: boolean;
 }
 
-export const usePullToRefresh = ({ onRefresh, threshold = 80 }: PullToRefreshOptions) => {
+export const usePullToRefresh = ({ onRefresh, threshold = 80, disabled = false }: PullToRefreshOptions) => {
     const [isRefreshing, setIsRefreshing] = useState(false);
     const [pullDistance, setPullDistance] = useState(0);
     const startY = useRef<number>(0);
@@ -15,6 +16,7 @@ export const usePullToRefresh = ({ onRefresh, threshold = 80 }: PullToRefreshOpt
     const scrollTopRef = useRef(0);
 
     const onTouchStart = (e: React.TouchEvent) => {
+        if (disabled) return;
         if (scrollTopRef.current === 0) {
             startY.current = e.touches[0].clientY;
             isDragging.current = true;
