@@ -1,19 +1,31 @@
 import React from "react";
 import { CollectionConfigData } from "ps99-api";
-import ImageComponent from "./ImageComponent";
+import ItemCard from "./ItemCard";
 
 const ShovelComponent: React.FC<{
   configData: CollectionConfigData<"Shovels">;
 }> = ({ configData }) => {
   return (
-    <div>
-      <h2>Shovel: {configData.DisplayName}</h2>
-      <p>Description: {configData.Desc}</p>
-      <p>Associated Item ID: {configData.AssociatedItemID}</p>
-      {configData.MerchantSalePrice && (
-        <p>Merchant Sale Price: {configData.MerchantSalePrice}</p>
-      )}
-      <ImageComponent src={configData.Icon} alt={configData.DisplayName} />
+    <div style={{ width: '100%', height: '100%', boxSizing: 'border-box' }}>
+
+      <div style={{ maxWidth: '300px', margin: '0 auto 15px auto' }}>
+        <ItemCard
+          id={configData.DisplayName}
+          amount={1}
+          label={configData.DisplayName}
+          itemData={{
+            icon: configData.Icon,
+            rarity: undefined,
+            name: configData.DisplayName
+          }}
+          rarityColor={null}
+        />
+      </div>
+
+      <div style={{ fontSize: '0.9em', color: '#666', textAlign: 'center' }}>
+        <p>{configData.Desc}</p>
+        {configData.MerchantSalePrice && <p style={{ marginTop: '10px' }}><strong>Sale Price:</strong> {configData.MerchantSalePrice}</p>}
+      </div>
     </div>
   );
 };

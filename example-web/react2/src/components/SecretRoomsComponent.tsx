@@ -5,10 +5,11 @@ const SecretRoomComponent: React.FC<{
   configData: CollectionConfigData<"SecretRooms">;
 }> = ({ configData }) => {
   return (
-    <div>
-      <h2>Secret Room: {configData.DisplayName}</h2>
-      <p>Instance ID: {configData.InstanceId}</p>
-      <p>Required Zone: {configData.RequiredZone}</p>
+    <div style={{ width: '100%', height: '100%', boxSizing: 'border-box' }}>
+      <div style={{ textAlign: 'left', display: 'grid', gridTemplateColumns: '1fr 1fr', gap: '10px' }}>
+        <p><strong>Instance ID:</strong> {configData.InstanceId}</p>
+        <p><strong>Required Zone:</strong> {configData.RequiredZone}</p>
+      </div>
     </div>
   );
 };

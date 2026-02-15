@@ -3,24 +3,22 @@ import { Link } from "react-router-dom";
 
 const HomePage: React.FC = () => {
   return (
-    <div style={{ textAlign: "center", padding: "2em" }}>
-      <h1>Welcome to Pet Simulator 99 API</h1>
-      <p>
-        Your one-stop solution for accessing all Pet Simulator 99 configData.
+    <div style={{ textAlign: "center", padding: "4em", marginTop: "50px" }}>
+      <h1 style={{ fontSize: "3rem", marginBottom: "0.5em", color: "var(--primary-color)", textShadow: "4px 4px 0px var(--border-color)" }}>
+        Pet Simulator 99
+      </h1>
+      <p style={{ fontSize: "1.2rem", marginBottom: "2em" }}>
+        Explore the world of Pet Simulator 99! Check out all the items, pets, and collections.
       </p>
-      <p>Select a collection to get started:</p>
-      <Link
-        to="/collections"
-        style={{
-          padding: "0.5em 1em",
-          background: "#007bff",
-          color: "#fff",
-          textDecoration: "none",
-          borderRadius: "4px",
-        }}
-      >
-        View Collections
-      </Link>
+
+      <div style={{ display: "flex", justifyContent: "center", gap: "20px" }}>
+        <Link
+          to="/collections"
+          className="game-button"
+        >
+          Collections
+        </Link>
+      </div>
     </div>
   );
 };

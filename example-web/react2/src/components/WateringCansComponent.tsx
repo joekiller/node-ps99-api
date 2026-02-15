@@ -1,25 +1,31 @@
 import React from "react";
 import { CollectionConfigData } from "ps99-api";
-import ImageComponent from "./ImageComponent";
+import ItemCard from "./ItemCard";
 
 const WateringCanComponent: React.FC<{
   configData: CollectionConfigData<"WateringCans">;
 }> = ({ configData }) => {
   return (
-    <div>
-      <h2>Watering Can</h2>
-      <h3>{configData.DisplayName}</h3>
-      {configData.Icon && (
-        <ImageComponent
-          src={configData.Icon}
-          alt={`${configData.DisplayName} Icon`}
+    <div style={{ width: '100%', height: '100%', boxSizing: 'border-box' }}>
+
+      <div style={{ maxWidth: '300px', margin: '0 auto 15px auto' }}>
+        <ItemCard
+          id={configData.DisplayName}
+          amount={1}
+          label={configData.DisplayName}
+          itemData={{
+            icon: configData.Icon,
+            rarity: undefined,
+            name: configData.DisplayName
+          }}
+          rarityColor={null}
         />
-      )}
-      <p>Associated Item ID: {configData.AssociatedItemID}</p>
-      <p>Plant Time Multiplier: {configData.PlantTimeMultiplier}</p>
-      <p>
-        Plant Time Multiplier Duration: {configData.PlantTimeMultiplierDuration}
-      </p>
+      </div>
+
+      <div style={{ display: 'grid', gridTemplateColumns: '1fr 1fr', gap: '10px', fontSize: '0.9em', color: '#666', textAlign: 'center' }}>
+        <p><strong>Time Mult:</strong> {configData.PlantTimeMultiplier}x</p>
+        <p><strong>Duration:</strong> {configData.PlantTimeMultiplierDuration}</p>
+      </div>
     </div>
   );
 };

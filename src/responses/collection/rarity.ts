@@ -11,4 +11,5 @@ export type RarityConfigData = {
   Lootbag: unknown;
   Message: unknown;
   RarityNumber: number;
+  _id: string;
 };

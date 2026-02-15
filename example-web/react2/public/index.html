@@ -1,33 +1,36 @@
 <!doctype html>
 <html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Pet Simulator 99 API</title>
-    <link rel="manifest" href="/node-ps99-api/manifest.json" />
-    <link rel="icon" href="/node-ps99-api/icons/icon-192x192.png" />
-  </head>
-  <body>
-    <div id="root"></div>
-    <script src="/node-ps99-api/bundle.js"></script>
-    <script>
-      if ("serviceWorker" in navigator) {
-        window.addEventListener("load", function () {
-          navigator.serviceWorker
-            .register("/node-ps99-api/service-worker.js")
-            .then(
-              function (registration) {
-                console.log(
-                  "ServiceWorker registration successful with scope: ",
-                  registration.scope,
-                );
-              },
-              function (error) {
-                console.log("ServiceWorker registration failed: ", error);
-              },
-            );
-        });
-      }
-    </script>
-  </body>
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Pet Simulator 99 API</title>
+  <link rel="manifest" href="/node-ps99-api/manifest.json" />
+  <link rel="icon" href="/node-ps99-api/icons/icon-192x192.png" />
+</head>
+
+<body>
+  <div id="root"></div>
+
+  <script>
+    // if ("serviceWorker" in navigator) {
+    //   window.addEventListener("load", function () {
+    //     navigator.serviceWorker
+    //       .register("/node-ps99-api/service-worker.js")
+    //       .then(
+    //         function (registration) {
+    //           console.log(
+    //             "ServiceWorker registration successful with scope: ",
+    //             registration.scope,
+    //           );
+    //         },
+    //         function (error) {
+    //           console.log("ServiceWorker registration failed: ", error);
+    //         },
+    //       );
+    //   });
+    // }
+  </script>
+</body>
+
 </html>

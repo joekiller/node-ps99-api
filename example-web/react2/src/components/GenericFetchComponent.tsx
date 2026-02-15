@@ -59,5 +59,13 @@ export const GenericFetchComponent = <T,>({
     return <div>Loading...</div>;
   }
 
-  return <div>{render(data)}</div>;
+  return (
+    <div style={{
+      width: '100%',
+      padding: '20px',
+      boxSizing: 'border-box'
+    }}>
+      {render(data)}
+    </div>
+  );
 };

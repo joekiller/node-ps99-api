@@ -10,6 +10,7 @@ import { ActiveClanBattleResponseBody } from "./responses/activeClanBattle";
 
 export type PetSimulator99APIOptions = {
   requestClient?: RequestClient;
+  baseUrl?: string;
 };
 
 export type ApiResponseBody<T> =
@@ -18,10 +19,12 @@ export type ApiResponseBody<T> =
 
 export class PetSimulator99API {
   public requestClient: RequestClient;
+  public baseUrl: string;
 
   constructor(params?: PetSimulator99APIOptions) {
     this.requestClient =
       params && params.requestClient ? params.requestClient : getAxiosRequest();
+    this.baseUrl = params?.baseUrl || "https://biggamesapi.io";
   }
 
   private request<T>(
@@ -35,17 +38,17 @@ export class PetSimulator99API {
       responseType?: ApiRequestParams["responseType"];
       responseEncoding?: ApiRequestParams["responseEncoding"];
     } = {
-      params: {},
-      responseType: "json",
-      responseEncoding: "utf8",
-    },
+        params: {},
+        responseType: "json",
+        responseEncoding: "utf8",
+      },
   ) {
     params = params || {};
     responseType = responseType || "json";
     responseEncoding = responseEncoding || "utf8";
     return this.requestClient.send<T>({
       method: "GET",
-      url: `https://biggamesapi.io${path}`,
+      url: `${this.baseUrl}${path}`,
       params,
       responseType,
       responseEncoding,
@@ -104,6 +107,7 @@ export class PetSimulator99API {
     if (rbxassetid.startsWith("rbxassetid://")) {
       rbxassetid = rbxassetid.slice(13);
     }
+    console.log(`[ps99-api] getImage calling: /image/${rbxassetid}`);
     return this.request<Blob>(`/image/${rbxassetid}`, {
       responseType: "arraybuffer",
       responseEncoding: "BINARY",

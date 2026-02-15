@@ -1,46 +1,62 @@
 import React from "react";
 import { CollectionConfigData } from "ps99-api";
+import ItemCard from "./ItemCard";
 import ImageComponent from "./ImageComponent";
+import { useItemResolution } from "../hooks/useItemResolution";
 
 const PotionsComponent: React.FC<{
   configData: CollectionConfigData<"Potions">;
 }> = ({ configData }) => {
+  const { getRarityColor } = useItemResolution();
+
   return (
-    <div style={{ padding: "1em", border: "1px solid #ccc", borderRadius: "8px", backgroundColor: "#f9f9f9" }}>
-      <h2 style={{ borderBottom: "2px solid #ccc", paddingBottom: "0.5em" }}>
-        Potion: {configData.Tiers[0].DisplayName}
-      </h2>
-      <div style={{ display: 'flex', gap: '1em' }}>
-        <div style={{ minWidth: '250px' }}>
+
+    <div style={{ width: '100%', height: '100%', boxSizing: 'border-box' }}>
+
+      <div style={{ display: 'flex', gap: '20px', alignItems: 'center', marginBottom: '20px', flexWrap: 'wrap', justifyContent: 'center' }}>
+        <div style={{ width: '150px', height: '150px' }}>
           <ImageComponent
             src={configData.Tiers[0].Icon}
             alt={configData.Tiers[0].DisplayName}
           />
         </div>
-        <div>
-          <p><strong>Description:</strong> {configData.Tiers[0].Desc}</p>
-          <p><strong>Primary Color:</strong> {configData.PrimaryColor}</p>
-          <p><strong>Secondary Color:</strong> {configData.SecondaryColor}</p>
-          <p><strong>Base Tier:</strong> {configData.BaseTier}</p>
-          <p><strong>Max Tier:</strong> {configData.MaxTier}</p>
+        <div style={{ textAlign: 'left', flex: 1, minWidth: '200px' }}>
+          <p style={{ marginBottom: '8px' }}><strong>Description:</strong> {configData.Tiers[0].Desc}</p>
+          <div style={{ display: 'grid', gridTemplateColumns: '1fr 1fr', gap: '8px' }}>
+            <p><strong>Primary:</strong> <span style={{ color: configData.PrimaryColor }}>{configData.PrimaryColor}</span></p>
+            <p><strong>Secondary:</strong> <span style={{ color: configData.SecondaryColor }}>{configData.SecondaryColor}</span></p>
+            <p><strong>Base Tier:</strong> {configData.BaseTier}</p>
+            <p><strong>Max Tier:</strong> {configData.MaxTier}</p>
+          </div>
         </div>
       </div>
-      <div style={{ marginTop: '1em' }}>
-        <h3>Tiers:</h3>
-        <div style={{ display: 'flex', flexWrap: 'wrap', gap: '1em' }}>
-          {configData.Tiers.map((tier, index) => (
-            <div key={index} style={{ border: '1px solid #ccc', borderRadius: '8px', padding: '1em', flex: '1 1 calc(33% - 1em)', boxSizing: 'border-box' }}>
-              <p><strong>Tier {index + 1}:</strong></p>
-              <p><strong>Display Name:</strong> {tier.DisplayName}</p>
-              <p><strong>Description:</strong> {tier.Desc}</p>
-              <div style={{ minWidth: '250px' }}>
-                <ImageComponent src={tier.Icon} alt={tier.DisplayName} />
+
+      <div style={{ marginTop: '20px' }}>
+        <h3>Tiers</h3>
+        <div style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fill, minmax(220px, 1fr))', gap: '15px' }}>
+          {configData.Tiers.map((tier, index) => {
+            const rarityColor = tier.Rarity ? getRarityColor(tier.Rarity) : null;
+            return (
+              <div key={index} style={{ marginBottom: '10px' }}>
+                <ItemCard
+                  id={tier.DisplayName}
+                  amount={1}
+                  label={tier.DisplayName}
+                  tn={index + 1}
+                  itemData={{
+                    icon: tier.Icon,
+                    rarity: tier.Rarity,
+                    name: tier.DisplayName
+                  }}
+                  rarityColor={rarityColor}
+                />
+                <div style={{ marginTop: '10px', fontSize: '0.9em', color: '#666', textAlign: 'center' }}>
+                  <p style={{ fontWeight: 'bold' }}>Power: {tier.Power}</p>
+                  <p>Time: {tier.Time}s</p>
+                </div>
               </div>
-              <p><strong>Power:</strong> {tier.Power}</p>
-              <p><strong>Time:</strong> {tier.Time}</p>
-              <p><strong>Rarity:</strong> {tier.Rarity.DisplayName}</p>
-            </div>
-          ))}
+            );
+          })}
         </div>
       </div>
     </div>

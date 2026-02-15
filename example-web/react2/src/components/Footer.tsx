@@ -31,14 +31,7 @@ const Footer: React.FC = () => {
   }, []);
 
   return (
-    <footer
-      style={{
-        textAlign: "center",
-        padding: "1em",
-        background: "#f8f9fa",
-        borderTop: "1px solid #ccc",
-      }}
-    >
+    <footer className="game-footer">
       <div
         style={{
           display: "flex",

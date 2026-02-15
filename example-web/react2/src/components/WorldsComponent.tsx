@@ -5,21 +5,31 @@ const WorldComponent: React.FC<{
   configData: CollectionConfigData<"Worlds">;
 }> = ({ configData }) => {
   return (
-    <div>
-      <h2>World</h2>
-      <h3>{configData.MapName}</h3>
-      <p>Spawn ID: {configData.SpawnId}</p>
-      <p>World Currency: {configData.WorldCurrency}</p>
-      <p>Place ID: {configData.PlaceId}</p>
-      <p>World Number: {configData.WorldNumber}</p>
+    <div style={{ width: '100%', height: '100%', boxSizing: 'border-box' }}>
+      <div style={{ textAlign: 'left', width: '100%' }}>
+        <p><strong>World #:</strong> {configData.WorldNumber}</p>
+        <p><strong>Spawn ID:</strong> {configData.SpawnId}</p>
+        <p><strong>Currency:</strong> {configData.WorldCurrency}</p>
+        <p><strong>Place ID:</strong> {configData.PlaceId}</p>
+      </div>
+
       {configData.AdditionalMusic && configData.AdditionalMusic.length > 0 && (
-        <div>
+        <div style={{ marginTop: '15px', width: '100%' }}>
           <h4>Additional Music</h4>
-          <ul>
+          <div style={{ display: 'flex', flexWrap: 'wrap', gap: '8px', justifyContent: 'center' }}>
             {configData.AdditionalMusic.map((music, index) => (
-              <li key={index}>{music}</li>
+              <span key={index} style={{
+                background: '#e0f7fa',
+                color: '#006064',
+                padding: '5px 10px',
+                borderRadius: '15px',
+                fontSize: '0.9em',
+                fontWeight: 'bold'
+              }}>
+                {music}
+              </span>
             ))}
-          </ul>
+          </div>
         </div>
       )}
     </div>

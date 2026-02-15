@@ -1,24 +1,35 @@
 import React from "react";
 import { CollectionConfigData } from "ps99-api";
-import ImageComponent from "./ImageComponent";
+import ItemCard from "./ItemCard";
+import { useItemResolution } from "../hooks/useItemResolution";
 
 const ZoneFlagComponent: React.FC<{
   configData: CollectionConfigData<"ZoneFlags">;
 }> = ({ configData }) => {
+  const { getRarityColor } = useItemResolution();
+  const rarityColor = configData.Rarity ? getRarityColor(configData.Rarity) : null;
+
   return (
-    <div>
-      <h2>Zone Flag</h2>
-      <h3>{configData.Name}</h3>
-      <p>Description: {configData.Desc}</p>
-      <p>Duration: {configData.Duration} seconds</p>
-      <p>Color: {configData.Color}</p>
-      <p>
-        Icon: <ImageComponent src={configData.Icon} alt={configData.Name} />
-      </p>
-      <h4>Rarity</h4>
-      <p>Rarity: {configData.Rarity.DisplayName}</p>
-      <p>Rarity Number: {configData.Rarity.RarityNumber}</p>
-      <p>Announce: {configData.Rarity.Announce.toString()}</p>
+    <div style={{ width: '100%', height: '100%', boxSizing: 'border-box' }}>
+
+      <div style={{ maxWidth: '300px', margin: '0 auto 15px auto' }}>
+        <ItemCard
+          id={configData.Name}
+          amount={1}
+          label={configData.Name}
+          itemData={{
+            icon: configData.Icon,
+            rarity: configData.Rarity,
+            name: configData.Name
+          }}
+          rarityColor={rarityColor}
+        />
+      </div>
+
+      <div style={{ fontSize: '0.9em', color: '#666', textAlign: 'center' }}>
+        <p>{configData.Desc}</p>
+        <p style={{ fontWeight: 'bold', marginTop: '5px' }}>Duration: {configData.Duration}s</p>
+      </div>
     </div>
   );
 };
