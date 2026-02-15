@@ -3,14 +3,11 @@ import { CollectionConfigData } from "ps99-api";
 
 import { useItemResolution } from "../hooks/useItemResolution";
 import ItemCard from "./ItemCard";
-import { useExpandableList } from "../hooks/useExpandableList";
 
 const RanksComponent: React.FC<{
   configData: CollectionConfigData<"Ranks">;
 }> = ({ configData }) => {
   const { loading, resolveItem, getRarityColor } = useItemResolution();
-  const goalsLength = React.useMemo(() => Array.isArray(configData.Goals) ? configData.Goals.length : 0, [configData.Goals]);
-  const { expandedIndices, toggle, expandAll, collapseAll, isExpanded } = useExpandableList(goalsLength);
 
   if (loading) {
     return (
@@ -31,117 +28,129 @@ const RanksComponent: React.FC<{
 
   return (
     <div style={{ width: "100%", height: "100%", boxSizing: "border-box" }}>
-      <div style={{ width: "100%" }}>
+      <style>{`
+        .sticky-info-column {
+          position: sticky;
+          top: 20px;
+        }
+        @media (max-width: 800px) {
+          .sticky-info-column {
+            position: relative !important;
+            top: 0 !important;
+          }
+        }
+      `}</style>
+      <div style={{
+        display: "flex",
+        flexWrap: "wrap",
+        gap: "40px",
+        alignItems: "start"
+      }}>
 
-        {/* Info Grid */}
-        <div style={{
-          display: "grid",
-          gridTemplateColumns: "repeat(auto-fit, minmax(180px, 1fr))",
-          gap: "16px",
-          marginBottom: "60px",
-          background: "#ffffff",
-          padding: "24px",
-          borderRadius: "20px",
-          boxShadow: "0 4px 20px rgba(0,0,0,0.05)"
+        {/* Left Column: Rank Info */}
+        <div className="sticky-info-column" style={{
+          flex: "1 1 250px",
+          background: "#fff",
+          padding: "30px",
+          borderRadius: "24px",
+          border: "2px solid #eee",
+          display: 'flex',
+          flexDirection: 'column',
+          gap: '20px'
         }}>
-          <InfoItem label="Max Enchants" value={configData.MaxEnchantsEquipped} />
-          <InfoItem label="Max Goals" value={configData.MaximumActiveGoals} />
-          <InfoItem label="Egg Slots" value={configData.UnlockableEggSlots} />
-          <InfoItem label="Pet Slots" value={configData.UnlockablePetSlots} />
-          {configData.RequiredRebirth && <InfoItem label="Rebirth Req" value={configData.RequiredRebirth} />}
-          {configData.RequiredZone && <InfoItem label="Zone Req" value={configData.RequiredZone} />}
+          {/* Header/Icon placeholder if we had one, for now just the metrics */}
+          <div style={{ textAlign: 'center', marginBottom: '10px' }}>
+            <h2 style={{ margin: 0, color: '#333', fontSize: '2em' }}>Rank Info</h2>
+          </div>
+
+          <div style={{ display: "flex", flexDirection: "column", gap: "15px" }}>
+            <InfoItem label="Max Enchants" value={configData.MaxEnchantsEquipped} />
+            <InfoItem label="Max Goals" value={configData.MaximumActiveGoals} />
+            <InfoItem label="Egg Slots" value={configData.UnlockableEggSlots} />
+            <InfoItem label="Pet Slots" value={configData.UnlockablePetSlots} />
+            {configData.RequiredRebirth && <InfoItem label="Rebirth Req" value={configData.RequiredRebirth} />}
+            {configData.RequiredZone && <InfoItem label="Zone Req" value={configData.RequiredZone} />}
+          </div>
         </div>
 
-        {/* Rewards Section */}
-        {configData.Rewards && configData.Rewards.length > 0 && (
-          <div style={{ marginBottom: "60px" }}>
-            <SectionTitle title="Rewards" />
-            <div style={{
-              display: "grid",
-              gridTemplateColumns: "repeat(auto-fill, minmax(200px, 1fr))",
-              gap: "24px"
-            }}>
-              {configData.Rewards.map((reward: any, i: number) => {
-                // Handle inconsistent reward structure if necessary
-                const data = reward.Item?._data || reward.Item || reward._data || reward;
-                const id = data.id || data._id || "Reward";
-                const amount = data._am || data.Amount || 1;
-                const tn = data.tn || data.Tier;
-                const itemData = resolveItem(id, tn);
-                return (
-                  <ItemCard
-                    key={`${id}-${tn}-${i}`}
-                    id={id}
-                    amount={amount}
-                    label={id}
-                    tn={tn}
-                    itemData={itemData}
-                    rarityColor={itemData?.rarity ? getRarityColor(itemData.rarity) : null}
-                  />
-                );
-              })}
+        {/* Right Column: Rewards & Goals */}
+        <div style={{
+          flex: "2 1 300px",
+          display: "flex",
+          flexDirection: "column",
+          gap: "40px",
+          minWidth: "300px"
+        }}>
+
+          {/* Rewards Section */}
+          {configData.Rewards && configData.Rewards.length > 0 && (
+            <div style={{ background: "#fff" }}>
+              <div style={{ display: 'flex', justifyContent: 'space-between', alignItems: 'center', marginBottom: '20px' }}>
+                <h3 style={{ fontSize: '1.6em', margin: 0, color: '#333' }}>Rewards</h3>
+              </div>
+              <div style={{
+                display: "grid",
+                gridTemplateColumns: "repeat(auto-fill, minmax(140px, 1fr))",
+                gap: "15px"
+              }}>
+                {configData.Rewards.map((reward: any, i: number) => {
+                  const data = reward.Item?._data || reward.Item || reward._data || reward;
+                  const id = data.id || data._id || "Reward";
+                  const amount = data._am || data.Amount || 1;
+                  const tn = data.tn || data.Tier;
+                  const itemData = resolveItem(id, tn);
+                  return (
+                    <ItemCard
+                      key={`${id}-${tn}-${i}`}
+                      id={id}
+                      amount={amount}
+                      label={id}
+                      tn={tn}
+                      itemData={itemData}
+                      rarityColor={itemData?.rarity ? getRarityColor(itemData.rarity) : null}
+                    />
+                  );
+                })}
+              </div>
             </div>
-          </div>
-        )}
+          )}
 
-        {/* Goals Section */}
-        {configData.Goals && (
-          <div>
-            <SectionTitle title="Goals" />
+          {/* Goals Section */}
+          {configData.Goals && (
+            <div>
+              <div style={{ display: 'flex', justifyContent: 'space-between', alignItems: 'center', marginBottom: '20px' }}>
+                <h3 style={{ fontSize: '1.6em', margin: 0, color: '#333' }}>Goals</h3>
+              </div>
 
-            <div style={{ marginBottom: '20px', display: 'flex', gap: '10px', justifyContent: 'center' }}>
-              <button onClick={expandAll} style={{ padding: '8px 16px', borderRadius: '8px', border: '1px solid #ddd', background: '#fff', cursor: 'pointer' }}>Expand All</button>
-              <button onClick={collapseAll} style={{ padding: '8px 16px', borderRadius: '8px', border: '1px solid #ddd', background: '#fff', cursor: 'pointer' }}>Collapse All</button>
-            </div>
-
-            <div style={{ display: "flex", flexDirection: "column", gap: "20px" }}>
-              {Array.isArray(configData.Goals) ? configData.Goals.map((goalSet: any[], setIndex: number) => (
-                <div key={setIndex} style={{
-                  background: "#fff",
-                  borderRadius: "24px",
-                  padding: "30px",
-                  boxShadow: "0 2px 10px rgba(0,0,0,0.03)"
-                }}>
-                  <div
-                    onClick={() => toggle(setIndex)}
-                    style={{
-                      display: "flex",
-                      alignItems: "center",
-                      gap: "12px",
-                      cursor: "pointer",
-                      marginBottom: isExpanded(setIndex) ? "24px" : "0"
-                    }}
-                  >
-                    <div style={{
-                      background: "#ffcc00",
-                      width: "8px",
-                      height: "32px",
-                      borderRadius: "4px"
-                    }} />
-                    <h3 style={{
-                      fontSize: "1.5rem",
-                      color: "#444",
-                      fontWeight: "700",
-                      margin: 0
+              <div style={{ display: "flex", flexDirection: "column", gap: "30px" }}>
+                {Array.isArray(configData.Goals) ? configData.Goals.map((goalSet: any[], setIndex: number) => (
+                  <div key={setIndex} style={{
+                    background: "#fff",
+                    borderRadius: "16px",
+                    padding: "20px",
+                    boxShadow: "0 4px 6px rgba(0,0,0,0.05)",
+                    border: '1px solid #eee'
+                  }}>
+                    <h4 style={{
+                      fontSize: "1.1rem",
+                      color: "#f57c00",
+                      fontWeight: "800",
+                      margin: "0 0 15px 0",
+                      textTransform: "uppercase",
+                      letterSpacing: "1px"
                     }}>
-                      {isExpanded(setIndex) ? '▼' : '▶'} Goal Set {setIndex + 1}
-                    </h3>
-                  </div>
+                      Goal Set {setIndex + 1}
+                    </h4>
 
-                  {isExpanded(setIndex) && (
                     <div style={{
                       display: "grid",
-                      gridTemplateColumns: "repeat(auto-fill, minmax(180px, 1fr))",
+                      gridTemplateColumns: "repeat(auto-fill, minmax(160px, 1fr))",
                       gap: "20px"
                     }}>
                       {goalSet.map((goal: any, index: number) => {
-                        // Determine ID and Label
-                        // Goals usually have Type (numeric) which we need to resolve
-                        // Sometimes they might have CurrencyID
                         const id = String(goal.CurrencyID || goal.Type);
                         const tn = goal.EnchantTier || goal.PotionTier || goal.Tier;
                         const itemData = resolveItem(id, tn);
-                        // Label can be tricky, resolveItem will give us data, but for fallback prompt we use ID
                         return (
                           <ItemCard
                             key={`${id}-${tn}-${index}`}
@@ -157,14 +166,14 @@ const RanksComponent: React.FC<{
                         );
                       })}
                     </div>
-                  )}
-                </div>
-              )) : (
-                <div>No goals structure found</div>
-              )}
+                  </div>
+                )) : (
+                  <div>No goals structure found</div>
+                )}
+              </div>
             </div>
-          </div>
-        )}
+          )}
+        </div>
       </div>
     </div>
   );
