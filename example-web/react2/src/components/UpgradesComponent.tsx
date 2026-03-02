@@ -74,7 +74,7 @@ const UpgradeComponent: React.FC<{
                   {currency.DisplayName}
                 </h4>
                 <div style={{ display: 'flex', gap: '6px', flexWrap: 'wrap' }}>
-                  <Badge color={currency.Rarity?.Color || '#999'}>{currency.Rarity?.DisplayName}</Badge>
+                  <Badge color={(currency.Rarity?.Color as string) || '#999'}>{currency.Rarity?.DisplayName as string}</Badge>
                   {currency.Tradable && <Badge color="#2e7d32" bg="#e8f5e9">Tradable</Badge>}
                   <Badge color="#7b1fa2" bg="#f3e5f5">Max: {formatGigantix(currency.MaxAmount)}</Badge>
                 </div>

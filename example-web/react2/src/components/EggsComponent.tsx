@@ -61,7 +61,7 @@ const EggsComponent: React.FC<{
                 name: configData.name
               }}
               rarityColor={rarityColor}
-              typeId={(configData as any)._index}
+              typeId={(configData as any).eggNumber || (configData as any)._index}
             />
           </div>
 
@@ -86,6 +86,7 @@ const EggsComponent: React.FC<{
             {configData.goldChance && <InfoRow label="Gold Chance" value={`${configData.goldChance}%`} />}
             {configData.rainbowChance && <InfoRow label="Rainbow Chance" value={`${configData.rainbowChance}%`} />}
             {configData.shinyChance && <InfoRow label="Shiny Chance" value={`${configData.shinyChance}%`} />}
+            {((configData as any).eggNumber || (configData as any)._index) && <InfoRow label="Zone #" value={(configData as any).eggNumber || (configData as any)._index} />}
           </div>
 
           <div style={{ display: 'flex', flexWrap: 'wrap', gap: '8px', justifyContent: 'center' }}>

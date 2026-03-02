@@ -88,6 +88,16 @@ function getCleanName(name: string, collectionName: string): string {
   return name;
 }
 
+function getRouteId(collectionName: string, configName: string): string {
+  if (configName.includes(" | ")) {
+    return configName.split(" | ")[0];
+  }
+  if (collectionName === "Worlds" && configName.startsWith("World ")) {
+    return configName.replace("World ", "");
+  }
+  return configName;
+}
+
 // --- Grid Cell Renderer ---
 const GridCellRenderer = ({ columnIndex, rowIndex, style, data }: any) => {
   const { items, columnCount, navigate, collectionName, variantFilter, shinyFilter, resolveIcon, GAP } = data;
@@ -115,7 +125,7 @@ const GridCellRenderer = ({ columnIndex, rowIndex, style, data }: any) => {
         bottom: GAP / 2,
       }}>
         <div
-          onClick={() => navigate(`/collections/${collectionName}/${item.configName}`)}
+          onClick={() => navigate(`/collections/${collectionName}/${encodeURIComponent(getRouteId(collectionName, item.configName))}`)}
           style={{ cursor: "pointer", height: '100%' }}
         >
           <ItemCard
@@ -183,7 +193,7 @@ const ListRowRenderer = ({ index, style, data }: any) => {
   return (
     <div style={{ ...style, padding: "5px 10px", boxSizing: "border-box" }}>
       <div
-        onClick={() => navigate(`/collections/${collectionName}/${item.configName}`)}
+        onClick={() => navigate(`/collections/${collectionName}/${encodeURIComponent(getRouteId(collectionName, item.configName))}`)}
         style={{
           display: "flex",
           alignItems: "center",
@@ -457,7 +467,7 @@ const CollectionConfigIndex: React.FC<CollectionConfigIndexProps> = () => {
     }
 
     return true;
-  });
+  }).reverse();
 
   // Determine View Mode
   useEffect(() => {
