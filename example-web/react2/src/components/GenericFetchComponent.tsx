@@ -30,8 +30,9 @@ export const GenericFetchComponent = <T,>({
             const isEventRoute = window.location.hash.includes("Event");
 
             const item = response.data.find((item) => {
+              const parts = item.configName.split(" | ");
               const matchesId = item.configName === rawConfigName ||
-                (item.configName.includes(" | ") && item.configName.split(" | ")[0] === rawConfigName) ||
+                (item.configName.includes(" | ") && (parts[0] === rawConfigName || parts[1] === rawConfigName)) ||
                 (collectionName === "Worlds" && item.configName === `World ${rawConfigName}`) ||
                 (collectionName === "Zones" && item.configName === `${rawConfigName}`);
 

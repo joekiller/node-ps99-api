@@ -88,9 +88,26 @@ function getCleanName(name: string, collectionName: string): string {
   return name;
 }
 
-function getRouteId(collectionName: string, configName: string): string {
+function getRouteId(collectionName: string, item: any): string {
+  const configName = item.configName;
   if (configName.includes(" | ")) {
-    return configName.split(" | ")[0];
+    const parts = configName.split(" | ");
+
+    // Most collections use the right side "Buff | Toy Ball" -> "Toy Ball"
+    if (collectionName !== "Eggs" && collectionName !== "Zones") {
+      return parts[1];
+    }
+
+    if (collectionName === "Zones") {
+      return parts[0];
+    }
+
+    // For Eggs, standard world eggs use numbers (left). Event/minigame eggs use names (right).
+    const cat = item.category || "";
+    if (cat === "Release" || cat.startsWith("World ") || cat.startsWith("Update ")) {
+      return parts[0];
+    }
+    return parts[1];
   }
   if (collectionName === "Worlds" && configName.startsWith("World ")) {
     return configName.replace("World ", "");
@@ -125,7 +142,7 @@ const GridCellRenderer = ({ columnIndex, rowIndex, style, data }: any) => {
         bottom: GAP / 2,
       }}>
         <div
-          onClick={() => navigate(`/collections/${collectionName}/${encodeURIComponent(getRouteId(collectionName, item.configName))}`)}
+          onClick={() => navigate(`/collections/${collectionName}/${encodeURIComponent(getRouteId(collectionName, item))}`)}
           style={{ cursor: "pointer", height: '100%' }}
         >
           <ItemCard
@@ -193,7 +210,7 @@ const ListRowRenderer = ({ index, style, data }: any) => {
   return (
     <div style={{ ...style, padding: "5px 10px", boxSizing: "border-box" }}>
       <div
-        onClick={() => navigate(`/collections/${collectionName}/${encodeURIComponent(getRouteId(collectionName, item.configName))}`)}
+        onClick={() => navigate(`/collections/${collectionName}/${encodeURIComponent(getRouteId(collectionName, item))}`)}
         style={{
           display: "flex",
           alignItems: "center",
