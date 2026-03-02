@@ -484,7 +484,17 @@ const CollectionConfigIndex: React.FC<CollectionConfigIndexProps> = () => {
     }
 
     return true;
-  }).reverse();
+  });
+
+  if (collectionName === "Zones") {
+    finalItems.sort((a, b) => {
+      const aId = parseInt(a.configName.split(" | ")[0], 10) || 0;
+      const bId = parseInt(b.configName.split(" | ")[0], 10) || 0;
+      return bId - aId; // Descending to show newest zones first
+    });
+  } else {
+    finalItems.reverse();
+  }
 
   // Determine View Mode
   useEffect(() => {
