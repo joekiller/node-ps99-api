@@ -486,11 +486,13 @@ const CollectionConfigIndex: React.FC<CollectionConfigIndexProps> = () => {
     return true;
   });
 
-  if (collectionName === "Zones") {
+  const numericallySortedCollections = new Set(["Zones", "Upgrades", "Achievements"]);
+
+  if (numericallySortedCollections.has(collectionName)) {
     finalItems.sort((a, b) => {
       const aId = parseInt(a.configName.split(" | ")[0], 10) || 0;
       const bId = parseInt(b.configName.split(" | ")[0], 10) || 0;
-      return bId - aId; // Descending to show newest zones first
+      return bId - aId; // Descending to show newest zones/eggs first
     });
   } else {
     finalItems.reverse();
