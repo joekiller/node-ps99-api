@@ -1,0 +1,93 @@
+/* Topbar Styles from index.html */
+.topbar {
+    background-color: #0066ff;
+    display: flex;
+    align-items: center;
+    padding: 10px 20px;
+    justify-content: space-between;
+    color: white;
+    font-family: 'Fredoka', sans-serif;
+}
+.topbar img {
+    height: 40px;
+    margin-right: 20px;
+}
+.topbar .nav-links {
+    display: flex;
+    align-items: center;
+}
+.topbar .nav-links a {
+    color: white;
+    text-decoration: none;
+    margin: 0 15px;
+    font-weight: 500;
+    font-size: 18px;
+}
+.topbar .nav-links a:hover {
+    text-decoration: underline;
+}
+
+/* Message Extension Styles */
+.message-extension {
+    background-color: #f1f1f1;
+    padding: 10px 20px;
+    text-align: center;
+    font-size: 16px;
+    color: #ffffff;
+}
+.message-extension.hidden {
+    display: none;
+}
+
+/* Carousel Container Styles */
+.carousel-container {
+    margin-top: 40px;
+}
+.carousel {
+    margin-bottom: 40px;
+}
+.carousel-header {
+    text-align: center;
+    margin-bottom: 20px;
+}
+.carousel-header h2 {
+    color: var(--primary-color);
+    font-size: 1.8em;
+}
+.carousel-content {
+    display: flex;
+    overflow-x: auto;
+    gap: var(--spacing);
+}
+.carousel-content::-webkit-scrollbar {
+    display: none;
+}
+.carousel-content a {
+    flex: 0 0 auto;
+    width: 200px;
+}
+
+/* Nav Card Layout Constraints */
+.nav-card {
+    aspect-ratio: 1 / 1;
+    background-color: var(--card-bg-color);
+    color: var(--text-color);
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    border-radius: var(--border-radius);
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    position: relative;
+    overflow: hidden;
+    text-decoration: none;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+.nav-card:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 6px 20px rgba(0, 0, 0, 0.3);
+}
+.subtext p {
+    color: var(--secondary-color);
+    font-size: 1.1em;
+}

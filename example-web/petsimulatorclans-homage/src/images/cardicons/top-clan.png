@@ -1,0 +1,247 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <!-- Google tag (gtag.js) analytics -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-8QNR3D7M8T" type="fcaa6012c8ebe4ff7113013d-text/javascript"></script>
+    <script type="fcaa6012c8ebe4ff7113013d-text/javascript">
+        window.dataLayer = window.dataLayer || [];
+        function gtag() { dataLayer.push(arguments); }
+        gtag('js', new Date());
+        gtag('config', 'G-8QNR3D7M8T');
+    </script>
+
+<script type="fcaa6012c8ebe4ff7113013d-text/javascript">
+    !function(t,e){var o,n,p,r;e.__SV||(window.posthog=e,e._i=[],e.init=function(i,s,a){function g(t,e){var o=e.split(".");2==o.length&&(t=t[o[0]],e=o[1]),t[e]=function(){t.push([e].concat(Array.prototype.slice.call(arguments,0)))}}(p=t.createElement("script")).type="text/javascript",p.crossOrigin="anonymous",p.async=!0,p.src=s.api_host.replace(".i.posthog.com","-assets.i.posthog.com")+"/static/array.js",(r=t.getElementsByTagName("script")[0]).parentNode.insertBefore(p,r);var u=e;for(void 0!==a?u=e[a]=[]:a="posthog",u.people=u.people||[],u.toString=function(t){var e="posthog";return"posthog"!==a&&(e+="."+a),t||(e+=" (stub)"),e},u.people.toString=function(){return u.toString(1)+".people (stub)"},o="init capture register register_once register_for_session unregister unregister_for_session getFeatureFlag getFeatureFlagPayload isFeatureEnabled reloadFeatureFlags updateEarlyAccessFeatureEnrollment getEarlyAccessFeatures on onFeatureFlags onSessionId getSurveys getActiveMatchingSurveys renderSurvey canRenderSurvey identify setPersonProperties group resetGroups setPersonPropertiesForFlags resetGroupPropertiesForFlags setPersonPropertiesForFlags resetPersonPropertiesForFlags reset get_distinct_id getGroups get_session_id get_session_replay_url alias set_config startSessionRecording stopSessionRecording sessionRecordingStarted captureException loadToolbar get_property getSessionProperty createPersonProfile opt_in_capturing opt_out_capturing has_opted_in_capturing has_opted_out_capturing clear_opt_in_out_capturing debug getPageViewId captureTraceFeedback captureTraceMetric".split(" "),n=0;n<o.length;n++)g(u,o[n]);e._i.push([i,s,a])},e.__SV=1)}(document,window.posthog||[]);
+    posthog.init('phc_SQGwJUbtLYh3DcDWtbmQrk1naY59j6YNu1LYuzoolWI', {
+        api_host: 'https://us.i.posthog.com',
+        person_profiles: 'identified_only', // or 'always' to create profiles for anonymous users as well
+    })
+</script>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Pet Simulator Clans</title>
+    <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-8916810451668501" crossorigin="anonymous" type="fcaa6012c8ebe4ff7113013d-text/javascript"></script>
+    <meta content="Pet Simulator Clans" property="og:title" />
+    <meta content="Track your Pet Simulator clan with advanced member tracking" property="og:description" />
+    <meta content="https://petsimulatorclans.com" property="og:url" />
+    <meta content="https://andreyondemand.github.io/psclansassets/images/clans.webp" property="og:image" />
+    <meta content="#0066ff" data-react-helmet="true" name="theme-color" />
+    <link rel="icon" type="image/x-icon" id="favicon" href="https://andreyondemand.github.io/psclansassets/images/clans.webp">
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Fredoka:wght@300..700&display=swap');
+    </style>
+  <link rel="stylesheet" href="https://petsimulatorclans.com/images/cardicons/styles9.css">
+    <style>
+        /* Topbar Styles */
+        .topbar {
+            background-color: #0066ff; /* Topbar background color */
+            display: flex;
+            align-items: center;
+            padding: 10px 20px;
+            justify-content: space-between;
+            color: white;
+            font-family: 'Fredoka', sans-serif;
+        }
+
+        .topbar img {
+            height: 40px; /* Logo height */
+            margin-right: 20px;
+        }
+
+        .topbar nav a {
+            color: white;
+            text-decoration: none;
+            margin: 0 15px;
+            font-weight: 500;
+            font-size: 18px;
+        }
+
+        .topbar nav a:hover {
+            text-decoration: underline;
+        }
+
+        /* Message Extension Styles */
+        .message-extension {
+            background-color: #f1f1f1; /* Light gray background */
+            padding: 10px 20px;
+            text-align: center;
+            font-size: 16px;
+            color: #ffffff; /* Darker text color for better readability */
+        }
+
+        .message-extension.hidden {
+            display: none;
+        }
+
+        /* Carousel Container Styles */
+        .carousel-container {
+            margin-top: 40px;
+        }
+
+        .carousel {
+            margin-bottom: 40px;
+        }
+
+        .carousel-header {
+            text-align: center;
+            margin-bottom: 20px;
+        }
+
+        .carousel-header h2 {
+            color: var(--primary-color);
+            font-size: 1.8em;
+        }
+
+        .carousel-content {
+            display: flex;
+            overflow-x: auto;
+            gap: var(--spacing);
+        }
+
+        .carousel-content::-webkit-scrollbar {
+            display: none; /* Hide scrollbar for better appearance */
+        }
+
+        .carousel-content a {
+            flex: 0 0 auto; /* Prevent shrinking and make items fit */
+            width: 200px; /* Adjust width as needed */
+        }
+
+        .nav-card {
+            aspect-ratio: 1 / 1; /* Ensures the card is a square */
+            background-color: var(--card-bg-color);
+            color: var(--text-color);
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            border-radius: var(--border-radius);
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+            position: relative;
+            overflow: hidden;
+            text-decoration: none;
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+        }
+
+        .nav-card:hover {
+            transform: translateY(-10px);
+            box-shadow: 0 6px 20px rgba(0, 0, 0, 0.3);
+        }
+.subtext p {
+                color: var(--secondary-color);
+                font-size: 1.1em;
+}
+    </style>
+</head>
+
+<body>
+    <header class="topbar">
+        <a href="https://petsimulatorclans.com/images/cardicons/index.html">
+          <img src="https://andreyondemand.github.io/psclansassets/images/clans.webp" alt="Pet Simulator Clans Logo" />
+        </a>
+        <nav>
+          <a href="https://petsimulatorclans.com/images/cardicons/discontinuation.html" style="background:rgba(255,255,255,0.2);padding:4px 12px;border-radius:20px;font-weight:700;">Discontinuation</a>
+          <a href="https://petsimulatorclans.com/images/cardicons/index.html">Home</a>
+          <a href="https://petsimulatorclans.com/images/cardicons/clans.html">Clans</a>
+          <a href="https://petsimulatorclans.com/images/cardicons/enchants.html">Enchants</a>
+        </nav>
+      </header>
+
+    <!-- Message Extension below the topbar -->
+    <div class="message-extension hidden" id="topBar">petsimulatorclans.com</div>
+
+    <header class="guild-header">
+        <img id="guild-icon" src="https://andreyondemand.github.io/psclansassets/images/clans.webp" alt="clan">
+        <div class="guild-info">
+            <h1>Pet Simulator Clans</h1>
+            <a href="https://petsimulatorclans.com/images/cardicons/discontinuation.html" style="background:rgba(255,255,255,0.2);padding:4px 12px;border-radius:20px;font-weight:700;color:white;text-decoration:none;font-size:18px;">Discontinuation</a>
+        </div>
+    </header>
+    <div class="search-container">
+        <input type="text" id="searchInput" placeholder="Enter clan name...">
+        <button id="searchButton">Search</button>
+    </div>
+    <div class="carousel-container">
+        <div class="carousel top-clans">
+            <div class="carousel-header">
+                <h2>Top Clans</h2>
+            </div>
+            <div class="carousel-content" id="topclans">
+                <!-- Add your top clan cards here -->
+                <a href="https://petsimulatorclans.com/images/cardicons/clan.html?clan=TOP1" class="nav-card top-clan">
+                    <div class="card-content">
+                        <p>#1</p>
+                        <p>Placeholder</p>
+                    </div>
+                </a>
+                <!-- More top clan cards -->
+            </div>
+            <div class="navigation">
+                <a href="https://petsimulatorclans.com/images/cardicons/clans.html" class="button">View all clans</a>
+            </div>
+        </div>
+
+        <div class="carousel pinned-clans">
+            <div class="carousel-header">
+                <h2>Pinned Clans</h2>
+                <div class="subtext">
+                <p>Want your clan pinned? <a href="https://discord.petsimulatorclans.com/" target="_blank" style="color: var(--primary-color); text-decoration: underline;">Join the Discord</a> and message andreyondemand!</p>
+            </div>
+            </div>
+            <div class="carousel-content" id="pinnedclans">
+                <a href="https://petsimulatorclans.com/images/cardicons/clan.html?clan=TOP1" class="nav-card pinned-clan">
+                    <div class="card-content">
+                        <p>#1</p>
+                        <p>Placeholder</p>
+                    </div>
+                </a>
+                <!-- More pinned clan cards -->
+            </div>
+        </div>
+    </div>
+
+    <script type="fcaa6012c8ebe4ff7113013d-module" src="https://andreyondemand.github.io/psclansassets/index.js"></script>
+    <script type="fcaa6012c8ebe4ff7113013d-text/javascript">
+        document.addEventListener("DOMContentLoaded", function () {
+            const apiEndpoint = 'https://api.petsimulatorclans.com/message';
+
+            // Function to fetch the message from the API and update the top bar
+            async function fetchMessage() {
+                try {
+                    const response = await fetch(apiEndpoint);
+                    if (!response.ok) throw new Error('Network response was not ok');
+                    const data = await response.json();
+
+                    const visible = data.visible;
+                    const message = data.message;
+                    const color = data.color;
+                    console.log(data);
+                    const topBar = document.getElementById('topBar');
+                    if (visible) {
+                        topBar.textContent = message;
+                        topBar.style.backgroundColor = color;
+                        topBar.classList.remove('hidden');
+                    } else {
+                        topBar.textContent = "petsimulatorclans.com";
+                        topBar.classList.add('hidden');
+                    }
+                } catch (error) {
+                    console.error('There has been a problem with fetching:', error);
+                    document.getElementById('topBar').textContent = 'Failed to load message.';
+                    document.getElementById('topBar').classList.remove('hidden');
+                }
+            }
+
+            fetchMessage();
+        });
+    </script>
+          
+    <footer class="bottom-nav">
+        <nav>
+            <p>Information shown on Pet Simulator Clans is from the public Pet Simulator 99 and Pets GO! APIs maintained by the BIG Games team. petsimulatorclans.com is not affiliated with BIG Games.</p>
+        </nav>
+    </footer>
+<!-- Cloudflare Pages Analytics --><script defer src='https://static.cloudflareinsights.com/beacon.min.js' data-cf-beacon='{"token": "40c58c7bfe644367b977e50c323b912a"}' type="fcaa6012c8ebe4ff7113013d-text/javascript"></script><!-- Cloudflare Pages Analytics --><script src="../../cdn-cgi/scripts/7d0fa10a/cloudflare-static/rocket-loader.min.js" data-cf-settings="fcaa6012c8ebe4ff7113013d-|49" defer></script></body>
+
+</html>

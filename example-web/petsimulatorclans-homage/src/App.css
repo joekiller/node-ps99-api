@@ -1,0 +1,808 @@
+:root {
+  --bg-color: #0f0f0f;
+  --primary-color: #2959f6;
+  --secondary-color: #90a4ae;
+  --text-color: #ffffff;
+  --sub-text-color: hsl(0, 0%, 100%);
+  --card-bg-color: #070707;
+  --container-bg-color: #0a0a0a;
+  --box-shadow: 0 6px 20px rgba(0, 0, 0, 0.3);
+  --border-radius: 10px;
+  --spacing: 20px;
+}
+
+.fredoka-font {
+  font-family: "Fredoka", system-ui;
+  font-optical-sizing: auto;
+  font-weight: 100;
+  font-style: normal;
+  font-variation-settings:
+    "wdth" 100;
+}
+
+body {
+  font-family: "Fredoka";
+  margin: 0;
+  padding: 0;
+  background-color: var(--bg-color);
+  color: var(--text-color);
+}
+
+.top-bar {
+  background-color: #00aeff;
+  font-family: "Roboto", sans-serif;
+  padding: 10px;
+  text-align: center;
+  font-size: 1em;
+}
+
+/* Button Styles */
+.button {
+  display: inline-block;
+  padding: 10px 20px;
+  font-size: 1em;
+  font-weight: bold;
+  text-align: center;
+  text-decoration: none;
+  color: #fff; /* Text color */
+  background-color: var(--primary-color); /* Background color */
+  border: none;
+  border-radius: var(--border-radius);
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  transition: background-color 0.3s ease, box-shadow 0.3s ease;
+}
+
+.button:hover {
+  background-color: #0056b3; /* Example darker shade */
+}
+
+.button:active {
+  background-color: #004494; /* Example even darker shade */
+}
+
+.button:focus {
+  outline: none; /* Remove default focus outline */
+  box-shadow: 0 0 0 2px rgba(0, 0, 0, 0.2); /* Custom focus outline */
+}
+
+header,
+.content {
+  max-width: 90%;
+  margin: var(--spacing) auto;
+  padding: var(--spacing);
+  background-color: var(--container-bg-color);
+  border-radius: var(--border-radius);
+  box-shadow: var(--box-shadow);
+}
+
+.guild-header {
+  text-align: center;
+  margin-bottom: var(--spacing);
+}
+
+.guild-header img {
+  display: block;
+  margin: 0 auto;
+  max-width: 160px;
+  max-height: 160px;
+  border-radius: 15%;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+.guild-info h1 {
+  margin-top: 15px;
+  color: var(--primary-color);
+  font-size: 2.5em;
+}
+
+.guild-info p {
+  color: var(--secondary-color);
+  font-size: 1.1em;
+}
+
+.container {
+  display: flex;
+  gap: var(--spacing);
+  flex-wrap: wrap;
+}
+
+.infoInfoContainer {
+  display: flex;
+  gap: var(--spacing);
+  flex-wrap: wrap;
+}
+
+.info {
+  flex: 1;
+  min-width: 300px; /* Minimum width for each info block */
+  padding: 10px;
+  background-color: var(--card-bg-color);
+  border-radius: 8px;
+  margin: 0;
+}
+
+.points {
+  margin: var(--spacing) 0;
+  padding: 15px;
+  background-color: var(--card-bg-color);
+  border-radius: 8px;
+}
+
+.points span {
+  display: block;
+  margin-top: 5px;
+}
+
+.info p {
+  margin: 10px;
+  color: var(--sub-text-color);
+}
+.info-container {
+  display: flex;
+  width: 100%;
+  gap: var(--spacing);
+  flex-wrap: wrap;
+}
+
+.points p {
+  margin: 5px 0;
+  color: var(--sub-text-color);
+}
+
+table {
+  width: 100%;
+  border-collapse: collapse;
+  margin-top: var(--spacing);
+  background-color: var(--container-bg-color);
+  border-radius: 8px;
+  overflow: scroll;
+}
+
+.table-button {
+  padding: 10px 20px;
+  border-radius: 4px;
+  border: none;
+  background-color: var(--primary-color);
+  color: var(--text-color);
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.table-button:hover {
+  background-color: #ffb300;
+}
+
+th,
+td {
+  text-align: left;
+  padding: 12px;
+  border-bottom: 1px solid #333;
+}
+
+th {
+  background-color: var(--card-bg-color);
+  color: var(--primary-color);
+}
+
+td {
+  color: var(--text-color);
+}
+
+tr:hover {
+  background-color: #333;
+}
+
+.username-link {
+  color: var(--primary-color);
+  text-decoration: underline;
+  cursor: pointer;
+}
+
+#graph-container {
+  width: 100%;
+  margin: var(--spacing) 0;
+}
+
+.popup {
+  display: none;
+  position: fixed;
+  z-index: 1000;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -50%);
+  background-color: var(--container-bg-color);
+  padding: var(--spacing);
+  border-radius: var(--border-radius);
+  box-shadow: var(--box-shadow);
+  width: 90%;
+  max-width: 600px;
+}
+
+.popup-content {
+  text-align: center;
+}
+
+.close-btn {
+  position: absolute;
+  top: 10px;
+  right: 20px;
+  font-size: 24px;
+  cursor: pointer;
+  color: var(--text-color);
+}
+
+.search-container {
+  display: flex;
+  justify-content: center;
+  margin-top: var(--spacing);
+}
+
+#searchInput {
+  width: 60%;
+  padding: 10px;
+  margin-right: 10px;
+  border-radius: 4px;
+  border: 1px solid #444;
+  background-color: var(--card-bg-color);
+  color: var(--text-color);
+}
+
+#searchButton {
+  padding: 10px 20px;
+  border-radius: 4px;
+  border: none;
+  background-color: var(--primary-color);
+  color: var(--text-color);
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+#searchButton:hover {
+  background-color: #ffb300;
+}
+
+.grid-container {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+  gap: var(--spacing);
+}
+
+.card {
+  background-color: var(--card-bg-color);
+  padding: var(--spacing);
+  border-radius: 8px;
+  text-align: center;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.card img {
+  width: 60px;
+  margin-bottom: 10px;
+}
+
+.icon {
+  height: 20px;
+  width: 20px;
+}
+
+.card p {
+  margin: 5px 0;
+}
+
+.card:hover {
+  transform: translateY(-10px);
+  box-shadow: 0 6px 20px rgba(0, 0, 0, 0.3);
+}
+
+.configName {
+  color: var(--primary-color);
+}
+
+.diminishPowerThreshold {
+  color: var(--sub-text-color);
+}
+
+.header,
+.content {
+  padding: var(--spacing);
+  background-color: var(--container-bg-color);
+  border-radius: var(--border-radius);
+  box-shadow: var(--box-shadow);
+}
+
+.navigation {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+  justify-content: center;
+  gap: var(--spacing);
+  margin-top: 40px;
+}
+
+.nav-card {
+  aspect-ratio: 1 / 1; /* Ensures the card is a square */
+  background-color: var(
+    --card-bg-color
+  ); /* Fallback color if image fails to load */
+  color: var(--text-color);
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  border-radius: var(--border-radius);
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  position: relative;
+  overflow: hidden;
+  text-decoration: none;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  background-size: cover; /* Ensure the image covers the entire card */
+  background-position: center; /* Center the image */
+}
+
+.nav-card::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.3); /* Dark overlay */
+  z-index: 1; /* Place overlay above the background image */
+}
+
+.nav-card .card-content {
+  position: relative;
+  z-index: 2; /* Ensure content is above the overlay */
+}
+
+.nav-card p {
+  z-index: 1;
+  position: relative;
+}
+
+.nav-card.top-clan::before {
+  background-image: url("images/cardicons/top-clan.png"); /* Example background image */
+}
+
+.nav-card.pinned-clan::before {
+  background-image: url("images/cardicons/pinned-clan.png"); /* Example background image */
+}
+
+.nav-card.orb::before {
+  background-image: url("images/cardicons/orb.png");
+}
+
+.nav-card.enchant::before {
+  background-image: none;
+}
+
+.nav-card.clans::before {
+  background-image: url("images/cardicons/clansicon.png");
+}
+
+.nav-card p:first-child {
+  font-size: 1.5em;
+  margin: 0;
+}
+
+.nav-card p:last-child {
+  font-size: 1.2em;
+  color: var(--text-color);
+  margin: 0;
+}
+
+.nav-card:hover {
+  transform: translateY(-10px);
+  box-shadow: 0 6px 20px rgba(0, 0, 0, 0.3);
+}
+
+/* Leaderboard specific styles */
+.leaderboard-container {
+  background-color: var(--container-bg-color);
+  padding: var(--spacing);
+  border-radius: var(--border-radius);
+  box-shadow: var(--box-shadow);
+}
+
+.leaderboard-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: var(--spacing);
+}
+
+.leaderboard-header h2 {
+  color: var(--primary-color);
+  font-size: 1.8em;
+}
+
+.leaderboard-table {
+  width: 100%;
+  border-collapse: collapse;
+}
+
+.leaderboard-table th,
+.leaderboard-table td {
+  padding: 12px;
+  text-align: left;
+  border-bottom: 1px solid #333;
+}
+
+.leaderboard-table th {
+  background-color: var(--card-bg-color);
+  color: var(--primary-color);
+}
+
+.leaderboard-table td {
+  color: var(--text-color);
+}
+
+.leaderboard-table tr:hover {
+  background-color: #333;
+}
+
+#loading-indicator {
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  background: rgba(0, 0, 0, 0.8);
+  color: #fff;
+  padding: 20px;
+  border-radius: 10px;
+  z-index: 1000;
+  font-size: 1.5em;
+}
+
+/* Media query for small screens */
+@media (max-width: 768px) {
+  .info-container {
+    flex-direction: column;
+  }
+}
+
+#guild-icon {
+  width: 100px;
+  height: 100px;
+  object-fit: cover;
+  border-radius: 8px; /* Optional: add border radius for rounded corners */
+}
+
+/* Carousel Styles */
+.carousel {
+  position: relative;
+}
+
+.carousel-inner {
+  display: flex;
+  transition: transform 0.5s ease;
+}
+
+.carousel-item {
+  flex: 0 0 100%;
+  max-width: 100%;
+  transition: opacity 0.5s ease;
+}
+
+.carousel-item img {
+  width: 100%;
+  display: block;
+}
+
+.carousel-controls {
+  position: absolute;
+  top: 50%;
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  transform: translateY(-50%);
+}
+
+/* Custom Scrollbar for Carousel Content */
+.carousel-content {
+  display: flex;
+  overflow-x: auto;
+  gap: var(--spacing);
+  scrollbar-width: thin; /* For Firefox */
+  scrollbar-color: #333 #222; /* For Firefox */
+}
+
+/* Webkit-based browsers (Chrome, Safari) */
+.carousel-content::-webkit-scrollbar {
+  width: 12px; /* Width of the scrollbar */
+}
+
+.carousel-content::-webkit-scrollbar-track {
+  background: #222; /* Background of the scrollbar track */
+  border-radius: 10px; /* Rounded corners for the scrollbar track */
+}
+
+.carousel-content::-webkit-scrollbar-thumb {
+  background: #333; /* Color of the scrollbar thumb */
+  border-radius: 10px; /* Rounded corners for the scrollbar thumb */
+}
+
+.carousel-content::-webkit-scrollbar-thumb:hover {
+  background: #444; /* Darker color when hovering over the scrollbar thumb */
+}
+
+.carousel-control-prev,
+.carousel-control-next {
+  background-color: var(--primary-color);
+  color: var(--text-color);
+  border: none;
+  padding: 10px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.carousel-control-prev:hover,
+.carousel-control-next:hover {
+  background-color: #ffb300;
+}
+
+.carousel-control-prev {
+  left: 10px;
+}
+
+.carousel-control-next {
+  right: 10px;
+}
+
+.carousel-indicators {
+  position: absolute;
+  bottom: 10px;
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  gap: 5px;
+}
+
+.carousel-indicator {
+  width: 10px;
+  height: 10px;
+  background-color: var(--secondary-color);
+  border-radius: 50%;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.carousel-indicator.active {
+  background-color: var(--primary-color);
+}
+
+/* Button Styles for Enchant and Top Clans */
+.enchant-button,
+.top-clans-button {
+  padding: 10px 20px;
+  border-radius: 4px;
+  border: none;
+  background-color: var(--primary-color);
+  color: var(--text-color);
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+  margin: 10px;
+}
+
+.enchant-button:hover,
+.top-clans-button:hover {
+  background-color: #ffb300;
+}
+
+.enchant-button {
+  background-image: none;
+  background-repeat: no-repeat;
+  background-size: 20px 20px;
+  background-position: left center;
+  padding-left: 30px; /* Adjust to fit icon */
+}
+
+.top-clans-button {
+  background-image: url("images/buttons/top-clans-icon.png");
+  background-repeat: no-repeat;
+  background-size: 20px 20px;
+  background-position: left center;
+  padding-left: 30px; /* Adjust to fit icon */
+}
+
+select-container {
+  display: flex;
+  gap: 10px; /* Space between the selects */
+}
+
+select {
+  flex: 1; /* Makes each select take an equal amount of space */
+  padding: 10px;
+  margin: 10px 0;
+  border-radius: var(--border-radius);
+  border: 1px solid var(--primary-color);
+  background-color: var(--card-bg-color);
+  color: var(--text-color);
+  font-size: 1em;
+  appearance: none; /* Remove default dropdown arrow */
+  background-repeat: no-repeat;
+  background-position: right 10px center;
+  background-size: 20px;
+}
+
+
+select:focus {
+  outline: none;
+  border-color: var(--primary-color);
+  box-shadow: 0 0 0 2px rgba(41, 182, 246, 0.5);
+}
+
+select option {
+  background-color: var(--card-bg-color);
+  color: var(--text-color);
+}
+
+/* Optional: Style the dropdown arrow */
+select::-ms-expand {
+  display: none; /* Remove default arrow for IE */
+}
+
+select:hover {
+  border-color: var(--primary-color);
+  box-shadow: 0 0 0 2px rgba(41, 182, 246, 0.5);
+}
+
+.member-change-entry {
+  display: inline-flex;
+  align-items: center;
+  padding: 10px;
+  background-color: var(--card-bg-color);
+  border-radius: 8px;
+  margin-right: 10px;
+  flex-shrink: 0; /* Prevent shrinking */
+}
+
+.member-changes-container {
+  display: flex;
+  flex-direction: column;
+  max-height: 400px; /* Adjust height as needed */
+  overflow-y: auto; /* Enable vertical scrolling */
+  padding: 10px;
+  background-color: var(--card-bg-color);
+  border-radius: 8px;
+  margin: 0;
+}
+
+.user-image {
+  width: 50px;
+  height: 50px;
+  border-radius: 50%;
+  margin-right: 15px;
+}
+
+
+.member-info {
+  display: flex;
+  flex-direction: column;
+}
+
+#member-changes-box {
+  display: flex;
+  overflow-x: auto;
+  white-space: nowrap;
+  padding: 10px;
+  background-color: var(--background-color);
+}
+
+/* Optional scrollbar styling for modern browsers */
+#member-changes-box::-webkit-scrollbar {
+  width: 8px;
+}
+
+#member-changes-box::-webkit-scrollbar-thumb {
+  background-color: var(--primary-color);
+  border-radius: 10px;
+}
+
+.carousel-container {
+  margin-top: 40px;
+  overflow: hidden; /* Ensures no content spills out of the container */
+}
+
+.carousel-content {
+  display: flex;
+  flex-wrap: nowrap; /* Keeps items in a single row */
+  overflow-x: auto; /* Adds horizontal scroll if needed */
+  gap: 10px; /* Adjust the gap between items */
+  padding: 10px; /* Add padding around the carousel content */
+  scroll-behavior: smooth; /* Smooth scrolling */
+}
+
+.carousel-content::-webkit-scrollbar {
+  height: 8px; /* Adds a scrollbar for horizontal scrolling */
+}
+
+.carousel-content::-webkit-scrollbar-thumb {
+  background-color: #888; /* Color of the scrollbar thumb */
+  border-radius: 4px;
+}
+
+.carousel-content::-webkit-scrollbar-thumb:hover {
+  background-color: #555; /* Darker color on hover */
+}
+
+.carousel-header {
+  text-align: center;
+  margin-bottom: 20px;
+}
+
+.carousel-header h2 {
+  color: var(--primary-color);
+  font-size: 1.8em;
+}
+
+@media (max-width: 768px) {
+  .carousel-content {
+    gap: 5px; /* Adjust gap for smaller screens */
+  }
+}
+
+@media (max-width: 480px) {
+  .carousel-content {
+    flex-direction: column; /* Stack items vertically on very small screens */
+    overflow-x: visible; /* No horizontal scroll needed */
+  }
+}
+
+/* Pagination Button Styles */
+.pagination-button {
+  padding: 10px 20px;
+  font-size: 1em;
+  font-weight: bold;
+  color: var(--text-color);
+  background-color: var(--primary-color);
+  border: none;
+  border-radius: var(--border-radius);
+  cursor: pointer;
+  transition: background-color 0.3s ease, box-shadow 0.3s ease;
+}
+
+.pagination-button:hover {
+  background-color: #0056b3;
+}
+
+.pagination-button:disabled {
+  background-color: #444;
+  cursor: not-allowed;
+}
+
+/* Center Pagination Buttons */
+.pagination {
+  display: flex;
+  justify-content: center;
+  margin-top: var(--spacing);
+}
+
+.pagination-container {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+
+}
+ /* Bottom Navigation Styles */
+ .bottom-nav {
+  background-color: #001b42; /* Background color */
+  color: white;
+  text-align: center;
+  padding: 10px 0;
+  bottom: 0;
+  width: 100%;
+  font-family: 'Fredoka', sans-serif;
+}
+
+.bottom-nav nav a {
+  color: white;
+  text-decoration: none;
+  margin: 0 15px;
+  font-weight: 500;
+  font-size: 16px;
+}
+
+.bottom-nav nav a:hover {
+  text-decoration: underline;
+}

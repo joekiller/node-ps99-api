@@ -1,0 +1,32 @@
+{
+  "name": "example-petsimulatorclans-homage",
+  "version": "1.0.0",
+  "description": "An homage to petsimulatorclans.com using the node-ps99-api.",
+  "private": true,
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "build": "npx webpack",
+    "dev": "npx webpack serve --config webpack.config.js --live-reload --mode=development"
+  },
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "@types/react-router-dom": "^5.3.3",
+    "lucide-react": "^1.7.0",
+    "ps99-api": "file:../..",
+    "react-router-dom": "^7.13.2"
+  },
+  "devDependencies": {
+    "@types/react": "^18.3.3",
+    "@types/react-dom": "^18.3.0",
+    "css-loader": "^7.1.2",
+    "react": "^18.3.1",
+    "react-dom": "^18.3.1",
+    "style-loader": "^4.0.0",
+    "ts-loader": "^9.5.1",
+    "typescript": "^5.5.3",
+    "webpack": "^5.92.1",
+    "webpack-cli": "^5.1.4",
+    "webpack-dev-server": "^5.0.4"
+  }
+}
