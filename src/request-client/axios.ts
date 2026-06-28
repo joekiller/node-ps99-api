@@ -12,8 +12,12 @@ export function getAxiosRequest(instance?: AxiosInstance): RequestClient {
         if (isAxiosError<{ message?: string }>(e)) {
           const message: string = e?.response?.data?.message || e.message;
           const newError = new Error(`${options.method} ${options.url}: ${message}`);
-          // Attach original response/status for consumers
-          (newError as any).response = e.response;
+          // Attach safe serializable subset — avoid circular refs from ClientRequest/Socket
+          (newError as any).response = e.response ? {
+            status: e.response.status,
+            statusText: e.response.statusText,
+            data: e.response.data,
+          } : undefined;
           (newError as any).status = e.response?.status;
           throw newError;
         }

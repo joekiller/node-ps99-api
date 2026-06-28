@@ -182,7 +182,12 @@ const DynamicCollectionConfigData: React.FC<
                       <pre style={{ margin: 0 }}>{JSON.stringify(configData, null, 2)}</pre>
                     </div>
                   ) : (
-                    props.render ? props.render(configData) : <Component configData={configData} {...props.additionalProps} />
+                    // Plain wrapper with no explicit height so child components' `height: 100%`
+                    // resolves to auto (natural content height) instead of clamping to the
+                    // scroll container's clientHeight, which would suppress scrollHeight.
+                    <div>
+                      {props.render ? props.render(configData) : <Component configData={configData} {...props.additionalProps} />}
+                    </div>
                   )}
                 </div>
               </>

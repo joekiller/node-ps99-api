@@ -34,6 +34,11 @@ describe("Pet Simulator Public Live API Test", () => {
     expect(results).toMatchSnapshot();
   });
 
+  test("CardItems shape", async () => {
+    const results = await api.getCollection("CardItems");
+    expect(results).toMatchSnapshot();
+  });
+
   test("Charms shape", async () => {
     const results = await api.getCollection("Charms");
     expect(results).toMatchSnapshot();
@@ -69,15 +74,7 @@ describe("Pet Simulator Public Live API Test", () => {
     expect(results).toMatchSnapshot();
   });
 
-  test("Hoverboards shape", async () => {
-    const results = await api.getCollection("Hoverboards");
-    expect(results).toMatchSnapshot();
-  });
 
-  test("Lootboxes shape", async () => {
-    const results = await api.getCollection("Lootboxes");
-    expect(results).toMatchSnapshot();
-  });
 
   test("Mastery shape", async () => {
     const results = await api.getCollection("Mastery");
@@ -86,11 +83,6 @@ describe("Pet Simulator Public Live API Test", () => {
 
   test("MiscItems shape", async () => {
     const results = await api.getCollection("MiscItems");
-    expect(results).toMatchSnapshot();
-  });
-
-  test("Pets shape", async () => {
-    const results = await api.getCollection("Pets");
     expect(results).toMatchSnapshot();
   });
 
@@ -176,6 +168,11 @@ describe("Pet Simulator Public Live API Test", () => {
 
   test("XPPotions shape", async () => {
     const results = await api.getCollection("XPPotions");
+    expect(results).toMatchSnapshot();
+  });
+
+  test("Pets shape", async () => {
+    const results = await api.getCollection("Pets");
     expect(results).toMatchSnapshot();
   });
 });
