@@ -1,6 +1,7 @@
 import { AchievementData } from "./achievement";
 export * from "./collection-data";
 import { BoostData } from "./boost";
+import { CardItemData } from "./card-item";
 import { BoothData } from "./booth";
 import { BoxData } from "./box";
 import { BuffData } from "./buff";
@@ -37,6 +38,7 @@ import { ZoneData } from "./zone";
 export type Collections =
   | AchievementData
   | BoostData
+  | CardItemData
   | BoothData
   | BoxData
   | BuffData

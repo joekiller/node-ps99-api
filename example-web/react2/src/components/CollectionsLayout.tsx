@@ -21,7 +21,7 @@ const CollectionsLayout: React.FC = () => {
                 display: "flex",
                 justifyContent: "center",
                 alignItems: "center",
-                minHeight: isMobile ? "100vh" : "calc(100vh - 80px)",
+                minHeight: isMobile ? "100dvh" : "calc(100vh - 80px)",
                 padding: isMobile ? "0" : "10px",
                 height: "100%",
                 boxSizing: "border-box"
@@ -34,7 +34,7 @@ const CollectionsLayout: React.FC = () => {
                         display: "flex",
                         width: "100%",
                         maxWidth: "1200px",
-                        height: isMobile ? "100vh" : "85vh",
+                        height: isMobile ? "100dvh" : "85vh",
                         backgroundColor: "#fff",
                         borderRadius: isMobile ? "0" : "16px",
                         boxShadow: isMobile ? "none" : "0 10px 40px rgba(0,0,0,0.2)",
