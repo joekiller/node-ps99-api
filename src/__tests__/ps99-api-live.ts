@@ -18,12 +18,6 @@ describe("Pet Simulator Public Live API Test", () => {
     const results = await api.getCollection("Boosts");
     expect(results).toMatchSnapshot();
   });
-
-  test("Booths shape", async () => {
-    const results = await api.getCollection("Booths");
-    expect(results).toMatchSnapshot();
-  });
-
   test("Boxes shape", async () => {
     const results = await api.getCollection("Boxes");
     expect(results).toMatchSnapshot();
@@ -41,16 +35,6 @@ describe("Pet Simulator Public Live API Test", () => {
 
   test("Charms shape", async () => {
     const results = await api.getCollection("Charms");
-    expect(results).toMatchSnapshot();
-  });
-
-  test("Currency shape", async () => {
-    const results = await api.getCollection("Currency");
-    expect(results).toMatchSnapshot();
-  });
-
-  test("Eggs shape", async () => {
-    const results = await api.getCollection("Eggs");
     expect(results).toMatchSnapshot();
   });
 
@@ -78,11 +62,6 @@ describe("Pet Simulator Public Live API Test", () => {
 
   test("Mastery shape", async () => {
     const results = await api.getCollection("Mastery");
-    expect(results).toMatchSnapshot();
-  });
-
-  test("MiscItems shape", async () => {
-    const results = await api.getCollection("MiscItems");
     expect(results).toMatchSnapshot();
   });
 
