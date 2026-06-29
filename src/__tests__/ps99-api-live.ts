@@ -170,9 +170,4 @@ describe("Pet Simulator Public Live API Test", () => {
     const results = await api.getCollection("XPPotions");
     expect(results).toMatchSnapshot();
   });
-
-  test("Pets shape", async () => {
-    const results = await api.getCollection("Pets");
-    expect(results).toMatchSnapshot();
-  });
 });

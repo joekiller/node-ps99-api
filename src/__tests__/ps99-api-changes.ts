@@ -41,4 +41,9 @@ describe("Pet Simulator Public Live API Test - Changing Items", () => {
     const results = await api.getCollection("Lootboxes");
     expect(results).toMatchSnapshot();
   });
+
+  test("Pets shape", async () => {
+    const results = await api.getCollection("Pets");
+    expect(results).toMatchSnapshot();
+  });
 });
