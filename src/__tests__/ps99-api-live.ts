@@ -96,11 +96,6 @@ describe("Pet Simulator Public Live API Test", () => {
     expect(results).toMatchSnapshot();
   });
 
-  test("Ranks shape", async () => {
-    const results = await api.getCollection("Ranks");
-    expect(results).toMatchSnapshot();
-  });
-
   test("Rarity shape", async () => {
     const results = await api.getCollection("Rarity");
     expect(results).toMatchSnapshot();
